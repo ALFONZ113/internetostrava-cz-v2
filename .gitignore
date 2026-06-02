@@ -1,4 +1,5 @@
 .qa/
 .preview/
+concepts/
 server.out.log
 server.err.log
