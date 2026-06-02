@@ -1,0 +1,4 @@
+.qa/
+.preview/
+server.out.log
+server.err.log

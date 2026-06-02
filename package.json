@@ -1,0 +1,10 @@
+{
+  "name": "internetostrava-cz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static SEO-first website for internetostrava.cz",
+  "scripts": {
+    "check": "node scripts/check-site.mjs"
+  }
+}
+

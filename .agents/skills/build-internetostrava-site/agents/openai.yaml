@@ -1,0 +1,4 @@
+interface:
+  display_name: "InternetOstrava Web"
+  short_description: "Build and maintain the InternetOstrava.cz SEO website"
+  default_prompt: "Use $build-internetostrava-site to update the InternetOstrava.cz website with accurate offers, strong local UX, and SEO-safe content."

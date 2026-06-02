@@ -1,0 +1,15 @@
+<svg width="1000" height="720" viewBox="0 0 1000 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="720" rx="44" fill="#082A3A"/>
+  <circle cx="760" cy="120" r="220" fill="#0E4B5B"/>
+  <circle cx="145" cy="660" r="260" fill="#08394A"/>
+  <path d="M-60 668C280 460 352 233 1070 60" stroke="#9CF27F" stroke-width="12" stroke-linecap="round"/>
+  <path d="M-60 590C282 422 435 244 1070 106" stroke="#48C6E7" stroke-width="7" stroke-linecap="round"/>
+  <path d="M-10 530C330 405 516 290 1070 176" stroke="white" stroke-opacity=".42" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="215" cy="505" r="19" fill="#9CF27F"/>
+  <circle cx="407" cy="372" r="13" fill="#48C6E7"/>
+  <circle cx="664" cy="260" r="11" fill="white"/>
+  <circle cx="816" cy="202" r="7" fill="#9CF27F"/>
+  <text x="85" y="135" fill="white" font-family="Arial, sans-serif" font-size="52" font-weight="800">OSTRAVA</text>
+  <text x="87" y="182" fill="#9CF27F" font-family="Arial, sans-serif" font-size="24" font-weight="700">PŘIPOJENÁ OPTIKOU</text>
+</svg>
+

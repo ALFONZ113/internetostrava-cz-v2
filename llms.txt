@@ -1,0 +1,11 @@
+# InternetOstrava.cz
+
+> InternetOstrava.cz helps Ostrava residents verify the availability of PODA internet service for an exact address. The website is operated by a sales representative of PODA a.s., not by PODA a.s. itself.
+
+## Main pages
+
+- [Internet Ostrava](https://internetostrava.cz/): service overview, indicative tariffs, address verification, and frequently asked questions
+- [Availability verification](https://internetostrava.cz/dostupnost/): non-binding form for checking an Ostrava address
+- [Tariffs](https://internetostrava.cz/tarify/): indicative options subject to address verification
+- [Contact](https://internetostrava.cz/kontakt/): representative contact details
+
