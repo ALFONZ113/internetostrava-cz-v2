@@ -413,7 +413,7 @@ button, input, textarea { font: inherit; }
 .industrial-stats .stat span { color: rgba(255,255,255,.68); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
 .city-marquee { position: relative; overflow: hidden; border-top: 5px solid #f5b800; border-bottom: 1px solid rgba(16,23,28,.22); background: #d9d5cd; }
 .city-marquee::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 3px; content: ""; opacity: .7; background: linear-gradient(90deg, transparent 0 7%, #1763ad 21%, #1763ad 43%, transparent 62%); }
-.city-marquee-track { display: flex; width: max-content; align-items: center; color: #10171c; animation: city-scroll 34s linear infinite; will-change: transform; }
+.city-marquee-track { display: flex; width: max-content; align-items: center; color: #10171c; animation: city-scroll var(--city-scroll-duration, 34s) linear infinite; will-change: transform; }
 .city-marquee-group { display: flex; flex-shrink: 0; align-items: center; gap: 24px; padding: 12px 12px; }
 .city-marquee span { font-family: Impact, "Arial Narrow", sans-serif; font-size: 1.25rem; letter-spacing: .09em; }
 .city-marquee i { color: #1763ad; font-size: .72rem; }
@@ -520,7 +520,7 @@ button, input, textarea { font: inherit; }
   .ostrava-stamp { display: none; }
   .network-pulse { left: 0; }
   .home-industrial .section-head h2 { font-size: clamp(3rem, 15vw, 4.5rem); }
-  .city-marquee-track { animation-duration: 43s; }
+  .city-marquee-track { --city-scroll-duration: 43s; }
 }
 
 @media (prefers-reduced-motion: reduce) {

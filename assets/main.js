@@ -4,6 +4,34 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 
 document.documentElement.classList.add("js-enabled");
 
+const marquee = document.querySelector(".city-marquee");
+const marqueeTrack = marquee?.querySelector(".city-marquee-track");
+const marqueeGroups = marqueeTrack ? [...marqueeTrack.querySelectorAll(".city-marquee-group")] : [];
+
+if (marquee && marqueeTrack && marqueeGroups.length === 2) {
+  const [primaryGroup, duplicateGroup] = marqueeGroups;
+  const baseMarkup = primaryGroup.innerHTML;
+  let resizeTimer;
+
+  const fillMarquee = () => {
+    primaryGroup.innerHTML = baseMarkup;
+
+    while (primaryGroup.offsetWidth < marquee.clientWidth + 160) {
+      primaryGroup.insertAdjacentHTML("beforeend", baseMarkup);
+    }
+
+    duplicateGroup.innerHTML = primaryGroup.innerHTML;
+    const speed = window.innerWidth < 720 ? 29 : 37;
+    marqueeTrack.style.setProperty("--city-scroll-duration", `${(primaryGroup.offsetWidth / speed).toFixed(2)}s`);
+  };
+
+  fillMarquee();
+  window.addEventListener("resize", () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(fillMarquee, 160);
+  });
+}
+
 if (toggle && links) {
   toggle.addEventListener("click", () => {
     const open = links.classList.toggle("open");
