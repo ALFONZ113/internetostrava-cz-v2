@@ -52,3 +52,13 @@ Publikovat postupně podle Search Console dotazů:
 - [Google Search Central: Build and submit a sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
 - [Vercel: Import an existing project](https://vercel.com/docs/getting-started-with-vercel/import)
 - [Vercel: Setting up a custom domain](https://vercel.com/docs/domains/set-up-custom-domain)
+
+## Implementovano 2026-06-03
+
+- Pridana hlavni SEO stranka `/poda-internet-ostrava/` pro dotazy typu `PODA internet Ostrava`, `PODA Ostrava` a overeni dostupnosti podle adresy.
+- Rozsirena stranka `/internet-ostrava-poruba/` pro dotazy `PODA Poruba` a `internet Ostrava-Poruba`.
+- Pridany lokalni stranky `/internet-moravska-ostrava/`, `/internet-ostrava-vitkovice/` a `/internet-slezska-ostrava/`.
+- Homepage nove odkazuje na hlavni PODA stranku a sirsi sadu lokalnich stranek.
+- Aktualizovany `sitemap.xml` a `llms.txt`.
+
+Dalsi krok: po napojeni finalni domeny overit web v Google Search Console, odeslat sitemapu a po 28 dnech rozhodovat dalsi obsah podle realnych impresi.
