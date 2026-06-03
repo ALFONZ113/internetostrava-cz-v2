@@ -602,7 +602,7 @@ button, input, textarea { font: inherit; }
   background: repeating-linear-gradient(135deg, transparent 0 22px, #1763ad 22px 24px);
 }
 .industrial-page .tariff-hero::before {
-  opacity: .16;
+  display: none;
 }
 .industrial-page .subhero .container { position: relative; }
 .industrial-page .subhero h1 { max-width: 1080px; color: white; font-size: clamp(4rem, 8vw, 7.5rem); line-height: .92; }
