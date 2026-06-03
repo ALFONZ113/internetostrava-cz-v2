@@ -7,7 +7,7 @@
   <meta name="description" content="Ověřte dostupnost optického internetu PODA v Ostravě. Tarify až 2 Gb/s, přehledná nabídka a osobní pomoc obchodního zástupce.">
   <link rel="canonical" href="https://internetostrava.cz/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css?v=mobile-responsive-2">
+  <link rel="stylesheet" href="/assets/styles.css?v=lead-ready-2">
   <meta property="og:title" content="Internet Ostrava | Optický internet PODA až 2 Gb/s">
   <meta property="og:description" content="Ověřte si dostupnost optického internetu PODA na své ostravské adrese.">
   <meta property="og:type" content="website">
@@ -223,14 +223,15 @@
         <div class="lead-panel">
           <h2>Ověřit adresu</h2>
           <p>Krátký formulář stačí. Bez závazku.</p>
-          <form name="overeni-dostupnosti" action="mailto:terc@poda.cz" data-email-form>
+          <form name="overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
             <div class="form-grid">
+              <div class="field hp-field" aria-hidden="true"><label for="home-website">Web</label><input id="home-website" name="website" tabindex="-1" autocomplete="off"></div>
               <div class="field field-wide"><label for="home-address">Ulice a číslo domu</label><input id="home-address" name="adresa" autocomplete="street-address" placeholder="Např. Hlavní třída 123" required></div>
               <div class="field"><label for="home-phone">Telefon</label><input id="home-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 ..." required></div>
               <div class="field"><label for="home-email">E-mail</label><input id="home-email" name="email" type="email" autocomplete="email" placeholder="vas@email.cz"></div>
               <label class="consent"><input type="checkbox" name="souhlas" required> Souhlasím se zpracováním údajů pro vyřízení dotazu podle <a href="/ochrana-udaju/">zásad ochrany údajů</a>.</label>
-              <button class="btn btn-lime field-wide" type="submit">Připravit e-mail k ověření</button>
-              <p class="form-note field-wide">Po kliknutí se otevře váš e-mail s vyplněnými údaji. Odeslání ještě potvrdíte ve své poštovní aplikaci.</p>
+              <button class="btn btn-lime field-wide" type="submit">Odeslat nezávazný dotaz</button>
+              <p class="form-note field-wide">Pokud automatické odeslání ještě není aktivní, otevřeme e-mail s vyplněnými údaji.</p>
             </div>
           </form>
         </div>
@@ -252,6 +253,16 @@
           <a class="district" href="/internet-moravska-ostrava/"><span>Centrum, byty, kanceláře a různorodé adresy</span><h3>Moravská Ostrava</h3><strong>Průvodce lokalitou →</strong></a>
           <a class="district" href="/internet-ostrava-vitkovice/"><span>Domácnosti v industriální části Ostravy</span><h3>Vítkovice</h3><strong>Průvodce lokalitou →</strong></a>
           <a class="district" href="/internet-slezska-ostrava/"><span>Rodinné domy, bytové domy i adresy blízko centra</span><h3>Slezská Ostrava</h3><strong>Průvodce lokalitou →</strong></a>
+        </div>
+        <div class="lead-cta">
+          <div>
+            <h3>Nejrychlejší cesta je přesná adresa.</h3>
+            <p>Pošlete ulici, číslo domu a telefon. Prověříme dostupnou technologii a dáme vám vědět, jaké varianty dávají smysl právě pro váš dům.</p>
+          </div>
+          <div class="button-row">
+            <a class="btn btn-yellow" href="/dostupnost/">Ověřit dostupnost</a>
+            <a class="btn btn-wire" href="tel:+420730431313">Zavolat</a>
+          </div>
         </div>
       </div>
     </section>
@@ -282,6 +293,6 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý web obchodního zástupce PODA a.s.</div>
     </div>
   </footer>
-  <script src="/assets/main.js" defer></script>
+  <script src="/assets/main.js?v=lead-ready-1" defer></script>
 </body>
 </html>

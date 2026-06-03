@@ -46,28 +46,115 @@ if (toggle && links) {
   });
 }
 
-document.querySelectorAll("[data-email-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+const utmParams = new URLSearchParams(window.location.search);
+const trackedUtmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+
+function buildLeadPayload(form) {
+  const fields = new FormData(form);
+  const payload = Object.fromEntries(fields.entries());
+  payload.source_page = window.location.pathname;
+
+  trackedUtmKeys.forEach((key) => {
+    const currentValue = utmParams.get(key);
+    if (currentValue) sessionStorage.setItem(key, currentValue);
+    payload[key] = currentValue || sessionStorage.getItem(key) || "";
+  });
+
+  return payload;
+}
+
+function buildMailto(payload) {
+  const body = [
+    "Dobrý den,",
+    "",
+    "prosím o ověření dostupnosti internetu na adrese:",
+    payload.adresa || "",
+    "",
+    `Telefon: ${payload.telefon || ""}`,
+    `E-mail: ${payload.email || "neuveden"}`,
+    payload.poznamka ? `Poznámka: ${payload.poznamka}` : "",
+    "",
+    `Stránka: ${payload.source_page || window.location.pathname}`,
+    "Odesláno z webu InternetOstrava.cz"
+  ].filter(Boolean).join("\n");
+
+  return `mailto:terc@poda.cz?subject=${encodeURIComponent("Ověření dostupnosti internetu v Ostravě")}&body=${encodeURIComponent(body)}`;
+}
+
+function getFormStatus(form) {
+  let status = form.querySelector("[data-form-status]");
+  if (!status) {
+    status = document.createElement("p");
+    status.className = "form-status";
+    status.setAttribute("data-form-status", "");
+    status.setAttribute("aria-live", "polite");
+    form.appendChild(status);
+  }
+  return status;
+}
+
+document.querySelectorAll("[data-lead-form], [data-email-form]").forEach((form) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
 
-    const fields = new FormData(form);
-    const body = [
-      "Dobrý den,",
-      "",
-      "prosím o ověření dostupnosti internetu na adrese:",
-      fields.get("adresa") || "",
-      "",
-      `Telefon: ${fields.get("telefon") || ""}`,
-      `E-mail: ${fields.get("email") || "neuveden"}`,
-      fields.get("poznamka") ? `Poznámka: ${fields.get("poznamka")}` : "",
-      "",
-      "Odesláno z webu InternetOstrava.cz"
-    ].filter(Boolean).join("\n");
+    const payload = buildLeadPayload(form);
+    const status = getFormStatus(form);
+    const submitButton = form.querySelector("button[type='submit']");
+    const originalLabel = submitButton?.textContent;
 
-    window.location.href = `mailto:terc@poda.cz?subject=${encodeURIComponent("Ověření dostupnosti internetu v Ostravě")}&body=${encodeURIComponent(body)}`;
+    status.textContent = "Odesíláme nezávazný dotaz...";
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Odesíláme...";
+    }
+
+    try {
+      const result = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const data = await result.json().catch(() => ({}));
+
+      if (result.ok && data.configured) {
+        window.dataLayer?.push?.({ event: "lead_submit", source_page: payload.source_page });
+        window.location.href = "/dekujeme/";
+        return;
+      }
+
+      status.textContent = "Otevřeme e-mail s vyplněnými údaji. Odeslání ještě potvrďte ve své poštovní aplikaci.";
+      window.location.href = buildMailto(payload);
+    } catch (error) {
+      status.textContent = "Nepodařilo se odeslat formulář automaticky. Otevřeme e-mail s vyplněnými údaji.";
+      window.location.href = buildMailto(payload);
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }
+    }
   });
 });
+
+document.querySelectorAll("a[href^='tel:']").forEach((link) => {
+  link.addEventListener("click", () => {
+    window.dataLayer?.push?.({ event: "phone_click", phone: link.getAttribute("href") });
+  });
+});
+
+document.querySelectorAll("a[href^='mailto:']").forEach((link) => {
+  link.addEventListener("click", () => {
+    window.dataLayer?.push?.({ event: "email_click", email: link.getAttribute("href") });
+  });
+});
+
+document.body.insertAdjacentHTML("beforeend", `
+  <div class="mobile-lead-bar" aria-label="Rychlý kontakt">
+    <a class="mobile-lead-bar__call" href="tel:+420730431313">Zavolat</a>
+    <a class="mobile-lead-bar__verify" href="/dostupnost/">Ověřit adresu</a>
+  </div>
+`);
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(".section, .section-compact, .city-marquee");
