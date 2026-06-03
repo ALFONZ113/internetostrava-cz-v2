@@ -522,6 +522,43 @@ button, input, textarea { font: inherit; }
 .home-industrial .site-footer { border-top: 8px solid #f5b800; }
 .home-industrial .footer-grid img { filter: none; }
 .home-industrial .footer-grid h3 { color: #f5b800; }
+
+.logo-combo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.home-industrial .logo-combo .logo-favicon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08);
+}
+.logo-combo .logo-text {
+  display: grid;
+  line-height: .86;
+  color: white;
+}
+.logo-combo .logo-text span,
+.logo-combo .logo-text strong {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.logo-combo .logo-text span {
+  font-size: .95rem;
+}
+.logo-combo .logo-text strong {
+  color: #2c79c9;
+  font-size: 1.74rem;
+  font-weight: 900;
+}
+.logo-combo .logo-text small {
+  color: white;
+  font-size: .44em;
+  letter-spacing: 0;
+}
 .js-enabled .reveal-ready { opacity: 1; transform: translateY(0); }
 .js-enabled .reveal-ready.reveal-visible { animation: reveal-soft .72s ease both; }
 
@@ -1222,5 +1259,34 @@ button, input, textarea { font: inherit; }
   }
   .industrial-page .subhero {
     padding: 36px 0 34px;
+  }
+}
+
+@media (max-width: 860px) {
+  .home-industrial .logo-combo {
+    gap: 9px;
+  }
+  .home-industrial .logo-combo .logo-favicon {
+    width: 44px;
+    height: 44px;
+  }
+  .logo-combo .logo-text span {
+    font-size: .78rem;
+  }
+  .logo-combo .logo-text strong {
+    font-size: 1.38rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-industrial .logo-combo .logo-favicon {
+    width: 39px;
+    height: 39px;
+  }
+  .logo-combo .logo-text span {
+    font-size: .68rem;
+  }
+  .logo-combo .logo-text strong {
+    font-size: 1.18rem;
   }
 }
