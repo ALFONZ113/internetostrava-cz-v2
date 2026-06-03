@@ -69,5 +69,3 @@ Dalsi krok: po napojeni finalni domeny overit web v Google Search Console, odesl
 - Doplneno BreadcrumbList schema na lokalni stranky bez breadcrumb structured data.
 - Pridany kanonicke Vercel redirecty pro kratke aliasy misto tvorby duplicitnich keyword stranek.
 - Aktualizovan `sitemap.xml` pro upravene lokalni stranky a `llms.txt` s poznamkou o alias presmerovanich.
-
-Poznamka: stranka pro Bohumin zatim nevznikla. Je mimo hlavni ostravsky zamer a mela by se resit samostatne az s unikatnim obsahem a jasnym obchodnim cilem.
