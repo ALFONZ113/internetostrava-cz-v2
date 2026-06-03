@@ -64,6 +64,13 @@ async function sendResendEmail(lead) {
   return { configured: true };
 }
 
+function parsePayload(body) {
+  if (!body) return {};
+  if (Buffer.isBuffer(body)) return JSON.parse(body.toString("utf8") || "{}");
+  if (typeof body === "string") return JSON.parse(body || "{}");
+  return body;
+}
+
 module.exports = async function handler(request, response) {
   if (request.method !== "POST") {
     response.setHeader("Allow", "POST");
@@ -71,7 +78,13 @@ module.exports = async function handler(request, response) {
   }
 
   try {
-    const payload = typeof request.body === "string" ? JSON.parse(request.body || "{}") : request.body || {};
+    let payload;
+    try {
+      payload = parsePayload(request.body);
+    } catch (error) {
+      return response.status(400).json({ ok: false, error: "invalid_json" });
+    }
+
     if (cleanText(payload.website, 200)) {
       return response.status(200).json({ ok: true, ignored: true });
     }
@@ -92,7 +105,14 @@ module.exports = async function handler(request, response) {
       return response.status(400).json({ ok: false, error: "invalid_required_fields" });
     }
 
-    const mail = await sendResendEmail(lead);
+    let mail;
+    try {
+      mail = await sendResendEmail(lead);
+    } catch (error) {
+      console.error(error);
+      return response.status(202).json({ ok: true, configured: false, fallback: "mailto", delivery: "resend_failed" });
+    }
+
     if (!mail.configured) {
       return response.status(202).json({ ok: true, configured: false, fallback: "mailto" });
     }
