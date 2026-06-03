@@ -46,6 +46,46 @@ if (toggle && links) {
   });
 }
 
+const leadModal = document.querySelector("#lead-modal");
+const leadModalAddress = leadModal?.querySelector("#modal-address");
+let lastModalTrigger = null;
+
+function closeLeadModal() {
+  if (!leadModal) return;
+  leadModal.hidden = true;
+  document.body.classList.remove("modal-open");
+  lastModalTrigger?.focus?.();
+  lastModalTrigger = null;
+}
+
+function openLeadModal(trigger) {
+  if (!leadModal) return;
+  lastModalTrigger = trigger;
+  leadModal.hidden = false;
+  document.body.classList.add("modal-open");
+  links?.classList.remove("open");
+  toggle?.setAttribute("aria-expanded", "false");
+  window.setTimeout(() => leadModalAddress?.focus(), 40);
+}
+
+document.querySelectorAll("[data-open-lead-modal]").forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    if (!leadModal) return;
+    event.preventDefault();
+    openLeadModal(trigger);
+  });
+});
+
+leadModal?.querySelectorAll("[data-close-lead-modal]").forEach((trigger) => {
+  trigger.addEventListener("click", closeLeadModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && leadModal && !leadModal.hidden) {
+    closeLeadModal();
+  }
+});
+
 const utmParams = new URLSearchParams(window.location.search);
 const trackedUtmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
 
@@ -63,12 +103,24 @@ function buildLeadPayload(form) {
   return payload;
 }
 
+function isCallbackLead(payload) {
+  return payload.lead_type === "callback" || payload.type === "callback";
+}
+
 function buildMailto(payload) {
+  const callback = isCallbackLead(payload);
+  const subject = callback
+    ? "Zpětné zavolání z InternetOstrava.cz"
+    : "Ověření dostupnosti internetu v Ostravě";
+  const intro = callback
+    ? "prosím o zpětné zavolání."
+    : "prosím o ověření dostupnosti internetu na adrese:";
+
   const body = [
     "Dobrý den,",
     "",
-    "prosím o ověření dostupnosti internetu na adrese:",
-    payload.adresa || "",
+    intro,
+    callback ? "" : (payload.adresa || ""),
     "",
     `Telefon: ${payload.telefon || ""}`,
     `E-mail: ${payload.email || "neuveden"}`,
@@ -78,7 +130,7 @@ function buildMailto(payload) {
     "Odesláno z webu InternetOstrava.cz"
   ].filter(Boolean).join("\n");
 
-  return `mailto:terc@poda.cz?subject=${encodeURIComponent("Ověření dostupnosti internetu v Ostravě")}&body=${encodeURIComponent(body)}`;
+  return `mailto:terc@poda.cz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 function getFormStatus(form) {
@@ -152,9 +204,15 @@ document.querySelectorAll("a[href^='mailto:']").forEach((link) => {
 document.body.insertAdjacentHTML("beforeend", `
   <div class="mobile-lead-bar" aria-label="Rychlý kontakt">
     <a class="mobile-lead-bar__call" href="tel:+420730431313">Zavolat</a>
-    <a class="mobile-lead-bar__verify" href="/dostupnost/">Ověřit adresu</a>
+    <a class="mobile-lead-bar__verify" href="/dostupnost/" data-open-lead-modal>Ověřit adresu</a>
   </div>
 `);
+
+document.querySelector(".mobile-lead-bar__verify")?.addEventListener("click", (event) => {
+  if (!leadModal) return;
+  event.preventDefault();
+  openLeadModal(event.currentTarget);
+});
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(".section, .section-compact, .city-marquee");

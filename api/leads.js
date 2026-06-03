@@ -25,6 +25,7 @@ function buildEmailHtml(lead) {
   return `
     <h2>Novy lead z InternetOstrava.cz</h2>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">
+      ${row("Typ", lead.type === "callback" ? "Zpetne zavolani" : "Overeni dostupnosti")}
       ${row("Adresa", lead.address)}
       ${row("Telefon", lead.phone)}
       ${row("E-mail", lead.email)}
@@ -41,6 +42,10 @@ function buildEmailHtml(lead) {
 async function sendResendEmail(lead) {
   if (!RESEND_API_KEY) return { configured: false };
 
+  const subject = lead.type === "callback"
+    ? `Zpetne zavolani: ${lead.phone || "novy kontakt"}`
+    : `Overeni internetu: ${lead.address || "nova adresa"}`;
+
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -51,7 +56,7 @@ async function sendResendEmail(lead) {
       from: LEAD_FROM_EMAIL,
       to: [LEAD_TO_EMAIL],
       reply_to: lead.email || undefined,
-      subject: `Overeni internetu: ${lead.address || "nova adresa"}`,
+      subject,
       html: buildEmailHtml(lead)
     })
   });
@@ -90,6 +95,7 @@ module.exports = async function handler(request, response) {
     }
 
     const lead = {
+      type: cleanText(payload.lead_type || payload.type, 40) || "availability",
       address: cleanText(payload.adresa || payload.address, 220),
       phone: cleanText(payload.telefon || payload.phone, 80),
       email: cleanText(payload.email, 160),
@@ -101,7 +107,8 @@ module.exports = async function handler(request, response) {
       createdAt: new Date().toISOString()
     };
 
-    if (!lead.address || !lead.phone || !isValidPhone(lead.phone)) {
+    const callbackLead = lead.type === "callback";
+    if (!lead.phone || !isValidPhone(lead.phone) || (!callbackLead && !lead.address)) {
       return response.status(400).json({ ok: false, error: "invalid_required_fields" });
     }
 

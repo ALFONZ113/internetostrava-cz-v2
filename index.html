@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#101318">
-  <link rel="stylesheet" href="/assets/styles.css?v=ux-scale-2">
+  <link rel="stylesheet" href="/assets/styles.css?v=lead-modal-2">
   <meta property="og:title" content="PODA internet Ostrava | Optický internet až 2 Gb/s">
   <meta property="og:description" content="Vyberte si PODA internet v Ostravě a ověřte dostupnost vybraného tarifu podle adresy.">
   <meta property="og:type" content="website">
@@ -88,7 +88,8 @@
         <a href="/#lokality">Lokality</a>
         <a href="/#faq">Časté dotazy</a>
         <a href="/kontakt/">Kontakt</a>
-        <a class="btn btn-small" href="/dostupnost/">Ověřit dostupnost <span aria-hidden="true">→</span></a>
+        <a class="btn btn-small nav-call" href="tel:+420730431313">Volat 730 431 313</a>
+        <a class="btn btn-small" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost <span aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
@@ -111,8 +112,14 @@
           <h1>Internet, který drží <span>rytmus Ostravy.</span></h1>
           <p class="lead">Ověřte si možnosti internetu PODA pro svůj dům. Rychle, konkrétně a s osobním kontaktem, když jej potřebujete.</p>
           <div class="button-row">
-            <a class="btn btn-yellow" href="/dostupnost/">Objednat ověření <span aria-hidden="true">→</span></a>
-            <a class="btn btn-wire" href="tel:+420730431313">Volat 730 431 313</a>
+            <a class="btn btn-yellow" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost <span aria-hidden="true">→</span></a>
+            <form class="callback-form" action="/api/leads" method="post" data-lead-form>
+              <input type="hidden" name="lead_type" value="callback">
+              <input type="hidden" name="poznamka" value="Zpětné zavolání z hero sekce">
+              <label class="sr-only" for="hero-callback-phone">Telefon pro zpětné zavolání</label>
+              <input id="hero-callback-phone" name="telefon" type="tel" autocomplete="tel" placeholder="Váš telefon" required>
+              <button class="btn btn-wire" type="submit">Zavolejte mi</button>
+            </form>
           </div>
           <div class="ostrava-stamp" aria-label="Lokální kontakt pro Ostravu">
             <span>OSTRAVA</span>
@@ -187,7 +194,7 @@
               <li>televize Mých 10</li>
               <li>výběr podle vašich potřeb</li>
             </ul>
-            <a class="btn" href="/dostupnost/">Ověřit dostupnost</a>
+            <a class="btn" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost</a>
           </article>
           <article class="price-card">
             <span class="tag">Maximum rychlosti</span>
@@ -268,7 +275,7 @@
             <p>Pošlete ulici, číslo domu a telefon. Prověříme dostupnou technologii a dáme vám vědět, jaké varianty dávají smysl právě pro váš dům.</p>
           </div>
           <div class="button-row">
-            <a class="btn btn-yellow" href="/dostupnost/">Ověřit dostupnost</a>
+            <a class="btn btn-yellow" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost</a>
             <a class="btn btn-wire" href="tel:+420730431313">Zavolat</a>
           </div>
         </div>
@@ -291,6 +298,28 @@
     </section>
   </main>
 
+  <div class="lead-modal" id="lead-modal" hidden>
+    <div class="lead-modal__backdrop" data-close-lead-modal></div>
+    <section class="lead-modal__panel" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+      <button class="lead-modal__close" type="button" aria-label="Zavřít okno" data-close-lead-modal>×</button>
+      <span class="eyebrow">Rychlé ověření</span>
+      <h2 id="lead-modal-title">Ověřit adresu</h2>
+      <p>Pošlete adresu a telefon. Ozveme se s možnostmi pro váš dům.</p>
+      <form name="modal-overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
+        <div class="form-grid">
+          <input type="hidden" name="lead_type" value="availability">
+          <div class="field hp-field" aria-hidden="true"><label for="modal-website">Web</label><input id="modal-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="field field-wide"><label for="modal-address">Adresa</label><input id="modal-address" name="adresa" autocomplete="street-address" placeholder="Ulice a číslo domu" required></div>
+          <div class="field"><label for="modal-phone">Telefon</label><input id="modal-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 ..." required></div>
+          <div class="field"><label for="modal-email">E-mail</label><input id="modal-email" name="email" type="email" autocomplete="email" placeholder="volitelné"></div>
+          <label class="consent"><input type="checkbox" name="souhlas" required> Souhlasím se zpracováním údajů pro vyřízení dotazu podle <a href="/ochrana-udaju/">zásad ochrany údajů</a>.</label>
+          <button class="btn btn-lime field-wide" type="submit">Odeslat nezávazný dotaz</button>
+          <p class="form-note field-wide"><a href="/dostupnost/">Raději otevřít celou stránku dostupnosti</a></p>
+        </div>
+      </form>
+    </section>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -301,6 +330,6 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý web obchodního zástupce PODA a.s.</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=lead-ready-1" defer></script>
+  <script src="/assets/main.js?v=lead-modal-2" defer></script>
 </body>
 </html>
