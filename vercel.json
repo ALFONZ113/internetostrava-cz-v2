@@ -17,6 +17,15 @@
   ],
   "redirects": [
     { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/internet-ostrava", "destination": "/", "permanent": true }
+    { "source": "/internet-ostrava", "destination": "/", "permanent": true },
+    { "source": "/poda-internet", "destination": "/poda-internet-ostrava/", "permanent": true },
+    { "source": "/poda-ostrava", "destination": "/poda-internet-ostrava/", "permanent": true },
+    { "source": "/poda-poruba", "destination": "/internet-ostrava-poruba/", "permanent": true },
+    { "source": "/poda-internet-poruba", "destination": "/internet-ostrava-poruba/", "permanent": true },
+    { "source": "/internet-poruba", "destination": "/internet-ostrava-poruba/", "permanent": true },
+    { "source": "/internet-vitkovice", "destination": "/internet-ostrava-vitkovice/", "permanent": true },
+    { "source": "/vitkovice", "destination": "/internet-ostrava-vitkovice/", "permanent": true },
+    { "source": "/internet-hrabuvka", "destination": "/internet-ostrava-jih/", "permanent": true },
+    { "source": "/internet-zabreh", "destination": "/internet-ostrava-jih/", "permanent": true }
   ]
 }

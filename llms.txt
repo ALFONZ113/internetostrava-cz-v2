@@ -15,3 +15,7 @@
 - [Moravska Ostrava](https://internetostrava.cz/internet-moravska-ostrava/): local page for central Ostrava addresses
 - [Vitkovice](https://internetostrava.cz/internet-ostrava-vitkovice/): local page for checking internet options in Vitkovice
 - [Slezska Ostrava](https://internetostrava.cz/internet-slezska-ostrava/): local page for checking internet options in Slezska Ostrava
+
+## Canonical query aliases
+
+Short query-style paths such as `/poda-ostrava`, `/poda-poruba`, `/internet-poruba`, `/internet-hrabuvka`, and `/internet-zabreh` redirect to the closest canonical landing page instead of creating duplicate thin pages.
