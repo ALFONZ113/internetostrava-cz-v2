@@ -1498,13 +1498,15 @@ button, input, textarea { font: inherit; }
 }
 .logo.logo-combo .logo-text strong {
   color: #2c79c9;
-  font-size: 1.45rem;
+  font-family: "Arial Black", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.52rem;
   font-weight: 900;
+  letter-spacing: .02em;
   white-space: nowrap;
 }
 .logo.logo-combo .logo-text small {
   color: white;
-  font-size: .42em;
+  font-size: .38em;
   font-weight: 900;
   letter-spacing: 0;
 }
@@ -1521,7 +1523,7 @@ button, input, textarea { font: inherit; }
     font-size: .68rem;
   }
   .logo.logo-combo .logo-text strong {
-    font-size: 1.24rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -1534,6 +1536,6 @@ button, input, textarea { font: inherit; }
     font-size: .62rem;
   }
   .logo.logo-combo .logo-text strong {
-    font-size: 1.08rem;
+    font-size: 1.14rem;
   }
 }
