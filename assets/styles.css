@@ -1465,18 +1465,18 @@ button, input, textarea { font: inherit; }
   }
 }
 
-/* Original header brand lockup: IO mark + Internet Ostrava.cz wordmark. */
+/* Compact header brand lockup: IO mark + Internet Ostrava.cz wordmark. */
 .logo.logo-combo {
   display: inline-flex;
   min-width: 0;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
 }
 .logo.logo-combo .logo-favicon {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   flex: 0 0 auto;
-  border-radius: 10px;
+  border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 0 0 1px rgba(255,255,255,.08);
 }
@@ -1484,42 +1484,44 @@ button, input, textarea { font: inherit; }
   display: grid;
   min-width: 0;
   color: white;
-  line-height: .86;
+  line-height: .9;
 }
 .logo.logo-combo .logo-text span,
 .logo.logo-combo .logo-text strong {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
-  letter-spacing: .04em;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  letter-spacing: .06em;
   text-transform: uppercase;
 }
 .logo.logo-combo .logo-text > span {
-  font-size: .95rem;
+  font-size: .78rem;
+  font-weight: 900;
 }
 .logo.logo-combo .logo-text strong {
   color: #2c79c9;
-  font-size: 1.74rem;
+  font-size: 1.45rem;
   font-weight: 900;
   white-space: nowrap;
 }
 .logo.logo-combo .logo-text small {
   color: white;
-  font-size: .44em;
+  font-size: .42em;
+  font-weight: 900;
   letter-spacing: 0;
 }
 
 @media (max-width: 860px) {
   .logo.logo-combo {
-    gap: 9px;
+    gap: 8px;
   }
   .logo.logo-combo .logo-favicon {
-    width: 44px;
-    height: 44px;
+    width: 43px;
+    height: 43px;
   }
   .logo.logo-combo .logo-text > span {
-    font-size: .78rem;
+    font-size: .68rem;
   }
   .logo.logo-combo .logo-text strong {
-    font-size: 1.38rem;
+    font-size: 1.24rem;
   }
 }
 
@@ -1529,9 +1531,9 @@ button, input, textarea { font: inherit; }
     height: 39px;
   }
   .logo.logo-combo .logo-text > span {
-    font-size: .68rem;
+    font-size: .62rem;
   }
   .logo.logo-combo .logo-text strong {
-    font-size: 1.18rem;
+    font-size: 1.08rem;
   }
 }
