@@ -149,6 +149,7 @@ button, input, textarea { font: inherit; }
 }
 
 .price-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+.price-grid-four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .price-card { position: relative; display: flex; min-height: 100%; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
 .price-card.featured { border-color: var(--teal); box-shadow: var(--shadow); }
 .tag { align-self: flex-start; padding: 5px 9px; border-radius: 999px; background: #e8f8f1; color: var(--teal); font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
@@ -835,6 +836,8 @@ button, input, textarea { font: inherit; }
   .price-grid,
   .districts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .price-grid .price-card.featured { grid-column: span 2; }
+  .price-grid-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .price-grid-four .price-card.featured { grid-column: auto; }
   .content-grid { grid-template-columns: minmax(0, 1fr) 300px; gap: 36px; }
   .industrial-page .subhero h1 { font-size: clamp(4rem, 8.6vw, 6.5rem); }
 }
