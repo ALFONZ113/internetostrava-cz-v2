@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#101318">
-  <link rel="stylesheet" href="/assets/styles.css?v=lead-modal-2">
+  <link rel="stylesheet" href="/assets/styles.css?v=tariff-order-1">
 </head>
 <body class="industrial-page">
   <header class="site-header">
@@ -60,6 +60,8 @@
           <form name="overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
             <div class="form-grid">
               <div class="field hp-field" aria-hidden="true"><label for="website">Web</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+              <input type="hidden" name="tarif" value="">
+              <p class="selected-tariff field-wide" data-selected-tariff hidden></p>
               <div class="field field-wide"><label for="address">Ulice a číslo domu</label><input id="address" name="adresa" autocomplete="street-address" required></div>
               <div class="field field-wide"><label for="phone">Telefon</label><input id="phone" name="telefon" type="tel" autocomplete="tel" required></div>
               <div class="field field-wide"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div>
@@ -83,6 +85,6 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=lead-modal-2" defer></script>
+  <script src="/assets/main.js?v=tariff-order-1" defer></script>
 </body>
 </html>

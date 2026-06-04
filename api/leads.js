@@ -29,6 +29,7 @@ function buildEmailHtml(lead) {
       ${row("Adresa", lead.address)}
       ${row("Telefon", lead.phone)}
       ${row("E-mail", lead.email)}
+      ${row("Tarif", lead.tariff)}
       ${row("Poznamka", lead.note)}
       ${row("Stranka", lead.sourcePage)}
       ${row("UTM source", lead.utmSource)}
@@ -99,6 +100,7 @@ module.exports = async function handler(request, response) {
       address: cleanText(payload.adresa || payload.address, 220),
       phone: cleanText(payload.telefon || payload.phone, 80),
       email: cleanText(payload.email, 160),
+      tariff: cleanText(payload.tarif || payload.tariff, 160),
       note: cleanText(payload.poznamka || payload.note, 1000),
       sourcePage: cleanText(payload.source_page, 300),
       utmSource: cleanText(payload.utm_source, 120),
