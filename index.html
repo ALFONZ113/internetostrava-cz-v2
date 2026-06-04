@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#101318">
-  <link rel="stylesheet" href="/assets/styles.css?v=tariff-order-1">
+  <link rel="stylesheet" href="/assets/styles.css?v=lead-modal-2">
   <meta property="og:title" content="PODA internet Ostrava | Optický internet až 2 Gb/s">
   <meta property="og:description" content="Vyberte si PODA internet v Ostravě a ověřte dostupnost vybraného tarifu podle adresy.">
   <meta property="og:type" content="website">
@@ -164,15 +164,15 @@
       </div>
     </section>
 
-    <section class="section soft tariff-showcase" id="tarify">
+    <section class="section soft" id="tarify">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Tarify PODA internetu</span>
           <h2>Vyberte výkon podle toho, jak Ostrava opravdu žije.</h2>
           <p class="lead">Konečnou nabídku vždy potvrdíme po ověření adresy. Díky tomu víte, co lze zapojit právě u vás.</p>
         </div>
-        <div class="price-grid tariff-grid">
-          <article class="price-card tariff-card featured">
+        <div class="price-grid">
+          <article class="price-card featured">
             <span class="tag">Oblíbená kombinace</span>
             <h3>1 Giga + TV Basic</h3>
             <div class="speed">až 1 000 / 1 000 Mb/s</div>
@@ -182,9 +182,9 @@
               <li>televize Basic</li>
               <li>ověření pro konkrétní adresu</li>
             </ul>
-            <a class="btn" href="/dostupnost/?tarif=1-giga-tv-basic" data-open-lead-modal data-tariff="1 Giga + TV Basic">Objednat 1 Giga + TV Basic</a>
+            <a class="btn" href="/dostupnost/">Prověřit možnost zapojení</a>
           </article>
-          <article class="price-card tariff-card">
+          <article class="price-card">
             <span class="tag">Více programů</span>
             <h3>1 Giga + TV Mých 10</h3>
             <div class="speed">až 1 000 / 1 000 Mb/s</div>
@@ -194,9 +194,9 @@
               <li>televize Mých 10</li>
               <li>výběr podle vašich potřeb</li>
             </ul>
-            <a class="btn" href="/dostupnost/?tarif=1-giga-tv-mych-10" data-open-lead-modal data-tariff="1 Giga + TV Mých 10">Objednat 1 Giga + TV Mých 10</a>
+            <a class="btn" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost</a>
           </article>
-          <article class="price-card tariff-card">
+          <article class="price-card">
             <span class="tag">Maximum rychlosti</span>
             <h3>2 Giga internet</h3>
             <div class="speed">až 2 000 / 2 000 Mb/s</div>
@@ -206,20 +206,7 @@
               <li>pro více zařízení a náročný provoz</li>
               <li>dostupnost podle adresy</li>
             </ul>
-            <a class="btn" href="/dostupnost/?tarif=2-giga-internet" data-open-lead-modal data-tariff="2 Giga internet">Objednat 2 Giga internet</a>
-          </article>
-          <article class="price-card tariff-card individual">
-            <span class="tag">Na míru</span>
-            <h3>Individuální nabídka</h3>
-            <div class="speed">až 2 Gb/s podle adresy</div>
-            <div class="price">na dotaz <small>/ podle možností</small></div>
-            <ul class="price-list">
-              <li>senior tarif nebo zvýhodněná varianta</li>
-              <li>pomoc s výběrem internetu a TV</li>
-              <li>pro specifickou adresu nebo více služeb</li>
-              <li>nezávazné ověření</li>
-            </ul>
-            <a class="btn" href="/dostupnost/?tarif=individualni-nabidka" data-open-lead-modal data-tariff="Individuální nabídka">Chci individuální nabídku</a>
+            <a class="btn" href="/dostupnost/">Prověřit adresu</a>
           </article>
         </div>
         <p class="note">Uvedené tarify jsou konkrétní možnosti výběru z aktuální nabídky. Dostupnost vybraného tarifu a technické možnosti zapojení potvrdíme pro přesnou adresu.</p>
@@ -321,9 +308,7 @@
       <form name="modal-overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
         <div class="form-grid">
           <input type="hidden" name="lead_type" value="availability">
-          <input type="hidden" name="tarif" value="">
           <div class="field hp-field" aria-hidden="true"><label for="modal-website">Web</label><input id="modal-website" name="website" tabindex="-1" autocomplete="off"></div>
-          <p class="selected-tariff field-wide" data-selected-tariff hidden></p>
           <div class="field field-wide"><label for="modal-address">Adresa</label><input id="modal-address" name="adresa" autocomplete="street-address" placeholder="Ulice a číslo domu" required></div>
           <div class="field"><label for="modal-phone">Telefon</label><input id="modal-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 ..." required></div>
           <div class="field"><label for="modal-email">E-mail</label><input id="modal-email" name="email" type="email" autocomplete="email" placeholder="volitelné"></div>
@@ -345,6 +330,6 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý web obchodního zástupce PODA a.s.</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=tariff-order-1" defer></script>
+  <script src="/assets/main.js?v=lead-modal-2" defer></script>
 </body>
 </html>

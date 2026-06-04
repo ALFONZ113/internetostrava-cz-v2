@@ -48,37 +48,7 @@ if (toggle && links) {
 
 const leadModal = document.querySelector("#lead-modal");
 const leadModalAddress = leadModal?.querySelector("#modal-address");
-const leadModalTariff = leadModal?.querySelector("input[name='tarif']");
 let lastModalTrigger = null;
-
-const tariffLabels = {
-  "1-giga-tv-basic": "1 Giga + TV Basic",
-  "1-giga-tv-mych-10": "1 Giga + TV Mých 10",
-  "2-giga-internet": "2 Giga internet",
-  "individualni-nabidka": "Individuální nabídka"
-};
-
-function resolveTariffLabel(value) {
-  const cleanValue = String(value || "").trim();
-  return tariffLabels[cleanValue] || cleanValue;
-}
-
-function setSelectedTariff(form, tariff) {
-  const label = resolveTariffLabel(tariff);
-  const input = form?.querySelector("input[name='tarif']");
-  const display = form?.querySelector("[data-selected-tariff]");
-
-  if (input) input.value = label;
-  if (!display) return;
-
-  if (label) {
-    display.hidden = false;
-    display.textContent = `Vybraný tarif: ${label}`;
-  } else {
-    display.hidden = true;
-    display.textContent = "";
-  }
-}
 
 function closeLeadModal() {
   if (!leadModal) return;
@@ -91,9 +61,6 @@ function closeLeadModal() {
 function openLeadModal(trigger) {
   if (!leadModal) return;
   lastModalTrigger = trigger;
-  const selectedTariff = trigger?.dataset?.tariff || "";
-  if (leadModalTariff) leadModalTariff.value = selectedTariff;
-  setSelectedTariff(leadModal, selectedTariff);
   leadModal.hidden = false;
   document.body.classList.add("modal-open");
   links?.classList.remove("open");
@@ -121,13 +88,11 @@ document.addEventListener("keydown", (event) => {
 
 const utmParams = new URLSearchParams(window.location.search);
 const trackedUtmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-const tariffFromUrl = resolveTariffLabel(utmParams.get("tarif"));
 
 function buildLeadPayload(form) {
   const fields = new FormData(form);
   const payload = Object.fromEntries(fields.entries());
   payload.source_page = window.location.pathname;
-  payload.tarif = payload.tarif || tariffFromUrl || "";
 
   trackedUtmKeys.forEach((key) => {
     const currentValue = utmParams.get(key);
@@ -159,7 +124,6 @@ function buildMailto(payload) {
     "",
     `Telefon: ${payload.telefon || ""}`,
     `E-mail: ${payload.email || "neuveden"}`,
-    payload.tarif ? `Vybraný tarif: ${payload.tarif}` : "",
     payload.poznamka ? `Poznámka: ${payload.poznamka}` : "",
     "",
     `Stránka: ${payload.source_page || window.location.pathname}`,
@@ -182,8 +146,6 @@ function getFormStatus(form) {
 }
 
 document.querySelectorAll("[data-lead-form], [data-email-form]").forEach((form) => {
-  if (tariffFromUrl) setSelectedTariff(form, tariffFromUrl);
-
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
