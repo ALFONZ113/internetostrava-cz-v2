@@ -13,6 +13,12 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#101318">
   <link rel="stylesheet" href="/assets/styles.css?v=lead-modal-2">
+  <meta property="og:title" content="Internet Slezská Ostrava | PODA dostupnost podle adresy">
+  <meta property="og:description" content="Zjistěte možnosti internetu PODA ve Slezské Ostravě podle přesné adresy domu.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://internetostrava.cz/internet-slezska-ostrava/">
+  <meta property="og:image" content="https://internetostrava.cz/assets/hero-ostrava-industrial.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,6 +26,37 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
       { "@type": "ListItem", "position": 2, "name": "Slezská Ostrava", "item": "https://internetostrava.cz/internet-slezska-ostrava/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://internetostrava.cz/internet-slezska-ostrava/#service",
+        "name": "Ověření dostupnosti internetu PODA ve Slezské Ostravě",
+        "serviceType": "Internetové připojení",
+        "areaServed": { "@type": "Place", "name": "Slezská Ostrava" },
+        "provider": { "@type": "Organization", "name": "PODA a.s.", "url": "https://www.poda.cz/" },
+        "broker": { "@type": "Organization", "name": "InternetOstrava.cz", "url": "https://internetostrava.cz/" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ověřujete celou Slezskou Ostravu jedním pravidlem?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Každou poptávku řešíme podle přesné adresy, protože možnosti internetu se mohou lišit dům od domu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Co když nevím, jaký tarif chci?",
+            "acceptedAnswer": { "@type": "Answer", "text": "To nevadí. Začněte adresou a krátkým popisem používání internetu." }
+          }
+        ]
+      }
     ]
   }
   </script>

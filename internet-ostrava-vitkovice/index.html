@@ -13,6 +13,12 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#101318">
   <link rel="stylesheet" href="/assets/styles.css?v=lead-modal-2">
+  <meta property="og:title" content="Internet Ostrava-Vítkovice | Ověření PODA podle adresy">
+  <meta property="og:description" content="Ověřte možnosti internetu PODA ve Vítkovicích podle přesné adresy domu.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://internetostrava.cz/internet-ostrava-vitkovice/">
+  <meta property="og:image" content="https://internetostrava.cz/assets/hero-ostrava-industrial.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,6 +26,37 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
       { "@type": "ListItem", "position": 2, "name": "Ostrava-Vítkovice", "item": "https://internetostrava.cz/internet-ostrava-vitkovice/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://internetostrava.cz/internet-ostrava-vitkovice/#service",
+        "name": "Ověření dostupnosti internetu PODA v Ostravě-Vítkovicích",
+        "serviceType": "Internetové připojení",
+        "areaServed": { "@type": "Place", "name": "Ostrava-Vítkovice" },
+        "provider": { "@type": "Organization", "name": "PODA a.s.", "url": "https://www.poda.cz/" },
+        "broker": { "@type": "Organization", "name": "InternetOstrava.cz", "url": "https://internetostrava.cz/" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Musím znát aktuální tarif?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nemusíte. Stačí popsat, jak internet používáte, a poslat přesnou adresu ve Vítkovicích." }
+          },
+          {
+            "@type": "Question",
+            "name": "Mohu řešit i televizi?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano. Pokud vás zajímá internet s televizí, uveďte to do poznámky k ověření dostupnosti." }
+          }
+        ]
+      }
     ]
   }
   </script>

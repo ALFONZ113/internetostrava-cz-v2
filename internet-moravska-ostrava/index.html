@@ -13,6 +13,12 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#101318">
   <link rel="stylesheet" href="/assets/styles.css?v=lead-modal-2">
+  <meta property="og:title" content="Internet Moravská Ostrava | PODA podle adresy">
+  <meta property="og:description" content="Ověřte internet PODA v Moravské Ostravě a centru podle konkrétní adresy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://internetostrava.cz/internet-moravska-ostrava/">
+  <meta property="og:image" content="https://internetostrava.cz/assets/hero-ostrava-industrial.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -20,6 +26,37 @@
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
       { "@type": "ListItem", "position": 2, "name": "Moravská Ostrava", "item": "https://internetostrava.cz/internet-moravska-ostrava/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://internetostrava.cz/internet-moravska-ostrava/#service",
+        "name": "Ověření dostupnosti internetu PODA v Moravské Ostravě",
+        "serviceType": "Internetové připojení",
+        "areaServed": { "@type": "Place", "name": "Moravská Ostrava" },
+        "provider": { "@type": "Organization", "name": "PODA a.s.", "url": "https://www.poda.cz/" },
+        "broker": { "@type": "Organization", "name": "InternetOstrava.cz", "url": "https://internetostrava.cz/" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Stačí napsat jen centrum Ostravy?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nestačí. Pro ověření internetu je potřeba přesná adresa, protože možnosti připojení se liší dům od domu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je ověření internetu závazné?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Ověření slouží k tomu, abyste znali reálné možnosti před výběrem tarifu." }
+          }
+        ]
+      }
     ]
   }
   </script>
