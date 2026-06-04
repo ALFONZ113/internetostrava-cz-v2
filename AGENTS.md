@@ -2,6 +2,10 @@
 
 Use the project skill at `.agents/skills/build-internetostrava-site/SKILL.md` for every website change.
 
+Also read `docs/CODEX-CONTEXT.md` at the start of a new Codex session. It
+contains the preserved context from the earlier project chats, owner
+preferences, recent commits, and current lead/SEO/design direction.
+
 Run:
 
 ```powershell
