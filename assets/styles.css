@@ -62,7 +62,7 @@ button, input, textarea { font: inherit; }
   backdrop-filter: blur(18px);
 }
 .nav { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 20px; }
-.logo img { width: 196px; }
+.logo img { width: 58px; height: 58px; object-fit: contain; }
 .nav-links { display: flex; align-items: center; gap: 28px; color: var(--ink-soft); font-size: .93rem; font-weight: 700; }
 .nav-links a:hover { color: var(--teal); }
 .nav-toggle {
@@ -322,7 +322,7 @@ button, input, textarea { font: inherit; }
 
 .site-footer { padding: 56px 0 24px; background: var(--deep); color: white; }
 .footer-grid { display: grid; gap: 42px; grid-template-columns: 1.4fr .8fr .8fr; }
-.footer-grid img { width: 196px; filter: brightness(0) invert(1); }
+.footer-grid img { width: 74px; height: 74px; object-fit: contain; filter: none; }
 .footer-grid p { max-width: 520px; margin-top: 16px; color: #b9cfd3; font-size: .86rem; }
 .footer-grid h3 { color: var(--lime); font-size: .88rem; letter-spacing: .05em; text-transform: uppercase; }
 .footer-links { display: grid; gap: 7px; margin-top: 15px; color: #d3e2e4; font-size: .88rem; }
@@ -405,7 +405,7 @@ button, input, textarea { font: inherit; }
   background: rgba(10, 16, 20, .72);
   backdrop-filter: blur(14px);
 }
-.home-industrial .logo img { width: 212px; filter: none; }
+.home-industrial .logo img { width: 58px; height: 58px; filter: none; }
 .home-industrial .nav-links { color: white; font-family: "Arial Narrow", Arial, sans-serif; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .home-industrial .nav-links a:hover { color: #f5b800; }
 .home-industrial .nav-links .btn { color: #10171c; background: #f5b800; }
@@ -669,7 +669,7 @@ button, input, textarea { font: inherit; }
   .industrial-stats .stat + .stat { border-top: 1px solid rgba(255,255,255,.15); border-left: 0; }
 }
 @media (max-width: 560px) {
-  .home-industrial .logo img { width: 176px; }
+  .home-industrial .logo img { width: 48px; height: 48px; }
   .industrial-hero { min-height: 795px; }
   .industrial-hero-inner { min-height: auto; }
   .industrial-hero h1 { font-size: clamp(4rem, 18vw, 5.4rem); }
@@ -727,7 +727,7 @@ button, input, textarea { font: inherit; }
   border-bottom: 1px solid rgba(255,255,255,.15);
   background: rgba(10,16,20,.96);
 }
-.industrial-page .logo img { width: 212px; }
+.industrial-page .logo img { width: 58px; height: 58px; }
 .industrial-page .nav-links { color: white; font-family: "Arial Narrow", Arial, sans-serif; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .industrial-page .nav-links a:hover { color: #f5b800; }
 .industrial-page .btn { border-radius: 0; }
@@ -790,7 +790,7 @@ button, input, textarea { font: inherit; }
   .home-industrial .nav-links,
   .industrial-page .nav-links { gap: 20px; }
   .home-industrial .logo img,
-  .industrial-page .logo img { width: 188px; }
+  .industrial-page .logo img { width: 52px; height: 52px; }
   .industrial-hero { min-height: 700px; padding: 124px 0 48px; }
   .industrial-hero-inner { min-height: 520px; }
   .industrial-hero h1 { font-size: clamp(5.4rem, 10vw, 7.9rem); }
@@ -819,7 +819,7 @@ button, input, textarea { font: inherit; }
   .nav { min-height: 68px; }
   .logo img,
   .home-industrial .logo img,
-  .industrial-page .logo img { width: 174px; }
+  .industrial-page .logo img { width: 48px; height: 48px; }
   .nav-links,
   .home-industrial .nav-links,
   .industrial-page .nav-links {
@@ -1000,7 +1000,7 @@ button, input, textarea { font: inherit; }
   .nav { min-height: 62px; }
   .logo img,
   .home-industrial .logo img,
-  .industrial-page .logo img { width: 154px; }
+  .industrial-page .logo img { width: 44px; height: 44px; }
   .nav-toggle {
     width: 40px;
     height: 40px;
@@ -1039,7 +1039,7 @@ button, input, textarea { font: inherit; }
   .industrial-page .price-card { padding: 19px; }
   .price-list { margin: 18px 0 22px; }
   .lead-panel { box-shadow: 5px 5px 0 rgba(245,184,0,.78); }
-  .footer-grid img { width: 160px; }
+  .footer-grid img { width: 64px; height: 64px; }
 }
 
 /* Responsive media preservation: important desktop visuals stay present on tablet and mobile. */
