@@ -62,7 +62,40 @@ button, input, textarea { font: inherit; }
   backdrop-filter: blur(18px);
 }
 .nav { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 20px; }
+.logo {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
 .logo img { width: 58px; height: 58px; object-fit: contain; }
+.logo-wordmark {
+  display: inline-grid;
+  min-width: 0;
+  color: var(--ink);
+  font-family: "Arial Narrow", Arial, sans-serif;
+  line-height: .9;
+  text-transform: uppercase;
+}
+.logo-wordmark > span {
+  color: currentColor;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.logo-wordmark strong {
+  color: #1763ad;
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+.logo-wordmark strong span {
+  color: var(--ink);
+  font-size: .5em;
+  font-weight: 800;
+  letter-spacing: 0;
+}
 .nav-links { display: flex; align-items: center; gap: 28px; color: var(--ink-soft); font-size: .93rem; font-weight: 700; }
 .nav-links a:hover { color: var(--teal); }
 .nav-toggle {
@@ -323,6 +356,11 @@ button, input, textarea { font: inherit; }
 .site-footer { padding: 56px 0 24px; background: var(--deep); color: white; }
 .footer-grid { display: grid; gap: 42px; grid-template-columns: 1.4fr .8fr .8fr; }
 .footer-grid img { width: 74px; height: 74px; object-fit: contain; filter: none; }
+.footer-grid > div:first-child > img { display: inline-block; vertical-align: middle; }
+.footer-grid > div:first-child > img + .logo-wordmark { margin-left: 12px; vertical-align: middle; }
+.site-footer .logo-wordmark { color: white; }
+.site-footer .logo-wordmark strong { color: #1763ad; }
+.site-footer .logo-wordmark strong span { color: white; }
 .footer-grid p { max-width: 520px; margin-top: 16px; color: #b9cfd3; font-size: .86rem; }
 .footer-grid h3 { color: var(--lime); font-size: .88rem; letter-spacing: .05em; text-transform: uppercase; }
 .footer-links { display: grid; gap: 7px; margin-top: 15px; color: #d3e2e4; font-size: .88rem; }
@@ -406,6 +444,8 @@ button, input, textarea { font: inherit; }
   backdrop-filter: blur(14px);
 }
 .home-industrial .logo img { width: 58px; height: 58px; filter: none; }
+.home-industrial .logo-wordmark { color: white; }
+.home-industrial .logo-wordmark strong span { color: white; }
 .home-industrial .nav-links { color: white; font-family: "Arial Narrow", Arial, sans-serif; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .home-industrial .nav-links a:hover { color: #f5b800; }
 .home-industrial .nav-links .btn { color: #10171c; background: #f5b800; }
@@ -728,6 +768,8 @@ button, input, textarea { font: inherit; }
   background: rgba(10,16,20,.96);
 }
 .industrial-page .logo img { width: 58px; height: 58px; }
+.industrial-page .logo-wordmark { color: white; }
+.industrial-page .logo-wordmark strong span { color: white; }
 .industrial-page .nav-links { color: white; font-family: "Arial Narrow", Arial, sans-serif; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .industrial-page .nav-links a:hover { color: #f5b800; }
 .industrial-page .btn { border-radius: 0; }
@@ -791,6 +833,9 @@ button, input, textarea { font: inherit; }
   .industrial-page .nav-links { gap: 20px; }
   .home-industrial .logo img,
   .industrial-page .logo img { width: 52px; height: 52px; }
+  .logo { gap: 9px; }
+  .logo-wordmark > span { font-size: .72rem; }
+  .logo-wordmark strong { font-size: 1.32rem; }
   .industrial-hero { min-height: 700px; padding: 124px 0 48px; }
   .industrial-hero-inner { min-height: 520px; }
   .industrial-hero h1 { font-size: clamp(5.4rem, 10vw, 7.9rem); }
@@ -820,6 +865,9 @@ button, input, textarea { font: inherit; }
   .logo img,
   .home-industrial .logo img,
   .industrial-page .logo img { width: 48px; height: 48px; }
+  .logo { gap: 8px; }
+  .logo-wordmark > span { font-size: .68rem; }
+  .logo-wordmark strong { font-size: 1.2rem; }
   .nav-links,
   .home-industrial .nav-links,
   .industrial-page .nav-links {
@@ -1001,6 +1049,9 @@ button, input, textarea { font: inherit; }
   .logo img,
   .home-industrial .logo img,
   .industrial-page .logo img { width: 44px; height: 44px; }
+  .logo { gap: 7px; }
+  .logo-wordmark > span { font-size: .62rem; }
+  .logo-wordmark strong { font-size: 1.05rem; }
   .nav-toggle {
     width: 40px;
     height: 40px;
