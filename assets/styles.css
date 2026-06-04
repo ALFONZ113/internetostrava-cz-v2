@@ -1465,77 +1465,65 @@ button, input, textarea { font: inherit; }
   }
 }
 
-/* Compact header brand lockup: IO mark + Internet Ostrava.cz wordmark. */
-.logo.logo-combo {
+.home-industrial .logo-combo .logo-favicon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.logo-combo {
   display: inline-flex;
   min-width: 0;
   align-items: center;
-  gap: 9px;
+  gap: 12px;
 }
-.logo.logo-combo .logo-favicon {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 0 0 1px rgba(255,255,255,.08);
-}
-.logo.logo-combo .logo-text {
+.logo-combo .logo-text {
   display: grid;
-  min-width: 0;
+  line-height: .86;
   color: white;
-  line-height: .9;
 }
-.logo.logo-combo .logo-text span,
-.logo.logo-combo .logo-text strong {
-  font-family: "Arial Narrow", Arial, sans-serif;
-  letter-spacing: .06em;
+.logo-combo .logo-text span,
+.logo-combo .logo-text strong {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+  letter-spacing: .04em;
   text-transform: uppercase;
 }
-.logo.logo-combo .logo-text > span {
-  font-size: .78rem;
-  font-weight: 900;
+.logo-combo .logo-text span {
+  font-size: .95rem;
 }
-.logo.logo-combo .logo-text strong {
+.logo-combo .logo-text strong {
   color: #2c79c9;
-  font-family: "Arial Black", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.52rem;
+  font-size: 1.74rem;
   font-weight: 900;
-  letter-spacing: .02em;
-  white-space: nowrap;
 }
-.logo.logo-combo .logo-text small {
+.logo-combo .logo-text small {
   color: white;
-  font-size: .38em;
-  font-weight: 900;
+  font-size: .44em;
   letter-spacing: 0;
 }
 
 @media (max-width: 860px) {
-  .logo.logo-combo {
-    gap: 8px;
-  }
-  .logo.logo-combo .logo-favicon {
+  .home-industrial .logo-combo .logo-favicon {
     width: 43px;
     height: 43px;
   }
-  .logo.logo-combo .logo-text > span {
+  .logo-combo .logo-text span {
     font-size: .68rem;
   }
-  .logo.logo-combo .logo-text strong {
-    font-size: 1.3rem;
+  .logo-combo .logo-text strong {
+    font-size: 1.38rem;
   }
 }
 
 @media (max-width: 520px) {
-  .logo.logo-combo .logo-favicon {
+  .home-industrial .logo-combo .logo-favicon {
     width: 39px;
     height: 39px;
   }
-  .logo.logo-combo .logo-text > span {
+  .logo-combo .logo-text span {
     font-size: .62rem;
   }
-  .logo.logo-combo .logo-text strong {
-    font-size: 1.14rem;
+  .logo-combo .logo-text strong {
+    font-size: 1.18rem;
   }
 }
