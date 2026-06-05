@@ -485,6 +485,7 @@ button, input, textarea { font: inherit; }
   position: absolute;
   z-index: -4;
   inset: -70px -45px -70px -45px;
+  display: block;
   width: calc(100% + 90px);
   height: calc(100% + 140px);
   max-width: none;
@@ -493,6 +494,12 @@ button, input, textarea { font: inherit; }
   transform: translate3d(0, var(--parallax-y, 0), 0) scale(1.03);
   filter: saturate(.92) contrast(1.05);
   transition: transform .12s linear;
+}
+.industrial-hero-fallback {
+  z-index: -5;
+}
+.industrial-hero-video {
+  background: #10171c url("/assets/hero-ostrava-industrial.webp") center / cover no-repeat;
 }
 .industrial-hero::after {
   position: absolute;
@@ -694,6 +701,8 @@ button, input, textarea { font: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .industrial-hero-video { display: none; }
+  .industrial-hero-fallback { z-index: -4; }
 }
 
 /* Shared industrial treatment for inner pages */

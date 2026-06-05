@@ -1,8 +1,14 @@
 const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".nav-links");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const heroVideo = document.querySelector("[data-hero-video]");
 
 document.documentElement.classList.add("js-enabled");
+
+if (reduceMotion && heroVideo) {
+  heroVideo.removeAttribute("autoplay");
+  heroVideo.pause();
+}
 
 const marquee = document.querySelector(".city-marquee");
 const marqueeTrack = marquee?.querySelector(".city-marquee-track");
@@ -240,7 +246,7 @@ if (!reduceMotion) {
   window.addEventListener("scroll", revealPassedItems, { passive: true });
 
   const parallaxImage = document.querySelector("[data-parallax]");
-  if (parallaxImage) {
+  if (parallaxImage && !reduceMotion) {
     window.addEventListener("scroll", () => {
       const offset = Math.min(window.scrollY * 0.12, 90);
       parallaxImage.style.setProperty("--parallax-y", `${offset}px`);

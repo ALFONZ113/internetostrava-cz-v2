@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#101318">
-  <link rel="stylesheet" href="/assets/styles.css?v=logo-original-3">
+  <link rel="stylesheet" href="/assets/styles.css?v=hero-video-1">
   <meta property="og:title" content="PODA internet Ostrava | Optický internet až 2 Gb/s">
   <meta property="og:description" content="Vyberte si PODA internet v Ostravě a ověřte dostupnost vybraného tarifu podle adresy.">
   <meta property="og:type" content="website">
@@ -96,7 +96,10 @@
 
   <main>
     <section class="hero industrial-hero">
-      <img class="industrial-hero-image" src="/assets/hero-ostrava-industrial.webp" alt="Industriální panorama inspirované Dolními Vítkovicemi v Ostravě" width="1586" height="992" fetchpriority="high" data-parallax>
+      <img class="industrial-hero-image industrial-hero-fallback" src="/assets/hero-ostrava-industrial.webp" alt="Industriální panorama inspirované Dolními Vítkovicemi v Ostravě" width="1586" height="992" fetchpriority="high">
+      <video class="industrial-hero-image industrial-hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/hero-ostrava-industrial.webp" aria-hidden="true" data-hero-video data-parallax>
+        <source src="/assets/hero-ostrava-clouds.webm" type="video/webm">
+      </video>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="network-pulse" aria-hidden="true">
         <span class="network-line line-a"></span>
@@ -343,7 +346,7 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý web obchodního zástupce PODA a.s.</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=brand-mark-1" defer></script>
+  <script src="/assets/main.js?v=hero-video-1" defer></script>
 </body>
 </html>
 
