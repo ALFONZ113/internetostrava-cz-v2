@@ -6,6 +6,22 @@ Also read `docs/CODEX-CONTEXT.md` at the start of a new Codex session. It
 contains the preserved context from the earlier project chats, owner
 preferences, recent commits, and current lead/SEO/design direction.
 
+## Working Principles
+
+Prefer careful, simple work over fast but noisy changes. For trivial tasks, use
+common sense, but keep these rules in mind:
+
+- State assumptions and uncertainties before implementation. If a request has
+  multiple plausible interpretations, name the tradeoff before choosing.
+- Prefer the smallest solution that solves the actual request. Do not add
+  speculative features, abstractions, or configurability that were not asked for.
+- Touch only files and lines that are needed for the user request. Do not
+  refactor, reformat, or clean unrelated code; only remove dead code created by
+  your own change.
+- Define how success will be checked, then verify it. For multi-step work, keep
+  each step tied to a concrete check such as `npm run check`, a targeted search,
+  or a focused browser/manual verification.
+
 Run:
 
 ```powershell
