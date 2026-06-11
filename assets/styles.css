@@ -59,7 +59,7 @@ button, input, textarea { font: inherit; }
   gap: 8px;
   margin-bottom: 18px;
   color: var(--teal);
-  font-size: .76rem;
+  font-size: .8rem;
   font-weight: 800;
   letter-spacing: .15em;
   text-transform: uppercase;
@@ -286,7 +286,7 @@ button, input, textarea { font: inherit; }
   color: white;
   font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
   font-size: clamp(2rem, 5vw, 3.15rem);
-  line-height: .98;
+  line-height: 1.1;
   letter-spacing: .02em;
   text-transform: uppercase;
 }
@@ -537,8 +537,8 @@ button, input, textarea { font: inherit; }
 .industrial-hero-inner { position: relative; min-height: 580px; }
 .industrial-hero .hero-copy { max-width: 715px; padding-top: 46px; color: white; }
 .industrial-hero .eyebrow { color: #f5b800; letter-spacing: .2em; }
-.industrial-hero h1 { color: white; font-size: clamp(4.2rem, 8vw, 8.5rem); line-height: .98; letter-spacing: .012em; }
-.industrial-hero h1 span { display: block; max-width: 800px; margin-top: 8px; color: #2c79c9; }
+.industrial-hero h1 { color: white; font-size: clamp(3.6rem, 7vw, 7rem); line-height: 1.08; letter-spacing: .012em; }
+.industrial-hero h1 span { display: block; max-width: 800px; margin-top: 8px; color: #3d8ad9; }
 .industrial-hero .lead { max-width: 590px; color: rgba(255,255,255,.84); font-size: 1.16rem; font-weight: 550; }
 .ostrava-stamp {
   display: grid;
@@ -630,7 +630,7 @@ button, input, textarea { font: inherit; }
 }
 .home-industrial #lokality .container { position: relative; }
 .home-industrial .section-head .eyebrow { color: #1763ad; }
-.home-industrial .section-head h2 { font-size: clamp(2.8rem, 5vw, 5.5rem); line-height: 1; }
+.home-industrial .section-head h2 { font-size: clamp(2.4rem, 4vw, 4.2rem); line-height: 1.1; }
 .home-industrial .price-card { border-radius: 0; border: 1px solid rgba(16,23,28,.28); background: rgba(255,255,255,.56); box-shadow: 8px 8px 0 rgba(16,23,28,.1); }
 .home-industrial .price-card.featured { border: 3px solid #1763ad; box-shadow: 9px 9px 0 #f5b800; }
 .home-industrial .tag { border-radius: 0; color: white; background: #1763ad; }
@@ -791,10 +791,10 @@ button, input, textarea { font: inherit; }
   display: none;
 }
 .industrial-page .subhero .container { position: relative; }
-.industrial-page .subhero h1 { max-width: 1080px; color: white; font-size: clamp(3.4rem, 7vw, 6.2rem); line-height: 1; }
-.industrial-page .subhero .lead { color: rgba(255,255,255,.75); }
+.industrial-page .subhero h1 { max-width: 1080px; color: white; font-size: clamp(3rem, 5.5vw, 5rem); line-height: 1.08; }
+.industrial-page .subhero .lead { color: rgba(255,255,255,.88); }
 .industrial-page .breadcrumbs { color: #f5b800; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
-.industrial-page .prose h2 { color: #10171c; line-height: .95; }
+.industrial-page .prose h2 { color: #10171c; line-height: 1.12; }
 .industrial-page .side-card { border-radius: 0; border-left: 5px solid #f5b800; background: #10171c; box-shadow: 8px 8px 0 rgba(23,99,173,.32); }
 .industrial-page .side-card .btn { color: #10171c; background: #f5b800; }
 .industrial-page .price-card { border-radius: 0; border-color: rgba(16,23,28,.28); background: rgba(255,255,255,.64); box-shadow: 8px 8px 0 rgba(16,23,28,.1); }
@@ -903,7 +903,7 @@ button, input, textarea { font: inherit; }
   .industrial-hero h1 {
     max-width: 620px;
     font-size: clamp(3.2rem, 12vw, 5.7rem);
-    line-height: .95;
+    line-height: 1.08;
   }
   .industrial-hero h1 span { margin-top: 4px; }
   .industrial-hero .lead {
@@ -937,7 +937,7 @@ button, input, textarea { font: inherit; }
   .city-marquee span { font-size: 1rem; }
   .home-industrial .section-head h2 {
     font-size: clamp(2.25rem, 9vw, 3.7rem);
-    line-height: 1.02;
+    line-height: 1.1;
   }
 
   .price-grid,
@@ -975,7 +975,7 @@ button, input, textarea { font: inherit; }
   }
   .industrial-page .subhero h1 {
     font-size: clamp(2.85rem, 11vw, 4.8rem);
-    line-height: .98;
+    line-height: 1.08;
   }
   .industrial-page .subhero .lead {
     max-width: 620px;
@@ -995,7 +995,7 @@ button, input, textarea { font: inherit; }
   .prose h2 {
     margin: 34px 0 12px;
     font-size: clamp(1.55rem, 6vw, 2.25rem);
-    line-height: 1.05;
+    line-height: 1.12;
   }
   .side-card {
     position: static;
@@ -1047,7 +1047,7 @@ button, input, textarea { font: inherit; }
   .industrial-hero { padding: 46px 0 28px; }
   .industrial-hero h1 {
     font-size: clamp(2.72rem, 13vw, 4.4rem);
-    line-height: .98;
+    line-height: 1.08;
   }
   .industrial-hero .lead { font-size: .96rem; }
   .industrial-hero .button-row {
@@ -1269,8 +1269,8 @@ button, input, textarea { font: inherit; }
   }
   .industrial-hero h1 {
     max-width: 680px;
-    font-size: clamp(4.15rem, 6.15vw, 7.25rem);
-    line-height: .9;
+    font-size: clamp(3.8rem, 5.6vw, 6.6rem);
+    line-height: 1.08;
   }
   .industrial-hero .lead {
     max-width: 560px;
@@ -1294,8 +1294,8 @@ button, input, textarea { font: inherit; }
 
   .home-industrial .section-head h2,
   .industrial-page .prose h2 {
-    font-size: clamp(2.25rem, 4.15vw, 4.55rem);
-    line-height: 1;
+    font-size: clamp(2.1rem, 3.2vw, 3.5rem);
+    line-height: 1.1;
   }
   .industrial-page .subhero {
     min-height: auto;
@@ -1304,7 +1304,7 @@ button, input, textarea { font: inherit; }
   .industrial-page .subhero h1 {
     max-width: 940px;
     font-size: clamp(3rem, 5.25vw, 5.15rem);
-    line-height: .98;
+    line-height: 1.08;
   }
   .industrial-page .subhero .lead {
     max-width: 720px;
@@ -1337,7 +1337,7 @@ button, input, textarea { font: inherit; }
   }
   .industrial-hero h1 {
     font-size: clamp(2.85rem, 10vw, 4.6rem);
-    line-height: .98;
+    line-height: 1.08;
   }
   .industrial-hero .lead {
     margin-top: 14px;
@@ -1348,7 +1348,7 @@ button, input, textarea { font: inherit; }
   .home-industrial .section-head h2,
   .industrial-page .subhero h1 {
     font-size: clamp(2.25rem, 8.5vw, 3.75rem);
-    line-height: 1.02;
+    line-height: 1.1;
   }
   .industrial-page .subhero {
     min-height: auto;
@@ -1366,7 +1366,7 @@ button, input, textarea { font: inherit; }
   }
   .industrial-hero h1 {
     font-size: clamp(2.35rem, 11vw, 3.55rem);
-    line-height: 1;
+    line-height: 1.08;
   }
   .industrial-hero .lead { font-size: .93rem; }
   .home-industrial .section-head h2,
@@ -1438,8 +1438,8 @@ button, input, textarea { font: inherit; }
   }
   .industrial-page .tariff-hero h1 {
     max-width: 980px;
-    font-size: clamp(3rem, 4.4vw, 5.2rem);
-    line-height: .94;
+    font-size: clamp(2.8rem, 4vw, 4.6rem);
+    line-height: 1.08;
   }
   .industrial-page .tariff-hero .lead {
     max-width: 740px;
