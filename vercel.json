@@ -18,8 +18,13 @@
   "redirects": [
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/internet-ostrava", "destination": "/", "permanent": true },
+    { "source": "/poda", "destination": "/poda-internet-ostrava/", "permanent": true },
     { "source": "/poda-internet", "destination": "/poda-internet-ostrava/", "permanent": true },
     { "source": "/poda-ostrava", "destination": "/poda-internet-ostrava/", "permanent": true },
+    { "source": "/poda-pokryti", "destination": "/poda-dostupnost/", "permanent": true },
+    { "source": "/poda-overeni-dostupnosti", "destination": "/poda-dostupnost/", "permanent": true },
+    { "source": "/poda-internet-karvina", "destination": "/poda-karvina/", "permanent": true },
+    { "source": "/internet-karvina", "destination": "/poda-karvina/", "permanent": true },
     { "source": "/poda-poruba", "destination": "/internet-ostrava-poruba/", "permanent": true },
     { "source": "/poda-internet-poruba", "destination": "/internet-ostrava-poruba/", "permanent": true },
     { "source": "/internet-poruba", "destination": "/internet-ostrava-poruba/", "permanent": true },

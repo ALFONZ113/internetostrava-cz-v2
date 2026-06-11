@@ -3,3 +3,4 @@
 concepts/
 server.out.log
 server.err.log
+.claude/settings.local.json
