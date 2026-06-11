@@ -10,6 +10,18 @@ if (reduceMotion && heroVideo) {
   heroVideo.pause();
 }
 
+if (heroVideo && !reduceMotion && window.matchMedia("(min-width: 861px)").matches) {
+  const videoSrc = heroVideo.getAttribute("data-video-src");
+  if (videoSrc && !heroVideo.querySelector("source")) {
+    const source = document.createElement("source");
+    source.src = videoSrc;
+    source.type = "video/webm";
+    heroVideo.appendChild(source);
+    heroVideo.load();
+    heroVideo.play()?.catch?.(() => {});
+  }
+}
+
 const marquee = document.querySelector(".city-marquee");
 const marqueeTrack = marquee?.querySelector(".city-marquee-track");
 const marqueeGroups = marqueeTrack ? [...marqueeTrack.querySelectorAll(".city-marquee-group")] : [];
@@ -219,6 +231,19 @@ document.querySelector(".mobile-lead-bar__verify")?.addEventListener("click", (e
   event.preventDefault();
   openLeadModal(event.currentTarget);
 });
+
+const pageLeadForms = [...document.querySelectorAll("[data-lead-form]")].filter((form) => !form.closest(".lead-modal"));
+if ("IntersectionObserver" in window && pageLeadForms.length) {
+  const visibleLeadForms = new Set();
+  const leadBarObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) visibleLeadForms.add(entry.target);
+      else visibleLeadForms.delete(entry.target);
+    });
+    document.body.classList.toggle("lead-form-visible", visibleLeadForms.size > 0);
+  }, { threshold: 0.2 });
+  pageLeadForms.forEach((form) => leadBarObserver.observe(form));
+}
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(".section, .section-compact, .city-marquee");

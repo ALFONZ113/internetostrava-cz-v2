@@ -95,9 +95,7 @@
   <main>
     <section class="hero industrial-hero">
       <img class="industrial-hero-image industrial-hero-fallback" src="/assets/hero-ostrava-industrial.webp" alt="Industriální panorama inspirované Dolními Vítkovicemi v Ostravě" width="1586" height="992" fetchpriority="high">
-      <video class="industrial-hero-image industrial-hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/hero-ostrava-industrial.webp" aria-hidden="true" data-hero-video data-parallax>
-        <source src="/assets/hero-ostrava-clouds.webm" type="video/webm">
-      </video>
+      <video class="industrial-hero-image industrial-hero-video" autoplay muted loop playsinline preload="metadata" poster="/assets/hero-ostrava-industrial.webp" aria-hidden="true" data-hero-video data-parallax data-video-src="/assets/hero-ostrava-clouds.webm"></video>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="network-pulse" aria-hidden="true">
         <span class="network-line line-a"></span>
@@ -233,6 +231,7 @@
           <span class="eyebrow">Jak to funguje</span>
           <h2>Nejdřív adresa. Potom řešení, které drží krok.</h2>
           <p class="lead" style="margin-top:18px">V Ostravě se mohou možnosti připojení lišit dům od domu. Proto nezačínáme slibem, ale ověřením.</p>
+          <p class="trust-line">Vaše ověření vyřídí osobně <strong>p. Terč</strong>, obchodní zástupce pro Ostravu a okolí. Ozveme se do 24 hodin v pracovní dny.</p>
         </div>
         <div class="steps">
           <div class="step"><div class="step-num">1</div><div><h3>Pošlete adresu</h3><p>Stačí ulice, číslo domu a kontakt, na kterém se vám můžeme ozvat.</p></div></div>
@@ -251,7 +250,7 @@
         </div>
         <div class="lead-panel">
           <h2>Ověřit adresu</h2>
-          <p>Krátký formulář stačí. Bez závazku.</p>
+          <p>Krátký formulář stačí. Bez závazku. Ozveme se do 24 hodin v pracovní dny.</p>
           <form name="overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
             <div class="form-grid">
               <div class="field hp-field" aria-hidden="true"><label for="home-website">Web</label><input id="home-website" name="website" tabindex="-1" autocomplete="off"></div>
@@ -317,7 +316,7 @@
       <button class="lead-modal__close" type="button" aria-label="Zavřít okno" data-close-lead-modal>×</button>
       <span class="eyebrow">Rychlé ověření</span>
       <h2 id="lead-modal-title">Ověřit adresu</h2>
-      <p>Pošlete adresu a telefon. Ozveme se s možnostmi pro váš dům.</p>
+      <p>Pošlete adresu a telefon. Ozveme se do 24 hodin v pracovní dny s možnostmi pro váš dům.</p>
       <form name="modal-overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
         <div class="form-grid">
           <input type="hidden" name="lead_type" value="availability">
