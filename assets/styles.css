@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Anton";
+  font-family: "Oswald";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url("/assets/fonts/anton-latin.woff2") format("woff2");
+  src: url("/assets/fonts/oswald-latin.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: "Anton";
+  font-family: "Oswald";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url("/assets/fonts/anton-latin-ext.woff2") format("woff2");
+  src: url("/assets/fonts/oswald-latin-ext.woff2") format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -284,7 +284,7 @@ button, input, textarea { font: inherit; }
 }
 .lead-modal__panel h2 {
   color: white;
-  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+  font-family: "Oswald", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
   font-size: clamp(2rem, 5vw, 3.15rem);
   line-height: 1.1;
   letter-spacing: .02em;
@@ -418,7 +418,7 @@ button, input, textarea { font: inherit; }
 .home-industrial .eyebrow,
 .home-industrial .stat strong,
 .home-industrial .price {
-  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+  font-family: "Oswald", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
   letter-spacing: .018em;
   text-transform: uppercase;
 }
@@ -552,7 +552,7 @@ button, input, textarea { font: inherit; }
   text-align: center;
   transform: rotate(-7deg);
 }
-.ostrava-stamp span { color: #f5b800; font-family: "Anton", Impact, "Arial Narrow", sans-serif; font-size: 1.75rem; letter-spacing: .06em; }
+.ostrava-stamp span { color: #f5b800; font-family: "Oswald", Impact, "Arial Narrow", sans-serif; font-size: 1.75rem; letter-spacing: .06em; }
 .ostrava-stamp small { max-width: 104px; margin-top: 6px; font-size: .58rem; font-weight: 850; letter-spacing: .17em; line-height: 1.45; }
 .hero-location {
   position: absolute;
@@ -566,7 +566,7 @@ button, input, textarea { font: inherit; }
   color: white;
 }
 .hero-location span, .hero-location small { font-family: "Arial Narrow", Arial, sans-serif; font-size: .67rem; font-weight: 800; letter-spacing: .16em; }
-.hero-location strong { margin: 7px 0; color: #f5b800; font-family: "Anton", Impact, "Arial Narrow", sans-serif; font-size: 2rem; letter-spacing: .08em; }
+.hero-location strong { margin: 7px 0; color: #f5b800; font-family: "Oswald", Impact, "Arial Narrow", sans-serif; font-size: 2rem; letter-spacing: .08em; }
 .hero-vertical {
   position: absolute;
   right: -80px;
@@ -591,14 +591,14 @@ button, input, textarea { font: inherit; }
 .industrial-stats { padding: 0; background: #10171c; color: white; }
 .industrial-stats .stats { width: 100%; max-width: none; border: 0; border-radius: 0; background: #10171c; box-shadow: none; }
 .industrial-stats .stat { position: relative; display: grid; min-height: 145px; padding: 30px 40px 27px 90px; align-content: center; border-color: rgba(255,255,255,.15); }
-.industrial-stats .stat b { position: absolute; left: 30px; top: 32px; color: #1763ad; font-family: "Anton", Impact, "Arial Narrow", sans-serif; font-size: 2.6rem; font-weight: 400; }
+.industrial-stats .stat b { position: absolute; left: 30px; top: 32px; color: #1763ad; font-family: "Oswald", Impact, "Arial Narrow", sans-serif; font-size: 2.6rem; font-weight: 400; }
 .industrial-stats .stat strong { color: white; font-size: 2.15rem; }
 .industrial-stats .stat span { color: rgba(255,255,255,.8); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
 .city-marquee { position: relative; overflow: hidden; border-top: 5px solid #f5b800; border-bottom: 1px solid rgba(16,23,28,.22); background: #d9d5cd; }
 .city-marquee::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 3px; content: ""; opacity: .7; background: linear-gradient(90deg, transparent 0 7%, #1763ad 21%, #1763ad 43%, transparent 62%); }
 .city-marquee-track { display: flex; width: max-content; align-items: center; color: #10171c; animation: city-scroll var(--city-scroll-duration, 34s) linear infinite; will-change: transform; }
 .city-marquee-group { display: flex; flex-shrink: 0; align-items: center; gap: 24px; padding: 12px 12px; }
-.city-marquee span { font-family: "Anton", Impact, "Arial Narrow", sans-serif; font-size: 1.25rem; letter-spacing: .09em; }
+.city-marquee span { font-family: "Oswald", Impact, "Arial Narrow", sans-serif; font-size: 1.25rem; letter-spacing: .09em; }
 .city-marquee i { color: #1763ad; font-size: .72rem; }
 
 .home-industrial .soft {
@@ -752,7 +752,7 @@ button, input, textarea { font: inherit; }
 .industrial-page h3,
 .industrial-page .btn,
 .industrial-page .price {
-  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+  font-family: "Oswald", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
   letter-spacing: .022em;
   text-transform: uppercase;
 }
@@ -1021,7 +1021,7 @@ button, input, textarea { font: inherit; }
     min-height: 52px;
     place-items: center;
     color: white;
-    font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+    font-family: "Oswald", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
     font-size: .96rem;
     letter-spacing: .04em;
     text-transform: uppercase;
@@ -1510,7 +1510,7 @@ button, input, textarea { font: inherit; }
 }
 .logo-combo .logo-text span,
 .logo-combo .logo-text strong {
-  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
+  font-family: "Oswald", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
   letter-spacing: .04em;
   text-transform: uppercase;
 }
