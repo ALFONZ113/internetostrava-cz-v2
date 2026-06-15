@@ -4,7 +4,8 @@
   "private": true,
   "description": "Static SEO-first website for internetostrava.cz",
   "scripts": {
-    "check": "node scripts/check-site.mjs"
+    "check": "node scripts/check-site.mjs",
+    "dev": "npx --yes http-server . -p 8080 --cors"
   }
 }
 
