@@ -27,7 +27,11 @@
   --line: #dce9e6;
   --shadow: 0 20px 60px rgba(8, 42, 58, .12);
   --radius: 24px;
-  --container: min(1180px, calc(100vw - 40px));
+  --container: min(1320px, calc(100vw - 56px));
+  --readable: 800px;
+}
+@media (min-width: 1600px) {
+  :root { --container: min(1440px, calc(100vw - 112px)); }
 }
 
 * { box-sizing: border-box; }
@@ -49,8 +53,8 @@ h3 { font-size: 1.35rem; letter-spacing: -.025em; }
 button, input, textarea { font: inherit; }
 
 .container { width: var(--container); margin-inline: auto; }
-.section { padding: 104px 0; }
-.section-compact { padding: 72px 0; }
+.section { padding: clamp(88px, 9vw, 140px) 0; }
+.section-compact { padding: clamp(60px, 6vw, 86px) 0; }
 .soft { background: var(--cream); }
 .deep { color: white; background: var(--deep); }
 .eyebrow {
@@ -338,6 +342,10 @@ button, input, textarea { font: inherit; }
 .prose h3 { margin: 28px 0 10px; }
 .prose p, .prose li { color: var(--ink-soft); }
 .prose ul { padding-left: 21px; }
+.content-grid .prose > p,
+.content-grid .prose > ul,
+.content-grid .prose > h2,
+.content-grid .prose > h3 { max-width: var(--readable); }
 .side-card { position: sticky; top: 106px; padding: 24px; border-radius: 20px; background: var(--ink); color: white; }
 .side-card p { margin: 10px 0 18px; color: #bfd5d9; font-size: .9rem; }
 .contact-list { display: grid; gap: 12px; padding: 0; list-style: none; }
@@ -1899,4 +1907,15 @@ body.lead-form-visible .mobile-lead-bar { display: none; }
       url("/assets/kontakt-hero-radnice.webp");
     background-position: center, 72% center;
   }
+}
+
+/* Tablet na výšku (620–860px): tarify a lokality 2 stĺpce namiesto 1 — lepšie využitie šírky */
+@media (min-width: 620px) and (max-width: 860px) {
+  .price-grid-four,
+  .tariffs-section .price-grid-four,
+  .price-grid,
+  .districts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .price-grid-four .price-card.featured { grid-column: auto; }
 }
