@@ -759,9 +759,9 @@ button, input, textarea { font: inherit; }
 
 /* Sidebar integration - clean, not clashing */
 .industrial-page .side-card {
-  background: #0f161b;
-  color: #eee;
-  border: 1px solid #f5b800;
+  background: #f7f4ec;
+  color: #1b2329;
+  border: 1px solid rgba(16,23,28,.16);
 }
 
 /* Global even distribution and alignment tweaks for the whole page */
@@ -963,9 +963,16 @@ button, input, textarea { font: inherit; }
   --lime: #f5b800;
   --cream: #e9e6df;
   --line: rgba(16, 23, 28, .2);
-  background-color: #e9e6df;
-  background-image: linear-gradient(rgba(16,23,28,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(16,23,28,.035) 1px, transparent 1px);
-  background-size: 36px 36px;
+  background-color: #e7e3dc;
+  background-image:
+    /* large soft blotches - old plaster / weathered concrete */
+    radial-gradient(ellipse 130% 85% at 18% 16%, rgba(185,170,140,.16) 0%, transparent 52%),
+    radial-gradient(ellipse 95% 115% at 82% 60%, rgba(150,135,105,.12) 0%, transparent 56%),
+    radial-gradient(ellipse 120% 90% at 50% 92%, rgba(120,110,90,.10) 0%, transparent 50%),
+    /* irregular aggregate specks - concrete texture, not regular grid */
+    repeating-radial-gradient(circle at 22% 28%, rgba(120,110,85,.04) 0 2.2px, transparent 4px 17px),
+    repeating-radial-gradient(circle at 68% 65%, rgba(105,95,72,.032) 0 1.8px, transparent 3.2px 21px);
+  background-size: 520px 380px, 580px 470px, 640px 420px, 17px 17px, 21px 21px;
 }
 .industrial-page::before {
   position: fixed;
@@ -984,8 +991,13 @@ button, input, textarea { font: inherit; }
 .industrial-page .btn,
 .industrial-page .price {
   font-family: "Oswald", Impact, Haettenschweiler, "Arial Narrow Bold", "Arial Narrow", sans-serif;
-  letter-spacing: .022em;
+  letter-spacing: .045em;
   text-transform: uppercase;
+}
+.industrial-page h1,
+.industrial-page h2,
+.industrial-page h3 {
+  line-height: 1.16;
 }
 .industrial-page .site-header {
   border-bottom: 1px solid rgba(255,255,255,.15);
@@ -1026,7 +1038,10 @@ button, input, textarea { font: inherit; }
 .industrial-page .subhero .lead { color: rgba(255,255,255,.88); }
 .industrial-page .breadcrumbs { color: #f5b800; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
 .industrial-page .prose h2 { color: #10171c; line-height: 1.12; }
-.industrial-page .side-card { border-radius: 0; border-left: 5px solid #f5b800; background: #10171c; box-shadow: 8px 8px 0 rgba(23,99,173,.32); }
+.industrial-page .side-card { border-radius: 0; border-left: 5px solid #f5b800; background: #f7f4ec; color: #1b2329; box-shadow: 7px 7px 0 rgba(16,23,28,.10); }
+.industrial-page .side-card h3 { color: #10171c; font-size: 1.05rem; letter-spacing: .03em; }
+.industrial-page .side-card p { color: #41505a; }
+.industrial-page .side-card a:not(.btn) { color: #1763ad; font-weight: 800; }
 .industrial-page .side-card .btn { color: #10171c; background: #f5b800; }
 .industrial-page .price-card { border-radius: 0; border-color: rgba(16,23,28,.28); background: rgba(255,255,255,.64); box-shadow: 8px 8px 0 rgba(16,23,28,.1); }
 .industrial-page .price-card.featured { border: 3px solid #1763ad; box-shadow: 9px 9px 0 #f5b800; }
@@ -1863,14 +1878,15 @@ body.lead-form-visible .mobile-lead-bar { display: none; }
 }
 
 .industrial-page .kontakt-hero {
-  min-height: 420px;
+  min-height: 440px;
   display: grid;
   align-items: center;
   background-image:
     linear-gradient(90deg, rgba(7,13,17,.95) 0%, rgba(7,13,17,.86) 36%, rgba(7,13,17,.3) 68%, rgba(7,13,17,.12) 100%),
     url("/assets/kontakt-hero-radnice.webp");
-  background-position: center, center;
+  background-position: center, 76% center;
   background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
 }
 .industrial-page .kontakt-hero::before { display: none; }
 .industrial-page .kontakt-hero h1,
