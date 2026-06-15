@@ -117,11 +117,13 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 24px; }
-.logo { display: inline-flex; align-items: center; gap: 11px; }
-.logo img { width: 42px; height: 42px; }
-.logo b { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em; color: #fff; font-size: 1.18rem; line-height: 1; }
-.logo b span { color: var(--signal); }
-.logo b small { color: var(--white-70); font-size: .62em; font-weight: 600; }
+.logo { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+.logo-favicon { width: 46px; height: 46px; border-radius: 10px; object-fit: cover; }
+.logo-text { display: grid; line-height: .86; color: #fff; }
+.logo-text > span, .logo-text strong { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.logo-text > span { font-size: .92rem; color: #fff; }
+.logo-text strong { color: #3d8ad9; font-size: 1.6rem; }
+.logo-text small { color: #fff; font-size: .44em; letter-spacing: 0; }
 .nav-links { display: flex; align-items: center; gap: 26px; }
 .nav-links a {
   font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .1em;
@@ -149,7 +151,7 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
   color: #fff; margin: 18px 0 0; max-width: 16ch;
   text-shadow: 0 4px 40px rgba(0,0,0,.5);
 }
-.hero h1 .accent { color: var(--signal); }
+.hero h1 .accent { color: #3d8ad9; }
 .hero .lead { color: var(--white-90); max-width: 46ch; margin-top: 22px; font-weight: 450; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; align-items: center; }
 .hero-callback { display: flex; gap: 8px; }
