@@ -87,7 +87,7 @@ p { margin: 0 0 1rem; }
 .eyebrow.dark { color: var(--steelblue-deep); }
 .eyebrow.dark::before { background: var(--steelblue-deep); }
 
-h2.title { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .035em; line-height: 1.14; font-size: clamp(2rem, 3.6vw, 3.1rem); margin: 14px 0 0; }
+h2.title { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .035em; line-height: 1.16; font-size: clamp(1.7rem, 2.9vw, 2.5rem); margin: 14px 0 0; max-width: 22ch; }
 h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; line-height: 1.2; font-size: 1.18rem; margin: 0; }
 .lead { font-size: clamp(1.08rem, 1.5vw, 1.26rem); line-height: 1.6; color: var(--ink-soft); max-width: 60ch; }
 .section-head { max-width: 720px; margin-bottom: clamp(34px, 4vw, 52px); }
@@ -170,7 +170,7 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 .hero-meta span { width: 6px; height: 6px; background: var(--signal); transform: rotate(45deg); }
 
 /* ---- stats strip ---- */
-.stats { background: var(--steel-900); color: #fff; }
+.stats { background-color: #131b22; background-image: linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.28)), url("/assets/tex-steel.png"); color: #fff; }
 .stats .grid { display: grid; grid-template-columns: repeat(3, 1fr); }
 .stat { padding: clamp(28px, 4vw, 46px) clamp(20px, 3vw, 40px); border-left: 1px solid rgba(255,255,255,.1); }
 .stat:first-child { border-left: 0; }
@@ -179,18 +179,37 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 .stat span { color: var(--white-70); font-size: .95rem; }
 
 /* ---- concrete sections ---- */
-.soft { background: var(--concrete); }
-.soft-2 { background: var(--concrete-2); }
-.concrete {
-  background-color: var(--concrete);
+/* svetlé betónové pásy */
+.soft, .concrete, .band-light {
+  background-color: #e7e1d6;
   background-image:
-    radial-gradient(ellipse 120% 80% at 15% 12%, rgba(185,170,140,.18) 0%, transparent 55%),
-    radial-gradient(ellipse 90% 110% at 85% 70%, rgba(150,135,105,.13) 0%, transparent 58%),
-    repeating-radial-gradient(circle at 25% 30%, rgba(120,110,85,.04) 0 2px, transparent 4px 18px);
-  background-size: 540px 380px, 600px 480px, 18px 18px;
+    linear-gradient(180deg, rgba(255,255,255,.35), rgba(0,0,0,.03)),
+    url("/assets/tex-concrete.png");
 }
-.divider-steel { height: 5px; background:
-  repeating-linear-gradient(135deg, var(--steel-900) 0 14px, var(--signal) 14px 17px, var(--steel-900) 17px 31px); }
+.soft-2 {
+  background-color: #efe9df;
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.4), rgba(0,0,0,.02)),
+    url("/assets/tex-concrete.png");
+}
+/* tmavé oceľové pásy */
+.band-dark {
+  background-color: #131b22;
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.28)),
+    url("/assets/tex-steel.png");
+  color: #fff;
+}
+.band-dark .title { color: #fff; }
+.band-dark .lead { color: rgba(255,255,255,.78); }
+.band-dark .note { color: rgba(255,255,255,.6); }
+.band-dark .step { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.12); }
+.band-dark .step h3 { color: #fff; }
+.band-dark .step p { color: rgba(255,255,255,.72); }
+.band-dark .trustline { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); }
+.band-dark .trustline p, .band-dark .trustline strong { color: #fff; }
+.divider-steel { height: 4px; background:
+  linear-gradient(90deg, var(--steelblue-deep), var(--signal) 60%, var(--steelblue-deep)); }
 
 /* ---- trust line ---- */
 .trustline {
