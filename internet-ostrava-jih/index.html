@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="cs">
 <head>
   <meta charset="utf-8">
@@ -11,13 +11,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#101318">
-  <link rel="stylesheet" href="/assets/styles.css?v=v2-3">
+  <meta name="theme-color" content="#0a0f13">
+  <link rel="stylesheet" href="/assets/redesign.css?v=r5">
   <meta property="og:title" content="Internet Ostrava-Jih | Hrabůvka, Zábřeh, Dubina, Výškovice">
   <meta property="og:description" content="Ověřte internet PODA pro adresu v obvodu Ostrava-Jih podle ulice a čísla domu.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://internetostrava.cz/internet-ostrava-jih/">
-  <meta property="og:image" content="https://internetostrava.cz/assets/hero-ostrava-industrial.webp">
+  <meta property="og:image" content="https://internetostrava.cz/assets/vitkovice-skyline.webp">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -48,32 +48,35 @@
   }
   </script>
 </head>
-<body class="industrial-page">
+<body class="home-redesign">
   <header class="site-header">
-    <div class="container nav">
-      <a class="logo logo-combo" href="/"><img class="logo-favicon" src="/assets/icon-192x192.png?v=logo-original-3" alt="" aria-hidden="true"><span class="logo-text"><span>INTERNET</span><strong>OSTRAVA<small>.CZ</small></strong></span></a>
+    <div class="wrap nav">
+      <a class="logo logo-combo" href="/" aria-label="Internet Ostrava domů"><img class="logo-favicon" src="/assets/icon-192x192.png?v=logo-original-3" alt="" aria-hidden="true"><span class="logo-text"><span>INTERNET</span><strong>OSTRAVA<small>.CZ</small></strong></span></a>
       <button class="nav-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false">☰</button>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Hlavní navigace">
         <a href="/poda-internet-ostrava/">PODA internet</a>
         <a href="/tarify/">Tarify</a>
         <a href="/dostupnost/">Dostupnost</a>
         <a href="/#lokality">Lokality</a>
         <a href="/kontakt/">Kontakt</a>
-        <a class="btn btn-small" href="/dostupnost/">Ověřit adresu</a>
+        <a class="btn btn-primary" href="/dostupnost/">Ověřit adresu</a>
       </nav>
     </div>
   </header>
   <main>
-    <section class="subhero photo-hero">
-      <div class="container">
+    <section class="subhero photo">
+      <img src="/assets/vitkovice-skyline.webp" alt="Panorama Ostravy s vysokou pecí a věží radnice" loading="eager">
+      <div class="scrim" aria-hidden="true"></div>
+      <div class="wrap">
         <div class="breadcrumbs"><a href="/">Domů</a> / Ostrava-Jih</div>
         <h1>Internet pro Ostravu-Jih.</h1>
         <p class="lead">Hrabůvka, Zábřeh, Dubina nebo Výškovice: zjistěte, jaké připojení připadá v úvahu na vaší přesné adrese.</p>
       </div>
     </section>
-    <section class="section">
-      <div class="container content-grid">
-        <article class="prose">
+
+    <section class="section concrete">
+      <div class="wrap page-grid">
+        <div class="prose">
           <h2>Krátká odpověď</h2>
           <p>Pro Hrabůvku, Zábřeh, Dubinu i Výškovice je nejlepší začít jednou stránkou Ostrava-Jih. Přesné možnosti internetu se pak ověřují podle ulice a čísla domu.</p>
           <h2>Jedna městská část, mnoho různých adres</h2>
@@ -82,26 +85,29 @@
           <p>Typickým požadavkem je stabilní připojení pro několik zařízení současně: práci, školu, streamování i běžný provoz domácnosti. Podle dostupnosti lze projít samostatný internet i kombinace s televizí.</p>
           <h2>Jak získat konkrétní odpověď</h2>
           <p>Pošlete adresu přes formulář. Místo obecného slibu dostanete informaci o tom, co lze na vašem místě skutečně řešit.</p>
-        </article>
-        <aside class="side-card">
+        </div>
+        <aside class="aside">
           <h3>Ověřit adresu na Jihu</h3>
           <p>Ulice a číslo domu nám umožní zjistit konkrétní možnosti.</p>
-          <a class="btn btn-lime" href="/dostupnost/">Ověřit adresu</a>
-          <p style="margin-top:16px"><a href="/poda-internet-ostrava/">PODA internet Ostrava</a></p>
+          <a class="btn btn-primary btn-block" href="/dostupnost/">Ověřit adresu →</a>
+          <div class="links">
+            <a href="/poda-internet-ostrava/">PODA internet Ostrava</a>
+            <a href="/tarify/">Tarify internetu</a>
+          </div>
         </aside>
       </div>
     </section>
   </main>
   <footer class="site-footer">
-    <div class="container">
+    <div class="wrap">
       <div class="footer-grid">
-        <div><img src="/assets/logo-industrial.svg?v=logo-original-3" alt="Internet Ostrava"><p>Tento web provozuje obchodní zástupce PODA a.s., nikoli samotná společnost PODA a.s.</p></div>
-        <div><h3>Lokality</h3><div class="footer-links"><a href="/internet-ostrava-poruba/">Ostrava-Poruba</a><a href="/internet-marianske-hory/">Mariánské Hory</a><a href="/internet-moravska-ostrava/">Moravská Ostrava</a></div></div>
-        <div><h3>Kontakt</h3><div class="footer-links"><a href="tel:+420730431313">730 431 313</a><a href="/kontakt/">Napsat nám</a></div></div>
+        <div><img src="/assets/logo-industrial.svg?v=logo-original-3" alt="Internet Ostrava"><p>Tento web provozuje autorizovaný obchodní zástupce PODA a.s., nikoli samotná společnost PODA a.s.</p></div>
+        <div><h4>Lokality</h4><div class="footer-links"><a href="/internet-ostrava-poruba/">Ostrava-Poruba</a><a href="/internet-marianske-hory/">Mariánské Hory</a><a href="/internet-moravska-ostrava/">Moravská Ostrava</a></div></div>
+        <div><h4>Kontakt</h4><div class="footer-links"><a href="tel:+420730431313">730 431 313</a><a href="/kontakt/">Napsat nám</a></div></div>
       </div>
-      <div class="footer-bottom">© 2026 InternetOstrava.cz</div>
+      <div class="footer-bottom">© 2026 InternetOstrava.cz · obchodní zástupce PODA a.s.</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=v2-3" defer></script>
+  <script src="/assets/main.js?v=r5" defer></script>
 </body>
 </html>
