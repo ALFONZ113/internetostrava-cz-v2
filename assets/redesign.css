@@ -449,6 +449,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .feature-item p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
 .band-dark .feature-item p { color: rgba(255,255,255,.72); }
 
+/* tarify ako veľké čísla v riadkoch */
+.btn-line { background: transparent; color: var(--ink); border-color: rgba(20,26,31,.38); }
+.btn-line:hover { border-color: var(--ink); background: var(--ink); color: #fff; }
+.tariff-rows { display: grid; margin-top: 4px; }
+.tariff-row { display: flex; align-items: center; gap: clamp(18px, 3vw, 36px); padding: clamp(22px, 2.8vw, 34px) 0; border-bottom: 1px solid rgba(20,26,31,.16); }
+.tariff-row:last-of-type { border-bottom: 0; }
+.tariff-row.feature { border-left: 4px solid var(--signal); padding-left: clamp(16px, 2vw, 26px); }
+.tariff-row .tprice { flex: 0 0 auto; min-width: 150px; }
+.tariff-row .tprice b { font-family: var(--display); font-weight: 700; font-size: clamp(2.4rem, 4.2vw, 3.3rem); line-height: .9; color: var(--ink); letter-spacing: -.01em; }
+.tariff-row .tprice b small { font-size: .4em; color: var(--ink-soft); font-weight: 600; letter-spacing: 0; }
+.tariff-row .tprice span { display: block; font-size: .8rem; color: #8a9097; margin-top: 6px; }
+.tariff-row .tinfo { flex: 1; min-width: 0; }
+.tariff-row .tname { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-size: 1.2rem; color: var(--ink); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tariff-row .ttag { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .62rem; color: var(--steel-900); background: var(--signal); padding: 3px 9px; }
+.tariff-row .tdesc { color: var(--ink-soft); font-size: .96rem; margin-top: 6px; }
+.tariff-row .tact { flex: 0 0 auto; }
+@media (max-width: 720px) {
+  .tariff-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .tariff-row .tact, .tariff-row .tact .btn { width: 100%; }
+}
+
 @media (max-width: 880px) {
   .page-grid { grid-template-columns: 1fr; }
   .aside { position: static; }
