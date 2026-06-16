@@ -409,6 +409,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .breadcrumbs a:hover { color: var(--signal); }
 .subhero h1 { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em; line-height: 1.1; font-size: clamp(2.3rem, 5vw, 4rem); max-width: 20ch; color: #fff; }
 .subhero .lead { color: rgba(255,255,255,.85); max-width: 60ch; margin-top: 16px; }
+.subhero.has-form { padding-block: clamp(36px, 5vw, 64px); }
+.subhero-form { display: grid; grid-template-columns: 1fr minmax(360px, 440px); gap: clamp(28px, 4vw, 60px); align-items: center; }
+.subhero-form .form-panel { background: rgba(8,12,16,.86); }
+@media (max-width: 920px) { .subhero-form { grid-template-columns: 1fr; } .subhero-form .form-panel { max-width: 560px; } }
 
 .page-grid { display: grid; grid-template-columns: minmax(0,1fr) 360px; gap: clamp(34px, 5vw, 64px); align-items: start; }
 .prose { max-width: var(--readable); }
