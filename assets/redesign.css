@@ -278,20 +278,32 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 .photoband .inner { padding-block: clamp(70px, 9vw, 120px); }
 
 /* form panel */
-.form-panel { background: rgba(10,15,19,.78); border: 1px solid rgba(255,255,255,.16); border-top: 4px solid var(--signal); backdrop-filter: blur(8px); padding: clamp(26px, 3vw, 40px); max-width: 520px; }
+.form-panel { background: rgba(10,15,19,.82); border: 1px solid rgba(255,255,255,.16); border-top: 4px solid var(--signal); backdrop-filter: blur(8px); padding: clamp(26px, 3vw, 40px); max-width: 520px; }
+.form-panel .eyebrow, .lead-modal__panel .eyebrow { font-size: .72rem; margin-bottom: 10px; }
 .form-panel h3 { color: #fff; font-size: 1.5rem; }
 .form-panel p { color: var(--white-70); font-size: .95rem; margin: 8px 0 20px; }
-.form-grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.form-grid { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
 .field { display: grid; gap: 6px; }
 .field.wide { grid-column: 1 / -1; }
-.field label { font-size: .78rem; font-weight: 600; letter-spacing: .04em; color: var(--white-70); text-transform: uppercase; }
+.field label { font-size: .76rem; font-weight: 600; letter-spacing: .05em; color: var(--white-70); text-transform: uppercase; }
+.field label small { color: rgba(255,255,255,.4); font-weight: 600; letter-spacing: 0; text-transform: none; }
+.input-wrap { position: relative; }
+.input-wrap > svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; pointer-events: none; color: rgba(255,255,255,.5); }
+.field.primary .input-wrap > svg { color: var(--signal); }
 .field input {
-  height: 50px; padding: 0 14px; background: rgba(255,255,255,.07);
+  width: 100%; height: 50px; padding: 0 14px; background: rgba(255,255,255,.07);
   border: 1px solid rgba(255,255,255,.24); border-radius: var(--radius); color: #fff; font: inherit;
+  transition: border-color .15s ease, box-shadow .15s ease;
 }
+.input-wrap input { padding-left: 42px; }
+.field.primary input { border-color: rgba(245,184,0,.55); }
 .field input::placeholder { color: rgba(255,255,255,.45); }
-.consent { grid-column: 1/-1; display: flex; gap: 10px; align-items: flex-start; font-size: .82rem; color: var(--white-70); }
-.consent a { color: var(--signal); }
+.field input:focus { outline: none; border-color: var(--signal); box-shadow: 0 0 0 3px rgba(245,184,0,.22); }
+.consent { grid-column: 1/-1; display: flex; gap: 10px; align-items: flex-start; font-size: .8rem; line-height: 1.5; color: var(--white-70); }
+.consent input { margin-top: 2px; flex: 0 0 auto; accent-color: var(--signal); width: 16px; height: 16px; }
+.consent a { color: var(--signal); text-decoration: underline; text-underline-offset: 2px; }
+.form-reassure { grid-column: 1/-1; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2px; color: rgba(255,255,255,.55); font-size: .78rem; }
+.form-reassure svg { width: 16px; height: 16px; color: var(--signal); flex: 0 0 auto; }
 .hp-field { position: absolute; left: -9999px; }
 
 /* ---- lokality ---- */
