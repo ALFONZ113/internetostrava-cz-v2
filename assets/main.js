@@ -15,7 +15,7 @@ if (heroVideo && !reduceMotion && window.matchMedia("(min-width: 861px)").matche
   if (videoSrc && !heroVideo.querySelector("source")) {
     const source = document.createElement("source");
     source.src = videoSrc;
-    source.type = "video/webm";
+    source.type = videoSrc.endsWith(".webm") ? "video/webm" : "video/mp4";
     heroVideo.appendChild(source);
     heroVideo.load();
     heroVideo.play()?.catch?.(() => {});
