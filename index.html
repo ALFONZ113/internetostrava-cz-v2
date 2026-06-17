@@ -13,7 +13,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a0f13">
   <link rel="preload" as="image" href="/assets/hero-vitkovice-night.webp">
-  <link rel="stylesheet" href="/assets/redesign.css?v=r7">
+  <link rel="stylesheet" href="/assets/redesign.css?v=r8">
   <meta property="og:title" content="Internet Ostrava – optické připojení až 2 Gb/s">
   <meta property="og:description" content="Rychlý internet v Ostravě a okolí. Ověřte dostupnost optického připojení na vaší adrese.">
   <meta property="og:type" content="website">
@@ -168,17 +168,17 @@
           <div class="tariff-row feature">
             <div class="tprice"><b>300 <small>Kč</small></b><span>/ měsíc</span></div>
             <div class="tinfo"><div class="tname">Giga 1000 + TV <span class="ttag">Oblíbená</span></div><div class="tdesc">optický internet · základní televizní balíček · až 1 000 / 1 000 Mb/s</div></div>
-            <div class="tact"><a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal>Objednat</a></div>
+            <div class="tact"><a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV" data-tariff-price="300 Kč / měsíc">Objednat</a></div>
           </div>
           <div class="tariff-row">
             <div class="tprice"><b>440 <small>Kč</small></b><span>/ měsíc</span></div>
             <div class="tinfo"><div class="tname">Giga 1000 + TV 10</div><div class="tdesc">optický internet · televize s výběrem 10 programů · až 1 000 / 1 000 Mb/s</div></div>
-            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal>Objednat</a></div>
+            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV 10" data-tariff-price="440 Kč / měsíc">Objednat</a></div>
           </div>
           <div class="tariff-row">
             <div class="tprice"><b>570 <small>Kč</small></b><span>/ měsíc</span></div>
             <div class="tinfo"><div class="tname">Giga 2000</div><div class="tdesc">samostatný internet · pro více zařízení a náročný provoz · až 2 000 / 2 000 Mb/s</div></div>
-            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal>Objednat</a></div>
+            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 2000" data-tariff-price="570 Kč / měsíc">Objednat</a></div>
           </div>
         </div>
         <p class="note">Hledáte levnější nebo senior variantu? Připravíme individuální nabídku. Dostupnost vybraného tarifu a technické možnosti zapojení potvrdíme pro přesnou adresu.</p>
@@ -334,12 +334,18 @@
     <div class="lead-modal__backdrop" data-close-lead-modal></div>
     <section class="lead-modal__panel" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
       <button class="lead-modal__close" type="button" aria-label="Zavřít okno" data-close-lead-modal>×</button>
-      <span class="eyebrow">Rychlé ověření</span>
-      <h3 id="lead-modal-title">Ověřit adresu</h3>
-      <p>Pošlete adresu a telefon. Ozveme se do 30 minut s možnostmi pro váš dům.</p>
+      <span class="eyebrow" data-modal-eyebrow>Rychlé ověření</span>
+      <h3 id="lead-modal-title" data-modal-title>Ověřit adresu</h3>
+      <p data-modal-intro>Pošlete adresu a telefon. Ozveme se do 30 minut s možnostmi pro váš dům.</p>
+      <div class="modal-tariff" data-modal-tariff hidden>
+        <span class="modal-tariff__label">Vybraný tarif</span>
+        <span class="modal-tariff__name" data-modal-tariff-name></span>
+        <span class="modal-tariff__price" data-modal-tariff-price></span>
+      </div>
       <form name="modal-overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
         <div class="form-grid">
-          <input type="hidden" name="lead_type" value="availability">
+          <input type="hidden" name="lead_type" value="availability" data-modal-type-input>
+          <input type="hidden" name="tarif" value="" data-modal-tariff-input>
           <div class="field hp-field" aria-hidden="true"><label for="modal-website">Web</label><input id="modal-website" name="website" tabindex="-1" autocomplete="off"></div>
           <div class="field primary wide">
             <label for="modal-address">Ulice a číslo domu</label>
@@ -370,6 +376,7 @@
     </section>
   </div>
 
-  <script src="/assets/main.js?v=r7" defer></script>
+  <script src="/assets/main.js?v=r8" defer></script>
 </body>
 </html>
+

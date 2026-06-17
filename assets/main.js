@@ -66,7 +66,55 @@ if (toggle && links) {
 
 const leadModal = document.querySelector("#lead-modal");
 const leadModalAddress = leadModal?.querySelector("#modal-address");
+const leadModalEyebrow = leadModal?.querySelector("[data-modal-eyebrow]");
+const leadModalTitle = leadModal?.querySelector("[data-modal-title]");
+const leadModalIntro = leadModal?.querySelector("[data-modal-intro]");
+const leadModalSubmit = leadModal?.querySelector("button[type='submit']");
+const leadModalTypeInput = leadModal?.querySelector("[data-modal-type-input]");
+const leadModalTariff = leadModal?.querySelector("[data-modal-tariff]");
+const leadModalTariffName = leadModal?.querySelector("[data-modal-tariff-name]");
+const leadModalTariffPrice = leadModal?.querySelector("[data-modal-tariff-price]");
+const leadModalTariffInput = leadModal?.querySelector("[data-modal-tariff-input]");
 let lastModalTrigger = null;
+
+const MODAL_PRESETS = {
+  availability: {
+    eyebrow: "Rychlé ověření",
+    title: "Ověřit adresu",
+    intro: "Pošlete adresu a telefon. Ozveme se do 30 minut s možnostmi pro váš dům.",
+    submit: "Odeslat nezávazný dotaz →",
+    leadType: "availability"
+  },
+  order: {
+    eyebrow: "Nezávazná objednávka",
+    title: "Objednat připojení",
+    intro: "Vyplňte adresu a telefon. Ozveme se do 30 minut, ověříme dostupnost na adrese a domluvíme zapojení. Odeslání vás k ničemu nezavazuje.",
+    submit: "Odeslat nezávaznou objednávku →",
+    leadType: "order"
+  }
+};
+
+function configureLeadModal(trigger) {
+  const intent = trigger?.dataset?.leadIntent === "order" ? "order" : "availability";
+  const preset = MODAL_PRESETS[intent];
+  if (leadModalEyebrow) leadModalEyebrow.textContent = preset.eyebrow;
+  if (leadModalTitle) leadModalTitle.textContent = preset.title;
+  if (leadModalIntro) leadModalIntro.textContent = preset.intro;
+  if (leadModalSubmit) leadModalSubmit.textContent = preset.submit;
+  if (leadModalTypeInput) leadModalTypeInput.value = preset.leadType;
+
+  const tariff = trigger?.dataset?.tariff;
+  const price = trigger?.dataset?.tariffPrice;
+  if (intent === "order" && tariff) {
+    if (leadModalTariffName) leadModalTariffName.textContent = tariff;
+    if (leadModalTariffPrice) leadModalTariffPrice.textContent = price || "";
+    if (leadModalTariffInput) leadModalTariffInput.value = price ? `${tariff} (${price})` : tariff;
+    if (leadModalTariff) leadModalTariff.hidden = false;
+  } else {
+    if (leadModalTariffInput) leadModalTariffInput.value = "";
+    if (leadModalTariff) leadModalTariff.hidden = true;
+  }
+}
 
 function closeLeadModal() {
   if (!leadModal) return;
@@ -79,6 +127,7 @@ function closeLeadModal() {
 function openLeadModal(trigger) {
   if (!leadModal) return;
   lastModalTrigger = trigger;
+  configureLeadModal(trigger);
   leadModal.hidden = false;
   document.body.classList.add("modal-open");
   links?.classList.remove("open");
@@ -127,12 +176,15 @@ function isCallbackLead(payload) {
 
 function buildMailto(payload) {
   const callback = isCallbackLead(payload);
-  const subject = callback
-    ? "Zpětné zavolání z InternetOstrava.cz"
-    : "Ověření dostupnosti internetu v Ostravě";
-  const intro = callback
-    ? "prosím o zpětné zavolání."
-    : "prosím o ověření dostupnosti internetu na adrese:";
+  const order = payload.lead_type === "order";
+  let subject;
+  if (callback) subject = "Zpětné zavolání z InternetOstrava.cz";
+  else if (order) subject = "Nezávazná objednávka z InternetOstrava.cz";
+  else subject = "Ověření dostupnosti internetu v Ostravě";
+  let intro;
+  if (callback) intro = "prosím o zpětné zavolání.";
+  else if (order) intro = "mám zájem o nezávaznou objednávku připojení na adrese:";
+  else intro = "prosím o ověření dostupnosti internetu na adrese:";
 
   const body = [
     "Dobrý den,",
@@ -140,6 +192,7 @@ function buildMailto(payload) {
     intro,
     callback ? "" : (payload.adresa || ""),
     "",
+    payload.tarif ? `Tarif: ${payload.tarif}` : "",
     `Telefon: ${payload.telefon || ""}`,
     `E-mail: ${payload.email || "neuveden"}`,
     payload.poznamka ? `Poznámka: ${payload.poznamka}` : "",

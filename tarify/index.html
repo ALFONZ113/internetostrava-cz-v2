@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tarify optického internetu Ostrava | Až 2 Gb/s</title>
   <meta name="description" content="Prohlédněte si tarify optického internetu pro Ostravu. Internet až 2 Gb/s, samostatně i s televizí. Dostupnost vybraného tarifu ověříme podle adresy.">
-  <link rel="canonical" href="https://internetostrava.cz/tarify/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><link rel="stylesheet" href="/assets/redesign.css?v=r7">
+  <link rel="canonical" href="https://internetostrava.cz/tarify/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><link rel="stylesheet" href="/assets/redesign.css?v=r8">
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -38,22 +38,22 @@
           <div class="tariff-row feature">
             <div class="tprice"><b>300 <small>Kč</small></b><span>/ měsíc</span></div>
             <div class="tinfo"><div class="tname">Giga 1000 + TV <span class="ttag">Oblíbená</span></div><div class="tdesc">optický internet · základní televizní balíček · až 1 000 / 1 000 Mb/s</div></div>
-            <div class="tact"><a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal>Objednat</a></div>
+            <div class="tact"><a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV" data-tariff-price="300 Kč / měsíc">Objednat</a></div>
           </div>
           <div class="tariff-row">
             <div class="tprice"><b>440 <small>Kč</small></b><span>/ měsíc</span></div>
             <div class="tinfo"><div class="tname">Giga 1000 + TV 10</div><div class="tdesc">optický internet · televize s výběrem 10 programů · kombinace připojení a zábavy</div></div>
-            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal>Objednat</a></div>
+            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV 10" data-tariff-price="440 Kč / měsíc">Objednat</a></div>
           </div>
           <div class="tariff-row">
             <div class="tprice"><b>570 <small>Kč</small></b><span>/ měsíc</span></div>
             <div class="tinfo"><div class="tname">Giga 2000</div><div class="tdesc">samostatný internet · více zařízení současně · pro náročný domácí provoz</div></div>
-            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal>Objednat</a></div>
+            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 2000" data-tariff-price="570 Kč / měsíc">Objednat</a></div>
           </div>
           <div class="tariff-row">
             <div class="tprice"><b style="font-size:clamp(1.5rem,2.6vw,2rem)">Na míru</b><span>podle potřeb</span></div>
             <div class="tinfo"><div class="tname">Individuální tarif</div><div class="tdesc">senior nebo individuální nabídka · možnost levnější varianty · internet i s televizí</div></div>
-            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal>Objednat</a></div>
+            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Individuální tarif" data-tariff-price="na míru">Objednat</a></div>
           </div>
         </div>
         <p class="note">Uvedené tarify jsou konkrétní možnosti výběru z aktuální nabídky. Dostupnost vybraného tarifu a technické možnosti zapojení potvrdíme pro přesnou adresu.</p>
@@ -105,12 +105,18 @@
     <div class="lead-modal__backdrop" data-close-lead-modal></div>
     <section class="lead-modal__panel" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
       <button class="lead-modal__close" type="button" aria-label="Zavřít okno" data-close-lead-modal>×</button>
-      <span class="eyebrow">Rychlé ověření</span>
-      <h3 id="lead-modal-title">Ověřit adresu</h3>
-      <p>Pošlete adresu a telefon. Ozveme se do 30 minut s možnostmi pro váš dům.</p>
+      <span class="eyebrow" data-modal-eyebrow>Rychlé ověření</span>
+      <h3 id="lead-modal-title" data-modal-title>Ověřit adresu</h3>
+      <p data-modal-intro>Pošlete adresu a telefon. Ozveme se do 30 minut s možnostmi pro váš dům.</p>
+      <div class="modal-tariff" data-modal-tariff hidden>
+        <span class="modal-tariff__label">Vybraný tarif</span>
+        <span class="modal-tariff__name" data-modal-tariff-name></span>
+        <span class="modal-tariff__price" data-modal-tariff-price></span>
+      </div>
       <form name="modal-overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
         <div class="form-grid">
-          <input type="hidden" name="lead_type" value="availability">
+          <input type="hidden" name="lead_type" value="availability" data-modal-type-input>
+          <input type="hidden" name="tarif" value="" data-modal-tariff-input>
           <div class="field hp-field" aria-hidden="true"><label for="modal-website">Web</label><input id="modal-website" name="website" tabindex="-1" autocomplete="off"></div>
           <div class="field primary wide">
             <label for="modal-address">Ulice a číslo domu</label>
@@ -141,6 +147,7 @@
     </section>
   </div>
 
-  <script src="/assets/main.js?v=r7" defer></script>
+  <script src="/assets/main.js?v=r8" defer></script>
 </body>
 </html>
+

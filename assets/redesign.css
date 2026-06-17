@@ -355,6 +355,11 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 .lead-modal__close { position: absolute; top: 12px; right: 14px; background: none; border: 0; color: var(--white-70); font-size: 1.8rem; cursor: pointer; }
 .lead-modal__panel h3 { color: #fff; font-size: 1.6rem; }
 .lead-modal__panel p { color: var(--white-70); margin: 8px 0 20px; }
+.modal-tariff { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; margin: 0 0 20px; padding: 12px 16px; background: rgba(255,255,255,.05); border-left: 3px solid var(--signal); }
+.modal-tariff[hidden] { display: none; }
+.modal-tariff__label { flex-basis: 100%; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--signal); }
+.modal-tariff__name { font-family: var(--display); font-size: 1.15rem; color: #fff; }
+.modal-tariff__price { color: var(--white-70); font-size: .95rem; }
 
 /* ---- focus ---- */
 a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--steelblue); outline-offset: 2px; }
