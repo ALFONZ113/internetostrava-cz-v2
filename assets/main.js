@@ -10,7 +10,7 @@ if (reduceMotion && heroVideo) {
   heroVideo.pause();
 }
 
-if (heroVideo && !reduceMotion && window.matchMedia("(min-width: 861px)").matches) {
+if (heroVideo && !reduceMotion) {
   const videoSrc = heroVideo.getAttribute("data-video-src");
   if (videoSrc && !heroVideo.querySelector("source")) {
     const source = document.createElement("source");
