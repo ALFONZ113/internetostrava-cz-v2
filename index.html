@@ -12,8 +12,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a0f13">
-  <link rel="preload" as="image" href="/assets/hero-clouds-poster.webp?v=r11">
-  <link rel="stylesheet" href="/assets/redesign.css?v=r11">
+  <meta name="geo.region" content="CZ-80">
+  <meta name="geo.placename" content="Ostrava">
+  <meta name="geo.position" content="49.8209;18.2625">
+  <meta name="ICBM" content="49.8209, 18.2625">
+  <link rel="preload" as="image" href="/assets/hero-clouds-poster.webp?v=r12">
+  <link rel="stylesheet" href="/assets/redesign.css?v=r12">
   <meta property="og:title" content="Internet Ostrava – optické připojení až 2 Gb/s">
   <meta property="og:description" content="Rychlý internet v Ostravě a okolí. Ověřte dostupnost optického připojení na vaší adrese.">
   <meta property="og:type" content="website">
@@ -31,6 +35,7 @@
         "url": "https://internetostrava.cz/",
         "description": "Nezávislý poradenský web pro ověření dostupnosti internetového připojení v Ostravě a okolí.",
         "telephone": "+420730431313",
+        "address": { "@type": "PostalAddress", "addressLocality": "Ostrava", "addressRegion": "Moravskoslezský kraj", "addressCountry": "CZ" },
         "areaServed": { "@type": "City", "name": "Ostrava" }
       },
       {
@@ -97,7 +102,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-media">
-        <video class="hero-video" data-hero-video data-video-src="/assets/hero-clouds.mp4?v=r11" poster="/assets/hero-clouds-poster.webp?v=r11" muted loop playsinline preload="none" aria-hidden="true" width="1264" height="720"></video>
+        <video class="hero-video" data-hero-video data-video-src="/assets/hero-clouds.mp4?v=r12" poster="/assets/hero-clouds-poster.webp?v=r12" muted loop playsinline preload="none" aria-hidden="true" width="1264" height="720"></video>
       </div>
       <div class="hero-scrim" aria-hidden="true"></div>
       <div class="wrap hero-inner">
@@ -114,6 +119,7 @@
             <button class="btn btn-ghost" type="submit">Zavolejte mi</button>
           </form>
         </div>
+        <p class="hero-altlink">Nevíte, který tarif vybrat? <a href="/tarify/">Prohlédněte si tarify a ceny →</a></p>
         <div class="hero-meta">
           <b>Srdce města</b><span aria-hidden="true"></span>Ostrava<span aria-hidden="true"></span>49°50′N · 18°17′E
         </div>
@@ -376,7 +382,7 @@
     </section>
   </div>
 
-  <script src="/assets/main.js?v=r11" defer></script>
+  <script src="/assets/main.js?v=r12" defer></script>
 </body>
 </html>
 

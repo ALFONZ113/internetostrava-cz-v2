@@ -154,6 +154,9 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 .hero h1 .accent { color: #3d8ad9; }
 .hero .lead { color: var(--white-90); max-width: 46ch; margin-top: 22px; font-weight: 450; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; align-items: center; }
+.hero-altlink { margin-top: 18px; color: var(--white-70); font-size: .96rem; }
+.hero-altlink a { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--signal); }
+.hero-altlink a:hover { color: var(--signal); }
 .hero-callback { display: flex; gap: 8px; }
 .hero-callback input {
   height: 52px; width: 190px; padding: 0 16px;

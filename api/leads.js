@@ -25,7 +25,8 @@ function buildEmailHtml(lead) {
   return `
     <h2>Novy lead z InternetOstrava.cz</h2>
     <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">
-      ${row("Typ", lead.type === "callback" ? "Zpetne zavolani" : "Overeni dostupnosti")}
+      ${row("Typ", lead.type === "callback" ? "Zpetne zavolani" : lead.type === "order" ? "Nezavazna objednavka" : "Overeni dostupnosti")}
+      ${row("Tarif", lead.tarif)}
       ${row("Adresa", lead.address)}
       ${row("Telefon", lead.phone)}
       ${row("E-mail", lead.email)}
@@ -44,6 +45,8 @@ async function sendResendEmail(lead) {
 
   const subject = lead.type === "callback"
     ? `Zpetne zavolani: ${lead.phone || "novy kontakt"}`
+    : lead.type === "order"
+    ? `Nezavazna objednavka: ${lead.tarif || lead.address || "novy lead"}`
     : `Overeni internetu: ${lead.address || "nova adresa"}`;
 
   const response = await fetch("https://api.resend.com/emails", {
@@ -96,6 +99,7 @@ module.exports = async function handler(request, response) {
 
     const lead = {
       type: cleanText(payload.lead_type || payload.type, 40) || "availability",
+      tarif: cleanText(payload.tarif, 160),
       address: cleanText(payload.adresa || payload.address, 220),
       phone: cleanText(payload.telefon || payload.phone, 80),
       email: cleanText(payload.email, 160),
