@@ -11,7 +11,15 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="logo logo-combo" href="/" aria-label="Internet Ostrava domů"><img class="logo-favicon" src="/assets/icon-192x192.png?v=logo-original-3" alt="" aria-hidden="true"><span class="logo-text"><span>INTERNET</span><strong>OSTRAVA<small>.CZ</small></strong></span></a>
-      <nav class="nav-links" aria-label="Hlavní navigace"><a class="btn btn-ghost" href="tel:+420730431313">730 431 313</a></nav>
+      <button class="nav-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Hlavní navigace">
+        <a href="/tarify/">Tarify</a>
+        <a href="/dostupnost/">Dostupnost</a>
+        <a href="/#lokality">Lokality</a>
+        <a href="/kontakt/">Kontakt</a>
+        <a class="btn btn-ghost" href="tel:+420730431313">730 431 313</a>
+        <a class="btn btn-primary" href="/dostupnost/">Ověřit adresu</a>
+      </nav>
     </div>
   </header>
   <main>
@@ -29,9 +37,15 @@
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <div class="footer-bottom" style="border:0;margin:0;padding:0">© 2026 InternetOstrava.cz · Nezávislý poradenský web pro připojení v Ostravě</div>
+      <div class="footer-grid">
+        <div><a class="logo logo-combo footer-logo" href="/" aria-label="Internet Ostrava domů"><img class="logo-favicon" src="/assets/icon-192x192.png?v=logo-original-3" alt="" aria-hidden="true"><span class="logo-text"><span>INTERNET</span><strong>OSTRAVA<small>.CZ</small></strong></span></a><p>Nezávislý poradenský web pro připojení v Ostravě a okolí.</p></div>
+        <div><h4>Kontakt</h4><div class="footer-links"><a href="tel:+420730431313">730 431 313</a><a href="/kontakt/">Napsat nám</a></div></div>
+        <div><h4>Informace</h4><div class="footer-links"><a href="/tarify/">Tarify</a><a href="/dostupnost/">Dostupnost</a></div></div>
+      </div>
+      <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý poradenský web pro připojení v Ostravě</div>
     </div>
   </footer>
+  <script src="/assets/main.js?v=r12" defer></script>
 </body>
 </html>
 
