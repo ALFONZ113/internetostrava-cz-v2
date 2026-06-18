@@ -25,14 +25,20 @@ Potom počkať na propagáciu (rádovo minúty až hodiny). Vercel automaticky v
 
 > Po nábehu over: `https://internetostrava.cz` aj `https://www.internetostrava.cz` (www → apex), zámok HTTPS, a že sa načíta nový web.
 
-## 3. Env premenné pre leady (Vercel → Settings → Environment Variables)
-Aby objednávky/overenia chodili e-mailom automaticky:
-- `LEAD_TO_EMAIL` = `terc@poda.cz` (kam chodia leady)
-- `RESEND_API_KEY` = API kľúč z [resend.com](https://resend.com) — **a v Resend overiť odosielaciu doménu** (aby fungoval odosielateľ `leady@internetostrava.cz`).
+## 3. Resend — e-mailové doručovanie leadov
+Aby objednávky/overenia chodili automaticky e-mailom (nie cez mailto), nastav Resend:
 
-Bez `RESEND_API_KEY` web stále funguje — formulár sa prepne na **mailto fallback** (otvorí poštový program s vyplnenými údajmi a používateľ odoslanie potvrdí). Pre plynulý zber leadov je ale lepšie Resend nastaviť.
+1. **Účet:** registrácia na [resend.com](https://resend.com) (free: 100 e-mailov/deň, 3 000/mesiac — stačí).
+2. **Overenie domény:** Resend → *Domains → Add Domain* → `internetostrava.cz`. Resend vypíše DNS záznamy (SPF `TXT`, DKIM). Pridať ich u registrátora domény (rovnaké miesto ako DNS pre Vercel). Počkať na stav **Verified**. (Overuje sa len odosielateľská doména; príjemca nie.)
+3. **API kľúč:** Resend → *API Keys → Create* → skopírovať `re_…` (zobrazí sa raz).
+4. **Env premenné vo Verceli** (Settings → Environment Variables, Production):
+   - `RESEND_API_KEY` = `re_…`
+   - `LEAD_TO_EMAIL` = `terc@poda.cz` (kam chodia leady; neskôr napr. `info@internetostrava.cz`)
+   - `LEAD_FROM_EMAIL` = `Internet Ostrava <leady@internetostrava.cz>` (musí byť na overenej doméne)
+5. **Redeploy** (env sa prejaví až po novom nasadení).
+6. **Test:** odoslať formulár → skontrolovať, že e-mail dorazil aj s tarifom.
 
-> Po nastavení otestuj reálne odoslanie formulára (Objednať aj Ověřit adresu) a skontroluj, že e-mail dorazil na terc@poda.cz aj s tarifom.
+Bez `RESEND_API_KEY` web stále funguje — formulár sa prepne na **mailto fallback** (otvorí poštový program s vyplnenými údajmi a používateľ odoslanie potvrdí). Leady teda neuniknú ani počas nastavovania Resendu.
 
 ## 4. Vyhľadávače a indexácia
 - **Google Search Console** → pridať doménu `internetostrava.cz`, overiť (DNS TXT alebo HTML súbor), poslať **`https://internetostrava.cz/sitemap.xml`**.
