@@ -464,6 +464,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .aside .btn { width: 100%; }
 .aside .links { display: grid; gap: 10px; margin-top: 16px; }
 .aside .links a { color: var(--steelblue-deep); font-weight: 700; font-size: .95rem; }
+/* lokalitný bočný panel s formulárom */
+.aside-cta { display: grid; gap: 16px; position: sticky; top: 96px; align-self: start; }
+.aside-cta .form-panel { max-width: none; }
+.aside-links { display: grid; gap: 10px; padding-left: 4px; }
+.aside-links a { color: var(--steelblue-deep); font-weight: 700; font-size: .95rem; }
 
 .field textarea { min-height: 96px; padding: 12px 14px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.24); border-radius: var(--radius); color: #fff; font: inherit; resize: vertical; }
 .field textarea::placeholder { color: rgba(255,255,255,.45); }
@@ -511,6 +516,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 
 @media (max-width: 880px) {
   .page-grid { grid-template-columns: 1fr; }
-  .aside { position: static; }
+  .aside, .aside-cta { position: static; }
   .feature-grid { grid-template-columns: 1fr; }
 }
