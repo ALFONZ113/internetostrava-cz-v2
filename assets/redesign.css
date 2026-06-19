@@ -367,6 +367,30 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 .modal-tariff__name { font-family: var(--display); font-size: 1.15rem; color: #fff; }
 .modal-tariff__price { color: var(--white-70); font-size: .95rem; }
 
+/* ---- mobilná plávajúca lišta (rýchly kontakt) ---- */
+.mobile-lead-bar { display: none; }
+@media (max-width: 880px) {
+  body { padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px)); }
+  .mobile-lead-bar {
+    position: fixed; z-index: 60; left: 10px; right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    display: grid; grid-template-columns: 1fr 1.35fr; overflow: hidden;
+    border-radius: var(--radius); border: 1px solid rgba(255,255,255,.16);
+    box-shadow: 0 16px 40px rgba(0,0,0,.45);
+    transition: transform .3s ease, opacity .3s ease;
+  }
+  .mobile-lead-bar a {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 58px; padding: 0 12px; text-decoration: none;
+    font-family: var(--display); font-weight: 600; font-size: 1.02rem;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  .mobile-lead-bar a svg { width: 18px; height: 18px; flex: none; }
+  .mobile-lead-bar__call { background: var(--steelblue-deep); color: #fff; }
+  .mobile-lead-bar__verify { background: var(--signal); color: var(--steel-900); }
+  body.lead-form-visible .mobile-lead-bar { transform: translateY(calc(100% + 28px)); opacity: 0; pointer-events: none; }
+}
+
 /* ---- focus ---- */
 a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--steelblue); outline-offset: 2px; }
 
