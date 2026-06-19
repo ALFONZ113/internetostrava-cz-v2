@@ -309,6 +309,10 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 .consent a { color: var(--signal); text-decoration: underline; text-underline-offset: 2px; }
 .form-reassure { grid-column: 1/-1; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2px; color: rgba(255,255,255,.55); font-size: .78rem; }
 .form-reassure svg { width: 16px; height: 16px; color: var(--signal); flex: 0 0 auto; }
+.form-faq { grid-column: 1/-1; margin-top: 14px; border-top: 1px solid rgba(255,255,255,.12); }
+.form-faq__item { margin: 0; padding: 9px 0; font-size: .82rem; line-height: 1.45; color: var(--white-70); border-bottom: 1px solid rgba(255,255,255,.08); }
+.form-faq__item:last-child { border-bottom: 0; }
+.form-faq__item b { color: #fff; font-weight: 600; }
 .hp-field { position: absolute; left: -9999px; }
 
 /* ---- lokality ---- */

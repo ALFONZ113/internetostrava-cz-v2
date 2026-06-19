@@ -260,6 +260,18 @@ document.querySelectorAll("[data-lead-form], [data-email-form]").forEach((form) 
   });
 });
 
+const FORM_FAQ_HTML = `
+  <div class="form-faq" aria-label="Časté dotazy k formuláři">
+    <p class="form-faq__item"><b>Je ověření zdarma?</b> Ano, nic neplatíte.</p>
+    <p class="form-faq__item"><b>Zavazuji se k něčemu?</b> Ne, je to nezávazné.</p>
+    <p class="form-faq__item"><b>Jak rychle se ozvete?</b> Do 30 minut.</p>
+  </div>`;
+document.querySelectorAll(".form-reassure").forEach((el) => {
+  if (!el.nextElementSibling?.classList?.contains("form-faq")) {
+    el.insertAdjacentHTML("afterend", FORM_FAQ_HTML);
+  }
+});
+
 document.querySelectorAll("a[href^='tel:']").forEach((link) => {
   link.addEventListener("click", () => {
     window.dataLayer?.push?.({ event: "phone_click", phone: link.getAttribute("href") });
