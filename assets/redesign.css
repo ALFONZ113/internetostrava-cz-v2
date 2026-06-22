@@ -318,12 +318,17 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
 /* ---- lokality ---- */
 .districts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .district {
-  display: block; padding: 26px 24px; background: var(--steel-900); color: #fff;
-  border-bottom: 4px solid var(--signal); transition: transform .2s ease, background .2s ease;
+  position: relative; isolation: isolate; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 210px; padding: 22px; color: #fff;
+  border-bottom: 4px solid var(--signal); transition: transform .2s ease;
 }
-.district:hover { transform: translateY(-6px); background: var(--steelblue-deep); }
-.district span { color: var(--white-70); font-size: .88rem; }
-.district h3 { margin: 10px 0 14px; color: #fff; font-size: 1.45rem; }
+.district img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .45s ease; }
+.district::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10,15,19,.2) 0%, rgba(10,15,19,.5) 50%, rgba(10,15,19,.88) 100%); }
+.district:hover { transform: translateY(-6px); }
+.district:hover img { transform: scale(1.06); }
+.district span { color: var(--white-90); font-size: .88rem; text-shadow: 0 1px 3px rgba(0,0,0,.4); }
+.district h3 { margin: 8px 0 12px; color: #fff; font-size: 1.45rem; text-shadow: 0 1px 4px rgba(0,0,0,.45); }
 .district b { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: var(--signal); }
 
 /* ---- človek z Ostravy ---- */
