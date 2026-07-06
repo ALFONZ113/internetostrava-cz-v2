@@ -1,4 +1,4 @@
-const LEAD_TO_EMAIL = process.env.LEAD_TO_EMAIL || "terc@poda.cz";
+const LEAD_TO_EMAIL = process.env.LEAD_TO_EMAIL || "terc@obchod.poda.cz";
 const LEAD_FROM_EMAIL = process.env.LEAD_FROM_EMAIL || "InternetOstrava.cz <leady@internetostrava.cz>";
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 

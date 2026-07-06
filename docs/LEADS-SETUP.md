@@ -7,14 +7,14 @@ Aktualni stav: web uz ma serverovy endpoint `/api/leads`, ale bez Resend klice b
 1. Navstevnik vyplni adresu, telefon, pripadne e-mail a poznamku.
 2. Frontend posle data na `/api/leads`.
 3. Pokud je ve Vercelu nastaveny `RESEND_API_KEY`, Vercel Function odesle e-mail s leadem.
-4. Pokud Resend jeste neni nastaveny, web otevre predvyplneny e-mail na `terc@poda.cz`.
+4. Pokud Resend jeste neni nastaveny, web otevre predvyplneny e-mail na `terc@obchod.poda.cz`.
 
 ## Vercel environment variables
 
 Nastavit v projektu ve Vercelu pro Production:
 
 - `RESEND_API_KEY` - API klic z Resend.
-- `LEAD_TO_EMAIL` - cilova adresa pro leady, aktualne `terc@poda.cz`.
+- `LEAD_TO_EMAIL` - cilova adresa pro leady, aktualne `terc@obchod.poda.cz`.
 - `LEAD_FROM_EMAIL` - overena odesilaci adresa v Resend, napr. `InternetOstrava.cz <leady@internetostrava.cz>`.
 
 `LEAD_FROM_EMAIL` musi byt domena/adresa, kterou Resend povoli odesilat. Dokud domena neni overena, pouzij schvalenou testovaci adresu podle Resend nastaveni.

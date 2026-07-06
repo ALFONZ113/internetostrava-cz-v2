@@ -7,7 +7,7 @@ Web je připravený jako rychlý statický projekt pro GitHub a Vercel. Nepotře
 Pošlete Codexu odpovědi:
 
 1. Je správný telefon `+420 730 431 313`?
-2. Je správný e-mail `terc@poda.cz`?
+2. Je správný e-mail `terc@obchod.poda.cz`?
 3. Kdo je právně správce osobních údajů: jméno nebo firma, adresa a IČO?
 4. Jsou ceny `300 Kč`, `440 Kč` a `570 Kč` stále aktuální a smíte je na webu publikovat?
 5. Je formulace „obchodní zástupce PODA a.s.“ přesná?

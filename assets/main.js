@@ -201,7 +201,7 @@ function buildMailto(payload) {
     "Odesláno z webu InternetOstrava.cz"
   ].filter(Boolean).join("\n");
 
-  return `mailto:terc@poda.cz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return `mailto:terc@obchod.poda.cz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 function getFormStatus(form) {

@@ -33,7 +33,7 @@ Aby objednávky/overenia chodili automaticky e-mailom (nie cez mailto), nastav R
 3. **API kľúč:** Resend → *API Keys → Create* → skopírovať `re_…` (zobrazí sa raz).
 4. **Env premenné vo Verceli** (Settings → Environment Variables, Production):
    - `RESEND_API_KEY` = `re_…`
-   - `LEAD_TO_EMAIL` = `terc@poda.cz` (kam chodia leady; neskôr napr. `info@internetostrava.cz`)
+   - `LEAD_TO_EMAIL` = `terc@obchod.poda.cz` (kam chodia leady; neskôr napr. `info@internetostrava.cz`)
    - `LEAD_FROM_EMAIL` = `Internet Ostrava <leady@internetostrava.cz>` (musí byť na overenej doméne)
 5. **Redeploy** (env sa prejaví až po novom nasadení).
 6. **Test:** odoslať formulár → skontrolovať, že e-mail dorazil aj s tarifom.

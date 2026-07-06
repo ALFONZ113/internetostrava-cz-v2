@@ -6,7 +6,7 @@ Statický český web obchodního zástupce pro prodej internetového připojen�
 
 Majitel webu je obchodní zástupce PODA a.s. PODA mu **zakázala používat značku PODA v Google Ads**. Web je proto rozdělen:
 
-**Ads zóna — slovo „PODA" se NIKDY nesmí objevit** v textu, title, meta, OG, JSON-LD schema, navigaci ani patičce (včetně e-mailu terc@poda.cz, doména obsahuje „poda"):
+**Ads zóna — slovo „PODA" se NIKDY nesmí objevit** v textu, title, meta, OG, JSON-LD schema, navigaci ani patičce (včetně e-mailu terc@obchod.poda.cz, doména obsahuje „poda"):
 - `/` (index.html), `/tarify/`, `/dostupnost/`, `/kontakt/`, `/dekujeme/`, `/ochrana-udaju/`, `404.html`
 - Patička: „Nezávislý poradenský web pro připojení v Ostravě a okolí."
 - Tarify zde mají neutrální názvy: Giga 1000 + TV, Giga 1000 + TV 10 programů, Giga 2000
@@ -22,7 +22,7 @@ Při jakékoli úpravě stránky nejdřív urči, do které zóny patří. Po ú
 
 ## Obchodní fakta (neměnit bez potvrzení majitele)
 
-- Kontakt: telefon 730 431 313; leady chodí na terc@poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js)
+- Kontakt: telefon 730 431 313; leady chodí na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js)
 - Ceny: 300 Kč (Giga 1000 + TV), 440 Kč (Giga 1000 + TV 10 programů), 570 Kč (Giga 2000)
 - Žádné nepodložené superlativy, procenta pokrytí, falešné recenze ani review schema (viz .agents/skills/build-internetostrava-site/references/publishing-rules.md)
 - Vždy komunikovat, že dostupnost a finální nabídka se ověřují podle přesné adresy

@@ -7,7 +7,7 @@ Checked on 2026-06-02 from the owner's public websites and sitemap files:
 - Existing owner websites: `https://overdostupnost.cz/` and `https://www.popri.cz/`
 - Main conversion contact shown on the owner's website:
   - phone: `+420 730 431 313`
-  - email: `terc@poda.cz`
+  - email: `terc@obchod.poda.cz`
 - Public offer inputs currently used in this draft:
   - `1 Giga + TV Basic`: `300 Kč / měsíc`
   - `1 Giga + TV Mých 10`: `440 Kč / měsíc`
