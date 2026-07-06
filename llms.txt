@@ -11,6 +11,7 @@
 - [Availability verification](https://internetostrava.cz/dostupnost/): non-binding form for checking an Ostrava address
 - [Tariffs](https://internetostrava.cz/tarify/): indicative options subject to address verification
 - [Contact](https://internetostrava.cz/kontakt/): representative contact details
+- [How to check optical internet availability](https://internetostrava.cz/jak-zjistit-dostupnost-internetu-ostrava/): step-by-step guide explaining how availability is verified for an exact address in Ostrava and what the result means
 - [Ostrava-Poruba](https://internetostrava.cz/internet-ostrava-poruba/): local page for checking PODA internet options in Poruba
 - [Ostrava-Jih](https://internetostrava.cz/internet-ostrava-jih/): local page for Hrabuvka, Zabreh, Dubina, Vyskovice, and nearby addresses
 - [Marianské Hory](https://internetostrava.cz/internet-marianske-hory/): local page for Marianské Hory and wider central Ostrava

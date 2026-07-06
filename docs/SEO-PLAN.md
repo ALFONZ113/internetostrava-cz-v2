@@ -32,7 +32,7 @@ Kontrolováno 2026-06-02:
 
 Publikovat postupně podle Search Console dotazů:
 
-1. Jak zjistit dostupnost optického internetu na konkrétní adrese v Ostravě
+1. ~~Jak zjistit dostupnost optického internetu na konkrétní adrese v Ostravě~~ (publikováno 2026-07-06)
 2. Optika vs. bezdrátové připojení v ostravském bytě
 3. Jak vybrat internet pro home office v Ostravě
 4. Jakou rychlost internetu potřebuje domácnost s více zařízeními
@@ -101,3 +101,10 @@ Pozn.: leady nadale chodi na terc@poda.cz (api/leads.js, env LEAD_TO_EMAIL; fall
 - Doplneno BreadcrumbList schema na lokalni stranky bez breadcrumb structured data.
 - Pridany kanonicke Vercel redirecty pro kratke aliasy misto tvorby duplicitnich keyword stranek.
 - Aktualizovan `sitemap.xml` pro upravene lokalni stranky a `llms.txt` s poznamkou o alias presmerovanich.
+
+## Implementovano 2026-07-06 - Prvni clanek z obsahoveho backlogu
+
+- Publikovan navodovy clanek `/jak-zjistit-dostupnost-internetu-ostrava/` (backlog c. 1): proc rozhoduje presna adresa, co si pripravit, tri zpusoby overeni, vyznam vysledku a caste otazky. Article + BreadcrumbList schema, og:type article.
+- Stranka patri do Ads zony (nulovy vyskyt retezce "poda"), footer s neutralnim disclosure; CTA vede na /dostupnost/ a /tarify/.
+- Interni odkaz na clanek pridan do sekce "Overeni konkretniho domu" na /dostupnost/.
+- Aktualizovan `sitemap.xml` (priority 0.6) a `llms.txt`.
