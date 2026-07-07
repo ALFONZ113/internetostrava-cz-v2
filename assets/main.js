@@ -19,7 +19,26 @@ if (heroVideo && !reduceMotion) {
     heroVideo.appendChild(source);
     heroVideo.load();
     heroVideo.play()?.catch?.(() => {});
+    heroVideo.addEventListener("canplay", () => heroVideo.classList.add("is-ready"), { once: true });
   }
+}
+
+const CITY_MARQUEE_HTML = `
+  <div class="city-marquee" aria-hidden="true">
+    <div class="city-marquee-track">
+      <div class="city-marquee-group">
+        <span><i>&bull;</i> Ověření adresy zdarma</span>
+        <span><i>&bull;</i> Odpověď do 30 minut</span>
+        <span><i>&bull;</i> Nezávazná poptávka</span>
+        <span><i>&bull;</i> Optika i bez optiky &ndash; podle domu</span>
+        <span><i>&bull;</i> Bez skrytých poplatků za ověření</span>
+        <span><i>&bull;</i> Telefon 777 425 230</span>
+      </div>
+      <div class="city-marquee-group"></div>
+    </div>
+  </div>`;
+if (!document.querySelector(".city-marquee")) {
+  document.querySelector("main")?.insertAdjacentHTML("afterbegin", CITY_MARQUEE_HTML);
 }
 
 const marquee = document.querySelector(".city-marquee");
@@ -230,6 +249,7 @@ document.querySelectorAll("[data-lead-form], [data-email-form]").forEach((form) 
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = "Odesíláme...";
+      submitButton.classList.add("is-loading");
     }
 
     try {
@@ -255,6 +275,7 @@ document.querySelectorAll("[data-lead-form], [data-email-form]").forEach((form) 
       if (submitButton) {
         submitButton.disabled = false;
         submitButton.textContent = originalLabel;
+        submitButton.classList.remove("is-loading");
       }
     }
   });
@@ -343,4 +364,11 @@ if (!reduceMotion) {
       parallaxImage.style.setProperty("--parallax-y", `${offset}px`);
     }, { passive: true });
   }
+}
+
+const siteHeader = document.querySelector(".site-header");
+if (siteHeader) {
+  const toggleHeaderScrolled = () => siteHeader.classList.toggle("is-scrolled", window.scrollY > 40);
+  toggleHeaderScrolled();
+  window.addEventListener("scroll", toggleHeaderScrolled, { passive: true });
 }
