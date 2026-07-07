@@ -22,7 +22,8 @@ Při jakékoli úpravě stránky nejdřív urči, do které zóny patří. Po ú
 
 ## Obchodní fakta (neměnit bez potvrzení majitele)
 
-- Kontakt: telefon 730 431 313; leady chodí na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js)
+- Kontakt podle zóny — Ads/neutrální zóna: telefon 777 425 230, e-mail info@internetostrava.cz; PODA zóna: telefon 730 431 313, e-mail terc@obchod.poda.cz. Mobilní lišta v main.js přebírá telefon z tel: odkazu stránky.
+- Leady chodí na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js)
 - Ceny: 300 Kč (Giga 1000 + TV), 440 Kč (Giga 1000 + TV 10 programů), 570 Kč (Giga 2000)
 - Žádné nepodložené superlativy, procenta pokrytí, falešné recenze ani review schema (viz .agents/skills/build-internetostrava-site/references/publishing-rules.md)
 - Vždy komunikovat, že dostupnost a finální nabídka se ověřují podle přesné adresy
