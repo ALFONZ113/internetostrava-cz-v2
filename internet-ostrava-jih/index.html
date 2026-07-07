@@ -47,6 +47,24 @@
     "broker": { "@type": "Organization", "name": "InternetOstrava.cz", "url": "https://internetostrava.cz/" }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je dostupnost stejná v celém obvodu Ostrava-Jih?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Hrabůvka, Zábřeh, Dubina i Výškovice mají různé možnosti, které se ověřují podle konkrétní adresy." }
+      },
+      {
+        "@type": "Question",
+        "name": "Je formulář závazná objednávka?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Formulář slouží k nezávaznému ověření možností pro danou adresu." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -86,6 +104,11 @@
           <p>Typickým požadavkem je stabilní připojení pro několik zařízení současně: práci, školu, streamování i běžný provoz domácnosti. Podle dostupnosti lze projít samostatný internet i kombinace s televizí.</p>
           <h2>Jak získat konkrétní odpověď</h2>
           <p>Pošlete adresu přes formulář. Místo obecného slibu dostanete informaci o tom, co lze na vašem místě skutečně řešit.</p>
+          <h2>Časté dotazy</h2>
+          <div class="faq">
+            <details><summary>Je dostupnost stejná v celém obvodu Ostrava-Jih?<span aria-hidden="true"></span></summary><p>Ne. Hrabůvka, Zábřeh, Dubina i Výškovice mají různé možnosti, které se ověřují podle konkrétní adresy.</p></details>
+            <details><summary>Je formulář závazná objednávka?<span aria-hidden="true"></span></summary><p>Ne. Formulář slouží k nezávaznému ověření možností pro danou adresu.</p></details>
+          </div>
         </div>
         <aside class="aside-cta">
           <form class="form-panel" name="overeni-jih" action="/api/leads" method="post" data-lead-form>

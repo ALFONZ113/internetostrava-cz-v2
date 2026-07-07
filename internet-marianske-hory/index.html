@@ -41,6 +41,24 @@
     "broker": { "@type": "Organization", "name": "InternetOstrava.cz", "url": "https://internetostrava.cz/" }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Je dostupnost stejná v celých Mariánských Horách?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Byty i rodinné domy mohou mít různé možnosti, které se ověřují podle konkrétní adresy." }
+      },
+      {
+        "@type": "Question",
+        "name": "Je odeslání adresy závazná objednávka?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Je to první krok k tomu, abyste dostali konkrétní odpověď místo obecného seznamu tarifů." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -80,6 +98,11 @@
           <p>K ověření stačí adresa a telefonní kontakt. Pokud už víte, že doma používáte více zařízení, pracujete z domova nebo chcete kombinaci s televizí, napište to do poznámky. Pomůže to rychleji projít vhodné možnosti.</p>
           <h2>Nezávazné prověření</h2>
           <p>Odeslání adresy není objednávka. Je to první krok k tomu, abyste dostali konkrétní odpověď místo obecného seznamu tarifů.</p>
+          <h2>Časté dotazy</h2>
+          <div class="faq">
+            <details><summary>Je dostupnost stejná v celých Mariánských Horách?<span aria-hidden="true"></span></summary><p>Ne. Byty i rodinné domy mohou mít různé možnosti, které se ověřují podle konkrétní adresy.</p></details>
+            <details><summary>Je odeslání adresy závazná objednávka?<span aria-hidden="true"></span></summary><p>Ne. Je to první krok k tomu, abyste dostali konkrétní odpověď místo obecného seznamu tarifů.</p></details>
+          </div>
         </div>
         <aside class="aside-cta">
           <form class="form-panel" name="overeni-marianske-hory" action="/api/leads" method="post" data-lead-form>
