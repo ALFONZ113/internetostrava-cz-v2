@@ -99,6 +99,7 @@ h3 { font-family: var(--display); font-weight: 600; text-transform: uppercase; l
   min-height: 52px; padding: 0 26px;
   font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .92rem;
   border: 2px solid transparent; border-radius: var(--radius); cursor: pointer;
+  white-space: nowrap;
   transition: transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
 }
 .btn:active { transform: translateY(1px); }
@@ -408,7 +409,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
   .person { grid-template-columns: 1fr; }
   .person figure { max-width: 540px; }
 }
-@media (max-width: 880px) {
+@media (max-width: 1080px) {
   .nav-links {
     position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; align-items: stretch;
     gap: 0; background: var(--steel-900); border-top: 1px solid rgba(255,255,255,.1); padding: 8px; display: none;
@@ -417,6 +418,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
   .nav-links a { padding: 14px 12px; }
   .nav-links .btn { margin-top: 6px; }
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: transparent; border: 1px solid rgba(255,255,255,.3); color: #fff; font-size: 1.4rem; border-radius: var(--radius); cursor: pointer; }
+}
+@media (max-width: 880px) {
   .split, .value { grid-template-columns: 1fr; }
   .checklist { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 28px; }
   .band-dark .checklist { border-top-color: rgba(255,255,255,.2); }
