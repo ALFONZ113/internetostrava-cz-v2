@@ -18,6 +18,15 @@
 - [Vitkovice](https://internetostrava.cz/internet-ostrava-vitkovice/): local page for checking internet options in Vitkovice
 - [Slezska Ostrava](https://internetostrava.cz/internet-slezska-ostrava/): local page for checking internet options in Slezska Ostrava
 
+## Advice hub (Poradna)
+
+- [Poradna](https://internetostrava.cz/poradna/): practical guides for choosing internet service in Ostrava
+- [Fiber availability check guide](https://internetostrava.cz/poradna/dostupnost-optickeho-internetu-ostrava/): how fiber availability is verified per exact address and why neighbouring buildings differ
+- [Fiber vs. wireless comparison](https://internetostrava.cz/poradna/optika-vs-bezdratovy-internet/): stability, latency, symmetric upload, and weather resilience compared
+- [Internet for home office](https://internetostrava.cz/poradna/internet-pro-home-office-ostrava/): why stability and upload matter more than headline download speed
+- [Household speed guide](https://internetostrava.cz/poradna/jaka-rychlost-internetu-pro-domacnost/): indicative speed guidance by household size and usage
+- [Switching provider FAQ](https://internetostrava.cz/poradna/caste-otazky-pred-zmenou-poskytovatele/): correct order of steps to switch without downtime
+
 ## Canonical query aliases
 
 Short query-style paths such as `/poda-ostrava`, `/poda-poruba`, `/internet-poruba`, `/internet-hrabuvka`, and `/internet-zabreh` redirect to the closest canonical landing page instead of creating duplicate thin pages.

@@ -95,6 +95,23 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-07-13 - Poradna + reakce na konkurenta internet-ostrava.online
+
+Kontext: kolega/konkurent spustil `internet-ostrava.online` - "nezavisly pruvodce" s 97 URL (23 lokalit, poradna, sekce poskytovatelu vcetne PODA stranky s orientacnimi tarify, procenta pokryti). Jeho slabiny: zadny telefon/e-mail, zadna realna osoba, zadne realne ceny, pravdepodobne vymyslena procenta a recenze, relativni canonical, chybi FAQ/Service schema. Pouziva shodny URL vzor lokalit (`/internet-ostrava-poruba`).
+
+Implementovano (vse v Ads zone bez retezce "poda", krome Person schema na PODA hubu):
+
+- Nova sekce `/poradna/` (hub s ItemList schema) + 5 clanku z puvodniho backlogu:
+  `/poradna/dostupnost-optickeho-internetu-ostrava/`, `/poradna/optika-vs-bezdratovy-internet/`, `/poradna/internet-pro-home-office-ostrava/`, `/poradna/jaka-rychlost-internetu-pro-domacnost/`, `/poradna/caste-otazky-pred-zmenou-poskytovatele/`.
+  Kazdy clanek: answer-first blok pod H1 (`.answer-box`), porovnavaci tabulka (`.compare-table`), Article + FAQPage + BreadcrumbList schema, interni odkazy, aside lead formular.
+- Navigace: polozka "Poradna" ve vsech 16 strankach (nav i paticka obou zon).
+- Autenticita (diferenciace vuci anonymnimu konkurentovi): `/kontakt/` blok "Kdo se vam ozve a jak to probiha", homepage a `/dostupnost/` kroky doplneny o "mistni zastupce, ne call centrum", `/poda-internet-ostrava/` Person schema (Milan Terc, autorizovany obchodni zastupce).
+- 6 lokalnich stranek: doplnen unikatni odstavec o typu zastavby (sorela Poruba, panelove sidliste Jih, cinzaky Marianske Hory, centrum Moravska Ostrava, cihlova kolonie Vitkovice, rozptylena zastavba Slezska). Zadna procenta pokryti.
+- CSS: `.answer-box`, `.table-scroll`, `.compare-table` v redesign.css; cache bump `?v=r21 -> r22` ve vsech HTML.
+- `sitemap.xml` +6 URL, `llms.txt` + sekce Advice hub.
+
+Vedome NEimplementovano: kopie konkurentovych procent pokryti a recenzi (publishing-rules), 23 lokalit (doorway riziko), sekce cizich poskytovatelu (falesna nezavislost).
+
 ## Implementovano 2026-06-03 - SEO/GEO doplneni
 
 - Doplneny kratke odpovedove bloky pro hlavni dotazy `internet Ostrava`, `PODA internet Ostrava`, `PODA Poruba` a lokalni stranky.
