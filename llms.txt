@@ -11,12 +11,30 @@
 - [Availability verification](https://internetostrava.cz/dostupnost/): non-binding form for checking an Ostrava address
 - [Tariffs](https://internetostrava.cz/tarify/): indicative options subject to address verification
 - [Contact](https://internetostrava.cz/kontakt/): representative contact details
-- [Ostrava-Poruba](https://internetostrava.cz/internet-ostrava-poruba/): local page for checking PODA internet options in Poruba
-- [Ostrava-Jih](https://internetostrava.cz/internet-ostrava-jih/): local page for Hrabuvka, Zabreh, Dubina, Vyskovice, and nearby addresses
-- [Marianské Hory](https://internetostrava.cz/internet-marianske-hory/): local page for Marianské Hory and wider central Ostrava
-- [Moravska Ostrava](https://internetostrava.cz/internet-moravska-ostrava/): local page for central Ostrava addresses
-- [Vitkovice](https://internetostrava.cz/internet-ostrava-vitkovice/): local page for checking internet options in Vitkovice
-- [Slezska Ostrava](https://internetostrava.cz/internet-slezska-ostrava/): local page for checking internet options in Slezska Ostrava
+- [Lokality overview](https://internetostrava.cz/lokality/): provider-neutral directory of Ostrava districts grouped by area, each linking to a local availability page
+
+## Local pages by district
+
+Each local page verifies internet availability by exact address; content is unique per district and describes the local building stock (panel estates, tenement houses, family homes, mining colonies). No coverage percentages are used.
+
+- [Ostrava-Poruba](https://internetostrava.cz/internet-ostrava-poruba/): sorela blocks, panel houses, and family homes at the edges
+- [Ostrava-Jih](https://internetostrava.cz/internet-ostrava-jih/): overview hub for the Jih district (Hrabuvka, Zabreh, Dubina, Vyskovice, Belsky Les)
+- [Hrabuvka](https://internetostrava.cz/internet-hrabuvka/): panel houses around the shopping centre and the brick Sidlovec colony
+- [Zabreh](https://internetostrava.cz/internet-zabreh/): panel estates and older brick tenement houses
+- [Dubina](https://internetostrava.cz/internet-ostrava-dubina/): the youngest panel estate of the Jih district
+- [Vyskovice](https://internetostrava.cz/internet-vyskovice/): panel houses and original family-home development near Belsky les
+- [Belsky Les](https://internetostrava.cz/internet-belsky-les/): panel estate set within greenery
+- [Marianské Hory](https://internetostrava.cz/internet-marianske-hory/): flats and family homes in wider central Ostrava
+- [Hulvaky](https://internetostrava.cz/internet-hulvaky/): smaller locality with colonies and apartment houses near Bazaly
+- [Moravska Ostrava](https://internetostrava.cz/internet-moravska-ostrava/): central Ostrava addresses
+- [Privoz](https://internetostrava.cz/internet-ostrava-privoz/): historic quarter of Art Nouveau tenement houses by the main station
+- [Vitkovice](https://internetostrava.cz/internet-ostrava-vitkovice/): brick industrial development in central Ostrava
+- [Svinov](https://internetostrava.cz/internet-svinov/): transport hub with family homes and low apartment buildings near the station
+- [Pustkovec](https://internetostrava.cz/internet-pustkovec/): quiet family-home area next to Poruba and the VSB campus
+- [Trebovice](https://internetostrava.cz/internet-trebovice/): residential area with family homes and a chateau park
+- [Slezska Ostrava](https://internetostrava.cz/internet-slezska-ostrava/): family and apartment houses close to the centre
+- [Muglinov](https://internetostrava.cz/internet-muglinov/): family development and a panel estate on the right bank of the Ostravice
+- [Michalkovice](https://internetostrava.cz/internet-michalkovice/): mining colonies and family homes near the Michal colliery
 
 ## Advice hub (Poradna)
 
@@ -29,4 +47,4 @@
 
 ## Canonical query aliases
 
-Short query-style paths such as `/poda-ostrava`, `/poda-poruba`, `/internet-poruba`, `/internet-hrabuvka`, and `/internet-zabreh` redirect to the closest canonical landing page instead of creating duplicate thin pages.
+Short query-style paths such as `/poda-ostrava`, `/poda-poruba`, `/internet-poruba`, `/internet-privoz`, and `/internet-dubina` redirect to the closest canonical landing page instead of creating duplicate thin pages. District names that have their own local page (for example Hrabuvka, Zabreh, Vyskovice) are served directly at `/internet-<district>/`.
