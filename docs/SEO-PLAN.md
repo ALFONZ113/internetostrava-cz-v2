@@ -95,6 +95,22 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-07-24 - Plne pokryti mestskych casti + hub /lokality/ (vlna 1)
+
+Kontext: majitel rozhodl o plnem pokryti mestskych casti Ostravy vlastnimi URL (vice nez konkurent, ktery ma 23 lokalit). Tim se **revidovalo puvodni rozhodnuti** z 2026-07-13 (r. "Vedome NEimplementovano: 23 lokalit / doorway riziko"). Doorway riziko se misto vynechani lokalit **mitiguje kvalitou**: kazda stranka ma unikatni obsah o typu zastavby dane casti, zadna vymyslena procenta pokryti ani recenze, vzdy veta o overeni podle presne adresy. Publikace ve dvou vlnach (prirozenejsi rust indexu).
+
+Implementovano (vlna 1):
+
+- Novy rozcestnik `/lokality/` (PODA-neutralni, nav i paticka jako homepage) - 6 foto-karet hlavnich pruvodcu + skupiny casti podle oblasti (`.loc-grid`), CollectionPage + ItemList + BreadcrumbList schema.
+- 12 novych lokalnich stranek s vlastnim obsahem o zastavbe: `/internet-hrabuvka/`, `/internet-zabreh/`, `/internet-ostrava-dubina/`, `/internet-vyskovice/`, `/internet-belsky-les/` (casti Jihu), `/internet-ostrava-privoz/` (Moravska Ostrava), `/internet-hulvaky/` (Marianske Hory), `/internet-svinov/`, `/internet-pustkovec/`, `/internet-trebovice/`, `/internet-muglinov/` (Slezska), `/internet-michalkovice/`. Kazda: @graph (Service + FAQPage + BreadcrumbList, u casti 3-urovnovy breadcrumb k rodicovskemu obvodu), subhero bez fotky, formular s poznamkou `Lokalita: X`.
+- Mini-huby "Casti obvodu" na strankach Ostrava-Jih (5 casti), Slezska Ostrava (Muglinov, Michalkovice), Marianske Hory (Hulvaky), Moravska Ostrava (Privoz).
+- Navigace: polozka "Lokality" prepnuta z kotvy `/#lokality` na `/lokality/` ve vsech strankach; homepage sekce #lokality doplnena o CTA "Vsechny lokality Ostravy". Jednotny footer sloupec "Lokality" (Vsechny lokality + rodic/sousede).
+- CSS: `.loc-grid`, `.loc-card`, `.loc-group` v redesign.css; cache bump `?v=r22 -> r23` ve vsech HTML.
+- `vercel.json`: odstraneny redirecty `/internet-hrabuvka` a `/internet-zabreh` (jiz kanonicke stranky), pridany aliasy `/internet-privoz`, `/internet-dubina`.
+- `sitemap.xml` +13 URL (hub 0.8, casti 0.7), `llms.txt` + sekce "Local pages by district" a prepis aliasu.
+
+Vlna 2 (planovano): mensi obvody a RD zastavba - Martinov, Krasne Pole, Plesna, Polanka nad Odrou, Stara/Nova Bela, Proskovice, Hrabova, Radvanice a Bartovice, Kuncicky, Hermanice, Petrkovice, Hostalkovice, Lhotka, Nova Ves. Doplnit karty do `/lokality/` a mini-hubu Slezske. Bez CSS/nav zmen.
+
 ## Implementovano 2026-07-13 - Poradna + reakce na konkurenta internet-ostrava.online
 
 Kontext: kolega/konkurent spustil `internet-ostrava.online` - "nezavisly pruvodce" s 97 URL (23 lokalit, poradna, sekce poskytovatelu vcetne PODA stranky s orientacnimi tarify, procenta pokryti). Jeho slabiny: zadny telefon/e-mail, zadna realna osoba, zadne realne ceny, pravdepodobne vymyslena procenta a recenze, relativni canonical, chybi FAQ/Service schema. Pouziva shodny URL vzor lokalit (`/internet-ostrava-poruba`).
