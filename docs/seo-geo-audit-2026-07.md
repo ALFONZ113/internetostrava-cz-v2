@@ -1,6 +1,6 @@
 # SEO + GEO + AIO audit — internetostrava.cz
 
-Datum: 2026-07-31 · Revize: `ca6a50b` · Rozsah: 34 HTML stránek, `robots.txt`, `sitemap.xml`, `llms.txt`, `vercel.json`
+Datum: 2026-07-31 · Revize: `ca6a50b` · Rozsah: 35 HTML stránek, `robots.txt`, `sitemap.xml`, `llms.txt`, `vercel.json`
 
 ---
 
@@ -25,7 +25,7 @@ Uvádím na začátku, aby nikde níže nebyly domyšlené údaje.
 
 Tři premisy zadání kód nepotvrzuje. Zbytek auditu pracuje se skutečným stavem.
 
-1. **`CityPage.tsx` + `cityData` pattern neexistuje.** `find . -name "*.tsx"` → 0 výsledků. Web je čistý statický HTML bez build kroku, 34 ručně psaných `index.html`. Nové lokality se dnes zakládají kopií šablony, ne datovým souborem.
+1. **`CityPage.tsx` + `cityData` pattern neexistuje.** `find . -name "*.tsx"` → 0 výsledků. Web je čistý statický HTML bez build kroku, 35 ručně psaných HTML souborů. Nové lokality se dnes zakládají kopií šablony, ne datovým souborem.
 2. **Hub NENÍ `/internet-ostrava`.** Ta cesta je 301 redirect na `/` (`vercel.json:11`). Skutečné huby jsou dva: `/lokality/` (neutrální) a `/poda-internet-ostrava/` (PODA zóna).
 3. **`overdostupnost.cz` není jen „paralelní" web.** Je to přímý konkurent v SERP, který na cílových dotazech vyhrává — a drží URL vzory, které tento web nemá. Detail v sekci 4.
 
@@ -33,7 +33,7 @@ Tři premisy zadání kód nepotvrzuje. Zbytek auditu pracuje se skutečným sta
 
 ## 1. Executive summary
 
-Technický základ je nadprůměrný a čistý: 34/34 stránek má unikátní title i description, přesně jedno H1, self-referenční canonical; sitemapa sedí na routy; nulové externí requesty (žádné fonty, žádná analytika, žádný third-party JS); FAQPage schema na 30 stránkách; `llms.txt` je přesný a aktuální. Oddělení Ads a PODA zóny **drží — grep na `poda` přes všech 8 souborů Ads zóny vrací 0.**
+Technický základ je nadprůměrný a čistý: 35/35 stránek má unikátní title i description, přesně jedno H1, self-referenční canonical; sitemapa sedí na routy; nulové externí requesty (žádné fonty, žádná analytika, žádný third-party JS); FAQPage schema na 30 stránkách; `llms.txt` je přesný a aktuální. Oddělení Ads a PODA zóny **drží — grep na `poda` přes všech 8 souborů Ads zóny vrací 0.**
 
 Nejhorší jsou tři věci. **(1) Kanibalizace sesterským webem:** `overdostupnost.cz` (stejný provozovatel, stejný lead e-mail `terc@obchod.poda.cz`) má `/internet-ostrava-hrabuvka` proti zdejšímu `/internet-hrabuvka/`, ranguje na 1. místě na „PODA internet Ostrava dostupnost" — a `internetostrava.cz` se **neobjevil v žádném z 5 provedených web searchů, ani na exact-match dotaz na vlastní doménu.** Mezi weby není deklarovaný žádný vztah — ani cross-domain canonical, ani rozdělení témat. **(2) E-E-A-T je pohřbené:** IČO 75546230 a jméno Milan Terč jsou na celém webu právě jednou, na `/ochrana-udaju/` s prioritou 0.2 — `/kontakt/` nemá IČO ani právní jméno, `LocalBusiness` schema chybí úplně (0 výskytů). **(3) GEO obsah nemá čím odpovídat:** web nikde neuvádí dobu instalace, „GPON" ani „pracovních dnů" — přesně ta fakta, kterými sesterský web a `poda.cz` obsazují AI odpovědi.
 
@@ -69,7 +69,7 @@ Ověřil jsem i opačný směr, který checker nedělá: všech **18/18** distri
 
 ### 2.3 Canonical, meta robots, indexovanost — stav: OK v kódu, riziko cross-domain
 
-- **Canonical:** 34/34 stránek (mimo `404.html`, správně). Všechny self-referenční, všechny absolutní `https://internetostrava.cz/…`. Vynucuje checker (`scripts/check-site.mjs:33`).
+- **Canonical:** 34/35 stránek (mimo `404.html`, správně). Všechny self-referenční, všechny absolutní `https://internetostrava.cz/…`. Vynucuje checker (`scripts/check-site.mjs:33`).
 - **meta robots:** pouze `404.html` a `/dekujeme/` mají `noindex,follow`. Ostatní bez direktivy = indexovatelné. Správně.
 - **Indexovanost:** **nelze změřit** (viz sekce 0). Nepřímý důkaz níže.
 
@@ -109,11 +109,11 @@ Rizikové:
 
 ### 2.5 Mobile-friendliness — stav: OK
 
-`<meta name="viewport" content="width=device-width, initial-scale=1">` na všech 34 stránkách, `theme-color`, `site.webmanifest`, mobilní lišta v `main.js` přebírající telefon z `tel:` odkazu. **Nezměřeno živě**, ale kód nevykazuje anti-pattern.
+`<meta name="viewport" content="width=device-width, initial-scale=1">` na všech 35 stránkách, `theme-color`, `site.webmanifest`, mobilní lišta v `main.js` přebírající telefon z `tel:` odkazu. **Nezměřeno živě**, ale kód nevykazuje anti-pattern.
 
 ### 2.6 Structured data — stav: dobrý základ, tři konkrétní díry
 
-Ověřeno extrakcí všech `"@type"` hodnot ze všech 34 stránek.
+Ověřeno extrakcí všech `"@type"` hodnot ze všech 35 stránek.
 
 Přítomno: `Organization` (většina stránek), `WebSite` (homepage), `Service`, `FAQPage`+`Question`+`Answer` (30 stránek), `BreadcrumbList`+`ListItem`, `Place` (18 district), `City`, `CollectionPage`+`ItemList` (`/lokality/`, `/poradna/`), `Article` (5 poradna článků), `Person` (1× `/poda-internet-ostrava/`).
 
@@ -133,7 +133,7 @@ Kosmetika: `geo.region`, `geo.placename`, `geo.position`, `ICBM` na homepage (`i
 
 ### 3.1 Title a meta description — stav: dobrý, 6 drobných překročení
 
-**Unikátnost: 34/34 titles unikátních, 34/34 descriptions unikátních.** Žádná duplicita.
+**Unikátnost: 35/35 titles unikátních, 35/35 descriptions unikátních.** Žádná duplicita.
 
 Překročení doporučené délky:
 
@@ -152,7 +152,7 @@ Překročení doporučené délky:
 
 ### 3.2 Heading struktura — stav: OK
 
-Přesně jedno `<h1>` na každé z 34 stránek — vynuceno checkerem (`scripts/check-site.mjs:36`). H1 jsou unikátní a popisné (`Internet pro Hrabůvku.`, `Internet pro Zábřeh.`). H2/H3 hierarchie odpovídá sekcím; district thumbnaily na homepage používají `<h3>` uvnitř odkazu — validní.
+Přesně jedno `<h1>` na každé z 35 stránek — vynuceno checkerem (`scripts/check-site.mjs:36`). H1 jsou unikátní a popisné (`Internet pro Hrabůvku.`, `Internet pro Zábřeh.`). H2/H3 hierarchie odpovídá sekcím; district thumbnaily na homepage používají `<h3>` uvnitř odkazu — validní.
 
 ### 3.3 Interní prolinkování — stav: hub→spoke výborný, PODA hub selhává
 
@@ -192,7 +192,7 @@ Obsah je fakticky unikátní — každá stránka popisuje reálnou zástavbu (s
 
 ### 4.1 Odpovědní formát a konkrétní fakta — stav: nejslabší část webu
 
-FAQPage schema je na **30 z 34 stránek**, což je nad standardem. Ale hustota je nízká: **district stránky mají jen 2 otázky**, homepage 3, poradna články 3–4. Maximum je 4 (`/poradna/caste-otazky-pred-zmenou-poskytovatele/`).
+FAQPage schema je na **30 z 35 stránek**, což je nad standardem. Ale hustota je nízká: **district stránky mají jen 2 otázky**, homepage 3, poradna články 3–4. Maximum je 4 (`/poradna/caste-otazky-pred-zmenou-poskytovatele/`).
 
 Horší je, čím web odpovídá. Ověřil jsem výskyt konkrétních, citovatelných faktů:
 
@@ -227,7 +227,7 @@ Ta stránka má v sitemapě **prioritu 0.2** — nejnižší na webu — a odkaz
 Konkrétně chybí:
 - **`/kontakt/` nemá IČO ani právní jméno.** Má telefon, e-mail a text „Ozveme se do 30 minut", ale ne identitu provozovatele.
 - **`LocalBusiness` schema: 0 výskytů** (viz 2.6).
-- **`Person` schema jen na 1 stránce** z 34 (`/poda-internet-ostrava/`). Poradna články nemají autora — 5 článků s `Article` schema, žádný `author`.
+- **`Person` schema jen na 1 stránce** z 35 (`/poda-internet-ostrava/`). Poradna články mají `author`, ale jen jako `Organization`, ne jako konkrétní osobu — a viditelný podpis autora nemá žádný z 5 článků.
 - Disclosure „obchodní zástupce PODA a.s." je v PODA zóně přítomný a korektní ✅ — to je dobře udělané a je to silný signál transparentnosti. Jen ho nedoprovází dohledatelná právní identita.
 
 **Dopad: vysoký.** AI systémy i Google potřebují propojit web s ověřitelnou entitou. Dnes je to schované na GDPR stránce.

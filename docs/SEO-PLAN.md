@@ -6,9 +6,32 @@ Získávat relevantní návštěvy z lokálních dotazů na internet v Ostravě 
 
 První pozici v Google nelze garantovat. Cílem je vytvořit lepší uživatelský výsledek než jednostránkový konkurent a rozhodovat další kroky podle Search Console dat.
 
+## Aktuální stav (2026-07-31)
+
+Tato sekce je zdroj pravdy. Sekce níže jsou chronologický log a popisují stav v době zápisu, ne dnešek.
+
+- **35 HTML stránek**: homepage, 3 konverzní (tarify, dostupnost, kontakt), hub `/lokality/`, **18 lokalitních stránek**, 3 PODA stránky, `/poradna/` + 5 článků, `/ochrana-udaju/`, `/dekujeme/` (noindex), `404.html`.
+- Dva huby: `/lokality/` (neutrální rozcestník) a `/poda-internet-ostrava/` (PODA zóna). Cesta `/internet-ostrava` je pouze 301 na `/`, není to stránka.
+- Split-brand drží: grep na `poda` přes všech 8 souborů Ads zóny vrací 0. Stejně tak `/poradna/`.
+- Úplný audit stavu k 2026-07: `docs/seo-geo-audit-2026-07.md`.
+
+### Vztah k sesterským webům — POZOR
+
+`overdostupnost.cz` **není cizí konkurent**, jak uvádí původní zápis níže. Majitel potvrdil (2026-07-31), že web patří jemu / jeho týmu. Sdílí stejný lead e-mail `terc@obchod.poda.cz` a překrývá se URL vzory:
+
+| | internetostrava.cz | overdostupnost.cz |
+|---|---|---|
+| Hrabůvka | `/internet-hrabuvka/` | `/internet-ostrava-hrabuvka` |
+| Poruba | `/internet-ostrava-poruba/` | `/internet-ostrava-poruba` |
+| Ostrava hub | 301 na `/` | `/internet-ostrava` (živá stránka) |
+
+V SERP dnes vyhrává `overdostupnost.cz`. Cílový stav: **Ostrava patří internetostrava.cz** (exact-match doména, 18 lokalit, nutná Ads landing zóna), zbytek regionu (Havířov, Karviná, Orlová, Poličká) sesterskému webu. Konsolidaci provádět **až podle dat ze Search Console**, po jednom přesměrování — ne plošně.
+
+Pozn.: `popri.cz` je rovněž PODA affiliate web se samostatnou sitemapou.
+
 ## Výchozí porovnání
 
-Kontrolováno 2026-06-02:
+Kontrolováno 2026-06-02 (**historický zápis — viz korekce výše**):
 
 - `internet-ostrava.cz` má přesnou doménu, jednoduchý jednostránkový web, robots.txt a sitemapu pouze s homepage.
 - `overdostupnost.cz` má širší sitemapu s lokalitami a obsahovými články.
@@ -28,6 +51,8 @@ Kontrolováno 2026-06-02:
 - `llms.txt` jako doplňkový orientační soubor pro AI systémy,
 - statický lead formulář, který lokálně připraví e-mail návštěvníka bez předávání osobních údajů cizím službám.
 
+**Pozn.:** „tři unikátní lokální landing pages" platilo k 2026-06-02. Dnes je lokalit 18 — viz Aktuální stav výše.
+
 ## Obsahový backlog
 
 Publikovat postupně podle Search Console dotazů:
@@ -40,7 +65,7 @@ Publikovat postupně podle Search Console dotazů:
 
 ## Pravidla
 
-- Nevytvářet desítky téměř stejných městských stránek.
+- Nevytvářet téměř stejné městské stránky. **Revidováno 2026-07-24:** lokalit je dnes 18 a doorway riziko se místo vynechávání mitiguje kvalitou — každá stránka musí mít vlastní obsah o typu zástavby. Kontrolní metrika: medián párového slovního překryvu mezi lokalitami byl k 2026-07-31 **0.35**, nejhorší dvojice `pustkovec`/`trebovice` **0.61**. Před vlnou 3 nejdřív zahustit stávající stránky, ne přidávat další.
 - Nekopírovat konkurenta.
 - Nevkládat neověřené superlativy, procenta pokrytí ani falešné recenze.
 - Aktualizovat nabídku pouze po potvrzení.
@@ -94,6 +119,39 @@ Interni odkazy na hub vedou z 6 lokalnich stranek, 2 PODA satelitu a sitemapy. H
 Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokryti`, `/poda-overeni-dostupnosti`, `/poda-internet-karvina`, `/internet-karvina`, `/poda-poruba`.
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
+
+## Implementovano 2026-07-31 - Faze 1 podle auditu (E-E-A-T, prelinkovani, vykon)
+
+Kontext: `docs/seo-geo-audit-2026-07.md`. Cilem bylo udelat z webu stranku, ktera si Ostravu zaslouzi vyhrat, jeste **pred** resenim prekryvu s `overdostupnost.cz`.
+
+Identita a schema (E-E-A-T):
+
+- `/kontakt/` - nova viditelna sekce "Kdo web provozuje": Milan Terc, ICO 75546230, sidlo Porubska 944/5. Dosud byly tyto udaje jen na `/ochrana-udaju/` (priorita 0.2).
+- `Organization` node na homepage povysen na `LocalBusiness` pri zachovani `@id` `#organization`, takze reference z `WebSite.publisher` a `Service.broker` plati dal. Doplneno `identifier` (ICO), `streetAddress`, `email`, `priceRange`.
+- `LocalBusiness` + `BreadcrumbList` doplneny na `/dostupnost/`, `/tarify/`, `/lokality/` - mely osirely entity graph (jen samostatny `FAQPage`).
+- 5 clanku poradny: `author` prepsan z `Organization` na `Person` (Milan Terc) + viditelny podpis pod leadem.
+- FAQ rozsireno na `/kontakt/` (2->4), `/dostupnost/` (2->4), `/tarify/` (2->3). Vse ze jiz publikovanych faktu, zadny novy obchodni udaj.
+
+Prelinkovani:
+
+- `/poda-internet-ostrava/` - nova sekce "PODA podle lokality" se **vsemi 18 lokalitami** ve 4 skupinach. Predtim odkazoval jen na 2.
+- `/poda-dostupnost/` - blok 6 nejcastejsich lokalit (predtim zadna).
+- `/poda-karvina/` - cross-link na ostravske rozcestniky (zamerne jen 3, ne 18 - Karvina neni Ostrava).
+- Vsech 5 clanku poradny odkazuje na lokality (predtim 1 z 5), kazdy na tematicky jine.
+
+Vykon a technika:
+
+- Vygenerovany 800px varianty 6 subhero obrazku + `srcset`/`sizes`/`width`/`height`. Uspora na mobilu ~70 % (napr. `loc-moravska-ostrava` 400 KB -> 105 KB). Jde o LCP obrazky (`loading="eager"`).
+- `icon-512x512.png` prekomprimovan 235 KB -> 63 KB.
+- `robots.txt` - explicitni `Allow` pro GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-User, PerplexityBot, Google-Extended, Applebot-Extended, CCBot.
+- Zkraceny 4 titles nad 60 znaku a 2 descriptions nad 158 znaku.
+
+Vedome NEimplementovano (ceka na potvrzeni majitele):
+
+- Provozni fakta - doba vyrizeni objednavky, doba instalace v pracovnich dnech, technologie (GPON/FTTH). Na webu maji dodnes **0 vyskytu** a jsou hlavni GEO mezerou, ale `CLAUDE.md` zakazuje menit obchodni fakta bez potvrzeni.
+- `openingHours` v `LocalBusiness` schema - neznama presna otviraci doba.
+- Rozsireni FAQ na lokalitnich strankach z 2 na 4-6 otazek.
+- Konsolidace s `overdostupnost.cz` - ceka na data ze Search Console.
 
 ## Implementovano 2026-07-24 - Plne pokryti mestskych casti + hub /lokality/ (vlna 1)
 
