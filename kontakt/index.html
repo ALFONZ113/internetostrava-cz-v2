@@ -14,17 +14,62 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Jde o oficiální web poskytovatele internetu?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Jde o nezávislý web obchodního zástupce, ne o oficiální web poskytovatele." }
+        "@type": "LocalBusiness",
+        "@id": "https://internetostrava.cz/#organization",
+        "name": "InternetOstrava.cz",
+        "legalName": "Milan Terč",
+        "description": "Nezávislý poradenský web pro ověření dostupnosti internetového připojení v Ostravě a okolí.",
+        "url": "https://internetostrava.cz/",
+        "identifier": { "@type": "PropertyValue", "name": "IČO", "value": "75546230" },
+        "telephone": "+420777425230",
+        "email": "info@internetostrava.cz",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Porubská 944/5",
+          "postalCode": "708 00",
+          "addressLocality": "Ostrava-Poruba",
+          "addressRegion": "Moravskoslezský kraj",
+          "addressCountry": "CZ"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Ostrava" },
+          { "@type": "AdministrativeArea", "name": "Moravskoslezský kraj" }
+        ],
+        "priceRange": "300–570 Kč"
       },
       {
-        "@type": "Question",
-        "name": "Je odeslání formuláře závazné?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Slouží k nezávaznému ověření adresy a prvnímu kontaktu." }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
+          { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://internetostrava.cz/kontakt/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Jde o oficiální web poskytovatele internetu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Jde o nezávislý web obchodního zástupce, ne o oficiální web poskytovatele." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je odeslání formuláře závazné?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Slouží k nezávaznému ověření adresy a prvnímu kontaktu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Kdo web provozuje?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Web provozuje Milan Terč, IČO 75546230, se sídlem Porubská 944/5, 708 00 Ostrava-Poruba. Jde o autorizovaného obchodního zástupce poskytovatele připojení, nikoli o samotného poskytovatele." }
+          },
+          {
+            "@type": "Question",
+            "name": "Kdy se mi ozvete?",
+            "acceptedAnswer": { "@type": "Answer", "text": "V pracovní dny se ozýváme do 30 minut od odeslání formuláře, telefonicky na číslo, které uvedete." }
+          }
+        ]
       }
     ]
   }
@@ -73,6 +118,15 @@
             <li>E-mail: <a href="mailto:info@internetostrava.cz">info@internetostrava.cz</a></li>
             <li>Formulář: <a href="/dostupnost/">nezávazné ověření adresy</a></li>
           </ul>
+          <h2>Kdo web provozuje</h2>
+          <p>Za webem stojí konkrétní člověk s dohledatelnou identitou, ne anonymní firma:</p>
+          <ul>
+            <li>Provozovatel: <strong>Milan Terč</strong>, zahraniční fyzická osoba</li>
+            <li>IČO: <strong>75546230</strong></li>
+            <li>Sídlo: Porubská 944/5, 708 00 Ostrava-Poruba</li>
+            <li>Působnost: Ostrava a okolí</li>
+          </ul>
+          <p>Provozovatel webu je autorizovaný obchodní zástupce poskytovatele připojení, nikoli samotný poskytovatel. Podrobnosti ke zpracování údajů najdete v <a href="/ochrana-udaju/">zásadách ochrany údajů</a>.</p>
           <h2>Kdo se vám ozve a jak to probíhá</h2>
           <p>Žádné call centrum ani anonymní linka. Dotazy z tohoto webu vyřizuje osobně místní zástupce pro Ostravu a okolí:</p>
           <ul>
@@ -84,6 +138,8 @@
           <div class="faq">
             <details><summary>Jde o oficiální web poskytovatele internetu?<span aria-hidden="true"></span></summary><p>Ne. Jde o nezávislý web obchodního zástupce, ne o oficiální web poskytovatele.</p></details>
             <details><summary>Je odeslání formuláře závazné?<span aria-hidden="true"></span></summary><p>Ne. Slouží k nezávaznému ověření adresy a prvnímu kontaktu.</p></details>
+            <details><summary>Kdo web provozuje?<span aria-hidden="true"></span></summary><p>Web provozuje Milan Terč, IČO 75546230, se sídlem Porubská 944/5, 708 00 Ostrava-Poruba. Jde o autorizovaného obchodního zástupce poskytovatele připojení, nikoli o samotného poskytovatele.</p></details>
+            <details><summary>Kdy se mi ozvete?<span aria-hidden="true"></span></summary><p>V pracovní dny se ozýváme do 30 minut od odeslání formuláře, telefonicky na číslo, které uvedete.</p></details>
           </div>
         </div>
         <aside class="aside-cta">

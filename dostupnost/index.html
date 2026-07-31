@@ -23,17 +23,57 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Je odeslání formuláře závazná objednávka?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Formulář slouží k nezávaznému ověření dostupnosti a prvnímu kontaktu." }
+        "@type": "LocalBusiness",
+        "@id": "https://internetostrava.cz/#organization",
+        "name": "InternetOstrava.cz",
+        "legalName": "Milan Terč",
+        "url": "https://internetostrava.cz/",
+        "identifier": { "@type": "PropertyValue", "name": "IČO", "value": "75546230" },
+        "telephone": "+420777425230",
+        "email": "info@internetostrava.cz",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Porubská 944/5",
+          "postalCode": "708 00",
+          "addressLocality": "Ostrava-Poruba",
+          "addressRegion": "Moravskoslezský kraj",
+          "addressCountry": "CZ"
+        },
+        "areaServed": { "@type": "City", "name": "Ostrava" }
       },
       {
-        "@type": "Question",
-        "name": "Jak dlouho trvá, než se ozvete?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Obvykle do 30 minut v pracovní dny. Ozve se vám člověk, ne automat." }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
+          { "@type": "ListItem", "position": 2, "name": "Dostupnost", "item": "https://internetostrava.cz/dostupnost/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Je odeslání formuláře závazná objednávka?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Formulář slouží k nezávaznému ověření dostupnosti a prvnímu kontaktu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak dlouho trvá, než se ozvete?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Obvykle do 30 minut v pracovní dny. Ozve se vám člověk, ne automat." }
+          },
+          {
+            "@type": "Question",
+            "name": "Co všechno musím k ověření poslat?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Stačí ulice, číslo domu a telefon. Pomůže i poznámka, zda jde o byt nebo rodinný dům a co na připojení potřebujete." }
+          },
+          {
+            "@type": "Question",
+            "name": "Proč nestačí zadat jen město nebo čtvrť?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Možnosti připojení se liší dům od domu podle technologie zavedené v objektu. Sousední budovy proto mohou mít odlišné varianty připojení." }
+          }
+        ]
       }
     ]
   }

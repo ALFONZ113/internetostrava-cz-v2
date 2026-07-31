@@ -16,10 +16,30 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "LocalBusiness",
+        "@id": "https://internetostrava.cz/#organization",
+        "name": "InternetOstrava.cz",
+        "legalName": "Milan Terč",
+        "url": "https://internetostrava.cz/",
+        "identifier": { "@type": "PropertyValue", "name": "IČO", "value": "75546230" },
+        "telephone": "+420777425230",
+        "email": "info@internetostrava.cz",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Porubská 944/5",
+          "postalCode": "708 00",
+          "addressLocality": "Ostrava-Poruba",
+          "addressRegion": "Moravskoslezský kraj",
+          "addressCountry": "CZ"
+        },
+        "areaServed": { "@type": "City", "name": "Ostrava" }
+      },
+      {
         "@type": "CollectionPage",
         "@id": "https://internetostrava.cz/lokality/#page",
         "name": "Internet v Ostravě podle lokality",
-        "description": "Přehled městských částí Ostravy a dostupnosti internetu podle konkrétní adresy."
+        "description": "Přehled městských částí Ostravy a dostupnosti internetu podle konkrétní adresy.",
+        "publisher": { "@id": "https://internetostrava.cz/#organization" }
       },
       {
         "@type": "ItemList",

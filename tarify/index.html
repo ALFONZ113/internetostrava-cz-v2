@@ -14,17 +14,53 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Platí uvedené ceny stejně pro každou adresu?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cena tarifu je stejná, ale technické možnosti zapojení a dostupnost se vždy potvrzují podle konkrétní adresy." }
+        "@type": "LocalBusiness",
+        "@id": "https://internetostrava.cz/#organization",
+        "name": "InternetOstrava.cz",
+        "legalName": "Milan Terč",
+        "url": "https://internetostrava.cz/",
+        "identifier": { "@type": "PropertyValue", "name": "IČO", "value": "75546230" },
+        "telephone": "+420777425230",
+        "email": "info@internetostrava.cz",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Porubská 944/5",
+          "postalCode": "708 00",
+          "addressLocality": "Ostrava-Poruba",
+          "addressRegion": "Moravskoslezský kraj",
+          "addressCountry": "CZ"
+        },
+        "areaServed": { "@type": "City", "name": "Ostrava" },
+        "priceRange": "300–570 Kč"
       },
       {
-        "@type": "Question",
-        "name": "Mohu mít jen internet bez televize?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ano. Giga 2000 je samostatný internet. U tarifů s televizí lze řešit i jen internet – napište to do poznámky ve formuláři." }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
+          { "@type": "ListItem", "position": 2, "name": "Tarify", "item": "https://internetostrava.cz/tarify/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Platí uvedené ceny stejně pro každou adresu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Cena tarifu je stejná, ale technické možnosti zapojení a dostupnost se vždy potvrzují podle konkrétní adresy." }
+          },
+          {
+            "@type": "Question",
+            "name": "Mohu mít jen internet bez televize?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano. Giga 2000 je samostatný internet. U tarifů s televizí lze řešit i jen internet – napište to do poznámky ve formuláři." }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak vyberu správný tarif?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Vyberte podle počtu lidí a zařízení v domácnosti a podle toho, zda chcete i televizi. Konečnou variantu potvrdíme až po ověření adresy, protože ne každý tarif lze zapojit v každém domě." }
+          }
+        ]
       }
     ]
   }

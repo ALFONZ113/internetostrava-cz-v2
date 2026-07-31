@@ -29,14 +29,28 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "@id": "https://internetostrava.cz/#organization",
         "name": "InternetOstrava.cz",
+        "legalName": "Milan Terč",
         "url": "https://internetostrava.cz/",
         "description": "Nezávislý poradenský web pro ověření dostupnosti internetového připojení v Ostravě a okolí.",
+        "identifier": { "@type": "PropertyValue", "name": "IČO", "value": "75546230" },
         "telephone": "+420777425230",
-        "address": { "@type": "PostalAddress", "addressLocality": "Ostrava", "addressRegion": "Moravskoslezský kraj", "addressCountry": "CZ" },
-        "areaServed": { "@type": "City", "name": "Ostrava" }
+        "email": "info@internetostrava.cz",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Porubská 944/5",
+          "postalCode": "708 00",
+          "addressLocality": "Ostrava-Poruba",
+          "addressRegion": "Moravskoslezský kraj",
+          "addressCountry": "CZ"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Ostrava" },
+          { "@type": "AdministrativeArea", "name": "Moravskoslezský kraj" }
+        ],
+        "priceRange": "300–570 Kč"
       },
       {
         "@type": "WebSite",
