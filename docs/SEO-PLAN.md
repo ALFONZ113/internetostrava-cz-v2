@@ -146,11 +146,17 @@ Vykon a technika:
 - `robots.txt` - explicitni `Allow` pro GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-User, PerplexityBot, Google-Extended, Applebot-Extended, CCBot.
 - Zkraceny 4 titles nad 60 znaku a 2 descriptions nad 158 znaku.
 
-Vedome NEimplementovano (ceka na potvrzeni majitele):
+Provozni fakta (potvrzena majitelem 2026-07-31):
 
-- Provozni fakta - doba vyrizeni objednavky, doba instalace v pracovnich dnech, technologie (GPON/FTTH). Na webu maji dodnes **0 vyskytu** a jsou hlavni GEO mezerou, ale `CLAUDE.md` zakazuje menit obchodni fakta bez potvrzeni.
-- `openingHours` v `LocalBusiness` schema - neznama presna otviraci doba.
-- Rozsireni FAQ na lokalitnich strankach z 2 na 4-6 otazek.
+- **Objednavku vyridime do 24 hodin** od potvrzeni, **zapojeni obvykle do 4-5 dni**, sit je vedena technologii **GPON**. Doplneno na 23 stranek - predtim mely tyto pojmy 0 vyskytu a byly hlavni GEO mezerou.
+- FAQ na lokalitnich strankach rozsireno z 2-3 na 4-5 otazek (termin zapojeni + technologie). Lokalni veta u obou otazek je **unikatni pro kazdy obvod** (navazuje na zastavbu popsanou na strance), aby fakta nezvysila slovni prekryv. Merene dopady: nejhorsi par `pustkovec`/`trebovice` 0.61 -> 0.59, median 0.35 -> 0.39, prumer 410 -> 489 slov.
+- Pri teto praci opraven **nesoulad viditelneho FAQ a schema**: pred zmenou mely lokalitni stranky 3 viditelne otazky vs 2 v schema a `/poradna/caste-otazky/` 6 vs 4. Schema se nove generuje z viditelneho FAQ, takze oboje sedi na vsech 30 strankach s FAQ.
+- `llms.txt` dostal sekce "Operator" (ICO, sidlo, kontakt) a "Key facts" (30 min / 24 h / 4-5 dni / GPON / rychlosti / ceny).
+
+Vedome NEimplementovano:
+
+- `openingHours` v `LocalBusiness` schema - majitel potvrdil, ze pevna otviraci doba neexistuje. Web misto toho uvadi "do 30 minut v pracovni dny".
+- **Pracovni vs kalendarni dny u zapojeni** - majitel uvedl "4-5 dni" bez upresneni, na webu je tedy "4-5 dni". Sestersky web uvadi 4-5 *pracovnich* dni. Pokud plati pracovni, je potreba text upravit (dnes slibuje kratsi termin).
 - Konsolidace s `overdostupnost.cz` - ceka na data ze Search Console.
 
 ## Implementovano 2026-07-24 - Plne pokryti mestskych casti + hub /lokality/ (vlna 1)

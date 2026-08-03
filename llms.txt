@@ -2,6 +2,19 @@
 
 > InternetOstrava.cz helps residents of Ostrava and the surrounding region verify the availability of internet service for an exact address. The homepage and conversion pages are provider-neutral; the dedicated PODA pages explain availability checks for the PODA network and are operated by a sales representative of PODA a.s., not by PODA a.s. itself.
 
+## Operator
+
+Operated by Milan Terč, IČO 75546230, registered at Porubská 944/5, 708 00 Ostrava-Poruba, Czech Republic. An authorised sales representative of the connectivity provider, not the provider itself. Phone +420 777 425 230, e-mail info@internetostrava.cz.
+
+## Key facts
+
+- **Response time:** a local representative calls back within 30 minutes on working days — not a call centre.
+- **Order processing:** confirmed orders are processed within 24 hours.
+- **Installation:** connection is usually completed within 4–5 days of the confirmed order. Flats in buildings that already have fibre to the entrance are typically at the shorter end; detached houses depend on agreeing the drop route.
+- **Technology:** the optical network is GPON. In apartment buildings the fibre is brought to the building entrance and distributed to individual flats; detached houses get a dedicated drop.
+- **Speeds:** up to 2 Gb/s symmetric. Tariffs 300 CZK (Giga 1000 + TV), 440 CZK (Giga 1000 + TV 10), 570 CZK (Giga 2000) per month.
+- **Availability is always confirmed per exact address**, never per district or street name — neighbouring buildings can differ. No coverage percentages are published anywhere on this site.
+
 ## Main pages
 
 - [Internet Ostrava](https://internetostrava.cz/): provider-neutral overview, indicative tariffs, address verification, and frequently asked questions
