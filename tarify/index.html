@@ -14,17 +14,72 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Platí uvedené ceny stejně pro každou adresu?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cena tarifu je stejná, ale technické možnosti zapojení a dostupnost se vždy potvrzují podle konkrétní adresy." }
+        "@type": "OfferCatalog",
+        "@id": "https://internetostrava.cz/tarify/#catalog",
+        "name": "Tarify optického internetu pro Ostravu",
+        "url": "https://internetostrava.cz/tarify/",
+        "provider": { "@id": "https://internetostrava.cz/#organization" },
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Giga 1000 + TV",
+            "description": "Optický internet až 1 000 / 1 000 Mb/s s televizí.",
+            "price": "300",
+            "priceCurrency": "CZK",
+            "availability": "https://schema.org/LimitedAvailability",
+            "areaServed": { "@type": "City", "name": "Ostrava" },
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "300", "priceCurrency": "CZK", "billingIncrement": 1, "unitCode": "MON" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Giga 1000 + TV 10 programů",
+            "description": "Optický internet až 1 000 / 1 000 Mb/s s rozšířenou televizní nabídkou.",
+            "price": "440",
+            "priceCurrency": "CZK",
+            "availability": "https://schema.org/LimitedAvailability",
+            "areaServed": { "@type": "City", "name": "Ostrava" },
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "440", "priceCurrency": "CZK", "billingIncrement": 1, "unitCode": "MON" }
+          },
+          {
+            "@type": "Offer",
+            "name": "Giga 2000",
+            "description": "Samostatný optický internet až 2 000 Mb/s pro náročný provoz.",
+            "price": "570",
+            "priceCurrency": "CZK",
+            "availability": "https://schema.org/LimitedAvailability",
+            "areaServed": { "@type": "City", "name": "Ostrava" },
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "570", "priceCurrency": "CZK", "billingIncrement": 1, "unitCode": "MON" }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Mohu mít jen internet bez televize?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ano. Giga 2000 je samostatný internet. U tarifů s televizí lze řešit i jen internet – napište to do poznámky ve formuláři." }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Platí uvedené ceny stejně pro každou adresu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Cena tarifu je stejná, ale technické možnosti zapojení a dostupnost se vždy potvrzují podle konkrétní adresy." }
+          },
+          {
+            "@type": "Question",
+            "name": "Mohu mít jen internet bez televize?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano. Giga 2000 je samostatný internet. U tarifů s televizí lze řešit i jen internet – napište to do poznámky ve formuláři." }
+          },
+          {
+            "@type": "Question",
+            "name": "Zaplatím u vás víc než při sjednání napřímo?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Cena tarifu je stejná. Jsme obchodní zástupce, ne srovnávač – naší odměnou je provize od poskytovatele za sjednané připojení, kterou platí on, ne vy. Ověření adresy je zdarma a nezávazné." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
+          { "@type": "ListItem", "position": 2, "name": "Tarify", "item": "https://internetostrava.cz/tarify/" }
+        ]
       }
     ]
   }
@@ -86,6 +141,7 @@
         <div class="faq">
           <details><summary>Platí uvedené ceny stejně pro každou adresu?<span aria-hidden="true"></span></summary><p>Cena tarifu je stejná, ale technické možnosti zapojení a dostupnost se vždy potvrzují podle konkrétní adresy.</p></details>
           <details><summary>Mohu mít jen internet bez televize?<span aria-hidden="true"></span></summary><p>Ano. Giga 2000 je samostatný internet. U tarifů s televizí lze řešit i jen internet – napište to do poznámky ve formuláři.</p></details>
+          <details><summary>Zaplatím u vás víc než při sjednání napřímo?<span aria-hidden="true"></span></summary><p>Ne. Cena tarifu je stejná. Jsme obchodní zástupce, ne srovnávač – naší odměnou je provize od poskytovatele za sjednané připojení, kterou platí on, ne vy. Ověření adresy je zdarma a nezávazné.</p></details>
         </div>
       </div>
     </section>

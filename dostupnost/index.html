@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ověření dostupnosti internetu Ostrava | InternetOstrava.cz</title>
-  <meta name="description" content="Ověřte dostupnost optického internetu na své adrese v Ostravě. Vyplňte krátký formulář a zjistěte dostupnou technologii a tarify pro váš dům.">
+  <title>Dostupnost internetu podle adresy | Ostrava a okolí</title>
+  <meta name="description" content="Ověření dostupnosti internetu podle přesné adresy v Ostravě a okolí. Zjistěte, jaká technologie a rychlost jsou dostupné pro konkrétní dům – nezávazně a do 30 minut.">
   <link rel="canonical" href="https://internetostrava.cz/dostupnost/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
@@ -14,8 +14,8 @@
   <meta name="theme-color" content="#0a0f13"><meta name="geo.region" content="CZ-80"><meta name="geo.placename" content="Ostrava"><meta name="geo.position" content="49.8209;18.2625"><meta name="ICBM" content="49.8209, 18.2625">
   <link rel="preload" as="image" href="/assets/radnice-optika-night.webp">
   <link rel="stylesheet" href="/assets/redesign.css?v=r23">
-  <meta property="og:title" content="Ověření dostupnosti internetu Ostrava | InternetOstrava.cz">
-  <meta property="og:description" content="Ověřte dostupnost optického internetu na své adrese v Ostravě podle ulice a čísla domu.">
+  <meta property="og:title" content="Dostupnost internetu podle adresy | Ostrava a okolí">
+  <meta property="og:description" content="Ověřte dostupnost internetu na své adrese v Ostravě podle ulice a čísla domu.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://internetostrava.cz/dostupnost/">
   <meta property="og:image" content="https://internetostrava.cz/assets/radnice-optika-night.webp">
@@ -23,17 +23,74 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Je odeslání formuláře závazná objednávka?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Formulář slouží k nezávaznému ověření dostupnosti a prvnímu kontaktu." }
+        "@type": "Service",
+        "@id": "https://internetostrava.cz/dostupnost/#service",
+        "name": "Ověření dostupnosti internetu podle adresy",
+        "serviceType": "Ověření dostupnosti internetového připojení",
+        "areaServed": { "@type": "Place", "name": "Ostrava a okolí, Moravskoslezský kraj" },
+        "provider": { "@id": "https://internetostrava.cz/#organization" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CZK", "description": "Ověření dostupnosti na adrese je nezávazné a zdarma." }
       },
       {
-        "@type": "Question",
-        "name": "Jak dlouho trvá, než se ozvete?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Obvykle do 30 minut v pracovní dny. Ozve se vám člověk, ne automat." }
+        "@type": "HowTo",
+        "@id": "https://internetostrava.cz/dostupnost/#howto",
+        "name": "Jak zjistit dostupnost internetu na konkrétní adrese",
+        "totalTime": "PT30M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Připravte přesnou adresu", "text": "Potřebujete ulici, číslo popisné nebo orientační a obec či městskou část. U bytových domů pomůže i číslo vchodu a patro." },
+          { "@type": "HowToStep", "position": 2, "name": "Odešlete adresu k ověření", "text": "Vyplňte adresu a telefon v nezávazném formuláři. Odeslání není objednávka." },
+          { "@type": "HowToStep", "position": 3, "name": "Prověříme možnosti pro konkrétní dům", "text": "Ověříme, jaká technologie a rychlost jsou na dané adrese skutečně zapojitelné." },
+          { "@type": "HowToStep", "position": 4, "name": "Projdeme si výsledek", "text": "Ozveme se telefonicky obvykle do 30 minut v pracovní dny s konkrétními možnostmi pro vaši adresu." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Jak zjistím dostupnost internetu podle adresy?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Potřebujete ulici, číslo domu a obec nebo městskou část. S touto adresou lze ověřit, jaká technologie a rychlost jsou pro konkrétní dům zapojitelné. Název čtvrti nestačí – sousední domy se mohou lišit." }
+          },
+          {
+            "@type": "Question",
+            "name": "Proč nestačí mapa pokrytí?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Mapy pokrytí ukazují oblast, ne jednotlivý dům. O skutečné dostupnosti rozhoduje, zda je přípojka zavedena do konkrétního domu a v jakém je stavu vnitřní rozvod. Proto se dostupnost potvrzuje až podle přesné adresy." }
+          },
+          {
+            "@type": "Question",
+            "name": "Pro jaké oblasti dostupnost ověřujete?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Pro Ostravu a okolí, včetně všech městských obvodů a částí. Pro adresy mimo tuto oblast doporučujeme obrátit se přímo na poskytovatele působící v daném místě." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je odeslání formuláře závazná objednávka?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Formulář slouží k nezávaznému ověření dostupnosti a prvnímu kontaktu. Tarif si vybíráte, až když víte, co lze na adrese skutečně zapojit." }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak dlouho trvá, než se ozvete?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Obvykle do 30 minut v pracovní dny. Ozve se vám člověk, ne automat." }
+          },
+          {
+            "@type": "Question",
+            "name": "Liší se dostupnost v bytovém a rodinném domě?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano. U bytových domů závisí na tom, zda je dům připojen a jak je řešen vnitřní rozvod ke konkrétnímu bytu. U rodinných domů jde o samostatnou přípojku k pozemku. Obojí ověřujeme podle přesné adresy." }
+          },
+          {
+            "@type": "Question",
+            "name": "Kolik ověření stojí a jak web vyděláváme?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ověření adresy je zdarma a nezávazné. Jsme obchodní zástupce, ne srovnávač – za sjednané připojení dostáváme provizi od poskytovatele. Cenu tarifu vám to nezvyšuje." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
+          { "@type": "ListItem", "position": 2, "name": "Dostupnost internetu podle adresy", "item": "https://internetostrava.cz/dostupnost/" }
+        ]
       }
     ]
   }
@@ -63,8 +120,8 @@
         <div class="subhero-form">
           <div>
             <div class="breadcrumbs"><a href="/">Domů</a> / Dostupnost</div>
-            <h1>Ověřte dostupnost na vaší adrese.</h1>
-            <p class="lead">Přesná adresa rozhoduje. Vyplňte ulici a číslo domu – prověříme reálné možnosti připojení pro váš dům.</p>
+            <h1>Ověřte dostupnost internetu podle adresy.</h1>
+            <p class="lead">Přesná adresa rozhoduje. Vyplňte ulici a číslo domu – prověříme reálné možnosti připojení pro váš dům v Ostravě a okolí.</p>
             <div class="trustline" style="margin-top:22px">
               <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
               <p><strong>Ozve se vám člověk, ne automat.</strong> Ozveme se do 30 minut.</p>
@@ -108,19 +165,69 @@
 
     <section class="section concrete">
       <div class="wrap" style="max-width:880px">
-        <div class="prose" style="max-width:none">
-          <h2>Ověření konkrétního domu</h2>
-          <p>Možnosti připojení se mohou lišit i mezi sousedními domy. Ověření adresy je nejrychlejší cesta, jak zjistit dostupnou technologii, rychlost i vhodnou variantu tarifu.</p>
+        <div class="answer-box">
+          <h2>Jak zjistit dostupnost internetu podle adresy</h2>
+          <p><strong>Krátká odpověď:</strong> potřebujete ulici, číslo domu a obec nebo městskou část. Teprve s přesnou adresou lze potvrdit, jaká technologie a rychlost jsou pro konkrétní dům skutečně zapojitelné. Název čtvrti k tomu nestačí – dva sousední domy na stejné ulici mohou mít odlišné možnosti připojení.</p>
         </div>
-        <div class="steps" style="margin-top:28px">
-          <div class="step"><div class="num">1</div><h3>Vyplníte kontakt</h3><p>Potřebujeme ulici, číslo domu a telefon.</p></div>
-          <div class="step"><div class="num">2</div><h3>Prověříme možnosti</h3><p>Zjistíme, co lze na adrese skutečně nabídnout.</p></div>
+
+        <div class="prose" style="max-width:none">
+          <h2>Proč mapa pokrytí nestačí</h2>
+          <p>Mapy pokrytí zobrazují oblast, ne jednotlivý dům. Ukážou, že se v lokalitě síť nachází, ale neřeknou, zda je přípojka zavedena až do vašeho vchodu a v jakém stavu je vnitřní rozvod. Právě tyto dvě věci rozhodují o tom, co lze na adrese reálně zapojit a za jakou rychlost.</p>
+          <p>Rozdíly vznikají typicky tam, kde se v jedné ulici míchá starší a novější zástavba, u domů po rekonstrukci, u nových přístaveb nebo u rodinných domů na konci slepé ulice. Proto se dostupnost i finální nabídka vždy potvrzují až podle přesné adresy.</p>
+        </div>
+
+        <div class="table-scroll" style="margin-top:24px">
+          <table class="compare-table">
+            <caption class="sr-only">Porovnání způsobů, jak zjistit dostupnost internetu na adrese</caption>
+            <thead>
+              <tr><th scope="col">Způsob zjištění</th><th scope="col">Co skutečně ukáže</th><th scope="col">Kdy stačí</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mapa pokrytí</td><td>Orientační rozsah sítě v oblasti</td><td>Když jen zjišťujete, zda se v lokalitě síť vůbec nachází</td></tr>
+              <tr><td>Vyhledávač podle obce</td><td>Seznam poskytovatelů působících v obci</td><td>Pro prvotní přehled, ne pro rozhodnutí</td></tr>
+              <tr><td>Ověření podle ulice a čísla domu</td><td>Technologie, rychlost a varianty pro konkrétní dům</td><td>Když se rozhodujete a chcete znát reálné možnosti</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose" style="max-width:none">
+          <h2>Co si připravit k ověření</h2>
+          <div class="checklist">
+            <div class="label">Co poslat</div>
+            <ul>
+              <li>ulici a číslo domu – popisné nebo orientační, ideálně obojí</li>
+              <li>obec nebo městskou část, u Ostravy pomůže i název obvodu</li>
+              <li>typ domu – bytový, rodinný, novostavba či dům po rekonstrukci</li>
+              <li>číslo vchodu a patro u větších bytových domů</li>
+              <li>telefon, abychom mohli výsledek probrat</li>
+            </ul>
+          </div>
+          <p class="note">Údaje slouží výhradně k ověření dostupnosti a prvnímu kontaktu. Podrobnosti najdete v <a href="/ochrana-udaju/">zásadách ochrany údajů</a>.</p>
+        </div>
+
+        <h2 style="margin-top:36px">Jak ověření probíhá</h2>
+        <div class="steps" style="margin-top:20px">
+          <div class="step"><div class="num">1</div><h3>Vyplníte adresu</h3><p>Potřebujeme ulici, číslo domu a telefon. Odeslání není objednávka.</p></div>
+          <div class="step"><div class="num">2</div><h3>Prověříme dům</h3><p>Zjistíme, jaká technologie a rychlost jsou na dané adrese skutečně zapojitelné.</p></div>
           <div class="step"><div class="num">3</div><h3>Projdeme řešení</h3><p>Do 30 minut se ozve místní zástupce – ne call centrum – a vysvětlí dostupné varianty.</p></div>
         </div>
-        <h2 style="margin-top:36px">Časté dotazy</h2>
+
+        <div class="prose" style="max-width:none; margin-top:36px">
+          <h2>Dostupnost podle městské části Ostravy</h2>
+          <p>Ostrava má rozdílnou zástavbu obvod od obvodu – panelová sídliště na Jihu, sorela v Porubě, činžáky v širším centru i rozptýlené rodinné domy na okrajích. Podle typu zástavby se liší i to, jak bývá připojení do domů vedeno.</p>
+          <p>Přehled jednotlivých obvodů a částí najdete v sekci <a href="/lokality/">internet podle lokality</a>. I tam ale platí, že konkrétní možnosti potvrdíme až podle čísla domu.</p>
+          <p>Pokud si nejste jistí, jakou rychlost vlastně potřebujete, projděte si <a href="/poradna/jaka-rychlost-internetu-pro-domacnost/">orientační vodítko pro domácnosti</a> nebo srovnání <a href="/poradna/optika-vs-bezdratovy-internet/">optiky a bezdrátového připojení</a>. Podrobný postup ověření rozebírá článek <a href="/poradna/dostupnost-optickeho-internetu-ostrava/">jak zjistit dostupnost optického internetu na adrese</a>.</p>
+        </div>
+
+        <h2 style="margin-top:36px">Časté dotazy k dostupnosti</h2>
         <div class="faq">
-          <details><summary>Je odeslání formuláře závazná objednávka?<span aria-hidden="true"></span></summary><p>Ne. Formulář slouží k nezávaznému ověření dostupnosti a prvnímu kontaktu.</p></details>
+          <details><summary>Jak zjistím dostupnost internetu podle adresy?<span aria-hidden="true"></span></summary><p>Potřebujete ulici, číslo domu a obec nebo městskou část. S touto adresou lze ověřit, jaká technologie a rychlost jsou pro konkrétní dům zapojitelné. Název čtvrti nestačí – sousední domy se mohou lišit.</p></details>
+          <details><summary>Proč nestačí mapa pokrytí?<span aria-hidden="true"></span></summary><p>Mapy pokrytí ukazují oblast, ne jednotlivý dům. O skutečné dostupnosti rozhoduje, zda je přípojka zavedena do konkrétního domu a v jakém je stavu vnitřní rozvod. Proto se dostupnost potvrzuje až podle přesné adresy.</p></details>
+          <details><summary>Pro jaké oblasti dostupnost ověřujete?<span aria-hidden="true"></span></summary><p>Pro Ostravu a okolí, včetně všech městských obvodů a částí. Pro adresy mimo tuto oblast doporučujeme obrátit se přímo na poskytovatele působící v daném místě.</p></details>
+          <details><summary>Je odeslání formuláře závazná objednávka?<span aria-hidden="true"></span></summary><p>Ne. Formulář slouží k nezávaznému ověření dostupnosti a prvnímu kontaktu. Tarif si vybíráte, až když víte, co lze na adrese skutečně zapojit.</p></details>
           <details><summary>Jak dlouho trvá, než se ozvete?<span aria-hidden="true"></span></summary><p>Obvykle do 30 minut v pracovní dny. Ozve se vám člověk, ne automat.</p></details>
+          <details><summary>Liší se dostupnost v bytovém a rodinném domě?<span aria-hidden="true"></span></summary><p>Ano. U bytových domů závisí na tom, zda je dům připojen a jak je řešen vnitřní rozvod ke konkrétnímu bytu. U rodinných domů jde o samostatnou přípojku k pozemku. Obojí ověřujeme podle přesné adresy.</p></details>
+          <details><summary>Kolik ověření stojí a jak web vyděláváme?<span aria-hidden="true"></span></summary><p>Ověření adresy je zdarma a nezávazné. Jsme obchodní zástupce, ne srovnávač – za sjednané připojení dostáváme provizi od poskytovatele. Cenu tarifu vám to nezvyšuje.</p></details>
         </div>
       </div>
     </section>

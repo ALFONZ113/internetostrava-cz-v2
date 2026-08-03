@@ -14,17 +14,57 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Jde o oficiální web poskytovatele internetu?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Jde o nezávislý web obchodního zástupce, ne o oficiální web poskytovatele." }
+        "@type": "ContactPage",
+        "@id": "https://internetostrava.cz/kontakt/#contactpage",
+        "url": "https://internetostrava.cz/kontakt/",
+        "name": "Kontakt | Internet Ostrava",
+        "about": { "@id": "https://internetostrava.cz/#organization" },
+        "publisher": { "@id": "https://internetostrava.cz/#organization" },
+        "inLanguage": "cs"
       },
       {
-        "@type": "Question",
-        "name": "Je odeslání formuláře závazné?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ne. Slouží k nezávaznému ověření adresy a prvnímu kontaktu." }
+        "@type": "Person",
+        "@id": "https://internetostrava.cz/#person",
+        "name": "Milan Terč",
+        "jobTitle": "Obchodní zástupce pro internet v Ostravě",
+        "telephone": "+420777425230",
+        "email": "info@internetostrava.cz",
+        "worksFor": { "@id": "https://internetostrava.cz/#organization" },
+        "areaServed": { "@type": "City", "name": "Ostrava" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Jde o oficiální web poskytovatele internetu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Jde o web obchodního zástupce, ne o oficiální web poskytovatele." }
+          },
+          {
+            "@type": "Question",
+            "name": "Kolik mě stojí ověření a zprostředkování?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nic. Ověření adresy je zdarma a nezávazné. Naší odměnou je provize od poskytovatele za sjednané připojení – cenu tarifu vám to nezvyšuje." }
+          },
+          {
+            "@type": "Question",
+            "name": "Porovnáváte všechny poskytovatele na trhu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Jsme obchodní zástupce, ne srovnávač. Proto u nás vidíte konkrétní ceny a konkrétní kontakt. Pokud na vaší adrese nedokážeme nabídnout rozumné řešení, řekneme vám to." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je odeslání formuláře závazné?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Slouží k nezávaznému ověření adresy a prvnímu kontaktu." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
+          { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://internetostrava.cz/kontakt/" }
+        ]
       }
     ]
   }
@@ -61,14 +101,14 @@
       <div class="wrap page-grid">
         <div class="prose">
           <h2>Obchodní zástupce pro internet v Ostravě</h2>
-          <p>Obraťte se přímo na místního zástupce pro Ostravu – bez call centra a přepojování. Jde o nezávislý web obchodního zástupce, ne o oficiální web poskytovatele.</p>
+          <p>Obraťte se přímo na místního zástupce pro Ostravu – bez call centra a přepojování. Jde o web obchodního zástupce, ne o oficiální web poskytovatele.</p>
           <div class="trustline">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-            <p>Vašemu dotazu se osobně věnuje <strong>p. Terč</strong>, zástupce pro Ostravu a okolí. Ozveme se do 30 minut v pracovní dny.</p>
+            <p>Vašemu dotazu se osobně věnuje <strong>Milan Terč</strong>, zástupce pro Ostravu a okolí. Ozveme se do 30 minut v pracovní dny.</p>
           </div>
           <h2>Kontaktní údaje</h2>
           <ul>
-            <li>Kontaktní osoba: <strong>p. Terč</strong></li>
+            <li>Kontaktní osoba: <strong>Milan Terč</strong></li>
             <li>Telefon: <a href="tel:+420777425230">+420 777 425 230</a></li>
             <li>E-mail: <a href="mailto:info@internetostrava.cz">info@internetostrava.cz</a></li>
             <li>Formulář: <a href="/dostupnost/">nezávazné ověření adresy</a></li>
@@ -80,9 +120,15 @@
             <li><strong>2. Do 30 minut se ozveme.</strong> V pracovní dny telefonicky – s konkrétními možnostmi pro váš dům, ne s obecnou nabídkou.</li>
             <li><strong>3. Rozhodnete se v klidu.</strong> Ověření je nezávazné. Tarif vybíráte, až když víte, co lze na adrese skutečně zapojit.</li>
           </ul>
+          <h2>Jak je tento web financovaný</h2>
+          <p>Řekneme to na rovinu: <strong>tento web neprovozuje porovnávač, ale obchodní zástupce.</strong> Za připojení sjednané přes tento web dostáváme provizi od poskytovatele. Vy za ověření adresy ani za zprostředkování neplatíte nic – cena tarifu je stejná, ať si ho sjednáte přes nás, nebo přímo.</p>
+          <p>Z toho plyne, co od nás čekat a co ne. Nenabízíme srovnání všech poskytovatelů na trhu a netváříme se, že jsme nezávislý rozhodčí. Nabízíme konkrétní ceny, konkrétní telefon a člověka, který vám řekne i to, když se na vaší adrese zapojit nedá – protože nesjednaná zakázka je pořád lepší než nespokojený zákazník na sousední ulici.</p>
+
           <h2>Časté dotazy</h2>
           <div class="faq">
-            <details><summary>Jde o oficiální web poskytovatele internetu?<span aria-hidden="true"></span></summary><p>Ne. Jde o nezávislý web obchodního zástupce, ne o oficiální web poskytovatele.</p></details>
+            <details><summary>Jde o oficiální web poskytovatele internetu?<span aria-hidden="true"></span></summary><p>Ne. Jde o web obchodního zástupce, ne o oficiální web poskytovatele.</p></details>
+            <details><summary>Kolik mě stojí ověření a zprostředkování?<span aria-hidden="true"></span></summary><p>Nic. Ověření adresy je zdarma a nezávazné. Naší odměnou je provize od poskytovatele za sjednané připojení – cenu tarifu vám to nezvyšuje.</p></details>
+            <details><summary>Porovnáváte všechny poskytovatele na trhu?<span aria-hidden="true"></span></summary><p>Ne. Jsme obchodní zástupce, ne srovnávač. Proto u nás vidíte konkrétní ceny a konkrétní kontakt. Pokud na vaší adrese nedokážeme nabídnout rozumné řešení, řekneme vám to.</p></details>
             <details><summary>Je odeslání formuláře závazné?<span aria-hidden="true"></span></summary><p>Ne. Slouží k nezávaznému ověření adresy a prvnímu kontaktu.</p></details>
           </div>
         </div>
