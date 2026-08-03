@@ -29,14 +29,32 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService"],
         "@id": "https://internetostrava.cz/#organization",
         "name": "InternetOstrava.cz",
+        "legalName": "Milan Terč",
+        "taxID": "75546230",
         "url": "https://internetostrava.cz/",
         "description": "Nezávislý poradenský web pro ověření dostupnosti internetového připojení v Ostravě a okolí.",
         "telephone": "+420777425230",
+        "email": "info@internetostrava.cz",
+        "logo": { "@type": "ImageObject", "url": "https://internetostrava.cz/assets/icon-192x192.png", "width": 192, "height": 192 },
+        "image": "https://internetostrava.cz/assets/radnice-optika-night.webp",
         "address": { "@type": "PostalAddress", "addressLocality": "Ostrava", "addressRegion": "Moravskoslezský kraj", "addressCountry": "CZ" },
-        "areaServed": { "@type": "City", "name": "Ostrava" }
+        "geo": { "@type": "GeoCoordinates", "latitude": 49.8209, "longitude": 18.2625 },
+        "areaServed": [
+          { "@type": "City", "name": "Ostrava" },
+          { "@type": "AdministrativeArea", "name": "Moravskoslezský kraj" }
+        ],
+        "knowsLanguage": "cs",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+420777425230",
+          "email": "info@internetostrava.cz",
+          "areaServed": "CZ",
+          "availableLanguage": "Czech"
+        }
       },
       {
         "@type": "WebSite",
@@ -71,6 +89,11 @@
             "@type": "Question",
             "name": "Mohu si objednat pouze internet bez televize?",
             "acceptedAnswer": { "@type": "Answer", "text": "Ano. V nabídce může být samostatný internet i kombinace internetu s televizí. Konkrétní dostupnou variantu ověří obchodní zástupce podle adresy." }
+          },
+          {
+            "@type": "Question",
+            "name": "Kolik stojí ověření adresy a jak web vyděláváme?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ověření adresy je zdarma a nezávazné. Jsme obchodní zástupce, ne srovnávač – za sjednané připojení dostáváme provizi od poskytovatele. Cenu tarifu vám to nezvyšuje, platíte stejně jako při sjednání napřímo." }
           }
         ]
       }
@@ -285,6 +308,7 @@
           <span class="eyebrow">Člověk z Ostravy</span>
           <h2 class="title">Za webem je živý člověk, který je tu doma.</h2>
           <p class="lead" style="margin-top:18px">Nejsme anonymní linka. Vašemu dotazu se věnuje místní zástupce, který Ostravu zná – ulice, domy i to, co kde reálně jde zapojit. Ozveme se do 30 minut a řekneme vám to na rovinu.</p>
+          <p style="margin-top:14px">Na rovinu i tohle: jsme obchodní zástupce, ne srovnávač. Za sjednané připojení dostáváme provizi od poskytovatele – vám ověření adresy ani zprostředkování nic nestojí a cenu tarifu to nezvyšuje. Proto u nás vidíte konkrétní ceny a konkrétní telefon, ne obecné „od".</p>
           <div class="hero-cta" style="margin-top:26px">
             <a class="btn btn-primary" href="tel:+420777425230">Volat 777 425 230</a>
             <a class="btn btn-ghost" href="/kontakt/">Napsat nám</a>
@@ -305,6 +329,7 @@
           <details><summary>Je optický internet dostupný v celé Ostravě?<span aria-hidden="true"></span></summary><p>Dostupnost se liší podle konkrétního domu. Sousední adresy mohou mít odlišné možnosti připojení, proto je přesná adresa důležitá.</p></details>
           <details><summary>Mohu mít pouze internet bez televize?<span aria-hidden="true"></span></summary><p>Ano. Nabídka může obsahovat samostatný internet i kombinace s televizí. Vybereme dostupnou variantu podle vašich potřeb.</p></details>
           <details><summary>Je odeslání formuláře závazná objednávka?<span aria-hidden="true"></span></summary><p>Ne. Formulář slouží k ověření dostupnosti a prvnímu kontaktu. Konkrétní řešení si nejprve projdete s obchodním zástupcem.</p></details>
+          <details><summary>Kolik stojí ověření adresy a jak web vyděláváme?<span aria-hidden="true"></span></summary><p>Ověření adresy je zdarma a nezávazné. Jsme obchodní zástupce, ne srovnávač – za sjednané připojení dostáváme provizi od poskytovatele. Cenu tarifu vám to nezvyšuje, platíte stejně jako při sjednání napřímo.</p></details>
         </div>
       </div>
     </section>
