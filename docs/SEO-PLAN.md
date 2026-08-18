@@ -95,6 +95,46 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Vyhodnoceni Search Console 2026-08-18 + prvni optimalizace podle dat
+
+Prvni vyhodnoceni realnych dat (export GSC z 2026-08-18, typ Web, obdobi 2026-07-07 az 2026-08-16, tj. 41 dni).
+
+### Namerena data
+
+- Celkem 30 kliku, ~880 zobrazeni, CTR ~3,3 %, prumerna pozice 20,7. Cesko: 28 kliku / 812 zobrazeni.
+- Mobil 26 kliku / 466 zobrazeni (CTR 5,58 %, poz. 21,3), desktop 4 kliky / 410 zobrazeni (CTR 0,98 %, poz. 19,1). Desktop rankuje lepe a konvertuje 5,7x hure.
+- 12 z 33 URL v sitemape neziskalo ani jedno zobrazeni: `/lokality/`, 8 lokalnich stranek vlny 1 (hrabuvka, zabreh, vyskovice, hulvaky, svinov, trebovice, muglinov, michalkovice), 2 clanky poradny (home-office, caste-otazky) a `/ochrana-udaju/`.
+
+### Hlavni zjisteni
+
+1. **Rankujeme na znacce, ne na objemu.** Znackove dotazy: `poda mapa pokryti` poz. 5,5; `poda internet ostrava` 7,5; `poda dostupnost` 10,3; `poda karvina` 12,7; `poda internet` 18,9; `poda ostrava` 20,1. Obecne lokalni dotazy: `internet ostrava` poz. 40,6; `internet v ostrave` 28,3; `internet poruba` 26,9; `internet ostrava poruba` 32,1; `nejlevnejsi internet ostrava` 38,3. PODA SEO zona funguje, neutralni Ads zona organicky ne (`/tarify/` poz. 43,1).
+2. **Cluster "podle adresy" byl nevyuzity.** ~50 zobrazeni napric variantami (`internet podle adresy` 15, `dostupnost internetu podle adresy` 15, `poskytovatele internetu podle adresy` 8, `overeni dostupnosti internetu` 8 a dalsi) na pozicich 30-63 - pritom jde o claim, na kterem stoji cely web. `/dostupnost/` mela pritom jen 226 slov.
+3. **Vlna 1 lokalit je neviditelna.** 12 stranek publikovanych 2026-07-24 vyrobilo za 3,5 tydne ~5 zobrazeni.
+4. **Problem s CTR je oddeleny od problemu s pozici.** `/poradna/dostupnost-optickeho-internetu-ostrava/` na poz. 7,2 ma 26 zobrazeni a 0 kliku.
+5. Kliky se koncentruji do 9.-12. 7. (19 z 30) s CTR 13-26 % na pozici 21-28, coz je organicky nedosazitelne - pravdepodobne vlastni nebo preposlane kliky. Drivejsi baseline "24 kliku" je tim nafouknuty; realne organicke CTR je spis 1-3 %.
+
+### Implementovano 2026-08-18
+
+- **Meta delky:** zkraceny 4 titulky nad 60 znaku (`/internet-belsky-les/`, `/internet-muglinov/`, 2 clanky poradny) a 2 description nad 160 znaku (`/lokality/`, `/poradna/`). Pozn. k mereni: pocitat ZNAKY, ne bajty - `${#var}` v bashi vraci bajty a ceska diakritika ma v UTF-8 2 bajty, coz vysledek nafoukne zhruba 1,3x a vyrobi falesne poplachy.
+- **Prohloubena `/dostupnost/`** z 226 na 1023 slov, cilena na cluster "podle adresy" (Ads zona, overeno 0 vyskytu retezce "poda"). Nove sekce: answer-box, "Proc se dostupnost overuje podle adresy, ne podle ctvrti", "Co na konkretni adrese rozhoduje" (checklist: typ domu, pripojka, rozvod, souhlas SVJ, technologie v ulici), "Proc obecne mapy pokryti nestaci", "Co si pripravit pred overenim", "Jake tarify se na adrese overuji" (3 neutralni tarify s cenami + odkaz na `/tarify/`), "Dostupnost podle mestske casti Ostravy". FAQ rozsirena z 2 na 8 otazek, schema doplneno o Service + BreadcrumbList a FAQPage rozsirena na 8. Zadna procenta pokryti, zadne superlativy, vsude veta o overeni podle presne adresy.
+- **Interni prolinkovani:** `/dostupnost/` nove odkazuje kontextove (v textu, ne jen v navigaci) na `/lokality/`, `/tarify/`, `/kontakt/` a 4 clanky poradny. Merene prichozi odkazy: `/poradna/dostupnost-optickeho-internetu-ostrava/` a `/poradna/caste-otazky-pred-zmenou-poskytovatele/` 1 -> 2, `/poradna/optika-vs-bezdratovy-internet/` a `/poradna/jaka-rychlost-internetu-pro-domacnost/` 3 -> 4. Pozn.: `/lokality/` orphan nebyl (33 prichozich odkazu, ale vsechny z navigace) - jeho nulova zobrazeni maji jinou pricinu; kontextovy odkaz mu prida relevanci, ne novou odkazujici stranku. Footer sloupec "Informace" doplnen o Lokality.
+- **Snippety 5 stranek s dobrou pozici a nulovym CTR:** `/poradna/dostupnost-optickeho-internetu-ostrava/` (poz. 7,2), `/internet-marianske-hory/` (10,3 - title prepsan z "... | Overeni" na znackovy vzor), `/poda-karvina/` (11,3), `/internet-ostrava-poruba/` (22,7 a 83 zobrazeni, nejvice na webu - title prepsan na "PODA internet Ostrava-Poruba | Dostupnost podle adresy"), `/internet-slezska-ostrava/` (25,7). Vsude doplnena konkretni pobidka konzistentni se zbytkem webu (nezavazne / do 30 minut).
+- **Prohlouben hub `/poda-internet-ostrava/`** z 630 na 1374 slov - stranka s 170 zobrazenimi a 13 kliky, tj. 43 % veskereho provozu webu (poz. 16,7). Nove sekce: answer-box, "Co PODA v Ostrave nabizi" (checklist), "PODA pokryti v Ostrave: proc mapa nestaci" (cili na `poda pokryti` poz. 12,7 a `poda mapa pokryti` poz. 5,5), "Internet PODA s televizi" (`poda tv internet`), "PODA v jednotlivych castech Ostravy" (odkazy na 6 lokalnich stranek + `/lokality/` + `/poda-karvina/`), "Co resi obchodni zastupce a co primo PODA" (`.compare-table` s delbou roli - cili na `poda klientska zona` a zaroven posiluje disclosure). FAQ z 3 na 9 otazek, `FAQPage` schema sladena 1:1 s viditelnym obsahem (9/9). Kotva `#tarify` na sekci tarifu, aside odkazy rozsirene o Porubu, Ostravu-Jih a `/lokality/`.
+- `sitemap.xml`: lastmod 2026-08-18 pro 12 zmenenych URL. Cache token nebumpovan - CSS ani JS se nemenily.
+
+### Rozhodnuto
+
+- **Vlna 2 lokalit se odklada**, dokud vlna 1 nezacne generovat zobrazeni. 12 tenkych stranek = ~5 zobrazeni za 3,5 tydne; dalsich 14 stranek stejneho typu by riziko doorway hodnoceni jen zvysilo, aniz by pribyl provoz.
+
+### Dalsi kroky podle ocekavaneho dopadu
+
+1. Overit v GSC > Indexovani stranek, zda je 12 URL s nulovymi zobrazenimi vubec zaindexovanych.
+2. Prohloubit `/internet-ostrava-poruba/` - ~90 zobrazeni porubskeho zameru napric dotazy, 0 kliku. Latka kvality: konkurencni stranka ma ~3500 slov, konkretni ulice a orientacni body, 11 FAQ a ceny.
+3. Zbyle 4 lokality ze seznamu: Slezska Ostrava, Ostrava-Jih, Vitkovice, Marianske Hory.
+4. Google Business Profile (Milan Terc, ICO 75546230, service-area business; nazev NESMI obsahovat "PODA" - neni to PODA a.s.) + zapis na Firmy.cz kvuli Seznamu.
+5. Po nasazeni poslat `/dostupnost/`, `/poda-internet-ostrava/` a upravene snippety do GSC > Kontrola URL > Pozadat o indexovani.
+6. Znovu vyhodnotit po 28 dnech, tj. cca 2026-09-15.
+
 ## Implementovano 2026-07-24 - Plne pokryti mestskych casti + hub /lokality/ (vlna 1)
 
 Kontext: majitel rozhodl o plnem pokryti mestskych casti Ostravy vlastnimi URL (vice nez konkurent, ktery ma 23 lokalit). Tim se **revidovalo puvodni rozhodnuti** z 2026-07-13 (r. "Vedome NEimplementovano: 23 lokalit / doorway riziko"). Doorway riziko se misto vynechani lokalit **mitiguje kvalitou**: kazda stranka ma unikatni obsah o typu zastavby dane casti, zadna vymyslena procenta pokryti ani recenze, vzdy veta o overeni podle presne adresy. Publikace ve dvou vlnach (prirozenejsi rust indexu).
