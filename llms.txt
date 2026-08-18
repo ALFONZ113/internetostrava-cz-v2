@@ -8,7 +8,7 @@
 - [PODA internet Ostrava](https://internetostrava.cz/poda-internet-ostrava/): focused explanation of how PODA internet availability is verified by exact address in Ostrava
 - [PODA dostupnost](https://internetostrava.cz/poda-dostupnost/): explanation of how PODA coverage and availability are verified per exact address
 - [PODA internet Karviná](https://internetostrava.cz/poda-karvina/): availability verification for addresses in Karviná and surroundings
-- [Availability verification](https://internetostrava.cz/dostupnost/): non-binding form for checking an Ostrava address
+- [Availability verification](https://internetostrava.cz/dostupnost/): how internet availability is determined per exact address in Ostrava, what affects the result at building level, what to prepare, plus a non-binding check form
 - [Tariffs](https://internetostrava.cz/tarify/): indicative options subject to address verification
 - [Contact](https://internetostrava.cz/kontakt/): representative contact details
 - [Lokality overview](https://internetostrava.cz/lokality/): provider-neutral directory of Ostrava districts grouped by area, each linking to a local availability page
