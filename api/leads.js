@@ -1,6 +1,8 @@
 const LEAD_TO_EMAIL = process.env.LEAD_TO_EMAIL || "terc@obchod.poda.cz";
 const LEAD_FROM_EMAIL = process.env.LEAD_FROM_EMAIL || "InternetOstrava.cz <leady@internetostrava.cz>";
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const N8N_LEAD_WEBHOOK = process.env.N8N_LEAD_WEBHOOK;
+const N8N_LEAD_TOKEN = process.env.N8N_LEAD_TOKEN;
 
 function cleanText(value, maxLength = 1000) {
   return String(value || "").trim().slice(0, maxLength);
@@ -72,6 +74,57 @@ async function sendResendEmail(lead) {
   return { configured: true };
 }
 
+async function forwardLeadToN8n(lead) {
+  if (!N8N_LEAD_WEBHOOK || !N8N_LEAD_TOKEN) return;
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 3000);
+  const leadLabel = lead.type === "callback"
+    ? "Zpětné volání"
+    : lead.type === "order"
+    ? "Nezávazná objednávka"
+    : "Ověření dostupnosti";
+  const message = [
+    lead.tarif ? `Tarif: ${lead.tarif}` : "",
+    lead.note,
+    lead.utmSource ? `UTM source: ${lead.utmSource}` : "",
+    lead.utmMedium ? `UTM medium: ${lead.utmMedium}` : "",
+    lead.utmCampaign ? `UTM campaign: ${lead.utmCampaign}` : ""
+  ].filter(Boolean).join("\n");
+  const sourcePath = lead.sourcePage
+    ? `/${lead.sourcePage.replace(/^\/+/, "")}`
+    : "";
+
+  try {
+    const response = await fetch(N8N_LEAD_WEBHOOK, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Lead-Token": N8N_LEAD_TOKEN
+      },
+      body: JSON.stringify({
+        source: "internetostrava.cz",
+        name: `${leadLabel} – ${lead.phone}`,
+        email: lead.email || null,
+        phone: lead.phone,
+        address: lead.address,
+        message,
+        pageUrl: `https://internetostrava.cz${sourcePath}`,
+        website: ""
+      }),
+      signal: controller.signal
+    });
+
+    if (!response.ok) {
+      throw new Error(`n8n returned ${response.status}`);
+    }
+  } catch (error) {
+    console.warn("[leads] n8n forwarding failed (ignored):", error instanceof Error ? error.message : "unknown error");
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 function parsePayload(body) {
   if (!body) return {};
   if (Buffer.isBuffer(body)) return JSON.parse(body.toString("utf8") || "{}");
@@ -116,14 +169,17 @@ module.exports = async function handler(request, response) {
       return response.status(400).json({ ok: false, error: "invalid_required_fields" });
     }
 
-    let mail;
-    try {
-      mail = await sendResendEmail(lead);
-    } catch (error) {
-      console.error(error);
+    const [mailResult] = await Promise.allSettled([
+      sendResendEmail(lead),
+      forwardLeadToN8n(lead)
+    ]);
+
+    if (mailResult.status === "rejected") {
+      console.error(mailResult.reason);
       return response.status(202).json({ ok: true, configured: false, fallback: "mailto", delivery: "resend_failed" });
     }
 
+    const mail = mailResult.value;
     if (!mail.configured) {
       return response.status(202).json({ ok: true, configured: false, fallback: "mailto" });
     }
