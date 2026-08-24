@@ -8,6 +8,7 @@
 - [PODA internet Ostrava](https://internetostrava.cz/poda-internet-ostrava/): focused explanation of how PODA internet availability is verified by exact address in Ostrava
 - [PODA dostupnost](https://internetostrava.cz/poda-dostupnost/): explanation of how PODA coverage and availability are verified per exact address
 - [PODA internet Karviná](https://internetostrava.cz/poda-karvina/): availability verification for addresses in Karviná and surroundings
+- [When PODA is not a good fit](https://internetostrava.cz/poda-kdy-nedava-smysl/): honest list of situations where fibre from PODA does not make sense, including commission disclosure
 - [Availability verification](https://internetostrava.cz/dostupnost/): how internet availability is determined per exact address in Ostrava, what affects the result at building level, what to prepare, plus a non-binding check form
 - [Tariffs](https://internetostrava.cz/tarify/): indicative options subject to address verification
 - [Contact](https://internetostrava.cz/kontakt/): representative contact details
@@ -40,6 +41,11 @@ Each local page verifies internet availability by exact address; content is uniq
 
 - [Poradna](https://internetostrava.cz/poradna/): practical guides for choosing internet service in Ostrava
 - [Fiber availability check guide](https://internetostrava.cz/poradna/dostupnost-optickeho-internetu-ostrava/): how fiber availability is verified per exact address and why neighbouring buildings differ
+- [Connection drops](https://internetostrava.cz/poradna/internet-vypadava-co-delat/): how to tell whether outages come from home Wi-Fi, the router, or the provider line
+- [Slow internet in the evening](https://internetostrava.cz/poradna/pomaly-internet-vecer/): why speed drops at peak hours and where network capacity is shared
+- [High ping when gaming](https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/): what latency and jitter mean and the most common causes at home
+- [Weak Wi-Fi in panel buildings](https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/): why concrete panel housing is hard for Wi-Fi and what helps before changing tariff
+- [Provider issue or home issue](https://internetostrava.cz/poradna/problem-u-poskytovatele-nebo-doma/): a ten-minute diagnostic to separate a home problem from a provider outage
 - [Fiber vs. wireless comparison](https://internetostrava.cz/poradna/optika-vs-bezdratovy-internet/): stability, latency, symmetric upload, and weather resilience compared
 - [Internet for home office](https://internetostrava.cz/poradna/internet-pro-home-office-ostrava/): why stability and upload matter more than headline download speed
 - [Household speed guide](https://internetostrava.cz/poradna/jaka-rychlost-internetu-pro-domacnost/): indicative speed guidance by household size and usage
