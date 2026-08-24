@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vysoký ping při hraní: příčiny a řešení</title>
+  <meta name="description" content="Vysoký ping kazí hraní víc než pomalé stahování. Co odezva měří, jaké hodnoty jsou v pořádku a pět nejčastějších příčin, které jde ovlivnit.">
+  <link rel="canonical" href="https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><meta name="geo.region" content="CZ-80"><meta name="geo.placename" content="Ostrava"><meta name="geo.position" content="49.8209;18.2625"><meta name="ICBM" content="49.8209, 18.2625"><link rel="stylesheet" href="/assets/redesign.css?v=r23">
+  <meta property="og:title" content="Vysoký ping při hraní: příčiny a řešení">
+  <meta property="og:description" content="Co ping měří, jaké hodnoty jsou v pořádku a co s vysokou odezvou jde dělat doma.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/">
+  <meta property="og:image" content="https://internetostrava.cz/assets/vitkovice-skyline.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/#article",
+        "headline": "Vysoký ping při hraní: příčiny a co s tím jde dělat",
+        "description": "Co je ping a jitter, jaké hodnoty odezvy jsou pro hraní v pořádku a jaké jsou nejčastější příčiny vysoké odezvy v domácnosti.",
+        "inLanguage": "cs",
+        "datePublished": "2026-08-18",
+        "dateModified": "2026-08-18",
+        "author": { "@type": "Organization", "name": "InternetOstrava.cz", "url": "https://internetostrava.cz/" },
+        "publisher": { "@type": "Organization", "name": "InternetOstrava.cz", "url": "https://internetostrava.cz/" },
+        "mainEntityOfPage": "https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Sníží vyšší tarif ping?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Většinou ne. Rychlost a odezva spolu souvisejí jen volně. Vyšší tarif pomůže tehdy, když je linka trvale zahlcená vlastním provozem – jinak se odezva prakticky nezmění." }
+          },
+          {
+            "@type": "Question",
+            "name": "Proč mám dobrý ping na počítači a špatný na konzoli?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Obvykle proto, že počítač je připojený kabelem a konzole přes wifi, nebo je konzole dál od routeru. Zkuste obě zařízení připojit stejně a porovnat." }
+          },
+          {
+            "@type": "Question",
+            "name": "Pomůže herní router?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Pomůže hlavně tam, kde si o linku konkuruje víc zařízení – umí upřednostnit herní provoz. Pokud je příčina mimo domácnost, herní router ji neobejde." }
+          },
+          {
+            "@type": "Question",
+            "name": "Co je horší, vysoký ping nebo kolísání?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Kolísání. Stabilní odezva 40 ms se hraje lépe než odezva skákající mezi 10 a 90 ms, protože hra si se stálou hodnotou poradí, s nepředvídatelnou ne." }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
+          { "@type": "ListItem", "position": 2, "name": "Poradna", "item": "https://internetostrava.cz/poradna/" },
+          { "@type": "ListItem", "position": 3, "name": "Vysoký ping", "item": "https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="home-redesign">
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo logo-combo" href="/" aria-label="Internet Ostrava domů"><img class="logo-favicon" src="/assets/icon-192x192.png?v=logo-original-3" alt="" aria-hidden="true"><span class="logo-text"><span>INTERNET</span><strong>OSTRAVA<small>.CZ</small></strong></span></a>
+      <button class="nav-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Hlavní navigace">
+        <a href="/tarify/">Tarify</a>
+        <a href="/dostupnost/">Dostupnost</a>
+        <a href="/poradna/">Poradna</a>
+        <a href="/lokality/">Lokality</a>
+        <a href="/kontakt/">Kontakt</a>
+        <a class="btn btn-ghost" href="tel:+420777425230">777 425 230</a>
+        <a class="btn btn-primary" href="/dostupnost/">Ověřit adresu</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="subhero photo">
+      <img src="/assets/vitkovice-skyline.webp" alt="Panorama Ostravy s vysokou pecí a věží radnice" loading="eager">
+      <div class="scrim" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="breadcrumbs"><a href="/">Domů</a> / <a href="/poradna/">Poradna</a> / Vysoký ping</div>
+        <h1>Vysoký ping při hraní.</h1>
+        <p class="lead">U hraní rozhoduje odezva, ne rychlost stahování. A odezvu ovlivňuje pár věcí, které máte pod kontrolou.</p>
+      </div>
+    </section>
+
+    <section class="section concrete">
+      <div class="wrap page-grid">
+        <div class="prose">
+          <div class="answer-box">
+            <p><strong>Rychlá odpověď:</strong> Ping je doba, za kterou dorazí odpověď ze serveru a zpět. Pro hraní je důležitější než rychlost stahování – gigabitová linka s vysokou odezvou hraje hůř než pomalejší linka s nízkou. Nejčastější příčiny doma: wifi místo kabelu, sdílená kapacita ve špičce a samotná technologie připojení.</p>
+          </div>
+
+          <h2>Co ping vlastně měří</h2>
+          <p>Rychlost stahování říká, kolik dat proteče za sekundu. Ping říká, jak rychle přijde odpověď. Při hraní se přenáší malé množství dat, ale musí dorazit okamžitě – proto je odezva rozhodující a rychlost tarifu skoro nehraje roli.</p>
+          <p>Vedle samotné hodnoty pingu je důležitý <strong>jitter</strong>, tedy kolísání odezvy. Stabilních 30 ms se hraje lépe než odezva, která skáče mezi 10 a 90 ms. Nestabilita se projeví jako trhání a poskakování postav.</p>
+
+          <h2>Jaké hodnoty jsou v pořádku</h2>
+          <div class="table-scroll">
+            <table class="compare-table">
+              <thead>
+                <tr><th>Odezva</th><th>Jak se to projeví</th></tr>
+              </thead>
+              <tbody>
+                <tr><th>do 20 ms</th><td>Velmi dobré. Vhodné i pro rychlé akční hry.</td></tr>
+                <tr><th>20–50 ms</th><td>Běžný stav, pro většinu her zcela dostačuje.</td></tr>
+                <tr><th>50–100 ms</th><td>Znát u akčních her, u strategií a her na tahy nevadí.</td></tr>
+                <tr><th>nad 100 ms</th><td>Rychlé hry se hrají obtížně, projeví se zpoždění reakcí.</td></tr>
+                <tr><th>kolísání nad 30 ms</th><td>Trhání a poskakování i při jinak dobré průměrné hodnotě.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Hodnoty jsou orientační. Záleží také na vzdálenosti herního serveru – ping do Prahy a do Ameriky se nedá srovnávat.</p>
+
+          <h2>Pět nejčastějších příčin</h2>
+          <ol>
+            <li><strong>Wi-Fi místo kabelu.</strong> Nejčastější a nejsnáz odstranitelná příčina. Wifi přidává odezvu i kolísání, hlavně když je v okolí hodně sítí.</li>
+            <li><strong>Sdílená kapacita ve špičce.</strong> Večer roste hlavně jitter. Když ping v devět večer vyskočí a dopoledne je v pořádku, je to tenhle případ.</li>
+            <li><strong>Stahování na pozadí.</strong> Aktualizace, cloudová záloha nebo streamování na jiném zařízení dokážou odezvu zvednout okamžitě.</li>
+            <li><strong>Technologie připojení.</strong> Bezdrátový přenos má odezvu vyšší a proměnlivější než kabel vedený do domu.</li>
+            <li><strong>Vzdálenost serveru.</strong> Část odezvy je fyzika a tu neovlivníte. Vyplatí se vybírat evropské servery.</li>
+          </ol>
+
+          <h2>Co pomůže hned a co vyžaduje změnu připojení</h2>
+          <div class="checklist">
+            <div class="label">Zkusit v tomto pořadí</div>
+            <ul>
+              <li>Připojit herní počítač nebo konzoli síťovým kabelem. Často to vyřeší celý problém.</li>
+              <li>Zastavit stahování a aktualizace na všech zařízeních a změřit znovu.</li>
+              <li>Změřit ping dopoledne i večer, ať víte, jestli jde o zatížení.</li>
+              <li>Vybrat herní server co nejblíž.</li>
+              <li>Pokud odezva zůstává vysoká i po kabelu a bez zátěže, jde o přípojku nebo technologii.</li>
+            </ul>
+          </div>
+          <p>První bod řeší většinu případů. Poslední bod je jediný, na který doma nestačíte – tam už rozhoduje, co je na adrese k dispozici.</p>
+
+          <h2>Kdy má smysl řešit připojení</h2>
+          <p>Pokud po kabelu, bez zátěže a na blízkém serveru zůstává odezva vysoká nebo silně kolísá, je limitem samotná linka. Optický kabel vedený do domu má odezvu nejnižší a nejstálejší, protože přenos není ovlivněn počasím ani sdílenou kapacitou vysílače – rozdíly jsme popsali v článku <a href="/poradna/optika-vs-bezdratovy-internet/">optika vs. bezdrátový internet</a>.</p>
+          <p>Co je zapojitelné u vás, <a href="/dostupnost/">ověříme podle přesné adresy</a>. Rozhoduje konkrétní dům, ne název čtvrti.</p>
+
+          <h2>Časté dotazy</h2>
+          <div class="faq">
+            <details><summary>Sníží vyšší tarif ping?<span aria-hidden="true"></span></summary><p>Většinou ne. Rychlost a odezva spolu souvisejí jen volně. Vyšší tarif pomůže tehdy, když je linka trvale zahlcená vlastním provozem – jinak se odezva prakticky nezmění.</p></details>
+            <details><summary>Proč mám dobrý ping na počítači a špatný na konzoli?<span aria-hidden="true"></span></summary><p>Obvykle proto, že počítač je připojený kabelem a konzole přes wifi, nebo je konzole dál od routeru. Zkuste obě zařízení připojit stejně a porovnat.</p></details>
+            <details><summary>Pomůže herní router?<span aria-hidden="true"></span></summary><p>Pomůže hlavně tam, kde si o linku konkuruje víc zařízení – umí upřednostnit herní provoz. Pokud je příčina mimo domácnost, herní router ji neobejde.</p></details>
+            <details><summary>Co je horší, vysoký ping nebo kolísání?<span aria-hidden="true"></span></summary><p>Kolísání. Stabilní odezva 40 ms se hraje lépe než odezva skákající mezi 10 a 90 ms, protože hra si se stálou hodnotou poradí, s nepředvídatelnou ne.</p></details>
+          </div>
+        </div>
+        <aside class="aside-cta">
+          <form class="form-panel" name="overeni-poradna-ping" action="/api/leads" method="post" data-lead-form>
+            <h3>Ověřit dostupnost na adrese</h3>
+            <p>Pošlete přesnou adresu v Ostravě nebo okolí. Nezávazně, ozveme se do 30 minut.</p>
+            <div class="form-grid">
+              <input type="hidden" name="lead_type" value="availability">
+              <input type="hidden" name="poznamka" value="Zdroj: poradna – vysoký ping">
+              <div class="field hp-field" aria-hidden="true"><label for="website">Web</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+              <div class="field primary wide">
+                <label for="address">Ulice a číslo domu</label>
+                <div class="input-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.686-6-10a6 6 0 0 1 12 0c0 4.314-6 10-6 10Z"/><circle cx="12" cy="11" r="2.5"/></svg>
+                  <input id="address" name="adresa" autocomplete="street-address" placeholder="Ulice a číslo domu" required>
+                </div>
+              </div>
+              <div class="field wide">
+                <label for="phone">Telefon</label>
+                <div class="input-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+                  <input id="phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 ..." required>
+                </div>
+              </div>
+              <div class="field wide">
+                <label for="email">E-mail <small>· volitelné</small></label>
+                <div class="input-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="vas@email.cz">
+                </div>
+              </div>
+              <label class="consent"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním údajů podle <a href="/ochrana-udaju/">zásad ochrany údajů</a></span></label>
+              <button class="btn btn-primary" type="submit" style="grid-column:1/-1">Odeslat nezávazný dotaz →</button>
+              <div class="form-reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> Nezávazné · Ozveme se do 30 minut</div>
+            </div>
+          </form>
+          <div class="aside-links">
+            <a href="/poradna/pomaly-internet-vecer/">Proč je internet pomalý večer</a>
+            <a href="/poradna/optika-vs-bezdratovy-internet/">Optika vs. bezdrát</a>
+            <a href="/poradna/">Další návody v poradně</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div><a class="logo logo-combo footer-logo" href="/" aria-label="Internet Ostrava domů"><img class="logo-favicon" src="/assets/icon-192x192.png?v=logo-original-3" alt="" aria-hidden="true"><span class="logo-text"><span>INTERNET</span><strong>OSTRAVA<small>.CZ</small></strong></span></a><p>Nezávislý poradenský web pro připojení v Ostravě a okolí.</p></div>
+        <div><h4>Kontakt</h4><div class="footer-links"><a href="tel:+420777425230">777 425 230</a><a href="mailto:info@internetostrava.cz">info@internetostrava.cz</a><a href="/kontakt/">Napsat nám</a></div></div>
+        <div><h4>Informace</h4><div class="footer-links"><a href="/poradna/">Poradna</a><a href="/dostupnost/">Dostupnost</a><a href="/lokality/">Lokality</a><a href="/ochrana-udaju/">Ochrana údajů</a></div></div>
+      </div>
+      <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý poradenský web pro připojení v Ostravě</div>
+    </div>
+  </footer>
+  <script src="/assets/main.js?v=r23" defer></script>
+</body>
+</html>

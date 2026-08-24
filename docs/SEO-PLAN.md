@@ -95,6 +95,63 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-08-18 (2) - Vyzkum konkurence + 6 novych clanku
+
+### Vyzkum konkurence
+
+Konkurencni pole se deli na dve nespojite casti:
+
+- **Znackove dotazy `poda *`** (tam rankujeme, poz. 5,5-20): poda.cz (oficialni), overdostupnost.cz a popri.cz (majitelove vlastni weby), **overit-dostupnost.online - novy nalez, jde o jineho obchodniho zastupce PODA (Jakub Rydl, ICO 76235084, tel. 607 086 800, rydl@poda.cz)**, internet-ostrava.online/poskytovatele/poda (koleguv portal, ~1200 slov, 6 tarifu PODA, lead formular) a firmy.cz. Sedm webu na cluster s ~130 zobrazenimi mesicne.
+- **Obecne dotazy `internet Ostrava`** (poz. 28-41): srovnavace rychlost.cz, porovnejsito.cz, kalkulator.cz, dsl.cz, pripojto.cz + narodni ISP (Vodafone, O2, Nordic Telecom, nej.cz, ERI) + 23 lokalnich ISP. **Zaver: prvni pozice na `internet Ostrava` neni v dohlednu dosazitelna, energii smerovat na dlouhy chvost.**
+
+Koleguv portal internet-ostrava.online ma ~97 URL ve trech vrstvach: 23 lokalit po 3500-4000 slovech, 23 profilu poskytovatelu a 23 clanku poradny v 5 kategoriich. Pouziva data CTU jako signal duveryhodnosti. Slabiny beze zmeny: zadny telefon, zadna konkretni osoba, zadne realne ceny, procenta pokryti bez doloziteľneho zdroje.
+
+**Profily cizich poskytovatelu nekopirovat** - rozhodnuti z 2026-07-13 ("falesna nezavislost") plati dal a vyzkum ho potvrdil.
+
+### NAP nekonzistence napric majitelovymi weby (nalez k reseni mimo repo)
+
+| Web | Telefon | ICO | Popis |
+|---|---|---|---|
+| internetostrava.cz | 777 425 230 | 75546230 | Milan Terc |
+| overdostupnost.cz | 730 431 313 | - | "nezavisly obchodni zastupce PODA a.s." |
+| popri.cz | 730 431 313 | **75456230** | "Popri.cz - Autorizovany partner PODA" |
+
+Tri problemy: dve ruzna telefonni cisla pro jednu osobu; ICO na popri.cz ma prehozene cislice oproti ARES (75546230); spojeni "nezavisly" + "obchodni zastupce PODA" si protireci a je v rozporu s [[commission-disclosure]]. Lokalni hodnoceni a overeni Google Business Profile stoji na konzistentnim NAP - tohle je nutne spravit **pred** zalozenim GBP. Kanibalizace mezi weby se tim neresi, to je vedome rozhodnuti majitele.
+
+### Technika - overeno merenim na produkci
+
+TTFB 31 ms, nacteni dokonceno 1197 ms, 271 KB prenesenych dat, 10 pozadavku. Rychlost ani technicke SEO web nebrzdi; do teto oblasti dalsi praci neinvestovat.
+
+### Implementovano - 6 novych clanku
+
+Nova kategorie poradny "Kdyz neco nefunguje" - u konkurenta 5 clanku, u nas dosud nula. Podklad z GSC: dlouhe otazkove dotazy nam funguji (napr. "ktera internetova sit funguje nejstabilneji pri bource nebo vichrici?" poz. 8,5).
+
+Ads zona (0 vyskytu retezce "poda", overeno):
+
+- `/poradna/internet-vypadava-co-delat/` (763 slov)
+- `/poradna/pomaly-internet-vecer/` (754 slov)
+- `/poradna/vysoky-ping-pri-hrani/` (721 slov)
+- `/poradna/slaba-wifi-v-panelaku/` (717 slov)
+- `/poradna/problem-u-poskytovatele-nebo-doma/` (711 slov)
+
+PODA SEO zona:
+
+- `/poda-kdy-nedava-smysl/` (819 slov) - poctivy vycet peti situaci, kdy se pripojeni nevyplati, vcetne otevreneho priznani provize. Diferenciace vuci anonymni konkurenci; zadny konkurencni web takovy obsah nema. Umisteno do PODA zony, protoze obsahuje znacku - do `/poradna/` patrit nemuze.
+
+Kazdy clanek: answer-box, `.compare-table` nebo `.checklist`, 4-5 FAQ, Article + FAQPage + BreadcrumbList schema (FAQ schema sladena 1:1 s viditelnym obsahem), aside lead formular s vlastni poznamkou, kontextove interni odkazy.
+
+Dale: hub `/poradna/` rozsiren na 10 karet ve dvou sekcich (ItemList schema 5 -> 10, upraveny lead i description), `/poda-internet-ostrava/` doplnen o odkaz na novy clanek v textu i v aside, `sitemap.xml` +6 URL (celkem 39), `llms.txt` +6 zaznamu.
+
+Overeno: `npm run check` prochazi, 0 vyskytu "poda" v Ads zone vcetne vsech 10 clanku poradny, 45 JSON-LD bloku validnich, bez preteceni na desktopu i mobilu.
+
+### Dalsi kroky
+
+1. Sjednotit telefon a opravit ICO na popri.cz, odstranit "nezavisly" u zastupce (mimo tento repozitar).
+2. Google Business Profile + realne recenze od zakazniku + zapis na Firmy.cz.
+3. Prohloubit `/internet-ostrava-poruba/` - ~90 zobrazeni porubskeho zameru, 0 kliku.
+4. Vytahnout osobu zastupce vys na lokalni stranky (fotka, jmeno, ICO) - koleguv portal je anonymni, to je nase vyhoda.
+5. Znovu vyhodnotit GSC cca 2026-09-15.
+
 ## Vyhodnoceni Search Console 2026-08-18 + prvni optimalizace podle dat
 
 Prvni vyhodnoceni realnych dat (export GSC z 2026-08-18, typ Web, obdobi 2026-07-07 az 2026-08-16, tj. 41 dni).
