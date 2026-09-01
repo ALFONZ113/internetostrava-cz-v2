@@ -5,7 +5,12 @@
   "description": "Static SEO-first website for internetostrava.cz",
   "scripts": {
     "check": "node scripts/check-site.mjs",
-    "dev": "npx --yes http-server . -p 8080 --cors"
+    "dev": "npx --yes http-server . -p 8080 --cors",
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "seo:gsc": "node scripts/gsc-report.mjs",
+    "seo:live": "node scripts/live-check.mjs",
+    "seo:report": "node scripts/seo-report.mjs",
+    "seo": "npm run check && npm run seo:audit; npm run seo:report"
   },
   "main": "index.js",
   "directories": {

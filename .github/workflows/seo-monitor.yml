@@ -1,0 +1,67 @@
+name: SEO monitor
+
+# Tydenni sber dat. Do webu nesaha - commituje pouze data/ a reports/.
+# Obsahove zmeny dela az Claude Routine (vrstva B), viz docs/SEO-AUTOMATION.md.
+
+on:
+  schedule:
+    - cron: "12 5 * * 1"   # pondeli 05:12 UTC (07:12 CEST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # Skripty zamerne nemaji zadne npm zavislosti, takze se nic neinstaluje.
+      - name: Kontrola webu
+        run: node scripts/check-site.mjs
+
+      - name: SEO audit
+        id: audit
+        continue-on-error: true   # nalezy patri do reportu, nesmi zastavit sber dat
+        run: node scripts/seo-audit.mjs
+
+      - name: Search Console
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: node scripts/gsc-report.mjs
+
+      - name: Kontrola produkce
+        continue-on-error: true
+        run: node scripts/live-check.mjs
+
+      - name: Sestavit report
+        run: node scripts/seo-report.mjs
+
+      - name: Commit dat a reportu
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/gsc reports/seo
+          if git diff --staged --quiet; then
+            echo "Zadne nove SEO datové soubory."
+            exit 0
+          fi
+          git commit -m "SEO monitor: data a report $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Souhrn do behu
+        if: always()
+        run: |
+          if [ -f reports/seo/latest.md ]; then
+            cat reports/seo/latest.md >> "$GITHUB_STEP_SUMMARY"
+          fi

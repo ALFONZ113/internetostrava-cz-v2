@@ -1,0 +1,74 @@
+# SEO report 2026-09-01
+
+Vygenerovano automaticky (`npm run seo:report`). Cisla z Google Search Console, technicke nalezy z `npm run seo:audit`.
+
+## 1. Vykon ve vyhledavani
+
+Data z Search Console zatim nejsou. Nastavte `GSC_SERVICE_ACCOUNT_JSON` podle `docs/SEO-AUTOMATION.md`;
+do te doby report obsahuje jen technickou cast.
+
+## 2. Prilezitosti
+
+Bez dat z Search Console nelze prilezitosti vyhodnotit.
+
+## 3. Technicky stav webu
+
+Zkontrolovano 41 stranek (19 v Ads zone), 45 JSON-LD bloku.
+Nalezeno **1 chyba** a 60 varovani.
+
+### 3.1 Chyby (blokuji automaticky push na main)
+
+- **[cache-token]** `index.html, poda-internet-ostrava/index.html` - nekonzistentni cache-busting token: r23 (82x), r17 (6x) - CDN muze servirovat stary asset
+
+### 3.2 Varovani podle typu
+
+| Typ | Pocet | Priklad |
+|---|---:|---|
+| faq | 46 | index.html: FAQPage schema ma 3 otazek, viditelnych <details> je 4 (projekt drzi 1:1) |
+| tenky-obsah | 11 | internet-belsky-les/index.html: jen 398 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni |
+| title | 2 | kontakt/index.html: title ma jen 26 znaku (doporuceno od 30) |
+| llms | 1 | ochrana-udaju/index.html: route /ochrana-udaju/ chybi v llms.txt |
+
+### 3.3 Nejtenci stranky
+
+| Stranka | Slov |
+|---|---:|
+| /kontakt/ | 301 |
+| /poradna/ | 343 |
+| /internet-ostrava-vitkovice/ | 349 |
+| /poda-dostupnost/ | 353 |
+| /poda-karvina/ | 372 |
+| /internet-trebovice/ | 387 |
+| /internet-muglinov/ | 392 |
+| /internet-pustkovec/ | 394 |
+| /internet-michalkovice/ | 396 |
+| /tarify/ | 396 |
+| /internet-belsky-les/ | 398 |
+
+## 4. Cilove clustery
+
+| Cluster | Priorita | Dotazu | Poznamka |
+|---|---:|---:|---|
+| Značkové dotazy PODA | 1 | 11 | Zde reálně rankujeme. Nejlepší poměr práce a výsledku – z pozice 5-20 se dá dost |
+| Ověření podle adresy | 2 | 6 | Claim, na kterém stojí celý web. Cluster byl do 2026-08-18 nevyužitý (pozice 30- |
+| Městské části Ostravy | 3 | 19 | Dlouhý chvost. Vlna 1 (12 stránek z 2026-07-24) byla po 3,5 týdne prakticky nevi |
+| Poradna – otázkové dotazy | 4 | 7 | Dlouhé otázkové dotazy nám podle GSC fungují nejlépe. Problém těchto stránek je  |
+| Obecné dotazy (jen sledovat) | 5 | 4 | jen sledovat, necilit |
+
+## 5. Ukoly pro tento cyklus
+
+Serazeno podle ocekavaneho dopadu. Agent vrstvy B bere shora a dela **nejvyse tri** polozky za beh.
+
+1. Opravit chybu auditu [cache-token] na `index.html, poda-internet-ostrava/index.html`: nekonzistentni cache-busting token: r23 (82x), r17 (6x) - CDN muze servirovat stary asset
+2. Sladit FAQPage schema s viditelnym obsahem na 18 strankach - Google vyzaduje, aby otazky ve schematu byly na strance videt.
+3. Prohloubit `/internet-ostrava-vitkovice/` (349 slov) - je to cilova stranka pro dotazy z keywords.json.
+
+## 6. Mimo repozitar (musi udelat majitel)
+
+Automatizace tyhle veci nedokaze udelat, ale jsou to nejvetsi paky:
+
+1. **Google Business Profile** - Milan Terc, ICO 75546230, service-area business. Nazev nesmi obsahovat "PODA".
+2. **Sjednotit NAP** napric weby (internetostrava.cz, overdostupnost.cz, popri.cz): jedno telefonni cislo, spravne ICO, odstranit rozporne spojeni "nezavisly" + "obchodni zastupce PODA".
+3. **Zapis na Firmy.cz** kvuli Seznamu - Seznam nema verejne API, automat jeho pozice merit neumi.
+4. **Realne recenze od zakazniku** - vymyslene recenze jsou proti publishing-rules a proti pravidlum Google.
+
