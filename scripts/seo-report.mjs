@@ -28,7 +28,7 @@ const gsc = gscFiles.length ? JSON.parse(readFileSync(join(gscDir, gscFiles.at(-
 const num = (value, digits = 1) => (Number.isFinite(value) ? value.toFixed(digits).replace(".", ",") : "-");
 const pct = (value) => `${num(value * 100, 2)} %`;
 const routeOf = (url) => url.replace(/^https?:\/\/[^/]+/, "") || "/";
-const plural = (count, one, few, many) => `${count} ${count === 1 ? one : count < 5 ? few : many}`;
+const plural = (count, one, few, many) => `${count} ${count === 1 ? one : count >= 2 && count <= 4 ? few : many}`;
 
 const totals = (rows = []) => rows.reduce(
   (accumulator, row) => ({

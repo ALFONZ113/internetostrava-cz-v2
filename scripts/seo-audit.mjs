@@ -13,7 +13,7 @@ const facts = JSON.parse(readFileSync(join(root, "data/seo/facts.json"), "utf8")
 const findings = [];
 const add = (severity, check, page, message) => findings.push({ severity, check, page, message });
 const error = (check, page, message) => add("error", check, page, message);
-const plural = (count, one, few, many) => `${count} ${count === 1 ? one : count < 5 ? few : many}`;
+const plural = (count, one, few, many) => `${count} ${count === 1 ? one : count >= 2 && count <= 4 ? few : many}`;
 const warn = (check, page, message) => add("warn", check, page, message);
 
 /* ---------- pomocne funkce ---------- */
