@@ -8,7 +8,7 @@
 // Bez credentials skript skonci kodem 0 a poznamkou - audit i workflow musi bezet i bez GSC.
 
 import { createSign } from "node:crypto";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
 const root = resolve(".");
@@ -20,6 +20,12 @@ const API = "https://searchconsole.googleapis.com";
 // GSC data maji zpozdeni zhruba dva az tri dny, proto okno konci pred tremi dny.
 const LAG_DAYS = 3;
 const WINDOW_DAYS = 28;
+
+// URL Inspection je pomale API (jednotky az desitky sekund na URL). Timeout na
+// jeden pozadavek a rozpocet na celou kontrolu drzi beh v rozumnem case i kdyz
+// Google odpovida pomalu nebo pozadavek uvizne.
+const REQUEST_TIMEOUT_MS = Number(process.env.GSC_REQUEST_TIMEOUT_MS || 30000);
+const INSPECTION_BUDGET_MS = Number(process.env.GSC_INSPECTION_BUDGET_MS || 240000);
 
 function loadCredentials() {
   const raw = process.env.GSC_SERVICE_ACCOUNT_JSON;
@@ -59,14 +65,21 @@ async function getAccessToken(credentials) {
   return (await response.json()).access_token;
 }
 
-async function apiPost(token, path, body) {
-  const response = await fetch(`${API}${path}`, {
-    method: "POST",
-    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-    body: JSON.stringify(body)
-  });
-  if (!response.ok) throw new Error(`${path} -> ${response.status} ${await response.text()}`);
-  return response.json();
+async function apiPost(token, path, body, timeoutMs = REQUEST_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(`${API}${path}`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`${path} -> ${response.status} ${await response.text()}`);
+    return await response.json();
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 const shiftDays = (days) => {
@@ -95,6 +108,15 @@ async function searchAnalytics(token, dimension, startDate, endDate) {
   }));
 }
 
+async function searchAnalyticsTotals(token, startDate, endDate) {
+  const path = `/webmasters/v3/sites/${encodeURIComponent(SITE_URL)}/searchAnalytics/query`;
+  const data = await apiPost(token, path, { startDate, endDate, dimensions: [], type: "web", rowLimit: 1 });
+  const row = (data.rows || [])[0];
+  return row
+    ? { clicks: row.clicks, impressions: row.impressions, ctr: row.ctr, position: row.position }
+    : { clicks: 0, impressions: 0, ctr: 0, position: null };
+}
+
 function sitemapRoutes() {
   const sitemap = readFileSync(join(root, "sitemap.xml"), "utf8");
   return [...sitemap.matchAll(/<loc>([^<]*)<\/loc>/g)].map(([, loc]) => loc);
@@ -102,7 +124,13 @@ function sitemapRoutes() {
 
 async function inspectUrls(token, urls) {
   const results = [];
+  const deadline = Date.now() + INSPECTION_BUDGET_MS;
+
   for (const url of urls) {
+    if (Date.now() > deadline) {
+      console.warn(`GSC: rozpocet na kontrolu indexace vycerpan, preskoceno ${urls.length - results.length} URL.`);
+      break;
+    }
     try {
       const data = await apiPost(token, "/v1/urlInspection/index:inspect", {
         inspectionUrl: url,
@@ -118,6 +146,7 @@ async function inspectUrls(token, urls) {
         robotsTxtState: status.robotsTxtState || "",
         indexingState: status.indexingState || ""
       });
+      console.log(`  [${results.length}/${urls.length}] ${status.verdict || "UNKNOWN"} ${url}`);
     } catch (inspectionError) {
       results.push({ url, verdict: "ERROR", coverageState: String(inspectionError.message).slice(0, 200) });
     }
@@ -147,12 +176,14 @@ async function main() {
   const token = await getAccessToken(credentials);
   console.log(`GSC: ${SITE_URL}, obdobi ${startDate} az ${endDate} (predchozi ${previousStart} az ${previousEnd}).`);
 
-  const [queries, pagesRows, devices, previousQueries, previousPages] = await Promise.all([
+  const [queries, pagesRows, devices, totals, previousQueries, previousPages, previousTotals] = await Promise.all([
     searchAnalytics(token, "query", startDate, endDate),
     searchAnalytics(token, "page", startDate, endDate),
     searchAnalytics(token, "device", startDate, endDate),
+    searchAnalyticsTotals(token, startDate, endDate),
     searchAnalytics(token, "query", previousStart, previousEnd),
-    searchAnalytics(token, "page", previousStart, previousEnd)
+    searchAnalytics(token, "page", previousStart, previousEnd),
+    searchAnalyticsTotals(token, previousStart, previousEnd)
   ]);
 
   const inspection = await inspectUrls(token, sitemapRoutes());
@@ -160,20 +191,35 @@ async function main() {
   const payload = {
     generatedAt: new Date().toISOString(),
     siteUrl: SITE_URL,
-    current: { startDate, endDate, queries, pages: pagesRows, devices },
-    previous: { startDate: previousStart, endDate: previousEnd, queries: previousQueries, pages: previousPages },
+    current: { startDate, endDate, totals, queries, pages: pagesRows, devices },
+    previous: { startDate: previousStart, endDate: previousEnd, totals: previousTotals, queries: previousQueries, pages: previousPages },
     inspection
   };
 
+  rmSync(join(root, "reports/seo/gsc-error.json"), { force: true });
   mkdirSync(join(root, "data/gsc"), { recursive: true });
   const file = join(root, "data/gsc", `${endDate}.json`);
   writeFileSync(file, `${JSON.stringify(payload, null, 2)}\n`);
 
   const notIndexed = inspection.filter((row) => row.verdict !== "PASS").length;
-  console.log(`GSC: ulozeno ${queries.length} dotazu, ${pagesRows.length} stranek, ${inspection.length} URL zkontrolovano (${notIndexed} bez verdiktu PASS) -> ${file}`);
+  console.log(`GSC: ${totals.clicks} kliku / ${totals.impressions} zobrazeni, ulozeno ${queries.length} dotazu, ${pagesRows.length} stranek, ${inspection.length} URL zkontrolovano (${notIndexed} bez verdiktu PASS) -> ${file}`);
 }
 
 main().catch((mainError) => {
-  console.error(`GSC selhalo: ${mainError.message}`);
+  const message = String(mainError.message);
+  console.error(`GSC selhalo: ${message}`);
+
+  // Zapsat duvod, aby report rozlisil "jeste nenastaveno" od "nastaveno, ale selhalo".
+  const hint = /403|sufficient permission/.test(message)
+    ? "Service account neni pridany v Search Console property, nebo GSC_SITE_URL neodpovida typu property (sc-domain: vs https://). Viz docs/SEO-AUTOMATION.md, krok 3."
+    : /invalid_grant|401|token/i.test(message)
+    ? "Problem s klicem service accountu - zkontrolujte secret GSC_SERVICE_ACCOUNT_JSON."
+    : "";
+
+  mkdirSync(join(root, "reports/seo"), { recursive: true });
+  writeFileSync(
+    join(root, "reports/seo/gsc-error.json"),
+    `${JSON.stringify({ failedAt: new Date().toISOString(), message: message.slice(0, 500), hint }, null, 2)}\n`
+  );
   process.exit(1);
 });
