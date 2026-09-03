@@ -48,10 +48,13 @@ function delta(current, previous, digits = 0, invert = false) {
   return ` (${sign}${num(difference, digits)}, ${better ? "lepsi" : "horsi"})`;
 }
 
-const queryCluster = new Map();
+const foldDiacritics = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+
+const clusterIndex = new Map();
 for (const cluster of keywords.clusters) {
-  for (const entry of cluster.queries) queryCluster.set(entry.query, { cluster, entry });
+  for (const entry of cluster.queries) clusterIndex.set(foldDiacritics(entry.query), { cluster, entry });
 }
+const queryCluster = { get: (query) => clusterIndex.get(foldDiacritics(query)) };
 
 const lines = [];
 const push = (line = "") => lines.push(line);
@@ -90,15 +93,42 @@ if (!gsc) {
   }
   push();
 } else {
-  const current = totals(gsc.current.queries);
-  const previous = totals(gsc.previous.queries);
-  const currentCtr = current.impressions ? current.clicks / current.impressions : 0;
-  const previousCtr = previous.impressions ? previous.clicks / previous.impressions : 0;
-  const currentPosition = current.impressions ? current.weighted / current.impressions : NaN;
-  const previousPosition = previous.impressions ? previous.weighted / previous.impressions : NaN;
+  // Souhrn se bere z neagregovaneho dotazu bez dimenzi. Soucet po dimenzi query
+  // je nizsi, protoze Google anonymizovane dotazy z vysledku vyrazuje - starsi
+  // datove soubory jeste totals nemaji, tam se scita jako drive.
+  const summarize = (period) => {
+    if (period.totals) {
+      return {
+        clicks: period.totals.clicks,
+        impressions: period.totals.impressions,
+        ctr: period.totals.ctr,
+        position: period.totals.position
+      };
+    }
+    const sum = totals(period.queries);
+    return {
+      clicks: sum.clicks,
+      impressions: sum.impressions,
+      ctr: sum.impressions ? sum.clicks / sum.impressions : 0,
+      position: sum.impressions ? sum.weighted / sum.impressions : NaN
+    };
+  };
+
+  const current = summarize(gsc.current);
+  const previous = summarize(gsc.previous);
+  const currentCtr = current.ctr;
+  const previousCtr = previous.ctr;
+  const currentPosition = current.position;
+  const previousPosition = previous.position;
+  const estimated = !gsc.current.totals;
 
   push(`Obdobi **${gsc.current.startDate} az ${gsc.current.endDate}**, porovnano s ${gsc.previous.startDate} az ${gsc.previous.endDate}.`);
   push();
+  if (estimated) {
+    push("> Pozn.: tato data jsou z doby pred opravou souhrnu, cisla jsou secteny po dimenzi `query`");
+    push("> a jsou proto nizsi nez skutecnost. Dalsi beh uz ulozi presny souhrn.");
+    push();
+  }
   push("| Metrika | Aktualne | Predchozi | Zmena |");
   push("|---|---:|---:|---|");
   push(`| Kliky | ${current.clicks} | ${previous.clicks} | ${delta(current.clicks, previous.clicks).trim() || "-"} |`);
