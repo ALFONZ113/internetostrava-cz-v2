@@ -41,16 +41,16 @@ Obdobi **2026-08-04 az 2026-08-31**, porovnano s 2026-07-07 az 2026-08-03.
 
 Tady nejde o pozici, ale o title a description ve vysledku vyhledavani.
 
-| Stranka | Zobrazeni | Pozice |
-|---|---:|---:|
-| /kontakt/ | 83 | 22,6 |
-| /internet-ostrava-poruba/ | 62 | 22,5 |
-| /internet-slezska-ostrava/ | 42 | 24,8 |
-| /tarify/ | 37 | 46,4 |
-| /poradna/optika-vs-bezdratovy-internet/ | 25 | 13,0 |
-| /poradna/internet-vypadava-co-delat/ | 24 | 9,2 |
-| /poradna/vysoky-ping-pri-hrani/ | 24 | 5,1 |
-| /internet-marianske-hory/ | 15 | 8,6 |
+| Stranka | Zobrazeni | Pozice | Na jake dotazy rankuje |
+|---|---:|---:|---|
+| /kontakt/ | 83 | 22,6 | internet ostrava (28); internet v ostravě (28); poskytovatelé internetu ostrava (7) |
+| /internet-ostrava-poruba/ | 62 | 22,5 | internet poruba (24); internet ostrava poruba (16); poda poruba (5) |
+| /internet-slezska-ostrava/ | 42 | 24,8 | internet slezke (21); internet v ostravě (6); internet ostrava (4) |
+| /tarify/ | 37 | 46,4 | nejlevnější internet ostrava (14); internet v ostravě (10); internet ostrava (9) |
+| /poradna/optika-vs-bezdratovy-internet/ | 25 | 13,0 | internet optika (2); která internetová síť funguje nejstabilněji při bouřce nebo vichřici? (1); optika internet (1) |
+| /poradna/internet-vypadava-co-delat/ | 24 | 9,2 | která internetová síť večer nejméně často vypadává? (2); proč vypadává wifi (1); vypadek wifi (1) |
+| /poradna/vysoky-ping-pri-hrani/ | 24 | 5,1 | - |
+| /internet-marianske-hory/ | 15 | 8,6 | - |
 
 ### 2.3 Stav indexace
 
@@ -63,27 +63,20 @@ Tady nejde o pozici, ale o title a description ve vysledku vyhledavani.
 | /internet-hulvaky/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-svinov/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-trebovice/ | NEUTRAL | Objeveno – momentálně neindexováno |
-| /internet-muglinov/ | NEUTRAL | Google adresu URL nezná |
+| /internet-muglinov/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-michalkovice/ | NEUTRAL | Objeveno – momentálně neindexováno |
-| /ochrana-udaju/ | NEUTRAL | Objeveno – momentálně neindexováno |
 
 ## 3. Technicky stav webu
 
 Zkontrolovano 41 stranek (19 v Ads zone), 45 JSON-LD bloku.
-Nalezeno **1 chyba** a 60 varovani.
-
-### 3.1 Chyby (blokuji automaticky push na main)
-
-- **[cache-token]** `index.html, poda-internet-ostrava/index.html` - nekonzistentni cache-busting token: r23 (82x), r17 (6x) - CDN muze servirovat stary asset
+Nalezeno **0 chyby** a 8 varovani.
 
 ### 3.2 Varovani podle typu
 
 | Typ | Pocet | Priklad |
 |---|---:|---|
-| faq | 46 | index.html: FAQPage schema ma 3 otazek, viditelnych <details> je 4 (projekt drzi 1:1) |
-| tenky-obsah | 11 | internet-belsky-les/index.html: jen 398 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni |
+| tenky-obsah | 6 | internet-ostrava-vitkovice/index.html: jen 349 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni |
 | title | 2 | kontakt/index.html: title ma jen 26 znaku (doporuceno od 30) |
-| llms | 1 | ochrana-udaju/index.html: route /ochrana-udaju/ chybi v llms.txt |
 
 ### 3.3 Nejtenci stranky
 
@@ -94,16 +87,11 @@ Nalezeno **1 chyba** a 60 varovani.
 | /internet-ostrava-vitkovice/ | 349 |
 | /poda-dostupnost/ | 353 |
 | /poda-karvina/ | 372 |
-| /internet-trebovice/ | 387 |
-| /internet-muglinov/ | 392 |
-| /internet-pustkovec/ | 394 |
-| /internet-michalkovice/ | 396 |
 | /tarify/ | 396 |
-| /internet-belsky-les/ | 398 |
 
 ### 3.4 Produkcni web
 
-Zkontrolovano 42 URL na https://internetostrava.cz, medianova odezva 49 ms.
+Zkontrolovano 42 URL na https://internetostrava.cz, medianova odezva 125 ms.
 
 Vsechny URL vraci 200 a canonical odpovida.
 
@@ -121,16 +109,16 @@ Vsechny URL vraci 200 a canonical odpovida.
 
 Serazeno podle ocekavaneho dopadu. Agent vrstvy B bere shora a dela **nejvyse tri** polozky za beh.
 
-1. Opravit chybu auditu [cache-token] na `index.html, poda-internet-ostrava/index.html`: nekonzistentni cache-busting token: r23 (82x), r17 (6x) - CDN muze servirovat stary asset
-2. Prepsat title a description na `/kontakt/` (83 zobrazeni, 0 kliku, pozice 22,6).
-3. Sladit FAQPage schema s viditelnym obsahem na 18 strankach - Google vyzaduje, aby otazky ve schematu byly na strance videt.
-4. Prepsat title a description na `/internet-ostrava-poruba/` (62 zobrazeni, 0 kliku, pozice 22,5).
-5. Vyresit indexaci 10 URL bez verdiktu PASS (viz sekce 2.3) - dokud nejsou v indexu, obsah na nich nema efekt.
-6. Prepsat title a description na `/internet-slezska-ostrava/` (42 zobrazeni, 0 kliku, pozice 24,8).
-7. Prepsat title a description na `/tarify/` (37 zobrazeni, 0 kliku, pozice 46,4).
-8. Posilit obsah pro dotaz "poda internet ostrava" (pozice 6,7, 26 zobrazeni) na strance `/poda-internet-ostrava/`.
-9. Posilit obsah pro dotaz "internet slezke" (pozice 17,3, 21 zobrazeni).
-10. Posilit obsah pro dotaz "poda karvina" (pozice 11,9, 21 zobrazeni) na strance `/poda-karvina/`.
+1. Prepsat title a description na `/kontakt/` (83 zobrazeni, 0 kliku, pozice 22,6) - rankuje na: internet ostrava (28); internet v ostravě (28); poskytovatelé internetu ostrava (7).
+2. Prepsat title a description na `/internet-ostrava-poruba/` (62 zobrazeni, 0 kliku, pozice 22,5) - rankuje na: internet poruba (24); internet ostrava poruba (16); poda poruba (5).
+3. Vyresit indexaci 9 URL bez verdiktu PASS (viz sekce 2.3) - dokud nejsou v indexu, obsah na nich nema efekt.
+4. Prepsat title a description na `/internet-slezska-ostrava/` (42 zobrazeni, 0 kliku, pozice 24,8) - rankuje na: internet slezke (21); internet v ostravě (6); internet ostrava (4).
+5. Prepsat title a description na `/tarify/` (37 zobrazeni, 0 kliku, pozice 46,4) - rankuje na: nejlevnější internet ostrava (14); internet v ostravě (10); internet ostrava (9).
+6. Posilit obsah pro dotaz "poda internet ostrava" (pozice 6,7, 26 zobrazeni) na strance `/poda-internet-ostrava/`.
+7. Posilit obsah pro dotaz "internet slezke" (pozice 17,3, 21 zobrazeni).
+8. Posilit obsah pro dotaz "poda karvina" (pozice 11,9, 21 zobrazeni) na strance `/poda-karvina/`.
+9. Prepsat title a description na `/poradna/optika-vs-bezdratovy-internet/` (25 zobrazeni, 0 kliku, pozice 13,0) - rankuje na: internet optika (2); která internetová síť funguje nejstabilněji při bouřce nebo vichřici? (1); optika internet (1).
+10. Prohloubit `/internet-ostrava-vitkovice/` (349 slov) - je to cilova stranka pro dotazy z keywords.json.
 
 ## 6. Mimo repozitar (musi udelat majitel)
 

@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-09-03T08:45:35.416Z",
+  "generatedAt": "2026-09-03T09:26:49.740Z",
   "origin": "https://internetostrava.cz",
   "checked": 42,
-  "medianMs": 49,
+  "medianMs": 125,
   "slowest": [
     {
-      "route": "/sitemap.xml",
-      "ms": 531
-    },
-    {
       "route": "/",
-      "ms": 521
+      "ms": 713
     },
     {
-      "route": "/kontakt/",
-      "ms": 121
+      "route": "/sitemap.xml",
+      "ms": 335
     },
     {
-      "route": "/dostupnost/",
-      "ms": 105
+      "route": "/poradna/",
+      "ms": 270
     },
     {
-      "route": "/poda-dostupnost/",
-      "ms": 95
+      "route": "/internet-belsky-les/",
+      "ms": 235
+    },
+    {
+      "route": "/internet-vyskovice/",
+      "ms": 220
     }
   ],
   "problems": [],
@@ -30,7 +30,7 @@
     {
       "route": "/",
       "status": 200,
-      "ms": 521,
+      "ms": 713,
       "canonical": "https://internetostrava.cz/",
       "title": "Internet Ostrava – optické připojení až 2 Gb/s",
       "location": null
@@ -38,7 +38,7 @@
     {
       "route": "/dostupnost/",
       "status": 200,
-      "ms": 105,
+      "ms": 201,
       "canonical": "https://internetostrava.cz/dostupnost/",
       "title": "Ověření dostupnosti internetu podle adresy | Ostrava",
       "location": null
@@ -46,7 +46,7 @@
     {
       "route": "/tarify/",
       "status": 200,
-      "ms": 74,
+      "ms": 210,
       "canonical": "https://internetostrava.cz/tarify/",
       "title": "Tarify optického internetu Ostrava | Až 2 Gb/s",
       "location": null
@@ -54,7 +54,7 @@
     {
       "route": "/poda-internet-ostrava/",
       "status": 200,
-      "ms": 37,
+      "ms": 193,
       "canonical": "https://internetostrava.cz/poda-internet-ostrava/",
       "title": "PODA internet Ostrava | Ověření dostupnosti podle adresy",
       "location": null
@@ -62,7 +62,7 @@
     {
       "route": "/poda-dostupnost/",
       "status": 200,
-      "ms": 95,
+      "ms": 118,
       "canonical": "https://internetostrava.cz/poda-dostupnost/",
       "title": "PODA dostupnost | Ověření pokrytí internetu podle adresy",
       "location": null
@@ -70,7 +70,7 @@
     {
       "route": "/poda-karvina/",
       "status": 200,
-      "ms": 49,
+      "ms": 213,
       "canonical": "https://internetostrava.cz/poda-karvina/",
       "title": "PODA internet Karviná | Ověření dostupnosti podle adresy",
       "location": null
@@ -78,7 +78,7 @@
     {
       "route": "/kontakt/",
       "status": 200,
-      "ms": 121,
+      "ms": 94,
       "canonical": "https://internetostrava.cz/kontakt/",
       "title": "Kontakt | Internet Ostrava",
       "location": null
@@ -86,7 +86,7 @@
     {
       "route": "/poradna/",
       "status": 200,
-      "ms": 74,
+      "ms": 270,
       "canonical": "https://internetostrava.cz/poradna/",
       "title": "Poradna: jak vybrat internet v Ostravě | InternetOstrava.cz",
       "location": null
@@ -94,7 +94,7 @@
     {
       "route": "/poradna/dostupnost-optickeho-internetu-ostrava/",
       "status": 200,
-      "ms": 57,
+      "ms": 119,
       "canonical": "https://internetostrava.cz/poradna/dostupnost-optickeho-internetu-ostrava/",
       "title": "Jak zjistit dostupnost optického internetu v Ostravě",
       "location": null
@@ -102,7 +102,7 @@
     {
       "route": "/poradna/optika-vs-bezdratovy-internet/",
       "status": 200,
-      "ms": 41,
+      "ms": 110,
       "canonical": "https://internetostrava.cz/poradna/optika-vs-bezdratovy-internet/",
       "title": "Optika vs. bezdrátový internet v ostravském bytě | Srovnání",
       "location": null
@@ -110,7 +110,7 @@
     {
       "route": "/poradna/internet-pro-home-office-ostrava/",
       "status": 200,
-      "ms": 46,
+      "ms": 134,
       "canonical": "https://internetostrava.cz/poradna/internet-pro-home-office-ostrava/",
       "title": "Internet pro home office v Ostravě: na čem skutečně záleží",
       "location": null
@@ -118,7 +118,7 @@
     {
       "route": "/poradna/jaka-rychlost-internetu-pro-domacnost/",
       "status": 200,
-      "ms": 54,
+      "ms": 159,
       "canonical": "https://internetostrava.cz/poradna/jaka-rychlost-internetu-pro-domacnost/",
       "title": "Jakou rychlost internetu potřebuje domácnost",
       "location": null
@@ -126,7 +126,7 @@
     {
       "route": "/poradna/caste-otazky-pred-zmenou-poskytovatele/",
       "status": 200,
-      "ms": 41,
+      "ms": 121,
       "canonical": "https://internetostrava.cz/poradna/caste-otazky-pred-zmenou-poskytovatele/",
       "title": "Časté otázky před změnou poskytovatele internetu | Ostrava",
       "location": null
@@ -134,7 +134,7 @@
     {
       "route": "/lokality/",
       "status": 200,
-      "ms": 47,
+      "ms": 117,
       "canonical": "https://internetostrava.cz/lokality/",
       "title": "Internet v Ostravě podle lokality | Všechny městské části",
       "location": null
@@ -142,7 +142,7 @@
     {
       "route": "/internet-ostrava-poruba/",
       "status": 200,
-      "ms": 48,
+      "ms": 115,
       "canonical": "https://internetostrava.cz/internet-ostrava-poruba/",
       "title": "PODA internet Ostrava-Poruba | Dostupnost podle adresy",
       "location": null
@@ -150,7 +150,7 @@
     {
       "route": "/internet-ostrava-jih/",
       "status": 200,
-      "ms": 42,
+      "ms": 121,
       "canonical": "https://internetostrava.cz/internet-ostrava-jih/",
       "title": "Internet Ostrava-Jih | Hrabůvka, Zábřeh, Dubina, Výškovice",
       "location": null
@@ -158,7 +158,7 @@
     {
       "route": "/internet-marianske-hory/",
       "status": 200,
-      "ms": 52,
+      "ms": 160,
       "canonical": "https://internetostrava.cz/internet-marianske-hory/",
       "title": "Internet Mariánské Hory | PODA připojení podle adresy",
       "location": null
@@ -166,7 +166,7 @@
     {
       "route": "/internet-moravska-ostrava/",
       "status": 200,
-      "ms": 37,
+      "ms": 172,
       "canonical": "https://internetostrava.cz/internet-moravska-ostrava/",
       "title": "Internet Moravská Ostrava | PODA podle adresy",
       "location": null
@@ -174,7 +174,7 @@
     {
       "route": "/internet-ostrava-vitkovice/",
       "status": 200,
-      "ms": 38,
+      "ms": 174,
       "canonical": "https://internetostrava.cz/internet-ostrava-vitkovice/",
       "title": "Internet Ostrava-Vítkovice | Ověření PODA podle adresy",
       "location": null
@@ -182,7 +182,7 @@
     {
       "route": "/internet-slezska-ostrava/",
       "status": 200,
-      "ms": 74,
+      "ms": 113,
       "canonical": "https://internetostrava.cz/internet-slezska-ostrava/",
       "title": "Internet Slezská Ostrava | PODA dostupnost podle adresy",
       "location": null
@@ -190,7 +190,7 @@
     {
       "route": "/internet-hrabuvka/",
       "status": 200,
-      "ms": 71,
+      "ms": 114,
       "canonical": "https://internetostrava.cz/internet-hrabuvka/",
       "title": "Internet Hrabůvka | PODA připojení Ostrava-Jih podle adresy",
       "location": null
@@ -198,7 +198,7 @@
     {
       "route": "/internet-zabreh/",
       "status": 200,
-      "ms": 35,
+      "ms": 105,
       "canonical": "https://internetostrava.cz/internet-zabreh/",
       "title": "Internet Zábřeh | PODA připojení Ostrava-Jih podle adresy",
       "location": null
@@ -206,7 +206,7 @@
     {
       "route": "/internet-ostrava-dubina/",
       "status": 200,
-      "ms": 57,
+      "ms": 161,
       "canonical": "https://internetostrava.cz/internet-ostrava-dubina/",
       "title": "Internet Dubina Ostrava | PODA připojení podle adresy",
       "location": null
@@ -214,7 +214,7 @@
     {
       "route": "/internet-vyskovice/",
       "status": 200,
-      "ms": 38,
+      "ms": 220,
       "canonical": "https://internetostrava.cz/internet-vyskovice/",
       "title": "Internet Výškovice | PODA připojení Ostrava-Jih podle adresy",
       "location": null
@@ -222,7 +222,7 @@
     {
       "route": "/internet-belsky-les/",
       "status": 200,
-      "ms": 48,
+      "ms": 235,
       "canonical": "https://internetostrava.cz/internet-belsky-les/",
       "title": "Internet Bělský Les | PODA připojení Ostrava podle adresy",
       "location": null
@@ -230,7 +230,7 @@
     {
       "route": "/internet-ostrava-privoz/",
       "status": 200,
-      "ms": 41,
+      "ms": 112,
       "canonical": "https://internetostrava.cz/internet-ostrava-privoz/",
       "title": "Internet Přívoz Ostrava | PODA připojení podle adresy",
       "location": null
@@ -238,7 +238,7 @@
     {
       "route": "/internet-hulvaky/",
       "status": 200,
-      "ms": 33,
+      "ms": 140,
       "canonical": "https://internetostrava.cz/internet-hulvaky/",
       "title": "Internet Hulváky | PODA připojení Ostrava podle adresy",
       "location": null
@@ -246,7 +246,7 @@
     {
       "route": "/internet-svinov/",
       "status": 200,
-      "ms": 54,
+      "ms": 117,
       "canonical": "https://internetostrava.cz/internet-svinov/",
       "title": "Internet Svinov | PODA připojení Ostrava podle adresy",
       "location": null
@@ -254,7 +254,7 @@
     {
       "route": "/internet-pustkovec/",
       "status": 200,
-      "ms": 72,
+      "ms": 126,
       "canonical": "https://internetostrava.cz/internet-pustkovec/",
       "title": "Internet Pustkovec | PODA připojení Ostrava podle adresy",
       "location": null
@@ -262,7 +262,7 @@
     {
       "route": "/internet-trebovice/",
       "status": 200,
-      "ms": 62,
+      "ms": 136,
       "canonical": "https://internetostrava.cz/internet-trebovice/",
       "title": "Internet Třebovice | PODA připojení Ostrava podle adresy",
       "location": null
@@ -270,7 +270,7 @@
     {
       "route": "/internet-muglinov/",
       "status": 200,
-      "ms": 58,
+      "ms": 125,
       "canonical": "https://internetostrava.cz/internet-muglinov/",
       "title": "Internet Muglinov | PODA připojení Ostrava podle adresy",
       "location": null
@@ -278,7 +278,7 @@
     {
       "route": "/internet-michalkovice/",
       "status": 200,
-      "ms": 31,
+      "ms": 112,
       "canonical": "https://internetostrava.cz/internet-michalkovice/",
       "title": "Internet Michálkovice | PODA připojení Ostrava podle adresy",
       "location": null
@@ -286,7 +286,7 @@
     {
       "route": "/poradna/internet-vypadava-co-delat/",
       "status": 200,
-      "ms": 35,
+      "ms": 102,
       "canonical": "https://internetostrava.cz/poradna/internet-vypadava-co-delat/",
       "title": "Internet vypadává: jak najít příčinu",
       "location": null
@@ -294,7 +294,7 @@
     {
       "route": "/poradna/pomaly-internet-vecer/",
       "status": 200,
-      "ms": 47,
+      "ms": 110,
       "canonical": "https://internetostrava.cz/poradna/pomaly-internet-vecer/",
       "title": "Proč je internet pomalý večer",
       "location": null
@@ -302,7 +302,7 @@
     {
       "route": "/poradna/vysoky-ping-pri-hrani/",
       "status": 200,
-      "ms": 51,
+      "ms": 104,
       "canonical": "https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/",
       "title": "Vysoký ping při hraní: příčiny a řešení",
       "location": null
@@ -310,7 +310,7 @@
     {
       "route": "/poradna/slaba-wifi-v-panelaku/",
       "status": 200,
-      "ms": 87,
+      "ms": 96,
       "canonical": "https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/",
       "title": "Slabá wifi v paneláku: co s tím",
       "location": null
@@ -318,7 +318,7 @@
     {
       "route": "/poradna/problem-u-poskytovatele-nebo-doma/",
       "status": 200,
-      "ms": 68,
+      "ms": 97,
       "canonical": "https://internetostrava.cz/poradna/problem-u-poskytovatele-nebo-doma/",
       "title": "Je problém u poskytovatele, nebo u vás doma?",
       "location": null
@@ -326,7 +326,7 @@
     {
       "route": "/poda-kdy-nedava-smysl/",
       "status": 200,
-      "ms": 37,
+      "ms": 137,
       "canonical": "https://internetostrava.cz/poda-kdy-nedava-smysl/",
       "title": "Kdy PODA nedává smysl | Upřímné shrnutí",
       "location": null
@@ -334,7 +334,7 @@
     {
       "route": "/ochrana-udaju/",
       "status": 200,
-      "ms": 30,
+      "ms": 113,
       "canonical": "https://internetostrava.cz/ochrana-udaju/",
       "title": "Ochrana osobních údajů | Internet Ostrava",
       "location": null
@@ -342,17 +342,17 @@
     {
       "route": "/robots.txt",
       "status": 200,
-      "ms": 33
+      "ms": 100
     },
     {
       "route": "/sitemap.xml",
       "status": 200,
-      "ms": 531
+      "ms": 335
     },
     {
       "route": "/llms.txt",
       "status": 200,
-      "ms": 39
+      "ms": 128
     }
   ]
 }
