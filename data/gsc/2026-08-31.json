@@ -1,9 +1,15 @@
 {
-  "generatedAt": "2026-09-03T08:24:32.351Z",
+  "generatedAt": "2026-09-03T08:45:32.155Z",
   "siteUrl": "sc-domain:internetostrava.cz",
   "current": {
     "startDate": "2026-08-04",
     "endDate": "2026-08-31",
+    "totals": {
+      "clicks": 13,
+      "impressions": 987,
+      "ctr": 0.013171225937183385,
+      "position": 16.062816616008107
+    },
     "queries": [
       {
         "key": "poda internet",
@@ -595,6 +601,12 @@
   "previous": {
     "startDate": "2026-07-07",
     "endDate": "2026-08-03",
+    "totals": {
+      "clicks": 24,
+      "impressions": 510,
+      "ctr": 0.047058823529411764,
+      "position": 22.062745098039215
+    },
     "queries": [
       {
         "key": "internet ostrava",
@@ -1198,7 +1210,7 @@
     {
       "url": "https://internetostrava.cz/internet-hrabuvka/",
       "verdict": "NEUTRAL",
-      "coverageState": "Google adresu URL nezná",
+      "coverageState": "Objeveno – momentálně neindexováno",
       "lastCrawlTime": null,
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED"
@@ -1278,7 +1290,7 @@
     {
       "url": "https://internetostrava.cz/internet-muglinov/",
       "verdict": "NEUTRAL",
-      "coverageState": "Objeveno – momentálně neindexováno",
+      "coverageState": "Google adresu URL nezná",
       "lastCrawlTime": null,
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED"
@@ -1342,7 +1354,7 @@
     {
       "url": "https://internetostrava.cz/ochrana-udaju/",
       "verdict": "NEUTRAL",
-      "coverageState": "Google adresu URL nezná",
+      "coverageState": "Objeveno – momentálně neindexováno",
       "lastCrawlTime": null,
       "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexingState": "INDEXING_STATE_UNSPECIFIED"

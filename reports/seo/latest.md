@@ -8,10 +8,10 @@ Obdobi **2026-08-04 az 2026-08-31**, porovnano s 2026-07-07 az 2026-08-03.
 
 | Metrika | Aktualne | Predchozi | Zmena |
 |---|---:|---:|---|
-| Kliky | 3 | 16 | (-13, horsi) |
-| Zobrazeni | 465 | 331 | (+134, lepsi) |
-| CTR | 0,65 % | 4,83 % | (-4,19, horsi) |
-| Prumerna pozice | 24,5 | 28,2 | (-3,7, lepsi) |
+| Kliky | 13 | 24 | (-11, horsi) |
+| Zobrazeni | 987 | 510 | (+477, lepsi) |
+| CTR | 1,32 % | 4,71 % | (-3,39, horsi) |
+| Prumerna pozice | 16,1 | 22,1 | (-6,0, lepsi) |
 
 | Zarizeni | Kliky | Zobrazeni | CTR | Pozice |
 |---|---:|---:|---:|---:|
@@ -30,9 +30,9 @@ Obdobi **2026-08-04 az 2026-08-31**, porovnano s 2026-07-07 az 2026-08-03.
 | poda karvina | 11,9 | (-3,5, lepsi) | 21 | 0 | Značkové dotazy PODA |
 | poda ostrava | 15,7 | (-6,1, lepsi) | 18 | 0 | Značkové dotazy PODA |
 | poda dostupnost | 10,3 | (+0,3, horsi) | 15 | 0 | Značkové dotazy PODA |
-| poda pokrytí | 9,8 | (-8,2, lepsi) | 14 | 0 | - |
+| poda pokrytí | 9,8 | (-8,2, lepsi) | 14 | 0 | Značkové dotazy PODA |
 | internet ostrava zábřeh | 16,7 | (+2,2, horsi) | 13 | 0 | - |
-| poda karviná | 12,6 | (-9,7, lepsi) | 10 | 0 | - |
+| poda karviná | 12,6 | (-9,7, lepsi) | 10 | 0 | Značkové dotazy PODA |
 | poskytovatelé internetu ostrava | 19,3 | - | 7 | 0 | - |
 | internet poda | 6,7 | (-5,6, lepsi) | 6 | 0 | - |
 | poda poruba | 15,0 | (-13,8, lepsi) | 5 | 0 | - |
@@ -57,15 +57,15 @@ Tady nejde o pozici, ale o title a description ve vysledku vyhledavani.
 | URL | Verdikt | Stav |
 |---|---|---|
 | /lokality/ | NEUTRAL | Objeveno – momentálně neindexováno |
-| /internet-hrabuvka/ | NEUTRAL | Google adresu URL nezná |
+| /internet-hrabuvka/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-zabreh/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-vyskovice/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-hulvaky/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-svinov/ | NEUTRAL | Objeveno – momentálně neindexováno |
 | /internet-trebovice/ | NEUTRAL | Objeveno – momentálně neindexováno |
-| /internet-muglinov/ | NEUTRAL | Objeveno – momentálně neindexováno |
+| /internet-muglinov/ | NEUTRAL | Google adresu URL nezná |
 | /internet-michalkovice/ | NEUTRAL | Objeveno – momentálně neindexováno |
-| /ochrana-udaju/ | NEUTRAL | Google adresu URL nezná |
+| /ochrana-udaju/ | NEUTRAL | Objeveno – momentálně neindexováno |
 
 ## 3. Technicky stav webu
 
@@ -103,7 +103,7 @@ Nalezeno **1 chyba** a 60 varovani.
 
 ### 3.4 Produkcni web
 
-Zkontrolovano 42 URL na https://internetostrava.cz, medianova odezva 58 ms.
+Zkontrolovano 42 URL na https://internetostrava.cz, medianova odezva 49 ms.
 
 Vsechny URL vraci 200 a canonical odpovida.
 
