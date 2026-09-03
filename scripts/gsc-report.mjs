@@ -8,7 +8,7 @@
 // Bez credentials skript skonci kodem 0 a poznamkou - audit i workflow musi bezet i bez GSC.
 
 import { createSign } from "node:crypto";
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
 const root = resolve(".");
@@ -165,6 +165,7 @@ async function main() {
     inspection
   };
 
+  rmSync(join(root, "reports/seo/gsc-error.json"), { force: true });
   mkdirSync(join(root, "data/gsc"), { recursive: true });
   const file = join(root, "data/gsc", `${endDate}.json`);
   writeFileSync(file, `${JSON.stringify(payload, null, 2)}\n`);
@@ -174,6 +175,20 @@ async function main() {
 }
 
 main().catch((mainError) => {
-  console.error(`GSC selhalo: ${mainError.message}`);
+  const message = String(mainError.message);
+  console.error(`GSC selhalo: ${message}`);
+
+  // Zapsat duvod, aby report rozlisil "jeste nenastaveno" od "nastaveno, ale selhalo".
+  const hint = /403|sufficient permission/.test(message)
+    ? "Service account neni pridany v Search Console property, nebo GSC_SITE_URL neodpovida typu property (sc-domain: vs https://). Viz docs/SEO-AUTOMATION.md, krok 3."
+    : /invalid_grant|401|token/i.test(message)
+    ? "Problem s klicem service accountu - zkontrolujte secret GSC_SERVICE_ACCOUNT_JSON."
+    : "";
+
+  mkdirSync(join(root, "reports/seo"), { recursive: true });
+  writeFileSync(
+    join(root, "reports/seo/gsc-error.json"),
+    `${JSON.stringify({ failedAt: new Date().toISOString(), message: message.slice(0, 500), hint }, null, 2)}\n`
+  );
   process.exit(1);
 });

@@ -70,9 +70,24 @@ push();
 push("## 1. Vykon ve vyhledavani");
 push();
 
+const gscErrorPath = join(root, "reports/seo/gsc-error.json");
+const gscError = existsSync(gscErrorPath) ? JSON.parse(readFileSync(gscErrorPath, "utf8")) : null;
+
+if (gscError) {
+  push(`**Stahovani dat ze Search Console selhalo** (${gscError.failedAt.slice(0, 16).replace("T", " ")} UTC).`);
+  push();
+  push(`> ${gscError.message}`);
+  push();
+  if (gscError.hint) push(gscError.hint);
+  push();
+  tasks.push({ weight: 95, text: `Opravit pristup ke Search Console API - ${gscError.hint || gscError.message}` });
+}
+
 if (!gsc) {
-  push("Data z Search Console zatim nejsou. Nastavte `GSC_SERVICE_ACCOUNT_JSON` podle `docs/SEO-AUTOMATION.md`;");
-  push("do te doby report obsahuje jen technickou cast.");
+  if (!gscError) {
+    push("Data z Search Console zatim nejsou. Nastavte `GSC_SERVICE_ACCOUNT_JSON` podle `docs/SEO-AUTOMATION.md`;");
+    push("do te doby report obsahuje jen technickou cast.");
+  }
   push();
 } else {
   const current = totals(gsc.current.queries);
@@ -183,7 +198,9 @@ if (gsc) {
   }
   push();
 } else {
-  push("Bez dat z Search Console nelze prilezitosti vyhodnotit.");
+  push(gscError
+    ? "Prilezitosti nelze vyhodnotit, dokud se neopravi pristup ke Search Console (viz sekce 1)."
+    : "Bez dat z Search Console nelze prilezitosti vyhodnotit.");
   push();
 }
 
