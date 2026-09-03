@@ -194,15 +194,30 @@ if (gsc) {
   push();
   push("Tady nejde o pozici, ale o title a description ve vysledku vyhledavani.");
   push();
+  const pairsByPage = new Map();
+  for (const pair of gsc.current.pairs || []) {
+    const bucket = pairsByPage.get(pair.page) || [];
+    bucket.push(pair);
+    pairsByPage.set(pair.page, bucket);
+  }
+
   if (noClicks.length) {
-    push("| Stranka | Zobrazeni | Pozice |");
-    push("|---|---:|---:|");
+    push("| Stranka | Zobrazeni | Pozice | Na jake dotazy rankuje |");
+    push("|---|---:|---:|---|");
     for (const row of noClicks) {
-      push(`| ${routeOf(row.key)} | ${row.impressions} | ${num(row.position)} |`);
+      const top = (pairsByPage.get(row.key) || [])
+        .sort((a, b) => b.impressions - a.impressions)
+        .slice(0, 3)
+        .map((pair) => `${pair.query} (${pair.impressions})`);
+      push(`| ${routeOf(row.key)} | ${row.impressions} | ${num(row.position)} | ${top.length ? top.join("; ") : "-"} |`);
       tasks.push({
         weight: 15 + row.impressions,
-        text: `Prepsat title a description na \`${routeOf(row.key)}\` (${row.impressions} zobrazeni, 0 kliku, pozice ${num(row.position)}).`
+        text: `Prepsat title a description na \`${routeOf(row.key)}\` (${row.impressions} zobrazeni, 0 kliku, pozice ${num(row.position)})${top.length ? ` - rankuje na: ${top.join("; ")}` : ""}.`
       });
+    }
+    if (!gsc.current.pairs) {
+      push();
+      push("> Sloupec s dotazy je prazdny - tato data jsou z doby pred pridanim dimenze `page`+`query`.");
     }
   } else {
     push("Zadna stranka v tomto stavu.");
