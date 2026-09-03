@@ -13,6 +13,7 @@
 - [Tariffs](https://internetostrava.cz/tarify/): indicative options subject to address verification
 - [Contact](https://internetostrava.cz/kontakt/): representative contact details
 - [Lokality overview](https://internetostrava.cz/lokality/): provider-neutral directory of Ostrava districts grouped by area, each linking to a local availability page
+- [Privacy policy](https://internetostrava.cz/ochrana-udaju/): how personal data from the availability form is handled
 
 ## Local pages by district
 

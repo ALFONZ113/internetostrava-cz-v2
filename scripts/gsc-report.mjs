@@ -108,6 +108,28 @@ async function searchAnalytics(token, dimension, startDate, endDate) {
   }));
 }
 
+// Parovani dotaz -> stranka. Podle kvot Google je to nejdrazsi typ dotazu, ale pri
+// radu stovek zobrazeni mesicne je to zanedbatelne a bez nej nelze rict, na co
+// ktera stranka rankuje - a tim padem ani smysluplne prepsat jeji snippet.
+async function searchAnalyticsPairs(token, startDate, endDate) {
+  const path = `/webmasters/v3/sites/${encodeURIComponent(SITE_URL)}/searchAnalytics/query`;
+  const data = await apiPost(token, path, {
+    startDate,
+    endDate,
+    dimensions: ["page", "query"],
+    type: "web",
+    rowLimit: 25000
+  });
+  return (data.rows || []).map((row) => ({
+    page: row.keys[0],
+    query: row.keys[1],
+    clicks: row.clicks,
+    impressions: row.impressions,
+    ctr: row.ctr,
+    position: row.position
+  }));
+}
+
 async function searchAnalyticsTotals(token, startDate, endDate) {
   const path = `/webmasters/v3/sites/${encodeURIComponent(SITE_URL)}/searchAnalytics/query`;
   const data = await apiPost(token, path, { startDate, endDate, dimensions: [], type: "web", rowLimit: 1 });
@@ -176,11 +198,12 @@ async function main() {
   const token = await getAccessToken(credentials);
   console.log(`GSC: ${SITE_URL}, obdobi ${startDate} az ${endDate} (predchozi ${previousStart} az ${previousEnd}).`);
 
-  const [queries, pagesRows, devices, totals, previousQueries, previousPages, previousTotals] = await Promise.all([
+  const [queries, pagesRows, devices, totals, pairs, previousQueries, previousPages, previousTotals] = await Promise.all([
     searchAnalytics(token, "query", startDate, endDate),
     searchAnalytics(token, "page", startDate, endDate),
     searchAnalytics(token, "device", startDate, endDate),
     searchAnalyticsTotals(token, startDate, endDate),
+    searchAnalyticsPairs(token, startDate, endDate),
     searchAnalytics(token, "query", previousStart, previousEnd),
     searchAnalytics(token, "page", previousStart, previousEnd),
     searchAnalyticsTotals(token, previousStart, previousEnd)
@@ -191,7 +214,7 @@ async function main() {
   const payload = {
     generatedAt: new Date().toISOString(),
     siteUrl: SITE_URL,
-    current: { startDate, endDate, totals, queries, pages: pagesRows, devices },
+    current: { startDate, endDate, totals, queries, pages: pagesRows, devices, pairs },
     previous: { startDate: previousStart, endDate: previousEnd, totals: previousTotals, queries: previousQueries, pages: previousPages },
     inspection
   };
