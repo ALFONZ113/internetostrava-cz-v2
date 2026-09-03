@@ -1,0 +1,11 @@
+# Interni SEO data a reporty se nenasazuji na produkci - obsahuji dotazy z Search Console
+# a nemaji byt verejne dostupne na internetostrava.cz.
+data/
+reports/
+docs/
+scripts/
+.agents/
+.claude/
+.github/
+AGENTS.md
+CLAUDE.md

@@ -1,0 +1,32 @@
+{
+  "_comment": "Chranene obchodni hodnoty. Kontroluje scripts/seo-audit.mjs. Menit smi jen majitel webu, nikdy automat.",
+  "phone": {
+    "display": "777 425 230",
+    "tel": "tel:+420777425230",
+    "forbidden": ["730 431 313", "+420730431313"]
+  },
+  "prices": ["300 Kč", "440 Kč", "570 Kč"],
+  "forbiddenPrices": ["350 Kč", "490 Kč", "590 Kč", "600 Kč"],
+  "email": {
+    "ads": "info@internetostrava.cz",
+    "poda": "terc@obchod.poda.cz"
+  },
+  "ico": "75546230",
+  "canonicalOrigin": "https://internetostrava.cz",
+  "adsZone": [
+    "index.html",
+    "404.html",
+    "tarify/index.html",
+    "dostupnost/index.html",
+    "kontakt/index.html",
+    "dekujeme/index.html",
+    "ochrana-udaju/index.html",
+    "lokality/index.html",
+    "poradna/index.html",
+    "poradna/**/index.html"
+  ],
+  "noindex": ["dekujeme/index.html"],
+  "thinContentWords": 400,
+  "titleChars": [30, 60],
+  "descriptionChars": [70, 160]
+}

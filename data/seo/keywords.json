@@ -1,0 +1,94 @@
+{
+  "_comment": "Mapa cilovych dotazu na stranky. baseline = prumerna pozice z prvniho vyhodnoceni GSC (export 2026-08-18, obdobi 2026-07-07 az 2026-08-16). null = dotaz zatim bez zobrazeni.",
+  "baselineDate": "2026-08-18",
+  "clusters": [
+    {
+      "id": "brand",
+      "label": "Značkové dotazy PODA",
+      "priority": 1,
+      "note": "Zde reálně rankujeme. Nejlepší poměr práce a výsledku – z pozice 5-20 se dá dostat do top 3.",
+      "queries": [
+        { "query": "poda mapa pokryti", "page": "/poda-dostupnost/", "baseline": 5.5 },
+        { "query": "poda internet ostrava", "page": "/poda-internet-ostrava/", "baseline": 7.5 },
+        { "query": "poda dostupnost", "page": "/poda-dostupnost/", "baseline": 10.3 },
+        { "query": "poda pokryti", "page": "/poda-dostupnost/", "baseline": 12.7 },
+        { "query": "poda karvina", "page": "/poda-karvina/", "baseline": 12.7 },
+        { "query": "poda internet", "page": "/poda-internet-ostrava/", "baseline": 18.9 },
+        { "query": "poda ostrava", "page": "/poda-internet-ostrava/", "baseline": 20.1 },
+        { "query": "poda internet karvina", "page": "/poda-karvina/", "baseline": null },
+        { "query": "poda tv internet", "page": "/poda-internet-ostrava/", "baseline": null },
+        { "query": "poda klientska zona", "page": "/poda-internet-ostrava/", "baseline": null },
+        { "query": "poda overeni dostupnosti", "page": "/poda-dostupnost/", "baseline": null }
+      ]
+    },
+    {
+      "id": "adresa",
+      "label": "Ověření podle adresy",
+      "priority": 2,
+      "note": "Claim, na kterém stojí celý web. Cluster byl do 2026-08-18 nevyužitý (pozice 30-63), /dostupnost/ prohloubena na 1023 slov.",
+      "queries": [
+        { "query": "internet podle adresy", "page": "/dostupnost/", "baseline": null },
+        { "query": "dostupnost internetu podle adresy", "page": "/dostupnost/", "baseline": null },
+        { "query": "poskytovatele internetu podle adresy", "page": "/dostupnost/", "baseline": null },
+        { "query": "overeni dostupnosti internetu", "page": "/dostupnost/", "baseline": null },
+        { "query": "dostupnost optickeho internetu", "page": "/poradna/dostupnost-optickeho-internetu-ostrava/", "baseline": 7.2 },
+        { "query": "mapa pokryti internetu", "page": "/dostupnost/", "baseline": null }
+      ]
+    },
+    {
+      "id": "lokality",
+      "label": "Městské části Ostravy",
+      "priority": 3,
+      "note": "Dlouhý chvost. Vlna 1 (12 stránek z 2026-07-24) byla po 3,5 týdne prakticky neviditelná – nejdřív ověřit indexaci, pak prohlubovat, nepřidávat další tenké stránky.",
+      "queries": [
+        { "query": "internet poruba", "page": "/internet-ostrava-poruba/", "baseline": 26.9 },
+        { "query": "internet ostrava poruba", "page": "/internet-ostrava-poruba/", "baseline": 32.1 },
+        { "query": "internet ostrava jih", "page": "/internet-ostrava-jih/", "baseline": null },
+        { "query": "internet marianske hory", "page": "/internet-marianske-hory/", "baseline": 10.3 },
+        { "query": "internet moravska ostrava", "page": "/internet-moravska-ostrava/", "baseline": null },
+        { "query": "internet vitkovice", "page": "/internet-ostrava-vitkovice/", "baseline": null },
+        { "query": "internet slezska ostrava", "page": "/internet-slezska-ostrava/", "baseline": 25.7 },
+        { "query": "internet hrabuvka", "page": "/internet-hrabuvka/", "baseline": null },
+        { "query": "internet zabreh", "page": "/internet-zabreh/", "baseline": null },
+        { "query": "internet dubina", "page": "/internet-ostrava-dubina/", "baseline": null },
+        { "query": "internet vyskovice", "page": "/internet-vyskovice/", "baseline": null },
+        { "query": "internet belsky les", "page": "/internet-belsky-les/", "baseline": null },
+        { "query": "internet privoz", "page": "/internet-ostrava-privoz/", "baseline": null },
+        { "query": "internet hulvaky", "page": "/internet-hulvaky/", "baseline": null },
+        { "query": "internet svinov", "page": "/internet-svinov/", "baseline": null },
+        { "query": "internet pustkovec", "page": "/internet-pustkovec/", "baseline": null },
+        { "query": "internet trebovice", "page": "/internet-trebovice/", "baseline": null },
+        { "query": "internet muglinov", "page": "/internet-muglinov/", "baseline": null },
+        { "query": "internet michalkovice", "page": "/internet-michalkovice/", "baseline": null }
+      ]
+    },
+    {
+      "id": "poradna",
+      "label": "Poradna – otázkové dotazy",
+      "priority": 4,
+      "note": "Dlouhé otázkové dotazy nám podle GSC fungují nejlépe. Problém těchto stránek je CTR, ne pozice.",
+      "queries": [
+        { "query": "pomaly internet vecer", "page": "/poradna/pomaly-internet-vecer/", "baseline": null },
+        { "query": "internet vypadava", "page": "/poradna/internet-vypadava-co-delat/", "baseline": null },
+        { "query": "vysoky ping pri hrani", "page": "/poradna/vysoky-ping-pri-hrani/", "baseline": null },
+        { "query": "slaba wifi v panelaku", "page": "/poradna/slaba-wifi-v-panelaku/", "baseline": null },
+        { "query": "jaka rychlost internetu pro domacnost", "page": "/poradna/jaka-rychlost-internetu-pro-domacnost/", "baseline": null },
+        { "query": "optika vs bezdratovy internet", "page": "/poradna/optika-vs-bezdratovy-internet/", "baseline": null },
+        { "query": "internet pro home office", "page": "/poradna/internet-pro-home-office-ostrava/", "baseline": null }
+      ]
+    },
+    {
+      "id": "head",
+      "label": "Obecné dotazy (jen sledovat)",
+      "priority": 5,
+      "note": "NECÍLIT na první místo. Výzkum 2026-08-18: pole obsazené celostátními srovnávači (rychlost.cz, dsl.cz, porovnejsito.cz) a národními ISP. Sledujeme jen kvůli trendu.",
+      "watchOnly": true,
+      "queries": [
+        { "query": "internet ostrava", "page": "/", "baseline": 40.6 },
+        { "query": "internet v ostrave", "page": "/", "baseline": 28.3 },
+        { "query": "nejlevnejsi internet ostrava", "page": "/tarify/", "baseline": 38.3 },
+        { "query": "opticky internet ostrava", "page": "/", "baseline": null }
+      ]
+    }
+  ]
+}

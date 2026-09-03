@@ -95,6 +95,55 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-09-01 - SEO automatizace (mereni + prace)
+
+Duvod: dosavadni cyklus byl cely rucni. GSC se vyhodnotilo jednou (export 2026-08-18), zonova
+pojistka "0 vyskytu poda v Ads zone" se kontrolovala rucnim grepem a dalsi vyhodnoceni bylo
+naplanovane jen jako veta v tomto dokumentu. Nahrazeno dvema vrstvami, popis v `docs/SEO-AUTOMATION.md`.
+
+### Vrstva A - mereni (GitHub Actions, tydne v pondeli)
+
+`.github/workflows/seo-monitor.yml` spousti:
+
+- `scripts/seo-audit.mjs` - offline audit bez credentials: zonova pojistka, delky title a
+  description v ZNACICH, duplicity, tenky obsah, validita JSON-LD, soulad FAQPage s viditelnym
+  obsahem, graf internich odkazu a sirotci, parita sitemap/llms.txt, konzistence cache tokenu,
+  canonical, noindex a chranene obchodni hodnoty z `data/seo/facts.json`.
+- `scripts/gsc-report.mjs` - Search Console API bez npm zavislosti (RS256 JWT pres `node:crypto`).
+  Dve 28denni obdobi, dimenze query/page/device zvlast (grupovani po query a page zaroven je
+  podle kvot Google nejdrazsi) a URL Inspection pro vsech 39 URL ze sitemapy.
+- `scripts/live-check.mjs` - HTTP kontrola produkce (stavove kody, canonical, odezva).
+- `scripts/seo-report.mjs` - slozi cesky report do `reports/seo/YYYY-MM-DD.md` vcetne
+  prioritizovaneho seznamu ukolu.
+
+Data a reporty se commituji do repozitare, ale `.vercelignore` je vylucuje z deploye - dotazy
+ze Search Console nemaji byt verejne na webu.
+
+### Vrstva B - prace (Claude Routine, 1. a 15. v mesici)
+
+Naplanovana session precte nejnovejsi report, provede nejvyse tri upravy a pushne na main -
+ale jen kdyz `npm run check` i `npm run seo:audit` projdou bez chyby. Jinak otevre pull request.
+Ceny, telefon, e-maily a pravni texty agent nemeni nikdy.
+
+Rozdeleni na dve vrstvy ma technicky duvod: prostredi Claude Code nema odchozi pristup na
+internet, GitHub Actions runner ano.
+
+### Nalezy prvniho behu auditu
+
+1. **Nekonzistentni cache token** (severity error): `?v=r17` na 6 mistech (hero video a poster
+   v `index.html` a `poda-internet-ostrava/index.html`) proti `?v=r23` na 82 mistech.
+2. **FAQPage schema neodpovida viditelnemu obsahu na 18 strankach.** U 12 lokalit vlny 1 jsou
+   ve schematu dve otazky, ktere na strance vubec nejsou (napr. `/internet-zabreh/` ma ve
+   schematu "Jak overim internet v Zabrehu?" a "Je Zabreh jedna technicka zona?", zatimco
+   viditelne jsou tri uplne jine). Na homepage ma schema 3 otazky proti 4 viditelnym a treti
+   se lisi ve formulaci. Google vyzaduje, aby obsah FAQ schematu byl na strance videt - tohle je
+   kandidat na vysvetleni, proc vlna 1 za 3,5 tydne vyrobila jen ~5 zobrazeni.
+3. 11 stranek pod 400 slov, z toho `/internet-ostrava-vitkovice/` (349) je cilova stranka dotazu.
+4. `/ochrana-udaju/` chybi v `llms.txt`.
+
+Zadny z nalezu nebyl v tomto kroku opraven - zmena zamerne pridava jen nastroje, aby prvni beh
+automatu ukazal, ze audit chyta realne veci.
+
 ## Implementovano 2026-08-18 (2) - Vyzkum konkurence + 6 novych clanku
 
 ### Vyzkum konkurence

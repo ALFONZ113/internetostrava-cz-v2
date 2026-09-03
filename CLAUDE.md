@@ -20,7 +20,7 @@ Majitel webu je obchodní zástupce PODA a.s. PODA mu **zakázala používat zna
 - Navigace zde obsahuje položku „PODA internet" → /poda-internet-ostrava/; patička plný disclosure „obchodní zástupce PODA a.s."
 - Z Ads zóny se na PODA stránky viditelně neodkazuje; opačným směrem ano.
 
-Při jakékoli úpravě stránky nejdřív urči, do které zóny patří. Po úpravě Ads zóny spusť grep na `poda` (case-insensitive) přes její soubory — musí být 0 výskytů.
+Při jakékoli úpravě stránky nejdřív urči, do které zóny patří. Po úpravě Ads zóny spusť `npm run seo:audit` — zónovou pojistku (0 výskytů `poda`) kontroluje automaticky a při porušení skončí chybou. Seznam souborů Ads zóny je v `data/seo/facts.json`.
 
 ## Obchodní fakta (neměnit bez potvrzení majitele)
 
@@ -34,5 +34,7 @@ Při jakékoli úpravě stránky nejdřív urči, do které zóny patří. Po ú
 
 - Lokální náhled: server „internetostrava-static" v .claude/launch.json (port 8080); /api/leads a redirecty z vercel.json lokálně nefungují
 - Nové lokální stránky se generují ze šablony (Poruba) — jednorázový generátor je možné vést v datovém souboru; kostra (nav, patička, formulář, cache token) musí zůstat jednotná, unikátní je obsah o zástavbě
-- Kontrola webu: `npm run check` (scripts/check-site.mjs)
+- Kontrola webu: `npm run check` (scripts/check-site.mjs) — existence, odkazy, základní metadata
+- SEO audit: `npm run seo:audit` (scripts/seo-audit.mjs) — zónová pojistka, délky v znacích, duplicity, tenký obsah, JSON-LD, sirotci, cache token, chráněné ceny a kontakty. Chyba = nesmí se pushovat na main.
+- SEO automatizace (týdenní sběr dat + dvoutýdenní práce agenta): `docs/SEO-AUTOMATION.md`
 - SEO strategie a historie změn: docs/SEO-PLAN.md; nové stránky přidávat do sitemap.xml a llms.txt

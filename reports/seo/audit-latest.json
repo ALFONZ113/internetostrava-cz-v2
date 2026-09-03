@@ -1,0 +1,464 @@
+{
+  "generatedAt": "2026-09-01T19:40:28.764Z",
+  "pages": 41,
+  "indexable": 39,
+  "schemaBlocks": 45,
+  "adsZonePages": 19,
+  "thinPages": [
+    {
+      "route": "/kontakt/",
+      "words": 301
+    },
+    {
+      "route": "/poradna/",
+      "words": 343
+    },
+    {
+      "route": "/internet-ostrava-vitkovice/",
+      "words": 349
+    },
+    {
+      "route": "/poda-dostupnost/",
+      "words": 353
+    },
+    {
+      "route": "/poda-karvina/",
+      "words": 372
+    },
+    {
+      "route": "/internet-trebovice/",
+      "words": 387
+    },
+    {
+      "route": "/internet-muglinov/",
+      "words": 392
+    },
+    {
+      "route": "/internet-pustkovec/",
+      "words": 394
+    },
+    {
+      "route": "/internet-michalkovice/",
+      "words": 396
+    },
+    {
+      "route": "/tarify/",
+      "words": 396
+    },
+    {
+      "route": "/internet-belsky-les/",
+      "words": 398
+    }
+  ],
+  "wordCounts": {
+    "/dostupnost/": 1016,
+    "/": 789,
+    "/internet-belsky-les/": 398,
+    "/internet-hrabuvka/": 458,
+    "/internet-hulvaky/": 403,
+    "/internet-marianske-hory/": 407,
+    "/internet-michalkovice/": 396,
+    "/internet-moravska-ostrava/": 409,
+    "/internet-muglinov/": 392,
+    "/internet-ostrava-dubina/": 400,
+    "/internet-ostrava-jih/": 419,
+    "/internet-ostrava-poruba/": 450,
+    "/internet-ostrava-privoz/": 407,
+    "/internet-ostrava-vitkovice/": 349,
+    "/internet-pustkovec/": 394,
+    "/internet-slezska-ostrava/": 407,
+    "/internet-svinov/": 401,
+    "/internet-trebovice/": 387,
+    "/internet-vyskovice/": 400,
+    "/internet-zabreh/": 430,
+    "/kontakt/": 301,
+    "/lokality/": 515,
+    "/ochrana-udaju/": 501,
+    "/poda-dostupnost/": 353,
+    "/poda-internet-ostrava/": 1406,
+    "/poda-karvina/": 372,
+    "/poda-kdy-nedava-smysl/": 812,
+    "/poradna/caste-otazky-pred-zmenou-poskytovatele/": 479,
+    "/poradna/dostupnost-optickeho-internetu-ostrava/": 571,
+    "/poradna/": 343,
+    "/poradna/internet-pro-home-office-ostrava/": 489,
+    "/poradna/internet-vypadava-co-delat/": 758,
+    "/poradna/jaka-rychlost-internetu-pro-domacnost/": 517,
+    "/poradna/optika-vs-bezdratovy-internet/": 535,
+    "/poradna/pomaly-internet-vecer/": 749,
+    "/poradna/problem-u-poskytovatele-nebo-doma/": 703,
+    "/poradna/slaba-wifi-v-panelaku/": 710,
+    "/poradna/vysoky-ping-pri-hrani/": 714,
+    "/tarify/": 396
+  },
+  "errors": [
+    {
+      "severity": "error",
+      "check": "cache-token",
+      "page": "index.html, poda-internet-ostrava/index.html",
+      "message": "nekonzistentni cache-busting token: r23 (82x), r17 (6x) - CDN muze servirovat stary asset"
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "internet-belsky-les/index.html",
+      "message": "jen 398 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "internet-michalkovice/index.html",
+      "message": "jen 396 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "internet-muglinov/index.html",
+      "message": "jen 392 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "internet-ostrava-vitkovice/index.html",
+      "message": "jen 349 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "internet-pustkovec/index.html",
+      "message": "jen 394 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "internet-trebovice/index.html",
+      "message": "jen 387 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "title",
+      "page": "kontakt/index.html",
+      "message": "title ma jen 26 znaku (doporuceno od 30)"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "kontakt/index.html",
+      "message": "jen 301 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "poda-dostupnost/index.html",
+      "message": "jen 353 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "poda-karvina/index.html",
+      "message": "jen 372 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "poradna/index.html",
+      "message": "jen 343 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "title",
+      "page": "poradna/pomaly-internet-vecer/index.html",
+      "message": "title ma jen 29 znaku (doporuceno od 30)"
+    },
+    {
+      "severity": "warn",
+      "check": "tenky-obsah",
+      "page": "tarify/index.html",
+      "message": "jen 396 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "index.html",
+      "message": "FAQPage schema ma 3 otazek, viditelnych <details> je 4 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"mohu si objednat pouze internet bez televize?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-belsky-les/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-belsky-les/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet na bělském lese?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-belsky-les/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"patří bělský les pod ostravu-jih?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-hrabuvka/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-hrabuvka/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v hrabůvce?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-hrabuvka/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"liší se dostupnost mezi paneláky a šídlovcem?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-hulvaky/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-hulvaky/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v hulvákách?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-hulvaky/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"pod jaký obvod hulváky patří?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-michalkovice/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-michalkovice/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v michálkovicích?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-michalkovice/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"dá se připojit i dům ve starší kolonii?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-moravska-ostrava/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"stačí napsat jen centrum ostravy?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-moravska-ostrava/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"je ověření internetu závazné?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-muglinov/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-muglinov/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v muglinově?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-muglinov/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"pod jaký obvod muglinov patří?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-dubina/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-dubina/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet na dubině?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-dubina/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"je dostupnost na celé dubině stejná?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-poruba/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-poruba/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím poda internet v porubě?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-poruba/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"stačí napsat jen ostrava-poruba?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-privoz/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-privoz/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v přívoze?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-ostrava-privoz/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"dá se připojit i starší činžák?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-pustkovec/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-pustkovec/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v pustkovci?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-pustkovec/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"sousedé připojení mají, budu ho mít taky?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-svinov/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-svinov/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet ve svinově?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-svinov/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"řeším rodinný dům, jak na to?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-trebovice/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-trebovice/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v třebovicích?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-trebovice/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"liší se možnosti mezi sousedními domy?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-vyskovice/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-vyskovice/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet ve výškovicích?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-vyskovice/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"řeším rodinný dům, jak na to?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-zabreh/index.html",
+      "message": "FAQPage schema ma 2 otazek, viditelnych <details> je 3 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-zabreh/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak ověřím internet v zábřehu?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "internet-zabreh/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"je zábřeh jedna technická zóna?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "poda-dostupnost/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"jak dlouho ověření dostupnosti trvá?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "poda-karvina/index.html",
+      "message": "otazka ve schematu neni doslovne ve viditelnem obsahu: \"funguje ověření dostupnosti i v karviné?\""
+    },
+    {
+      "severity": "warn",
+      "check": "faq",
+      "page": "poradna/caste-otazky-pred-zmenou-poskytovatele/index.html",
+      "message": "FAQPage schema ma 4 otazek, viditelnych <details> je 6 (projekt drzi 1:1)"
+    },
+    {
+      "severity": "warn",
+      "check": "llms",
+      "page": "ochrana-udaju/index.html",
+      "message": "route /ochrana-udaju/ chybi v llms.txt"
+    }
+  ]
+}
