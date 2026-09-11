@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T10:15:55.173Z",
+  "generatedAt": "2026-09-11T07:29:00.823Z",
   "pages": 41,
   "indexable": 39,
   "schemaBlocks": 45,
@@ -7,7 +7,7 @@
   "thinPages": [
     {
       "route": "/kontakt/",
-      "words": 301
+      "words": 299
     },
     {
       "route": "/poradna/",
@@ -51,7 +51,7 @@
     "/internet-trebovice/": 432,
     "/internet-vyskovice/": 426,
     "/internet-zabreh/": 461,
-    "/kontakt/": 301,
+    "/kontakt/": 299,
     "/lokality/": 515,
     "/ochrana-udaju/": 501,
     "/poda-dostupnost/": 353,
@@ -81,15 +81,9 @@
     },
     {
       "severity": "warn",
-      "check": "title",
-      "page": "kontakt/index.html",
-      "message": "title ma jen 26 znaku (doporuceno od 30)"
-    },
-    {
-      "severity": "warn",
       "check": "tenky-obsah",
       "page": "kontakt/index.html",
-      "message": "jen 301 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
+      "message": "jen 299 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
     },
     {
       "severity": "warn",
