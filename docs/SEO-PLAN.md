@@ -95,6 +95,51 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-09-11 - Kanibalizace hlavniho dotazu
+
+Po pridani dimenze page+query do sberu dat (viz nize) slo poprve rict, ktera stranka
+na jaky dotaz rankuje. Ukazalo to necekany nalez.
+
+### Nalez
+
+Na dva nejsilnejsi obecne dotazy webu rankovaly tri stranky zaroven:
+
+| Dotaz | Homepage | /kontakt/ | /tarify/ |
+|---|---:|---:|---:|
+| internet ostrava | 37,3 | **26,4** | 60,9 |
+| internet v ostrave | 30,4 | **19,4** | 60,8 |
+
+Kontaktni stranka predbihala homepage o zhruba deset pozic. Duvod byl primo v jejim
+kodu: mela H2 "Obchodni zastupce pro internet v Ostrave", tedy presnou shodu s dotazem,
+a metapopis "pro overeni dostupnosti internetu v Ostrave". Vysledek: 83 zobrazeni,
+nula kliku - clovek hleda "internet Ostrava", dostane stranku s telefonnim cislem.
+
+### Co se NEudelalo a proc
+
+Puvodni uvaha byla prohloubit homepage. Kontrola ukazala, ze homepage na ten dotaz
+slaba neni - ma H2 "Internet v Ostrave zacina overenim presne adresy" (presna shoda)
+a 35 zminek Ostravy v textu. Pridavat dalsi obsah by bylo keyword stuffing bez efektu.
+Problem nebyl ve slabe homepage, ale v tom, ze ji prehlusovala vlastni kontaktni stranka.
+
+### Implementovano
+
+- `/kontakt/` zuzena na kontaktni temata: title "Kontakt - zastupce pro Ostravu |
+  Telefon 777 425 230" (52 znaku, drive 26 a hlaseno jako prilis kratke), metapopis
+  a og bez frazi o overovani dostupnosti, H2 "Obchodni zastupce pro internet v Ostrave"
+  -> "Na koho se dostanete". Retezec "internet v Ostrave" uz na strance neni.
+- `/poradna/internet-vypadava-co-delat/` doplnen title o wifi: rankuje na "proc vypadava
+  wifi" (poz. 11) a "vypadek wifi" (poz. 30), ale slovo wifi v title nemela.
+- `scripts/seo-report.mjs` deli stranky s nulovym CTR na dve sekce podle pozice.
+  Drive hlasil vse jako "problem snippetu" bez ohledu na pozici, coz vedlo k zavery,
+  ze u Poruby (poz. 22,5) a Slezske (poz. 24,8) staci prepsat snippet. Na treti strane
+  vysledku ale stranku prakticky nikdo nevidi - tam je problem pozice, ne snippetu.
+
+### Vedome neudelano
+
+`/internet-marianske-hory/` (poz. 8,6) a `/poradna/vysoky-ping-pri-hrani/` (poz. 5,1)
+maji nulove prokliky a dobrou pozici, ale GSC pro ne nevraci zadne dotazy - objem je
+pod prahem anonymizace. Bez dat by prepis snippetu byl hadani, proto se odklada.
+
 ## Implementovano 2026-09-01 - SEO automatizace (mereni + prace)
 
 Duvod: dosavadni cyklus byl cely rucni. GSC se vyhodnotilo jednou (export 2026-08-18), zonova
