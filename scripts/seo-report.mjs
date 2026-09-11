@@ -184,15 +184,21 @@ if (gsc) {
   }
   push();
 
-  // Dobra pozice, nulove prokliky = problem snippetu, ne pozice.
-  const noClicks = gsc.current.pages
+  // Nulove prokliky maji dve ruzne priciny a kazda chce jinou praci.
+  // Na prvni strane vysledku stranku uzivatel VIDI a neklikne - to je problem
+  // snippetu. Od druhe strany dal ji prakticky nikdo nevidi, takze prepis title
+  // a description nic neprinese; tam je problem pozice, tedy obsahu a odkazu.
+  const SNIPPET_POSITION_LIMIT = 10;
+  const zeroClicks = gsc.current.pages
     .filter((row) => row.clicks === 0 && row.impressions >= 15)
-    .sort((a, b) => b.impressions - a.impressions)
-    .slice(0, 10);
+    .sort((a, b) => b.impressions - a.impressions);
+  const noClicks = zeroClicks.filter((row) => row.position <= SNIPPET_POSITION_LIMIT).slice(0, 10);
+  const buriedPages = zeroClicks.filter((row) => row.position > SNIPPET_POSITION_LIMIT).slice(0, 10);
 
-  push("### 2.2 Stranky se zobrazenimi a nulovymi prokliky");
+  push("### 2.2 Viditelne stranky bez prokliku (problem snippetu)");
   push();
-  push("Tady nejde o pozici, ale o title a description ve vysledku vyhledavani.");
+  push(`Stranky do pozice ${SNIPPET_POSITION_LIMIT}, ktere uzivatel ve vysledcich vidi a presto neklikne.`);
+  push("Tady pomuze title a description, ne dalsi obsah.");
   push();
   const pairsByPage = new Map();
   for (const pair of gsc.current.pairs || []) {
@@ -218,6 +224,31 @@ if (gsc) {
     if (!gsc.current.pairs) {
       push();
       push("> Sloupec s dotazy je prazdny - tato data jsou z doby pred pridanim dimenze `page`+`query`.");
+    }
+  } else {
+    push("Zadna stranka v tomto stavu.");
+  }
+  push();
+
+  push("### 2.2b Stranky, ktere nikdo nevidi (problem pozice)");
+  push();
+  push(`Zobrazeni maji, ale az za pozici ${SNIPPET_POSITION_LIMIT}. Prepis snippetu je tu k nicemu -`);
+  push("potrebuji hlubsi a konkretnejsi obsah a interni odkazy.");
+  push();
+  if (buriedPages.length) {
+    push("| Stranka | Zobrazeni | Pozice | Na jake dotazy rankuje |");
+    push("|---|---:|---:|---|");
+    for (const row of buriedPages) {
+      const top = (pairsByPage.get(row.key) || [])
+        .sort((a, b) => b.impressions - a.impressions)
+        .slice(0, 3)
+        .map((pair) => `${pair.query} (${pair.impressions})`);
+      const words = audit.wordCounts?.[routeOf(row.key)];
+      push(`| ${routeOf(row.key)} | ${row.impressions} | ${num(row.position)} | ${top.length ? top.join("; ") : "-"} |`);
+      tasks.push({
+        weight: 10 + row.impressions / 2,
+        text: `Prohloubit \`${routeOf(row.key)}\` (pozice ${num(row.position)}, ${row.impressions} zobrazeni${words ? `, ${words} slov` : ""})${top.length ? ` - rankuje na: ${top.join("; ")}` : ""}.`
+      });
     }
   } else {
     push("Zadna stranka v tomto stavu.");
