@@ -95,6 +95,58 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-09-14 - Hlubkovy vytah z GSC + druha vlna kanibalizace
+
+Pridan `scripts/gsc-research.mjs`, ktery na rozdil od tydenniho sberu tahne celou
+dostupnou historii a vsechny dimenze najednou. Prvni vytah (2026-07-07 az 2026-09-11,
+67 dni s daty): 87 dotazu, 2197 zobrazeni, 45 kliku, prumerna pozice 16,0.
+
+### Rozsah kanibalizace je vetsi, nez ukazovalo 28denni okno
+
+| Dotaz | Pocet stranek | Zobrazeni |
+|---|---:|---:|
+| internet v ostrave | 6 | 111 |
+| internet ostrava | 4 | 126 |
+| internet ostrava poruba | 3 | 56 |
+| internet podle adresy | 3 | 40 |
+| internet ostrava zabreh | 3 | 17 |
+
+### Implementovano
+
+- **`/internet-ostrava-jih/`**: title mel "Hrabuvka, Zabreh, Dubina, Vyskovice",
+  tedy narokoval si nazvy vlastnich mestskych casti. Google proto na dotaz
+  `internet ostrava zabreh` (poz. 11,9, 13 zobrazeni) bral rodicovsky obvod misto
+  `/internet-zabreh/`. Title i popisek ted mluvi o obvodu; casti zustavaji
+  prolinkovane v obsahu (5 odkazu), jen uz o ne stranka nesoutezi v metadatech.
+- **`/internet-zabreh/`**: title naopak nesl rodicovsky obvod ("PODA pripojeni
+  Ostrava-Jih"). Ted vede vlastnim nazvem a mestem, tedy v tvaru dotazu.
+- **`/tarify/`**: rankuje na `nejlevnejsi internet ostrava` (poz. 32,5, 25 zobrazeni),
+  ale o cene nebylo v title ani popisku slovo. Doplnena konkretni castka "od 300 Kc
+  za mesic" - fakt z cenniku, ne superlativ (publishing-rules superlativy zakazuji).
+- `sitemap.xml` lastmod pro tri zmenene URL.
+
+### Vedome neudelano
+
+- **`/internet-slezska-ostrava/`**: na hlavni dotazy soutezi az z pozic 48-56, tedy
+  zanedbatelne. Vlastni dotaz `internet slezke` ma na poz. 16,2 a 43 zobrazeni -
+  tam ale nepomuze snippet, nybrz hlubsi obsah. Patri do prace na pozicich, ne sem.
+  Slovo "Ostrava" z nazvu mestske casti odstranit nelze.
+- **`/poradna/`**: 2 zobrazeni na poz. 55. Uprava by byla prace naprazdno.
+
+### Poznamka k FAQ schematu
+
+Google 7. 5. 2026 FAQ rich results zcela zrusil. Sladeni schematu s viditelnym obsahem
+z 2026-09-03 bylo spravne z jinych duvodu (rozpor s viditelnym obsahem, doplneni
+tenkych stranek), bohate vysledky ale neprinese. Dimenze `searchAppearance` to
+potvrzuje - vraci prazdno.
+
+### Poznamka ke klikum
+
+45 kliku za celou historii je nafouknute cislo. Sedm z osmi kliku na `internet ostrava`
+smerovalo na homepage z prumerne pozice 38,3, coz je 16% CTR tam, kde je realne kolem
+0,1 %. Dalsich 19 kliku padlo v jednom cervencovem tydnu naraz. Realny organicky vykon
+je spis kolem dvaceti kliku za devet tydnu; s tim cislem pracovat pri porovnavani.
+
 ## Implementovano 2026-09-11 - Kanibalizace hlavniho dotazu
 
 Po pridani dimenze page+query do sberu dat (viz nize) slo poprve rict, ktera stranka
