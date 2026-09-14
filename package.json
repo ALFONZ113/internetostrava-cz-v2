@@ -10,7 +10,8 @@
     "seo:gsc": "node scripts/gsc-report.mjs",
     "seo:live": "node scripts/live-check.mjs",
     "seo:report": "node scripts/seo-report.mjs",
-    "seo": "npm run check && npm run seo:audit; npm run seo:report"
+    "seo": "npm run check && npm run seo:audit; npm run seo:report",
+    "seo:research": "node scripts/gsc-research.mjs"
   },
   "main": "index.js",
   "directories": {
