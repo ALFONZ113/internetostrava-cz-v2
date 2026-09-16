@@ -18,10 +18,22 @@ const audit = JSON.parse(readFileSync(auditPath, "utf8"));
 /* ---------- nacteni nejnovejsich GSC dat ---------- */
 
 const gscDir = join(root, "data/gsc");
+const WEEKLY_FILE = /^\d{4}-\d{2}-\d{2}\.json$/;
 const gscFiles = existsSync(gscDir)
-  ? readdirSync(gscDir).filter((name) => name.endsWith(".json")).sort()
+  ? readdirSync(gscDir).filter((name) => WEEKLY_FILE.test(name)).sort()
   : [];
-const gsc = gscFiles.length ? JSON.parse(readFileSync(join(gscDir, gscFiles.at(-1)), "utf8")) : null;
+
+let gsc = null;
+if (gscFiles.length) {
+  const file = gscFiles.at(-1);
+  const parsed = JSON.parse(readFileSync(join(gscDir, file), "utf8"));
+  // Radsi zadna data nez pad na pulce reportu: technicka cast se hodi i tak.
+  if (parsed?.current?.queries && parsed?.previous) {
+    gsc = parsed;
+  } else {
+    console.warn(`Varovani: ${file} nema ocekavanou strukturu (current/previous), preskakuji data z GSC.`);
+  }
+}
 
 /* ---------- pomocne funkce ---------- */
 
