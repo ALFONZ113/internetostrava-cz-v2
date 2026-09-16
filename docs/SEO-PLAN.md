@@ -95,6 +95,122 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-09-16 - Prohloubeni nezaindexovanych lokalit
+
+Duvod: URL Inspection ukazala, ze osm lokalit vlny 1 ma verdikt "Objeveno - momentalne
+neindexovano" a `/internet-hrabuvka/` dokonce "Google adresu URL nezna". Nezaindexovany
+byl i rozcestnik `/lokality/`. Google ty stranky nasel pres sitemapu a rozhodl se je
+do indexu nezaradit - to je jeho typicka reakce na tenky obsah. Cela investice do
+dvanacti lokalit tim nevyrobila nic.
+
+### Podklad: delka obsahu proti pozici
+
+Na tomhle webu je korelace necekane cista. Kazda stranka nad 700 slov je na prvni strane
+nebo tesne pod ni, kazda pod 500 je na druhe az treti:
+
+| Stranka | Slov | Pozice |
+|---|---:|---:|
+| /poradna/vysoky-ping-pri-hrani/ | 714 | 6,1 |
+| /poradna/dostupnost-optickeho-internetu-ostrava/ | 571 | 7,1 |
+| /poradna/internet-vypadava-co-delat/ | 758 | 9,3 |
+| /poda-internet-ostrava/ | 1406 | 13,9 |
+| /internet-ostrava-vitkovice/ | 349 | 16,3 |
+| /internet-ostrava-poruba/ | 493 | 22,0 |
+| /internet-slezska-ostrava/ | 407 | 23,5 |
+
+Neni to zelezny zakon (Marianske Hory maji 407 slov a pozici 9,6), ale poradna dokazuje,
+ze hloubka na tomhle webu funguje.
+
+### Implementovano
+
+Osm lokalit prohloubeno ze 426-514 na 689-848 slov (mereno auditem):
+hrabuvka, zabreh, vyskovice, hulvaky, svinov, trebovice, muglinov, michalkovice.
+
+Kazda dostala:
+- `.answer-box` s odpovedi na uvod, psanou pro danou cast zvlast,
+- novou sekci "Co u vas v <casti> rozhoduje" - dva odstavce o tom, co v tamni zastavbe
+  rozhoduje pri pripojeni (panelovy dum proti rodinnemu, kolonie, svazity teren,
+  rozdelena zastavba u dopravniho uzlu),
+- `.checklist` s peti body na miru typu zastavby,
+- zaverecnou sekci k mistnimu specifiku,
+- kontextove odkazy do poradny (2 az 3 na stranku), coz zaroven posiluje interni
+  prolinkovani, ktere bylo u techto stranek slabe.
+
+Rozcestnik `/lokality/` prohlouben z 515 na 900 slov. Byl to cisty seznam odkazu bez
+vlastni hodnoty - presne to, co Google indexovat nechce. Doplnena answer-box, sekce
+"Proc ctvrt nestaci a adresa ano", prehled ctyr typu ostravske zastavby s tim, co u
+ktereho rozhoduje, a "Co si pripravit pred overenim". Ads zona, overeno 0 vyskytu
+retezce "poda".
+
+### Co se NEvymyslelo
+
+Zadna nova mistopisna tvrzeni. Pridany obsah stavi vyhradne na charakteristikach
+zastavby, ktere uz stranky uvadely (Sidlovec, dul Michal, zamecky park, prave brehy
+Ostravice, dopravni uzel Svinov), a doplnuje k nim obecne platnou technickou a
+procesni realitu pripojovani daneho typu domu. Zadna procenta pokryti, zadne terminy
+instalace, zadne recenze, zadne superlativy.
+
+### Dalsi na rade
+
+`/poda-dostupnost/` ma 353 slov a 299 zobrazeni - nejhorsi pomer na webu.
+Pak `/internet-ostrava-poruba/` (493 slov, 159 zobrazeni, poz. 22,0) a
+`/internet-slezska-ostrava/` (407 slov, 94 zobrazeni, poz. 23,5).
+
+Po nasazeni poslat vsech devet URL v Search Console pres Kontrola URL ->
+Pozadat o indexovani.
+
+## Implementovano 2026-09-14 - Hlubkovy vytah z GSC + druha vlna kanibalizace
+
+Pridan `scripts/gsc-research.mjs`, ktery na rozdil od tydenniho sberu tahne celou
+dostupnou historii a vsechny dimenze najednou. Prvni vytah (2026-07-07 az 2026-09-11,
+67 dni s daty): 87 dotazu, 2197 zobrazeni, 45 kliku, prumerna pozice 16,0.
+
+### Rozsah kanibalizace je vetsi, nez ukazovalo 28denni okno
+
+| Dotaz | Pocet stranek | Zobrazeni |
+|---|---:|---:|
+| internet v ostrave | 6 | 111 |
+| internet ostrava | 4 | 126 |
+| internet ostrava poruba | 3 | 56 |
+| internet podle adresy | 3 | 40 |
+| internet ostrava zabreh | 3 | 17 |
+
+### Implementovano
+
+- **`/internet-ostrava-jih/`**: title mel "Hrabuvka, Zabreh, Dubina, Vyskovice",
+  tedy narokoval si nazvy vlastnich mestskych casti. Google proto na dotaz
+  `internet ostrava zabreh` (poz. 11,9, 13 zobrazeni) bral rodicovsky obvod misto
+  `/internet-zabreh/`. Title i popisek ted mluvi o obvodu; casti zustavaji
+  prolinkovane v obsahu (5 odkazu), jen uz o ne stranka nesoutezi v metadatech.
+- **`/internet-zabreh/`**: title naopak nesl rodicovsky obvod ("PODA pripojeni
+  Ostrava-Jih"). Ted vede vlastnim nazvem a mestem, tedy v tvaru dotazu.
+- **`/tarify/`**: rankuje na `nejlevnejsi internet ostrava` (poz. 32,5, 25 zobrazeni),
+  ale o cene nebylo v title ani popisku slovo. Doplnena konkretni castka "od 300 Kc
+  za mesic" - fakt z cenniku, ne superlativ (publishing-rules superlativy zakazuji).
+- `sitemap.xml` lastmod pro tri zmenene URL.
+
+### Vedome neudelano
+
+- **`/internet-slezska-ostrava/`**: na hlavni dotazy soutezi az z pozic 48-56, tedy
+  zanedbatelne. Vlastni dotaz `internet slezke` ma na poz. 16,2 a 43 zobrazeni -
+  tam ale nepomuze snippet, nybrz hlubsi obsah. Patri do prace na pozicich, ne sem.
+  Slovo "Ostrava" z nazvu mestske casti odstranit nelze.
+- **`/poradna/`**: 2 zobrazeni na poz. 55. Uprava by byla prace naprazdno.
+
+### Poznamka k FAQ schematu
+
+Google 7. 5. 2026 FAQ rich results zcela zrusil. Sladeni schematu s viditelnym obsahem
+z 2026-09-03 bylo spravne z jinych duvodu (rozpor s viditelnym obsahem, doplneni
+tenkych stranek), bohate vysledky ale neprinese. Dimenze `searchAppearance` to
+potvrzuje - vraci prazdno.
+
+### Poznamka ke klikum
+
+45 kliku za celou historii je nafouknute cislo. Sedm z osmi kliku na `internet ostrava`
+smerovalo na homepage z prumerne pozice 38,3, coz je 16% CTR tam, kde je realne kolem
+0,1 %. Dalsich 19 kliku padlo v jednom cervencovem tydnu naraz. Realny organicky vykon
+je spis kolem dvaceti kliku za devet tydnu; s tim cislem pracovat pri porovnavani.
+
 ## Implementovano 2026-09-11 - Kanibalizace hlavniho dotazu
 
 Po pridani dimenze page+query do sberu dat (viz nize) slo poprve rict, ktera stranka
