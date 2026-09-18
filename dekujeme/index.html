@@ -32,12 +32,53 @@
         <h1>Děkujeme. Adresu máme.</h1>
         <p class="lead">Dotaz jsme přijali. Prověříme možnosti připojení pro váš dům a <strong>ozveme se vám do 30 minut</strong>. Pokud spěcháte, zavolejte rovnou.</p>
         <div class="hero-cta" style="margin-top:28px">
-          <a class="btn btn-primary" href="/">Zpět na hlavní stránku</a>
-          <a class="btn btn-ghost" href="tel:+420777425230">Volat 777 425 230</a>
+          <a class="btn btn-primary" href="tel:+420777425230">Volat 777 425 230</a>
+          <a class="btn btn-ghost" href="/poradna/">Přečíst si poradnu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Co bude následovat</h2>
+        <ol class="steps">
+          <li>
+            <h3>Ověříme vaši adresu</h3>
+            <p>Podíváme se, co je zavedené přímo ve vašem domě. Rozhoduje konkrétní adresa, ne název čtvrti – sousední dům může mít jiné možnosti.</p>
+          </li>
+          <li>
+            <h3>Zavoláme vám do 30 minut</h3>
+            <p>Ozve se vám místní zástupce, ne call centrum. Řekneme rovnou, co je u vás zapojitelné a co ne, včetně ceny. Pokud voláme mimo vaše možnosti, napište nám čas, který vám vyhovuje.</p>
+          </li>
+          <li>
+            <h3>Rozhodnete se v klidu</h3>
+            <p>Odeslaný dotaz není objednávka a k ničemu vás nezavazuje. Pokud nabídka nebude dávat smysl, řekneme vám to na rovinu.</p>
+          </li>
+        </ol>
+        <p class="note">Nedorazilo potvrzení nebo jste se překlepli v telefonu? Napište na <a href="mailto:info@internetostrava.cz">info@internetostrava.cz</a> nebo zavolejte na <a href="tel:+420777425230">777 425 230</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Než se ozveme</h2>
+        <p>Pokud vás zajímá, co dnešní potíže s připojením obvykle způsobuje, tyhle návody jsou k tomu nejčtenější:</p>
+        <div class="footer-links">
+          <a href="/poradna/internet-vypadava-co-delat/">Internet vypadává: kde bývá příčina</a>
+          <a href="/poradna/pomaly-internet-vecer/">Proč je internet pomalý večer</a>
+          <a href="/poradna/slaba-wifi-v-panelaku/">Slabá wifi v bytě i paneláku</a>
+          <a href="/tarify/">Přehled tarifů a cen</a>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    /* Zaloha konverzniho signalu. main.js posila lead_submit jeste pred
+       presmerovanim; tenhle event potvrdi, ze uzivatel na dekovaci stranku
+       skutecne dorazil, i kdyby se predchozi udalost pri navigaci ztratila. */
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "lead_thank_you", source_page: "/dekujeme/" });
+  </script>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">

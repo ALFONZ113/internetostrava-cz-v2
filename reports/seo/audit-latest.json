@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T20:12:34.740Z",
+  "generatedAt": "2026-09-18T20:17:11.694Z",
   "pages": 41,
   "indexable": 39,
   "schemaBlocks": 45,
@@ -102,12 +102,6 @@
       "check": "tenky-obsah",
       "page": "poradna/index.html",
       "message": "jen 343 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "title",
-      "page": "poradna/pomaly-internet-vecer/index.html",
-      "message": "title ma jen 29 znaku (doporuceno od 30)"
     },
     {
       "severity": "warn",
