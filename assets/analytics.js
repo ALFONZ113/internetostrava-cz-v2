@@ -8,7 +8,7 @@
    GTM kontejneru.
 
    Souhlas: Google Consent Mode v2, vychozi stav DENIED. Merici cookies se
-   aktivuji az po kliknuti na "Souhlasim" v listе. Volba se uklada do
+   aktivuji az po kliknuti na "Souhlasim" v liste. Volba se uklada do
    localStorage na 6 mesicu.
    =========================================================================== */
 

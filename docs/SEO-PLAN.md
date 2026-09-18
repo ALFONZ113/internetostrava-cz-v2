@@ -95,6 +95,91 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-09-18 - Mereni konverzi, konverzni vrstva a prohloubeni sesti stranek
+
+Kontext: veskera dosavadni prace na webu byla SEO (dve vlny kanibalizace,
+prohloubeni lokalit). Web pritom **nemeril nic** - `assets/main.js` pushoval
+udalosti do `window.dataLayer`, ale GTM ani GA4 nebyly nainstalovany na zadne
+ze 41 stranek. Bez mereni nelze spustit Google Ads (nema na cem optimalizovat)
+ani zjistit, ktera stranka generuje poptavky. Web ma 15 kliku za 28 dni, coz
+pri 10% konverzi vychazi na 1,5 leadu mesicne; organika sama tohle cislo v
+rozumnem horizontu nezvedne, hlavni packa je Ads - a ta bez mereni nedava smysl.
+
+### Mereni
+
+- Novy `assets/analytics.js`: GTM loader rizeny `<meta name="gtm-id">`. Dokud je
+  obsah prazdny, skript jen pripravi dataLayer a nic nestahuje, takze nasazeni
+  je bezpecne i pred zalozenim kontejneru. Souhlasova lista se ze stejneho
+  duvodu ukazuje jen tehdy, kdyz je ID vyplnene.
+- Google Consent Mode v2, vychozi stav `denied`. Merici skripty se nenactou,
+  dokud clovek neklikne na Souhlasim. Volba v `localStorage` na 6 mesicu.
+- Devet udalosti: `lead_submit` (s `lead_type`, `tarif`, UTM), `lead_thank_you`,
+  `phone_click` (s umistenim odkazu), `email_click`, `modal_open`, `form_start`,
+  `form_email_opened`, `form_abandon` (s poctem vyplnenych poli),
+  `mailto_fallback` (s duvodem).
+- `mailto_fallback` je zaroven diagnostika: kdyz se objevuje, `/api/leads`
+  lead neprijal (nejspis chybi `RESEND_API_KEY` ve Vercelu) a na mobilu takovy
+  lead vetsinou nikdo nedokonci. Postup v `docs/MERENI-A-ADS.md`.
+
+### Konverzni vrstva formularu
+
+- Rozepsany formular prezije odchod ze stranky (`io-lead-draft-v1`, 7 dni).
+  Souhlas se zpracovanim se zamerne neuklada - musi byt vzdy novy ukon.
+- E-mail je nepovinny, proto nove schovany pod prepinacem: uzivatel vidi dve
+  povinna pole misto tri.
+- Telefon se kontroluje pri opusteni pole a normalizuje pred odeslanim.
+- `/dekujeme/` prestala byt slepou ulickou (jediny odkaz zpet na homepage).
+  Nove tri kroky "co bude nasledovat", telefon jako hlavni CTA a odkazy na
+  nejctenejsi navody.
+
+### Snippety podle dotazu
+
+Prepsany title a description ctyr clanku poradny. Klicovy nalez: 
+`/poradna/vysoky-ping-pri-hrani/` rankuje na dotaz "ping 29ms", coz je otazka
+na HODNOTU, ale titulek mluvil o "vysokem pingu" - proto 95 zobrazeni a nula
+kliku pri pozici 6,1. Novy titulek slibuje hodnoty, popisek je vyjmenuje.
+Pozn. k ocekavani: pri pozici 9,3 vychazi ocekavany zisk na jednotky kliku
+mesicne, ne na skokovou zmenu.
+
+### Prohloubeny stranky
+
+| Stranka | Pred | Po | Duvod |
+|---|---:|---:|---|
+| `/internet-ostrava-poruba/` | 439 | 1401 | 78 zobrazeni, pozice 21,2, komercni dotazy |
+| `/internet-ostrava-vitkovice/` | 293 | 1103 | 41 zobrazeni, pozice 15,9 |
+| `/internet-slezska-ostrava/` | 352 | 1052 | 54 zobrazeni, pozice 21,4 |
+| `/tarify/` | 396 | 908 | "nejlevnejsi internet ostrava", pozice 34,9 |
+| `/kontakt/` | 299 | 652 | nejtencí soubor v Ads zone |
+| `/ochrana-udaju/` | 458 | 655 | sekce 8 musela popsat nove mereni |
+
+U lokalit pribyly stavebni obvody a orientacni body, zavedeni v bytovem dome
+vcetne souhlasu SVJ, prechod od poskytovatele a FAQ (Poruba 11, ostatni 8).
+`/tarify/` nove odpovida na cenovy dotaz: nejnizsi cena z nabidky je 300 Kc a
+balicek s televizi je levnejsi nez samostatny internet, protoze rozdil dela
+rychlost. Zadny superlativ o trhu - odpovidame vlastni nabidkou.
+`/kontakt/` dostal duveryhodnostni obsah, ktery zamerne NEcili na "internet
+ostrava" (kanibalizaci resil commit c13d494).
+
+FAQPage schema se nove generuje primo z viditelnych `<details>`, takze se s
+obsahem nemuze rozejit.
+
+Opraveno pri praci: nadpis mini-hubu na `/internet-slezska-ostrava/` z "Casti
+Slezske Ostravy" na "Slezska Ostrava a okoli" - Michalkovice jsou samostatny
+mestsky obvod, ne cast Slezske, a jejich vlastni breadcrumb vede pres
+`/lokality/`. Karty ani odkazy nezmeneny.
+
+Audit: 0 chyb, varovani 7 -> 3 (zbyva `/poda-dostupnost/`, `/poda-karvina/`,
+`/poradna/`). Cache token r23 -> r24. Sitemap lastmod u 10 URL.
+
+### Dalsi kroky podle ocekavaneho dopadu
+
+1. **Vlozit GTM ID** (`docs/MERENI-A-ADS.md`) - bez toho vsechno vyse nemeri nic.
+2. **Google Business Profile** - pro service-area business je map pack nad
+   organickymi vysledky; stale neudelano.
+3. **Overit `RESEND_API_KEY`** ve Vercelu, jinak kazdy lead pada do mailto.
+4. **Google Ads** az po bodech 1 a 3.
+5. Prohloubit `/poradna/`, `/poda-dostupnost/`, `/poda-karvina/`.
+
 ## Implementovano 2026-09-16 - Prohloubeni nezaindexovanych lokalit
 
 Duvod: URL Inspection ukazala, ze osm lokalit vlny 1 ma verdikt "Objeveno - momentalne
