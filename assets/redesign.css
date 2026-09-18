@@ -649,3 +649,8 @@ input.is-invalid { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,97,
   .compare-table--tarify th:last-child, .compare-table--tarify td:last-child { display: none; }
   .compare-table--tarify th, .compare-table--tarify td { padding: 10px 10px; font-size: .9rem; }
 }
+/* trust riadok v tmavom subhero (dostupnost, homepage) bol atramentový na tmavom pozadí */
+.subhero .trustline .ico { color: var(--signal); }
+.subhero .trustline p, .subhero .trustline strong { color: var(--white-90); }
+/* prepínač e-mailu vo form-grid zaberal jednu bunku a lámal sa; má ísť cez celú šírku vľavo */
+.form-grid .field-toggle { grid-column: 1 / -1; justify-self: start; text-align: left; }

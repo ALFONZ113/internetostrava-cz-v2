@@ -2,50 +2,63 @@
 
 > InternetOstrava.cz helps residents of Ostrava and the surrounding region verify the availability of internet service for an exact address. The homepage and conversion pages are provider-neutral; the dedicated PODA pages explain availability checks for the PODA network and are operated by a sales representative of PODA a.s., not by PODA a.s. itself.
 
+## Key facts
+
+- Operator: Milan Terč, authorised sales representative (IČO 75546230), based in Ostrava-Poruba. Not the network operator itself.
+- Service area: Ostrava and its districts, plus Karviná and nearby towns. Addresses outside the area can be checked on request.
+- Phone: +420 777 425 230. E-mail: info@internetostrava.cz. Calls are made on working days; a request sent in the evening or at the weekend is answered the next working morning.
+- How it works: the visitor sends a street address with house number and a phone number. The representative checks what is actually installed in that building and calls back within 30 minutes on working days with concrete options and prices. The request is free and non-binding; no order is placed by sending the form.
+- Availability is decided per exact building, never per district or from a public coverage map. Neighbouring houses can have different options (fibre already in the building, cabling in the risers, housing-association consent, technology in the street).
+- Tariffs (monthly, same price at every address; availability confirmed per address): Giga 1000 + TV — 300 CZK, fibre 1000/1000 Mb/s with a basic TV package; Giga 1000 + TV 10 — 440 CZK, 1000/1000 Mb/s with 103 channels plus 10 premium channels of choice; Giga 2000 — 570 CZK, 2000/2000 Mb/s internet only. An individual tariff (for example for seniors) is available on request.
+- Cheapest option in the offer: 300 CZK per month (Giga 1000 + TV). The package with television is cheaper than the internet-only tariff because the difference is speed (1 Gb/s vs 2 Gb/s), not the TV.
+- Fibre (FTTH/GPON) upload speed equals download speed. Wireless alternatives are described honestly where fibre is not installed.
+- The site publishes no coverage percentages, no customer reviews, no review schema and no market superlatives. Every page repeats that the final offer is confirmed for the exact address.
+- Google Ads campaigns point only to the provider-neutral pages (homepage, /dostupnost/, /tarify/, /kontakt/, /lokality/, /poradna/).
+
 ## Main pages
 
-- [Internet Ostrava](https://internetostrava.cz/): provider-neutral overview, indicative tariffs, address verification, and frequently asked questions
-- [PODA internet Ostrava](https://internetostrava.cz/poda-internet-ostrava/): focused explanation of how PODA internet availability is verified by exact address in Ostrava
-- [PODA dostupnost](https://internetostrava.cz/poda-dostupnost/): explanation of how PODA coverage and availability are verified per exact address
+- [Internet Ostrava](https://internetostrava.cz/): provider-neutral overview, tariffs, address verification form, callback form, and frequently asked questions
+- [Availability verification](https://internetostrava.cz/dostupnost/): how internet availability is determined per exact address in Ostrava, what affects the result at building level (house type, existing connection, riser cabling, housing-association consent, technology in the street), what to prepare, plus a non-binding check form
+- [Tariffs](https://internetostrava.cz/tarify/): the three tariffs with prices (300 / 440 / 570 CZK per month), a comparison table, a direct answer to "cheapest internet in Ostrava" (300 CZK with TV), what influences the real cost (upload speed, package contents, how long a promotional price lasts) and the five questions to ask any provider before signing
+- [Contact](https://internetostrava.cz/kontakt/): representative contact details, when calls are made and when not, what to prepare before the call, what happens with the submitted data, and the promise to say openly when the current connection is the better option
+- [Lokality overview](https://internetostrava.cz/lokality/): provider-neutral directory of Ostrava districts grouped by area, each linking to a local availability page
+- [Privacy policy](https://internetostrava.cz/ochrana-udaju/): how personal data from the availability form is handled; section 8 describes browser storage (form draft, consent choice, UTM parameters) and consent-based analytics (Google Tag Manager / GA4 with Consent Mode v2, default denied)
+- [PODA internet Ostrava](https://internetostrava.cz/poda-internet-ostrava/): focused explanation of how PODA internet availability is verified by exact address in Ostrava, original PODA tariff names, and a visible disclosure that the site is run by a sales representative
+- [PODA dostupnost](https://internetostrava.cz/poda-dostupnost/): why a public coverage map is not enough and how PODA availability is verified per exact address
 - [PODA internet Karviná](https://internetostrava.cz/poda-karvina/): availability verification for addresses in Karviná and surroundings
 - [When PODA is not a good fit](https://internetostrava.cz/poda-kdy-nedava-smysl/): honest list of situations where fibre from PODA does not make sense, including commission disclosure
-- [Availability verification](https://internetostrava.cz/dostupnost/): how internet availability is determined per exact address in Ostrava, what affects the result at building level, what to prepare, plus a non-binding check form
-- [Tariffs](https://internetostrava.cz/tarify/): indicative options subject to address verification
-- [Contact](https://internetostrava.cz/kontakt/): representative contact details
-- [Lokality overview](https://internetostrava.cz/lokality/): provider-neutral directory of Ostrava districts grouped by area, each linking to a local availability page
-- [Privacy policy](https://internetostrava.cz/ochrana-udaju/): how personal data from the availability form is handled
 
 ## Local pages by district
 
-Each local page verifies internet availability by exact address; content is unique per district and describes the local building stock (panel estates, tenement houses, family homes, mining colonies). No coverage percentages are used.
+Each local page verifies internet availability by exact address; content is unique per district and describes the local building stock (panel estates, tenement houses, family homes, mining colonies), how fibre is brought into an apartment building (housing-association consent, riser cabling), how switching from the current provider works, and answers district-specific FAQs. No coverage percentages are used.
 
-- [Ostrava-Poruba](https://internetostrava.cz/internet-ostrava-poruba/): sorela blocks, panel houses, and family homes at the edges
-- [Ostrava-Jih](https://internetostrava.cz/internet-ostrava-jih/): overview hub for the Jih district (Hrabuvka, Zabreh, Dubina, Vyskovice, Belsky Les)
-- [Hrabuvka](https://internetostrava.cz/internet-hrabuvka/): panel houses around the shopping centre and the brick Sidlovec colony
-- [Zabreh](https://internetostrava.cz/internet-zabreh/): panel estates and older brick tenement houses
+- [Ostrava-Poruba](https://internetostrava.cz/internet-ostrava-poruba/): sorela blocks along Hlavní třída and the Oblouk, panel houses in the numbered construction districts, family homes towards Krásné Pole and Plesná, student housing near the VŠB-TUO campus; 11 FAQs
+- [Ostrava-Jih](https://internetostrava.cz/internet-ostrava-jih/): overview hub for the Jih district (Hrabůvka, Zábřeh, Dubina, Výškovice, Bělský Les)
+- [Hrabůvka](https://internetostrava.cz/internet-hrabuvka/): panel houses around the shopping centre and the brick Šídlovec colony
+- [Zábřeh](https://internetostrava.cz/internet-zabreh/): panel estates and older brick tenement houses
 - [Dubina](https://internetostrava.cz/internet-ostrava-dubina/): the youngest panel estate of the Jih district
-- [Vyskovice](https://internetostrava.cz/internet-vyskovice/): panel houses and original family-home development near Belsky les
-- [Belsky Les](https://internetostrava.cz/internet-belsky-les/): panel estate set within greenery
-- [Marianské Hory](https://internetostrava.cz/internet-marianske-hory/): flats and family homes in wider central Ostrava
-- [Hulvaky](https://internetostrava.cz/internet-hulvaky/): smaller locality with colonies and apartment houses near Bazaly
-- [Moravska Ostrava](https://internetostrava.cz/internet-moravska-ostrava/): central Ostrava addresses
-- [Privoz](https://internetostrava.cz/internet-ostrava-privoz/): historic quarter of Art Nouveau tenement houses by the main station
-- [Vitkovice](https://internetostrava.cz/internet-ostrava-vitkovice/): brick industrial development in central Ostrava
+- [Výškovice](https://internetostrava.cz/internet-vyskovice/): panel houses and original family-home development near Bělský les
+- [Bělský Les](https://internetostrava.cz/internet-belsky-les/): panel estate set within greenery
+- [Mariánské Hory](https://internetostrava.cz/internet-marianske-hory/): flats and family homes in wider central Ostrava
+- [Hulváky](https://internetostrava.cz/internet-hulvaky/): smaller locality with colonies and apartment houses near Bazaly
+- [Moravská Ostrava](https://internetostrava.cz/internet-moravska-ostrava/): central Ostrava addresses
+- [Přívoz](https://internetostrava.cz/internet-ostrava-privoz/): historic quarter of Art Nouveau tenement houses by the main station
+- [Vítkovice](https://internetostrava.cz/internet-ostrava-vitkovice/): brick industrial colony around Mírové náměstí and the Dolní oblast Vítkovice area, small housing associations, renovated houses; 8 FAQs
 - [Svinov](https://internetostrava.cz/internet-svinov/): transport hub with family homes and low apartment buildings near the station
-- [Pustkovec](https://internetostrava.cz/internet-pustkovec/): quiet family-home area next to Poruba and the VSB campus
-- [Trebovice](https://internetostrava.cz/internet-trebovice/): residential area with family homes and a chateau park
-- [Slezska Ostrava](https://internetostrava.cz/internet-slezska-ostrava/): family and apartment houses close to the centre
+- [Pustkovec](https://internetostrava.cz/internet-pustkovec/): quiet family-home area next to Poruba and the VŠB campus
+- [Třebovice](https://internetostrava.cz/internet-trebovice/): residential area with family homes and a chateau park
+- [Slezská Ostrava](https://internetostrava.cz/internet-slezska-ostrava/): hillside and scattered development on the right bank of the Ostravice, the district's parts (Muglinov, Heřmanice, Hrušov, Kunčice, Kunčičky, Koblov, Antošovice) and neighbouring Michálkovice; 8 FAQs
 - [Muglinov](https://internetostrava.cz/internet-muglinov/): family development and a panel estate on the right bank of the Ostravice
-- [Michalkovice](https://internetostrava.cz/internet-michalkovice/): mining colonies and family homes near the Michal colliery
+- [Michálkovice](https://internetostrava.cz/internet-michalkovice/): separate city district with mining colonies and family homes near the Michal colliery
 
 ## Advice hub (Poradna)
 
-- [Poradna](https://internetostrava.cz/poradna/): practical guides for choosing internet service in Ostrava
+- [Poradna](https://internetostrava.cz/poradna/): practical guides for choosing internet service in Ostrava and for diagnosing connection problems at home
 - [Fiber availability check guide](https://internetostrava.cz/poradna/dostupnost-optickeho-internetu-ostrava/): how fiber availability is verified per exact address and why neighbouring buildings differ
 - [Connection drops](https://internetostrava.cz/poradna/internet-vypadava-co-delat/): how to tell whether outages come from home Wi-Fi, the router, or the provider line
 - [Slow internet in the evening](https://internetostrava.cz/poradna/pomaly-internet-vecer/): why speed drops at peak hours and where network capacity is shared
-- [High ping when gaming](https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/): what latency and jitter mean and the most common causes at home
-- [Weak Wi-Fi in panel buildings](https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/): why concrete panel housing is hard for Wi-Fi and what helps before changing tariff
+- [Ping values for gaming](https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/): which ping values are good (under 20 ms excellent, 20–50 ms normal, over 100 ms noticeable), why jitter matters more than the average, and the five most common causes at home
+- [Weak Wi-Fi in flats and panel buildings](https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/): why concrete panel housing is hard for Wi-Fi and what helps before changing tariff
 - [Provider issue or home issue](https://internetostrava.cz/poradna/problem-u-poskytovatele-nebo-doma/): a ten-minute diagnostic to separate a home problem from a provider outage
 - [Fiber vs. wireless comparison](https://internetostrava.cz/poradna/optika-vs-bezdratovy-internet/): stability, latency, symmetric upload, and weather resilience compared
 - [Internet for home office](https://internetostrava.cz/poradna/internet-pro-home-office-ostrava/): why stability and upload matter more than headline download speed
@@ -54,4 +67,4 @@ Each local page verifies internet availability by exact address; content is uniq
 
 ## Canonical query aliases
 
-Short query-style paths such as `/poda-ostrava`, `/poda-poruba`, `/internet-poruba`, `/internet-privoz`, and `/internet-dubina` redirect to the closest canonical landing page instead of creating duplicate thin pages. District names that have their own local page (for example Hrabuvka, Zabreh, Vyskovice) are served directly at `/internet-<district>/`.
+Short query-style paths such as `/poda-ostrava`, `/poda-poruba`, `/internet-poruba`, `/internet-privoz`, and `/internet-dubina` redirect to the closest canonical landing page instead of creating duplicate thin pages. District names that have their own local page (for example Hrabůvka, Zábřeh, Výškovice) are served directly at `/internet-<district>/`.
