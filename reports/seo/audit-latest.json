@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T20:17:11.694Z",
+  "generatedAt": "2026-09-18T20:20:30.895Z",
   "pages": 41,
   "indexable": 39,
   "schemaBlocks": 45,
@@ -24,10 +24,6 @@
     {
       "route": "/poda-karvina/",
       "words": 372
-    },
-    {
-      "route": "/tarify/",
-      "words": 396
     }
   ],
   "wordCounts": {
@@ -69,7 +65,7 @@
     "/poradna/problem-u-poskytovatele-nebo-doma/": 703,
     "/poradna/slaba-wifi-v-panelaku/": 710,
     "/poradna/vysoky-ping-pri-hrani/": 714,
-    "/tarify/": 396
+    "/tarify/": 1006
   },
   "errors": [],
   "warnings": [
@@ -102,12 +98,6 @@
       "check": "tenky-obsah",
       "page": "poradna/index.html",
       "message": "jen 343 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "tarify/index.html",
-      "message": "jen 396 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
     }
   ]
 }
