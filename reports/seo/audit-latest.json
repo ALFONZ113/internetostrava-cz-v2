@@ -1,26 +1,13 @@
 {
-  "generatedAt": "2026-09-18T23:16:53.173Z",
+  "generatedAt": "2026-09-18T23:31:45.571Z",
   "pages": 41,
   "indexable": 39,
   "schemaBlocks": 45,
   "adsZonePages": 19,
-  "thinPages": [
-    {
-      "route": "/poradna/",
-      "words": 343
-    },
-    {
-      "route": "/poda-dostupnost/",
-      "words": 353
-    },
-    {
-      "route": "/poda-karvina/",
-      "words": 372
-    }
-  ],
+  "thinPages": [],
   "wordCounts": {
     "/dostupnost/": 1016,
-    "/": 789,
+    "/": 795,
     "/internet-belsky-les/": 445,
     "/internet-hrabuvka/": 848,
     "/internet-hulvaky/": 721,
@@ -42,13 +29,13 @@
     "/kontakt/": 701,
     "/lokality/": 900,
     "/ochrana-udaju/": 698,
-    "/poda-dostupnost/": 353,
-    "/poda-internet-ostrava/": 1406,
-    "/poda-karvina/": 372,
+    "/poda-dostupnost/": 1416,
+    "/poda-internet-ostrava/": 1414,
+    "/poda-karvina/": 1474,
     "/poda-kdy-nedava-smysl/": 812,
     "/poradna/caste-otazky-pred-zmenou-poskytovatele/": 479,
     "/poradna/dostupnost-optickeho-internetu-ostrava/": 571,
-    "/poradna/": 343,
+    "/poradna/": 696,
     "/poradna/internet-pro-home-office-ostrava/": 489,
     "/poradna/internet-vypadava-co-delat/": 758,
     "/poradna/jaka-rychlost-internetu-pro-domacnost/": 517,
@@ -57,27 +44,8 @@
     "/poradna/problem-u-poskytovatele-nebo-doma/": 703,
     "/poradna/slaba-wifi-v-panelaku/": 710,
     "/poradna/vysoky-ping-pri-hrani/": 714,
-    "/tarify/": 1005
+    "/tarify/": 1013
   },
   "errors": [],
-  "warnings": [
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "poda-dostupnost/index.html",
-      "message": "jen 353 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "poda-karvina/index.html",
-      "message": "jen 372 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "poradna/index.html",
-      "message": "jen 343 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    }
-  ]
+  "warnings": []
 }

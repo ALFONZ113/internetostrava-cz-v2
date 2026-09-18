@@ -18,7 +18,11 @@ if (reduceMotion && heroVideo) {
   heroVideo.pause();
 }
 
-if (heroVideo && !reduceMotion) {
+// Video (1,7 MB) ma smysl jen na sirokem displeji. Na mobilu zustane poster:
+// setri data i baterii a nezpomali nacteni formulare. Respektujeme i Data Saver.
+const wantsHeroVideo = window.matchMedia("(min-width: 880px)").matches && !navigator.connection?.saveData;
+
+if (heroVideo && !reduceMotion && wantsHeroVideo) {
   const videoSrc = heroVideo.getAttribute("data-video-src");
   if (videoSrc && !heroVideo.querySelector("source")) {
     const source = document.createElement("source");
@@ -113,10 +117,10 @@ const MODAL_PRESETS = {
     leadType: "availability"
   },
   order: {
-    eyebrow: "Nezávazná objednávka",
-    title: "Objednat připojení",
+    eyebrow: "Nezávazná poptávka",
+    title: "Chci tento tarif",
     intro: "Vyplňte adresu a telefon. Ozveme se do 30 minut, ověříme dostupnost na adrese a domluvíme zapojení. Odeslání vás k ničemu nezavazuje.",
-    submit: "Odeslat nezávaznou objednávku →",
+    submit: "Odeslat nezávaznou poptávku →",
     leadType: "order"
   }
 };
@@ -211,11 +215,11 @@ function buildMailto(payload) {
   const order = payload.lead_type === "order";
   let subject;
   if (callback) subject = "Zpětné zavolání z InternetOstrava.cz";
-  else if (order) subject = "Nezávazná objednávka z InternetOstrava.cz";
+  else if (order) subject = "Nezávazná poptávka tarifu z InternetOstrava.cz";
   else subject = "Ověření dostupnosti internetu v Ostravě";
   let intro;
   if (callback) intro = "prosím o zpětné zavolání.";
-  else if (order) intro = "mám zájem o nezávaznou objednávku připojení na adrese:";
+  else if (order) intro = "mám nezávazný zájem o připojení na adrese:";
   else intro = "prosím o ověření dostupnosti internetu na adrese:";
 
   const body = [

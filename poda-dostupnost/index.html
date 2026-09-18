@@ -3,13 +3,19 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PODA dostupnost | Ověření pokrytí internetu podle adresy</title>
-  <meta name="description" content="Chcete vědět, zda je PODA dostupná na vaší adrese? Pokrytí se liší dům od domu. Pošlete přesnou adresu v Ostravě nebo okolí a nezávazně ověříme možnosti.">
-  <link rel="canonical" href="https://internetostrava.cz/poda-dostupnost/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><meta name="geo.region" content="CZ-80"><meta name="geo.placename" content="Ostrava"><meta name="geo.position" content="49.8209;18.2625"><meta name="ICBM" content="49.8209, 18.2625"><link rel="stylesheet" href="/assets/redesign.css?v=r25">
+  <meta name="description" content="Mapa pokrytí PODA ukazuje oblasti, ne domy. Dostupnost ověříme podle přesné adresy v Ostravě, Karviné a okolí: co rozhoduje, jak to probíhá a co si připravit.">
+  <link rel="canonical" href="https://internetostrava.cz/poda-dostupnost/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><meta name="geo.region" content="CZ-80"><meta name="geo.placename" content="Ostrava"><meta name="geo.position" content="49.8209;18.2625"><meta name="ICBM" content="49.8209, 18.2625">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin-ext.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/redesign.css?v=r26">
   <meta property="og:title" content="PODA dostupnost | Ověření pokrytí internetu podle adresy">
-  <meta property="og:description" content="Pokrytí PODA se liší dům od domu. Pošlete přesnou adresu a nezávazně ověříme možnosti připojení.">
+  <meta property="og:description" content="Mapa pokrytí PODA ukazuje oblasti, ne domy. Pošlete přesnou adresu a nezávazně ověříme možnosti připojení.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://internetostrava.cz/poda-dostupnost/">
-  <meta property="og:image" content="https://internetostrava.cz/assets/radnice-optika-night.webp">
+  <meta property="og:image" content="https://internetostrava.cz/assets/og/radnice-optika-night.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -33,17 +39,52 @@
           {
             "@type": "Question",
             "name": "Kde všude je PODA dostupná?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Pokrytí se liší podle konkrétního domu, ne podle města nebo ulice. Proto má smysl poslat přesnou adresu; ověříme reálné možnosti pro daný objekt." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Pokrytí se liší podle konkrétního domu, ne podle města nebo ulice. Proto má smysl poslat přesnou adresu; ověříme reálné možnosti pro daný objekt v Ostravě, Karviné a okolí." }
+          },
+          {
+            "@type": "Question",
+            "name": "Existuje mapa pokrytí PODA, kde si adresu ověřím sám?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Mapa pokrytí ukazuje oblasti, ne jednotlivé domy, takže z ní nelze spolehlivě vyčíst, zda je připojení zapojitelné právě u vás. Spolehlivý výsledek dává až ověření konkrétního čísla domu." }
           },
           {
             "@type": "Question",
             "name": "Jak dlouho ověření trvá?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Zpravidla se ozveme v řádu pracovních dnů s konkrétními možnostmi pro váš dům." }
+            "acceptedAnswer": { "@type": "Answer", "text": "První odpověď dostanete obvykle do 30 minut v pracovní dny. Pokud dům vyžaduje podrobnější prověření, například když se přípojka teprve plánuje, řekneme vám to rovnou a domluvíme se, kdy se ozveme znovu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Proč mají sousední domy různé možnosti?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Síť se staví postupně po jednotlivých objektech. Jeden dům může mít kabel přivedený a rozvedený až k bytům, vedlejší ho zatím nemá, nebo v něm optika končí v suterénu. Zvenčí to poznat nelze." }
+          },
+          {
+            "@type": "Question",
+            "name": "Potřebuji k ověření souhlas SVJ nebo majitele domu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "K samotnému ověření ne. Souhlas SVJ, družstva nebo vlastníka je potřeba až tehdy, když se má do domu přípojka teprve zavést nebo se zasahuje do společných prostor. U nájemního bytu je potřeba souhlas vlastníka bytu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Ověřujete dostupnost i v Karviné a mimo Ostravu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano. Postup je stejný pro Ostravu, Karvinou i okolní obce: pošlete ulici, číslo domu a telefon. Zda je připojení na dané adrese k dispozici, potvrdíme podle konkrétního domu." }
           },
           {
             "@type": "Question",
             "name": "Co když na mé adrese PODA dostupná není?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Řekneme vám to na rovinu. Ověření je nezávazné a slouží k tomu, abyste znali skutečné možnosti dříve, než budete vybírat tarif." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Řekneme vám to na rovinu. Ověření je nezávazné a slouží k tomu, abyste znali skutečné možnosti dříve, než budete vybírat tarif. Podle adresy zároveň zjistíme, zda se výstavba sítě v místě plánuje." }
+          },
+          {
+            "@type": "Question",
+            "name": "Mohu ověřit adresu bytu, do kterého se teprve stěhuji?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano, a je rozumné udělat to ještě před stěhováním. Do poznámky uveďte termín, od kdy připojení potřebujete, a případně to, že jde o nájem – pak je potřeba souhlas vlastníka bytu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je odeslání adresy závazné?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Odeslání slouží k nezávaznému ověření možností pro danou adresu a k prvnímu kontaktu. Nic si tím neobjednáváte." }
+          },
+          {
+            "@type": "Question",
+            "name": "Jsem zákazníkem PODA a řeším poruchu. Pomůžete mi?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Poruchy, fakturaci a klientskou zónu řeší přímo PODA a.s. Tento web provozuje obchodní zástupce a pomáhá s ověřením dostupnosti a se sjednáním nového připojení." }
           }
         ]
       },
@@ -58,7 +99,7 @@
   }
   </script>
   <meta name="gtm-id" content="">
-  <script src="/assets/analytics.js?v=r25" defer></script>
+  <script src="/assets/analytics.js?v=r26" defer></script>
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -91,27 +132,72 @@
     <section class="section concrete">
       <div class="wrap page-grid">
         <div class="prose">
-          <h2>Je PODA dostupná na vaší adrese?</h2>
-          <p>Dostupnost PODA internetu nelze spolehlivě vyčíst z obecné mapy pokrytí. Rozhoduje konkrétní dům: typ zástavby, technické řešení v objektu a dostupná infrastruktura. Pošlete přesnou adresu a nezávazně ověříme, co lze u vás zapojit.</p>
-          <h2>Proč nestačí mapa pokrytí</h2>
-          <p>I v dobře pokryté čtvrti se mohou možnosti lišit mezi sousedními domy. Bytový dům může mít zavedenou optiku, zatímco vedlejší objekt ještě ne. Ověření adresy proto vždy předchází výběru tarifu; jinak hrozí, že vyberete variantu, kterou na adrese nelze zapojit.</p>
-          <h2>Co poslat k ověření dostupnosti</h2>
-          <ul>
-            <li>ulici a číslo domu (Ostrava, Karviná a okolí),</li>
-            <li>telefon pro rychlé doplnění informací,</li>
-            <li>poznámku, zda řešíte jen internet, nebo i televizi.</li>
-          </ul>
-          <h2>Jak ověření probíhá</h2>
-          <div class="steps">
-            <div class="step"><div class="num">1</div><h3>Pošlete adresu</h3><p>Formulářem nebo telefonicky. Odeslání není objednávka.</p></div>
-            <div class="step"><div class="num">2</div><h3>Prověříme dům</h3><p>Zjistíme dostupnou technologii a varianty pro konkrétní objekt.</p></div>
-            <div class="step"><div class="num">3</div><h3>Dostanete odpověď</h3><p>Ozveme se s reálnými možnostmi. Teprve potom vybíráte tarif.</p></div>
+          <div class="answer-box">
+            <p><strong>Rychlá odpověď:</strong> Dostupnost PODA se neověřuje podle mapy pokrytí, ale podle přesné adresy – ulice a čísla domu. Mapa ukazuje oblasti, jenže síť je vedena po jednotlivých domech a dva sousední objekty mohou mít odlišné možnosti. Pošlete adresu v Ostravě, Karviné nebo okolí a ozveme se s tím, co lze u vás skutečně zapojit. Nezávazně, obvykle do 30 minut v pracovní dny.</p>
           </div>
+          <h2>Je PODA dostupná na vaší adrese?</h2>
+          <p>Na dotaz „PODA dostupnost" neexistuje odpověď pro celé město ani pro celou ulici. O dostupnosti PODA internetu rozhoduje konkrétní dům: jak je k němu síť přivedena, jak vypadá rozvod uvnitř a kdo za objekt jedná. Proto na této stránce nenajdete mapu s barevnou plochou přes Ostravu, ale popis toho, co na adrese skutečně rozhoduje a jak ověření probíhá. Pokud chcete rovnou výsledek, pošlete ulici a číslo domu formulářem vedle textu.</p>
+
+          <h2>Proč mapa pokrytí PODA nestačí</h2>
+          <p>Mapa pokrytí je užitečná jako první orientace: ukáže, zda se poskytovatel v dané části města vůbec pohybuje. Pro rozhodnutí o konkrétním bytě nebo domě ale nestačí, a to ze tří důvodů.</p>
+          <p>Za prvé, mapa pracuje s plochami, ne s čísly domů. Barevně vyznačená čtvrť znamená, že se v ní připojení nabízí; neříká, že je zapojitelné v každém domě uvnitř té plochy. Za druhé, síť se staví postupně, ulici po ulici a dům po domu. Bytový dům, kam byl kabel přiveden při rekonstrukci, může stát vedle objektu, kde se to zatím neřešilo. Za třetí, i tam, kde kabel k domu vede, ještě nemusí být hotový rozvod do jednotlivých bytů – optika může končit u paty domu a zapojení bytu vyžaduje další krok.</p>
+          <p>Z těchto důvodů bereme mapu pokrytí jen jako nápovědu. Odpověď, na kterou se dá spolehnout, dává až ověření konkrétního čísla domu.</p>
+
+          <h2>Co na konkrétní adrese rozhoduje</h2>
+          <div class="checklist">
+            <div class="label">Šest věcí, které ověřujeme</div>
+            <ul>
+              <li><strong>Typ domu</strong> – panelový dům, cihlový činžák, novostavba a rodinný dům se připojují každý jinak.</li>
+              <li><strong>Přípojka do budovy</strong> – zda je kabel do domu už přiveden, nebo se musí teprve vybudovat.</li>
+              <li><strong>Rozvod uvnitř domu</strong> – jestli je síť rozvedena po stoupačkách až k bytům, nebo končí v suterénu.</li>
+              <li><strong>Souhlas SVJ, družstva nebo vlastníka</strong> – u zásahu do společných prostor bytového domu je běžným krokem.</li>
+              <li><strong>Technologie v ulici</strong> – jakým způsobem je síť do ulice dovedena a zda umožňuje přípojku k vašemu vchodu nebo pozemku.</li>
+              <li><strong>Přesná adresa včetně vchodu</strong> – u dlouhých panelových domů s více vchody se řešení může lišit i mezi vchody.</li>
+            </ul>
+          </div>
+
+          <h2>Bytový dům a rodinný dům: dva různé případy</h2>
+          <p>U bytového domu se dostupnost řeší pro celý objekt najednou. Když je dům už připojený, bývá zapojení jednotlivého bytu poměrně přímočaré: domlouvá se termín technika a umístění zásuvky. Pokud přípojka v domě chybí, přibývá jednání s výborem SVJ, bytovým družstvem nebo správcem – bez jejich souhlasu nelze vést kabel společnými prostorami. Není to překážka, ale posouvá to termín. U nájemního bytu je navíc potřeba souhlas vlastníka bytu.</p>
+          <p>U rodinného domu naopak rozhoduje trasa sítě ve vaší ulici. Zjišťuje se, kudy kabel vede, jak daleko je od hranice pozemku a jak lze udělat přípojku a prostup do domu. V řadové zástavbě bývá situace jednodušší než u samostatně stojícího domu na konci slepé ulice. Proto u rodinných domů nikdy neodpovídáme podle čtvrti – rozdíl může být i mezi dvěma domy v jedné ulici.</p>
+
+          <h2>Jak ověření dostupnosti probíhá</h2>
+          <div class="steps">
+            <div class="step"><div class="num">1</div><h3>Pošlete adresu</h3><p>Formulářem nebo telefonicky na <a href="tel:+420777425230">777 425 230</a>. Stačí ulice, číslo domu a telefon. Odeslání není objednávka.</p></div>
+            <div class="step"><div class="num">2</div><h3>Prověříme dům</h3><p>Zjistíme, zda a jak je objekt připojený, jaká technologie je k dispozici a co je potřeba k zapojení bytu nebo domu.</p></div>
+            <div class="step"><div class="num">3</div><h3>Dostanete odpověď</h3><p>Ozveme se s reálnými možnostmi pro vaši adresu, včetně toho, co by bylo potřeba dořešit. Teprve potom vybíráte tarif.</p></div>
+          </div>
+          <p>Ozve se vám obchodní zástupce, ne automat. Pokud výsledek vyžaduje podrobnější prověření – například u domu, kde se přípojka teprve plánuje – řekneme vám to rovnou a domluvíme se, kdy se ozveme znovu.</p>
+
+          <h2>Co si připravit k ověření</h2>
+          <ul>
+            <li>ulici a číslo domu (Ostrava, Karviná a okolí), u bytového domu i číslo vchodu,</li>
+            <li>telefon, na kterém se vám můžeme ozvat,</li>
+            <li>poznámku, zda řešíte jen internet, nebo i televizi,</li>
+            <li>pokud víte, kdo za dům jedná (SVJ, družstvo, správce, majitel), uveďte to – ušetří to jedno kolo dotazů,</li>
+            <li>při stěhování termín, od kdy připojení potřebujete.</li>
+          </ul>
+
+          <h2>Co když PODA na vaší adrese dostupná není</h2>
+          <p>Řekneme vám to na rovinu a nebudeme vás přemlouvat k něčemu, co u vás nefunguje. Podle adresy zároveň zjistíme, zda se v místě výstavba sítě plánuje, a probereme, jaké jiné technické řešení připadá v úvahu – rozdíly mezi kabelem a bezdrátem popisuje článek <a href="/poradna/optika-vs-bezdratovy-internet/">optika proti bezdrátovému internetu</a>. Situace, kdy optické připojení nedává smysl ani tam, kde je dostupné, jsme sepsali na stránce <a href="/poda-kdy-nedava-smysl/">kdy PODA nedává smysl</a>.</p>
+
+          <h2>Dostupnost PODA v Ostravě a v Karviné</h2>
+          <p>Ověření probíhá stejně pro všechny adresy, zástavba se ale liší a s ní i to, co bývá typickým důvodem rozdílů. V Ostravě jsme pro nejčastěji řešené části připravili samostatné stránky – například <a href="/internet-ostrava-poruba/">Porubu</a> se zděnými bloky i panelovými obvody, <a href="/internet-ostrava-jih/">Ostravu-Jih</a> s rozsáhlými panelovými sídlišti nebo <a href="/internet-moravska-ostrava/">Moravskou Ostravu</a> s činžovními domy v centru; celý přehled je v <a href="/lokality/">rozcestníku lokalit</a>. Nabídku a postup pro Ostravu shrnuje stránka <a href="/poda-internet-ostrava/">PODA internet Ostrava</a>, pro Karvinou a okolí <a href="/poda-karvina/">PODA internet Karviná</a>.</p>
+
+          <h2>Kdo ověření provádí</h2>
+          <p>Tento web provozuje autorizovaný obchodní zástupce PODA a.s., nikoli společnost PODA a.s. Ověření dostupnosti, výběr tarifu a sjednání objednávky řešíme my; instalaci, fakturaci, klientskou zónu a technickou podporu zajišťuje přímo PODA a.s. Pokud už jste zákazníkem a řešíte poruchu nebo fakturu, obraťte se přímo na PODA. Pokud chcete zjistit, zda a jak se lze na své adrese připojit, jste tady správně.</p>
+
           <h2>Časté dotazy k dostupnosti PODA</h2>
           <div class="faq">
-            <details><summary>Kde všude je PODA dostupná?<span aria-hidden="true"></span></summary><p>Pokrytí se liší podle konkrétního domu, ne podle města nebo ulice. Proto má smysl poslat přesnou adresu; ověříme reálné možnosti pro daný objekt.</p></details>
-            <details><summary>Jak dlouho ověření trvá?<span aria-hidden="true"></span></summary><p>Zpravidla se ozveme v řádu pracovních dnů s konkrétními možnostmi pro váš dům.</p></details>
-            <details><summary>Co když na mé adrese PODA dostupná není?<span aria-hidden="true"></span></summary><p>Řekneme vám to na rovinu. Ověření je nezávazné a slouží k tomu, abyste znali skutečné možnosti dříve, než budete vybírat tarif.</p></details>
+            <details><summary>Kde všude je PODA dostupná?<span aria-hidden="true"></span></summary><p>Pokrytí se liší podle konkrétního domu, ne podle města nebo ulice. Proto má smysl poslat přesnou adresu; ověříme reálné možnosti pro daný objekt v Ostravě, Karviné a okolí.</p></details>
+            <details><summary>Existuje mapa pokrytí PODA, kde si adresu ověřím sám?<span aria-hidden="true"></span></summary><p>Mapa pokrytí ukazuje oblasti, ne jednotlivé domy, takže z ní nelze spolehlivě vyčíst, zda je připojení zapojitelné právě u vás. Spolehlivý výsledek dává až ověření konkrétního čísla domu.</p></details>
+            <details><summary>Jak dlouho ověření trvá?<span aria-hidden="true"></span></summary><p>První odpověď dostanete obvykle do 30 minut v pracovní dny. Pokud dům vyžaduje podrobnější prověření, například když se přípojka teprve plánuje, řekneme vám to rovnou a domluvíme se, kdy se ozveme znovu.</p></details>
+            <details><summary>Proč mají sousední domy různé možnosti?<span aria-hidden="true"></span></summary><p>Síť se staví postupně po jednotlivých objektech. Jeden dům může mít kabel přivedený a rozvedený až k bytům, vedlejší ho zatím nemá, nebo v něm optika končí v suterénu. Zvenčí to poznat nelze.</p></details>
+            <details><summary>Potřebuji k ověření souhlas SVJ nebo majitele domu?<span aria-hidden="true"></span></summary><p>K samotnému ověření ne. Souhlas SVJ, družstva nebo vlastníka je potřeba až tehdy, když se má do domu přípojka teprve zavést nebo se zasahuje do společných prostor. U nájemního bytu je potřeba souhlas vlastníka bytu.</p></details>
+            <details><summary>Ověřujete dostupnost i v Karviné a mimo Ostravu?<span aria-hidden="true"></span></summary><p>Ano. Postup je stejný pro Ostravu, Karvinou i okolní obce: pošlete ulici, číslo domu a telefon. Zda je připojení na dané adrese k dispozici, potvrdíme podle konkrétního domu.</p></details>
+            <details><summary>Co když na mé adrese PODA dostupná není?<span aria-hidden="true"></span></summary><p>Řekneme vám to na rovinu. Ověření je nezávazné a slouží k tomu, abyste znali skutečné možnosti dříve, než budete vybírat tarif. Podle adresy zároveň zjistíme, zda se výstavba sítě v místě plánuje.</p></details>
+            <details><summary>Mohu ověřit adresu bytu, do kterého se teprve stěhuji?<span aria-hidden="true"></span></summary><p>Ano, a je rozumné udělat to ještě před stěhováním. Do poznámky uveďte termín, od kdy připojení potřebujete, a případně to, že jde o nájem – pak je potřeba souhlas vlastníka bytu.</p></details>
+            <details><summary>Je odeslání adresy závazné?<span aria-hidden="true"></span></summary><p>Ne. Odeslání slouží k nezávaznému ověření možností pro danou adresu a k prvnímu kontaktu. Nic si tím neobjednáváte.</p></details>
+            <details><summary>Jsem zákazníkem PODA a řeším poruchu. Pomůžete mi?<span aria-hidden="true"></span></summary><p>Poruchy, fakturaci a klientskou zónu řeší přímo PODA a.s. Tento web provozuje obchodní zástupce a pomáhá s ověřením dostupnosti a se sjednáním nového připojení.</p></details>
           </div>
         </div>
         <aside class="aside-cta">
@@ -167,7 +253,7 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · obchodní zástupce PODA a.s.</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=r25" defer></script>
+  <script src="/assets/main.js?v=r26" defer></script>
 </body>
 </html>
 

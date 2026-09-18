@@ -95,6 +95,88 @@ Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokry
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
 
+## Implementovano 2026-09-18 (2. kolo) - Vizualni kontrola, AEO, sdileni odkazu, copy CTA
+
+Kontext: prvni kolo (mereni, formulare, sest prohloubenych stranek) bylo
+odladene jen auditem a syntaxi, ne v prohlizeci. Screenshoty v Chromiu
+(Playwright, 390 px a 1366 px) odhalily chyby, ktere by jinak odesly na
+produkci. Druhe kolo je proto z vetsi casti kontrola a dotazeni, plus veci,
+ktere se ukazaly az pri prohlidce ocima navstevnika.
+
+### Opraveno po screenshotech
+
+- Nepovinne pole e-mail se neskryvalo: atribut `hidden` prohraval s
+  `.field { display: grid }`. Globalni `[hidden] { display: none !important }`.
+  Modal a `.modal-tariff` overeny, ze se stale otevraji a zaviraji.
+- `/dekujeme/`: odkazy na navody pouzivaly `.footer-links` (bila na tmavou
+  paticku), na svetlem pozadi byly neviditelne. Nahrazeno `.aside-links`.
+- Tabulka tarifu na mobilu: paty sloupec s vetami natahoval radky do prazdna.
+  Do 720 px se skryva (informace je v kartach), bunky maji mensi padding,
+  "103 stanic + 10 premiovych" zkraceno, aby nepreteklo bunku.
+- `/dostupnost/` - hlavni Ads landing - mela trust radek "Ozve se vam clovek,
+  ne automat" v barve inkoustu na tmavem subhero, tedy prakticky necitelny.
+  Nove bila s ikonou v signalni zlute (`.subhero .trustline`).
+- Prepinac e-mailu ve dvousloupcovem `.form-grid` zabiral jednu bunku a lamal
+  se; nove pres celou sirku, zarovnany vlevo.
+
+### AEO / GEO
+
+- `llms.txt`: nova sekce "Key facts" - operator (Milan Terc, ICO, zastupce,
+  ne operator site), oblast, telefon a kdy se vola, prubeh overeni, tri tarify
+  s cenami, ze nejlevnejsi je 300 Kc s televizi a proc, symetricky upload,
+  ze web nepublikuje procenta ani recenze, kam smi mirit Ads. Popisy stranek
+  aktualizovane podle prohloubeneho obsahu, diakritika v nazvech ctvrti.
+- `/poradna/` (343 -> 647 slov): answer-box "Jak vybrat internet v Ostrave ve
+  trech krocich" + 4 FAQ; FAQPage pridana do stavajiciho @graph.
+- Homepage Organization schema: `email`, `contactPoint` (telefon, e-mail,
+  jazyk, pracovni dny) a `founder` Person "Milan Terc" s jobTitle bez znacky.
+  Entita provozovatele je tak v Ads zone citelna strojove, konzistentne s
+  /kontakt/ ("p. Terc") a /ochrana-udaju/ (cele jmeno, ICO).
+
+### Sdileni odkazu (WhatsApp, Messenger, iMessage)
+
+Vsech 10 og:image bylo WebP. Facebook s nim pracuje, WhatsApp a iMessage
+nespolehlive - odkaz poslany zakaznikovi z terenu se tak casto zobrazi bez
+nahledu. Vygenerovano 10 JPEG 1200x630 (`assets/og/`, 61-177 kB, sharp,
+`fit: cover, position: attention`), og:image prepnuto na ne a doplneno
+og:image:width/height/type na vsech strankach.
+
+### Vykon
+
+- Hero video (1,7 MB mp4) se stahovalo i na mobilu, ackoli LCP je poster.
+  Nove jen od 880 px sirky a ne pri zapnutem Data Saver; overeno, ze na
+  390 px se `<source>` nevklada a na 1366 px ano.
+- Preload obou subsetu fontu Oswald (H1 v display fontu bez FOUT).
+
+### Copy CTA
+
+"Objednat" u tarifu (11 mist: homepage, /tarify/, PODA hub) otviral modal,
+ktery je vyslovene nezavazny. Slovo slibovalo zavazek, ktery tam neni, a u
+neoverene dostupnosti odrazovalo. Nove "Chci tento tarif"; modal "Nezavazna
+poptavka / Chci tento tarif / Odeslat nezavaznou poptavku", mailto fallback
+sladen. FAQ "Je odeslani zavazna objednavka? Ne." zustava - tam je slovo na
+miste.
+
+### Prohloubeny PODA stranky (znackovy cluster, priorita 1 v reportu)
+
+| Stranka | Pred | Po | Dotazy (pozice) |
+|---|---:|---:|---|
+| `/poda-dostupnost/` | 353 | 1361 | poda dostupnost (10,3), poda pokryti (7,2) |
+| `/poda-karvina/` | 372 | 1419 | poda karvina (12,4), poda karvina s diakritikou (12,1) |
+
+Obe byly na hrane prvni strany s tenkym obsahem. Na /poda-dostupnost/ je jadrem, proc verejna mapa pokryti nestaci a co na adrese rozhoduje (typ domu, pripojka do budovy, rozvod, souhlas SVJ, technologie v ulici); na /poda-karvina/ popis casti mesta (Frystat, Nove Mesto, sidliste Raj / Mizerov / Hranice, Darkov, Stare Mesto) a co z typu zastavby plyne pro zavedeni optiky. FAQ 3 -> 10 na obou, schema 1:1. Nikde se netvrdi, ktera cast je pokryta.
+
+Audit: 0 chyb, 0 varovani (poprve od zavedeni prahu tenkeho obsahu).
+Cache token r25 -> r26. Sitemap lastmod u /poradna/, /poda-dostupnost/,
+/poda-karvina/.
+
+### Co zbyva majiteli (beze zmeny)
+
+1. GTM ID do `<meta name="gtm-id">` (`docs/MERENI-A-ADS.md`).
+2. Google Business Profile.
+3. Overit `RESEND_API_KEY` ve Vercelu.
+4. Google Ads az po 1 a 3.
+
 ## Implementovano 2026-09-18 - Mereni konverzi, konverzni vrstva a prohloubeni sesti stranek
 
 Kontext: veskera dosavadni prace na webu byla SEO (dve vlny kanibalizace,
