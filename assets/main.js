@@ -3,6 +3,14 @@ const links = document.querySelector(".nav-links");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const heroVideo = document.querySelector("[data-hero-video]");
 
+// Udalosti posilame pres analytics.js. Kdyz se nenacetl, spadne to do dataLayeru,
+// odkud je GTM po pozdejsim nacteni jeste precte.
+function track(event, payload) {
+  if (typeof window.ioTrack === "function") return window.ioTrack(event, payload);
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(Object.assign({ event }, payload || {}));
+}
+
 document.documentElement.classList.add("js-enabled");
 
 if (reduceMotion && heroVideo) {
@@ -152,6 +160,11 @@ function openLeadModal(trigger) {
   links?.classList.remove("open");
   toggle?.setAttribute("aria-expanded", "false");
   window.setTimeout(() => leadModalAddress?.focus(), 40);
+  track("modal_open", {
+    lead_type: leadModalTypeInput?.value || "availability",
+    tarif: leadModalTariffInput?.value || "",
+    source_page: window.location.pathname
+  });
 }
 
 document.querySelectorAll("[data-open-lead-modal]").forEach((trigger) => {
@@ -261,14 +274,23 @@ document.querySelectorAll("[data-lead-form], [data-email-form]").forEach((form) 
       const data = await result.json().catch(() => ({}));
 
       if (result.ok && data.configured) {
-        window.dataLayer?.push?.({ event: "lead_submit", source_page: payload.source_page });
+        track("lead_submit", {
+          lead_type: payload.lead_type || "availability",
+          tarif: payload.tarif || "",
+          source_page: payload.source_page,
+          utm_source: payload.utm_source,
+          utm_campaign: payload.utm_campaign
+        });
+        clearDraft();
         window.location.href = "/dekujeme/";
         return;
       }
 
+      track("mailto_fallback", { reason: "not_configured", source_page: payload.source_page });
       status.textContent = "Otevřeme e-mail s vyplněnými údaji. Odeslání ještě potvrďte ve své poštovní aplikaci.";
       window.location.href = buildMailto(payload);
     } catch (error) {
+      track("mailto_fallback", { reason: "request_failed", source_page: payload.source_page });
       status.textContent = "Nepodařilo se odeslat formulář automaticky. Otevřeme e-mail s vyplněnými údaji.";
       window.location.href = buildMailto(payload);
     } finally {
@@ -295,13 +317,20 @@ document.querySelectorAll(".form-reassure").forEach((el) => {
 
 document.querySelectorAll("a[href^='tel:']").forEach((link) => {
   link.addEventListener("click", () => {
-    window.dataLayer?.push?.({ event: "phone_click", phone: link.getAttribute("href") });
+    track("phone_click", {
+      phone: link.getAttribute("href"),
+      placement: link.closest(".mobile-lead-bar") ? "mobile_bar"
+        : link.closest(".site-header") ? "header"
+        : link.closest(".site-footer") ? "footer"
+        : "content",
+      source_page: window.location.pathname
+    });
   });
 });
 
 document.querySelectorAll("a[href^='mailto:']").forEach((link) => {
   link.addEventListener("click", () => {
-    window.dataLayer?.push?.({ event: "email_click", email: link.getAttribute("href") });
+    track("email_click", { email: link.getAttribute("href"), source_page: window.location.pathname });
   });
 });
 
@@ -372,3 +401,166 @@ if (siteHeader) {
   toggleHeaderScrolled();
   window.addEventListener("scroll", toggleHeaderScrolled, { passive: true });
 }
+
+/* ===========================================================================
+   Konverzni vrstva formularu
+   ---------------------------------------------------------------------------
+   1. Rozepsany formular prezije odchod ze stranky (7 dni, localStorage).
+      Souhlas se zpracovanim se zamerne NEUKLADA - musi byt vzdy aktivni ukon.
+   2. E-mail je nepovinny, proto je schovany pod prepinacem. Uzivatel vidi
+      dve povinna pole misto tri, coz je hlavni packa na dokonceni formulare.
+   3. Telefon se pred odeslanim normalizuje a pri opusteni pole se kontroluje
+      pocet cislic - chyba se ukaze hned, ne az po odeslani.
+   4. Zacatek a opusteni rozepsaneho formulare se meri (form_start,
+      form_abandon), aby slo spocitat, kde lide odpadavaji.
+   =========================================================================== */
+
+const DRAFT_KEY = "io-lead-draft-v1";
+const DRAFT_TTL_MS = 7 * 86400000;
+const DRAFT_FIELDS = ["adresa", "telefon", "email"];
+
+function readDraft() {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(DRAFT_KEY) || "null");
+    if (!parsed || !parsed.at || Date.now() - parsed.at > DRAFT_TTL_MS) return null;
+    return parsed.values || null;
+  } catch (error) {
+    return null;
+  }
+}
+
+function saveDraft(form) {
+  const values = {};
+  DRAFT_FIELDS.forEach((name) => {
+    const input = form.querySelector(`[name="${name}"]`);
+    if (input && input.value.trim()) values[name] = input.value.trim();
+  });
+  try {
+    if (Object.keys(values).length) {
+      window.localStorage.setItem(DRAFT_KEY, JSON.stringify({ at: Date.now(), values }));
+    }
+  } catch (error) {
+    /* Bez uloziste se jen neobnovi rozepsany text. */
+  }
+}
+
+function clearDraft() {
+  try {
+    window.localStorage.removeItem(DRAFT_KEY);
+  } catch (error) {
+    /* Nic k uklizeni. */
+  }
+}
+
+function normalizePhone(value) {
+  return String(value || "").replace(/[\s().-]/g, "");
+}
+
+function phoneDigitCount(value) {
+  return (String(value || "").match(/\d/g) || []).length;
+}
+
+function fieldWrapper(input) {
+  return input.closest(".field") || input.closest(".input-wrap") || input.parentElement;
+}
+
+const EMAIL_TOGGLE_LABEL = "Přidat e-mail (nepovinné)";
+
+document.querySelectorAll("[data-lead-form]").forEach((form) => {
+  const draft = readDraft();
+  let started = false;
+  let submitted = false;
+
+  /* --- 1. Obnoveni rozepsanych hodnot --- */
+  if (draft) {
+    DRAFT_FIELDS.forEach((name) => {
+      const input = form.querySelector(`[name="${name}"]`);
+      if (input && !input.value && draft[name]) input.value = draft[name];
+    });
+  }
+
+  /* --- 2. E-mail pod prepinacem --- */
+  const emailInput = form.querySelector('input[name="email"]');
+  if (emailInput && !emailInput.required) {
+    const wrapper = fieldWrapper(emailInput);
+    const hasValue = Boolean(emailInput.value.trim());
+    if (wrapper && !wrapper.querySelector(".field-toggle")) {
+      const toggleButton = document.createElement("button");
+      toggleButton.type = "button";
+      toggleButton.className = "field-toggle";
+      toggleButton.textContent = EMAIL_TOGGLE_LABEL;
+      toggleButton.setAttribute("aria-expanded", String(hasValue));
+      wrapper.insertAdjacentElement("beforebegin", toggleButton);
+
+      wrapper.hidden = !hasValue;
+      toggleButton.hidden = hasValue;
+
+      toggleButton.addEventListener("click", () => {
+        wrapper.hidden = false;
+        toggleButton.hidden = true;
+        toggleButton.setAttribute("aria-expanded", "true");
+        emailInput.focus();
+        track("form_email_opened", { source_page: window.location.pathname });
+      });
+    }
+  }
+
+  /* --- 3. Telefon: kontrola pri opusteni pole --- */
+  const phoneInput = form.querySelector('input[name="telefon"]');
+  if (phoneInput) {
+    phoneInput.addEventListener("blur", () => {
+      const digits = phoneDigitCount(phoneInput.value);
+      if (!phoneInput.value.trim()) {
+        phoneInput.setCustomValidity("");
+        phoneInput.classList.remove("is-invalid");
+        return;
+      }
+      if (digits < 9) {
+        phoneInput.setCustomValidity("Zadejte prosím telefonní číslo včetně předvolby, například 777 425 230.");
+        phoneInput.classList.add("is-invalid");
+        phoneInput.reportValidity();
+      } else {
+        phoneInput.setCustomValidity("");
+        phoneInput.classList.remove("is-invalid");
+      }
+    });
+    phoneInput.addEventListener("input", () => {
+      phoneInput.setCustomValidity("");
+      phoneInput.classList.remove("is-invalid");
+    });
+  }
+
+  /* --- 4. Mereni zacatku, prubezne ukladani --- */
+  form.addEventListener("input", (event) => {
+    if (event.target.name === "website") return; /* honeypot */
+    if (!started) {
+      started = true;
+      track("form_start", {
+        form_placement: form.closest(".lead-modal") ? "modal" : "page",
+        source_page: window.location.pathname
+      });
+    }
+    saveDraft(form);
+  });
+
+  form.addEventListener("submit", () => {
+    submitted = true;
+    if (phoneInput) phoneInput.value = normalizePhone(phoneInput.value);
+  }, { capture: true });
+
+  /* --- 5. Opusteni rozepsaneho formulare --- */
+  const reportAbandon = () => {
+    if (!started || submitted) return;
+    submitted = true; /* at se neposle dvakrat */
+    const filled = DRAFT_FIELDS.filter((name) => form.querySelector(`[name="${name}"]`)?.value.trim()).length;
+    track("form_abandon", {
+      form_placement: form.closest(".lead-modal") ? "modal" : "page",
+      fields_filled: filled,
+      source_page: window.location.pathname
+    });
+  };
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") reportAbandon();
+  });
+});
