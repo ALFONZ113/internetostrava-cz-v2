@@ -1,21 +1,13 @@
 {
-  "generatedAt": "2026-09-18T20:20:30.895Z",
+  "generatedAt": "2026-09-18T20:23:47.884Z",
   "pages": 41,
   "indexable": 39,
   "schemaBlocks": 45,
   "adsZonePages": 19,
   "thinPages": [
     {
-      "route": "/kontakt/",
-      "words": 299
-    },
-    {
       "route": "/poradna/",
       "words": 343
-    },
-    {
-      "route": "/internet-ostrava-vitkovice/",
-      "words": 349
     },
     {
       "route": "/poda-dostupnost/",
@@ -38,18 +30,18 @@
     "/internet-muglinov/": 698,
     "/internet-ostrava-dubina/": 445,
     "/internet-ostrava-jih/": 419,
-    "/internet-ostrava-poruba/": 493,
+    "/internet-ostrava-poruba/": 1457,
     "/internet-ostrava-privoz/": 458,
-    "/internet-ostrava-vitkovice/": 349,
+    "/internet-ostrava-vitkovice/": 1163,
     "/internet-pustkovec/": 440,
-    "/internet-slezska-ostrava/": 407,
+    "/internet-slezska-ostrava/": 1102,
     "/internet-svinov/": 710,
     "/internet-trebovice/": 689,
     "/internet-vyskovice/": 701,
     "/internet-zabreh/": 742,
-    "/kontakt/": 299,
+    "/kontakt/": 701,
     "/lokality/": 900,
-    "/ochrana-udaju/": 501,
+    "/ochrana-udaju/": 698,
     "/poda-dostupnost/": 353,
     "/poda-internet-ostrava/": 1406,
     "/poda-karvina/": 372,
@@ -69,18 +61,6 @@
   },
   "errors": [],
   "warnings": [
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "internet-ostrava-vitkovice/index.html",
-      "message": "jen 349 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "kontakt/index.html",
-      "message": "jen 299 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
     {
       "severity": "warn",
       "check": "tenky-obsah",
