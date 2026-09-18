@@ -638,3 +638,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .field-toggle:hover { color: var(--steelblue); }
 .lead-modal .field-toggle, .hero .field-toggle { color: var(--signal); }
 input.is-invalid { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,97,46,.16); }
+
+/* ---- opravy po vizuálnej kontrole ---- */
+/* hidden atribút musí vyhrať nad display:grid/flex na .field a spol. */
+[hidden] { display: none !important; }
+/* tabuľka tarifov: na mobile piaty stĺpec (komu sa hodí) naťahoval riadky do prázdna;
+   rovnaká informácia je v kartách nad tabuľkou */
+@media (max-width: 720px) {
+  .compare-table--tarify { min-width: 0; }
+  .compare-table--tarify th:last-child, .compare-table--tarify td:last-child { display: none; }
+  .compare-table--tarify th, .compare-table--tarify td { padding: 10px 10px; font-size: .9rem; }
+}

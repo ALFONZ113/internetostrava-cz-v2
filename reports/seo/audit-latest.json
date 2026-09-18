@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T20:29:36.406Z",
+  "generatedAt": "2026-09-18T23:16:53.173Z",
   "pages": 41,
   "indexable": 39,
   "schemaBlocks": 45,
@@ -57,7 +57,7 @@
     "/poradna/problem-u-poskytovatele-nebo-doma/": 703,
     "/poradna/slaba-wifi-v-panelaku/": 710,
     "/poradna/vysoky-ping-pri-hrani/": 714,
-    "/tarify/": 1006
+    "/tarify/": 1005
   },
   "errors": [],
   "warnings": [
