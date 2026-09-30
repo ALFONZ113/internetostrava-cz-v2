@@ -1,5 +1,9 @@
 # SEO a GEO plán pro InternetOstrava.cz
 
+## Pracovni cyklus 2026-09-30
+
+Podklad: report `reports/seo/2026-09-28.md`, GSC property `sc-domain:internetostrava.cz`, obdobi 2026-08-29 az 2026-09-25. Stranka `/internet-slezska-ostrava/` mela 60 zobrazeni, 0 kliku a prumernou pozici 18,3. Opakovany text o overeni adresy byl nahrazen kratkym postupem pro bytovy a rodinny dum, kontextovymi odkazy na Muglinov, Michalkovice a radu k vyberu rychlosti. Další vyhodnoceni az po novem 28dennim obdobi; nelze vyvozovat ucinek z dat, ktera predchazela zmene.
+
 ## Pracovni cyklus 2026-09-27
 
 Vsechna nasledujici cisla jsou jen z GSC property `sc-domain:internetostrava.cz`, typ Web, obdobi 2026-08-28 az 2026-09-24. Dotaz `internet ostrava`: 47 zobrazeni, 1 klik, prumerna pozice 32,0. Jiny dotaz `poda internet ostrava`: 35 zobrazeni, 2 kliky, pozice 7,5. Tyto dve pozice se nesmi zamenovat.
