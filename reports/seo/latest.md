@@ -1,23 +1,23 @@
-# SEO report 2026-10-05
+# SEO report 2026-10-12
 
 Vygenerovano automaticky (`npm run seo:report`). Cisla z Google Search Console, technicke nalezy z `npm run seo:audit`.
 
 ## 1. Vykon ve vyhledavani
 
-Obdobi **2026-09-05 az 2026-10-02**, porovnano s 2026-08-08 az 2026-09-04.
+Obdobi **2026-09-12 az 2026-10-09**, porovnano s 2026-08-15 az 2026-09-11.
 
 | Metrika | Aktualne | Predchozi | Zmena |
 |---|---:|---:|---|
-| Kliky | 26 | 15 | (+11, lepsi) |
-| Zobrazeni | 1698 | 1181 | (+517, lepsi) |
-| CTR | 1,53 % | 1,27 % | (+0,26, lepsi) |
-| Prumerna pozice | 10,7 | 15,1 | (-4,4, lepsi) |
+| Kliky | 31 | 15 | (+16, lepsi) |
+| Zobrazeni | 1656 | 1375 | (+281, lepsi) |
+| CTR | 1,87 % | 1,09 % | (+0,78, lepsi) |
+| Prumerna pozice | 10,5 | 13,4 | (-2,8, lepsi) |
 
 | Zarizeni | Kliky | Zobrazeni | CTR | Pozice |
 |---|---:|---:|---:|---:|
-| MOBILE | 14 | 855 | 1,64 % | 9,9 |
-| DESKTOP | 11 | 827 | 1,33 % | 11,6 |
-| TABLET | 1 | 16 | 6,25 % | 7,3 |
+| MOBILE | 17 | 866 | 1,96 % | 10,0 |
+| DESKTOP | 13 | 769 | 1,69 % | 11,3 |
+| TABLET | 1 | 21 | 4,76 % | 7,2 |
 
 ## 2. Prilezitosti
 
@@ -25,21 +25,21 @@ Obdobi **2026-09-05 az 2026-10-02**, porovnano s 2026-08-08 az 2026-09-04.
 
 | Dotaz | Pozice | Zmena | Zobrazeni | Kliky | Cluster |
 |---|---:|---|---:|---:|---|
-| dostupnost internetu podle adresy | 18,5 | (-1,9, lepsi) | 81 | 0 | Ověření podle adresy |
-| internet podle adresy | 18,2 | (-21,9, lepsi) | 75 | 0 | Ověření podle adresy |
-| ověřit dostupnost internetu | 10,5 | (-27,0, lepsi) | 61 | 0 | - |
-| poda internet | 12,9 | (-8,9, lepsi) | 40 | 1 | Značkové dotazy PODA |
-| poda internet ostrava | 7,5 | (+0,8, horsi) | 35 | 2 | Značkové dotazy PODA |
-| internet slezke | 17,3 | (+0,7, horsi) | 23 | 0 | - |
-| internet poruba | 18,5 | (-14,6, lepsi) | 22 | 0 | Městské části Ostravy |
-| slabá wifi v bytě | 12,3 | (-0,2, lepsi) | 22 | 0 | - |
-| poda karvina | 11,3 | (-0,6, lepsi) | 18 | 0 | Značkové dotazy PODA |
-| internet dostupnost | 6,2 | - | 16 | 0 | - |
-| internet ostrava poruba | 18,4 | (-8,8, lepsi) | 15 | 1 | Městské části Ostravy |
-| poda dostupnost | 9,4 | (-1,1, lepsi) | 14 | 0 | Značkové dotazy PODA |
-| poda pokrytí | 6,7 | (-2,6, lepsi) | 12 | 0 | Značkové dotazy PODA |
-| slabá wifi | 8,2 | (-0,8, lepsi) | 11 | 0 | - |
-| internet ostrava zábřeh | 12,6 | (-4,4, lepsi) | 9 | 0 | - |
+| ověřit dostupnost internetu | 8,8 | (-12,2, lepsi) | 75 | 0 | - |
+| dostupnost internetu podle adresy | 17,3 | (-0,2, lepsi) | 74 | 0 | Ověření podle adresy |
+| internet podle adresy | 16,5 | (-9,1, lepsi) | 73 | 0 | Ověření podle adresy |
+| poda internet | 12,2 | (-7,3, lepsi) | 50 | 1 | Značkové dotazy PODA |
+| internet dostupnost | 6,2 | - | 33 | 0 | - |
+| poda internet ostrava | 7,5 | (+0,7, horsi) | 31 | 1 | Značkové dotazy PODA |
+| internet ostrava poruba | 17,0 | (-7,8, lepsi) | 21 | 1 | Městské části Ostravy |
+| internet poruba | 17,0 | (-13,0, lepsi) | 19 | 0 | Městské části Ostravy |
+| internet slezke | 16,8 | (+0,3, horsi) | 17 | 0 | - |
+| poda karvina | 10,7 | (-1,7, lepsi) | 16 | 0 | Značkové dotazy PODA |
+| poda dostupnost | 9,5 | (-0,9, lepsi) | 15 | 0 | Značkové dotazy PODA |
+| poda karviná | 11,5 | (-0,6, lepsi) | 14 | 0 | Značkové dotazy PODA |
+| poda pokrytí | 6,4 | (-0,8, lepsi) | 11 | 0 | Značkové dotazy PODA |
+| internet ostrava zábřeh | 12,8 | (+2,6, horsi) | 9 | 0 | - |
+| internet poda | 10,9 | (+4,7, horsi) | 9 | 0 | - |
 
 ### 2.2 Viditelne stranky bez prokliku (problem snippetu)
 
@@ -48,9 +48,10 @@ Tady pomuze title a description, ne dalsi obsah.
 
 | Stranka | Zobrazeni | Pozice | Na jake dotazy rankuje |
 |---|---:|---:|---|
-| /poradna/vysoky-ping-pri-hrani/ | 200 | 5,9 | ping 29ms (1) |
-| /poradna/internet-vypadava-co-delat/ | 150 | 8,6 | vypadává internet (3); výpadky wifi (3); proč vypadává wifi (2) |
-| /poradna/dostupnost-optickeho-internetu-ostrava/ | 26 | 5,3 | - |
+| /poradna/vysoky-ping-pri-hrani/ | 158 | 6,0 | - |
+| /poradna/internet-vypadava-co-delat/ | 115 | 8,3 | výpadky wifi (2); nefunguje internet (1); proč vypadává wifi (1) |
+| /poradna/dostupnost-optickeho-internetu-ostrava/ | 31 | 5,2 | - |
+| /poradna/slaba-wifi-v-panelaku/ | 23 | 8,4 | slabá wifi (9); slabá wifi v bytě (1); slabá wifi v domě (1) |
 
 ### 2.2b Stranky, ktere nikdo nevidi (problem pozice)
 
@@ -59,10 +60,8 @@ potrebuji hlubsi a konkretnejsi obsah a interni odkazy.
 
 | Stranka | Zobrazeni | Pozice | Na jake dotazy rankuje |
 |---|---:|---:|---|
-| /poda-karvina/ | 65 | 10,6 | poda karvina (18); poda karviná (9); internet karviná (3) |
-| /poradna/slaba-wifi-v-panelaku/ | 54 | 10,2 | slabá wifi v bytě (22); slabá wifi (11); slabá wifi v domě (3) |
-| /internet-slezska-ostrava/ | 50 | 14,2 | internet slezke (23); internet ostrava (1); internet v ostravě (1) |
-| /kontakt/ | 37 | 17,5 | internet ostrava (7); poskytovatelé internetu ostrava (4); internet v ostravě (3) |
+| /poda-karvina/ | 68 | 10,8 | poda karvina (16); poda karviná (14); poda internet (4) |
+| /internet-slezska-ostrava/ | 43 | 14,1 | internet slezke (17); internet v ostravě (2); internet ostrava (1) |
 
 ### 2.3 Stav indexace
 
@@ -94,7 +93,7 @@ Nalezeno **0 chyb** a 6 varovani.
 
 ### 3.4 Produkcni web
 
-Zkontrolovano 42 URL na https://internetostrava.cz, medianova odezva 16 ms.
+Zkontrolovano 42 URL na https://internetostrava.cz, medianova odezva 20 ms.
 
 Vsechny URL vraci 200 a canonical odpovida.
 
@@ -112,16 +111,16 @@ Vsechny URL vraci 200 a canonical odpovida.
 
 Serazeno podle ocekavaneho dopadu. Agent vrstvy B bere shora a dela **nejvyse tri** polozky za beh.
 
-1. Prepsat title a description na `/poradna/vysoky-ping-pri-hrani/` (200 zobrazeni, 0 kliku, pozice 5,9) - rankuje na: ping 29ms (1).
-2. Prepsat title a description na `/poradna/internet-vypadava-co-delat/` (150 zobrazeni, 0 kliku, pozice 8,6) - rankuje na: vypadává internet (3); výpadky wifi (3); proč vypadává wifi (2).
-3. Posilit obsah pro dotaz "dostupnost internetu podle adresy" (pozice 18,5, 81 zobrazeni) na strance `/dostupnost/`.
-4. Posilit obsah pro dotaz "internet podle adresy" (pozice 18,2, 75 zobrazeni) na strance `/dostupnost/`.
-5. Posilit obsah pro dotaz "ověřit dostupnost internetu" (pozice 10,5, 61 zobrazeni).
+1. Prepsat title a description na `/poradna/vysoky-ping-pri-hrani/` (158 zobrazeni, 0 kliku, pozice 6,0).
+2. Prepsat title a description na `/poradna/internet-vypadava-co-delat/` (115 zobrazeni, 0 kliku, pozice 8,3) - rankuje na: výpadky wifi (2); nefunguje internet (1); proč vypadává wifi (1).
+3. Posilit obsah pro dotaz "ověřit dostupnost internetu" (pozice 8,8, 75 zobrazeni).
+4. Posilit obsah pro dotaz "dostupnost internetu podle adresy" (pozice 17,3, 74 zobrazeni) na strance `/dostupnost/`.
+5. Posilit obsah pro dotaz "internet podle adresy" (pozice 16,5, 73 zobrazeni) na strance `/dostupnost/`.
 6. Vyresit indexaci 1 URL bez verdiktu PASS (viz sekce 2.3) - dokud nejsou v indexu, obsah na nich nema efekt.
-7. Prohloubit `/poda-karvina/` (pozice 10,6, 65 zobrazeni, 372 slov) - rankuje na: poda karvina (18); poda karviná (9); internet karviná (3).
-8. Prepsat title a description na `/poradna/dostupnost-optickeho-internetu-ostrava/` (26 zobrazeni, 0 kliku, pozice 5,3).
+7. Prepsat title a description na `/poradna/dostupnost-optickeho-internetu-ostrava/` (31 zobrazeni, 0 kliku, pozice 5,2).
+8. Prohloubit `/poda-karvina/` (pozice 10,8, 68 zobrazeni, 372 slov) - rankuje na: poda karvina (16); poda karviná (14); poda internet (4).
 9. Prohloubit `/internet-ostrava-vitkovice/` (349 slov) - je to cilova stranka pro dotazy z keywords.json.
-10. Prohloubit `/poradna/slaba-wifi-v-panelaku/` (pozice 10,2, 54 zobrazeni, 710 slov) - rankuje na: slabá wifi v bytě (22); slabá wifi (11); slabá wifi v domě (3).
+10. Prepsat title a description na `/poradna/slaba-wifi-v-panelaku/` (23 zobrazeni, 0 kliku, pozice 8,4) - rankuje na: slabá wifi (9); slabá wifi v bytě (1); slabá wifi v domě (1).
 
 ## 6. Mimo repozitar (musi udelat majitel)
 
