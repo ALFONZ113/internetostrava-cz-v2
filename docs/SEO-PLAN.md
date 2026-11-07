@@ -1,5 +1,36 @@
 # SEO a GEO plán pro InternetOstrava.cz
 
+## Implementovano 2026-11-07 - Homepage v3 „Ocel & Signal"
+
+Redizajn homepage podle schvaleneho navrhu v3. Neni to novy web: paleta, Oswald,
+textury, fotky a ostre hrany jsou beze zmeny z puvodniho CSS. Meni se kompozice
+a hlavne cesta k overeni adresy.
+
+- **Adresa v hero.** Formular ulice + telefon + souhlas primo pod H1 (dosud jen
+  tlacitko do modalu a formular "Zavolejte mi" jen s telefonem). Payload nese
+  `poznamka: "Overeni z hero sekce"`, takze jde v leadech rozlisit od spodniho
+  formulare. Formular "Zavolejte mi" (lead_type callback) z homepage zmizel -
+  sledovat, zda pocet leadu z homepage nepoklesne.
+- **Hero obrazek:** Nova radnice s modrym svetlem (`radnice-optika-night.webp`,
+  112 kB) s preloadem a fetchpriority high misto videa s mraky. Video zustava
+  na `/poda-internet-ostrava/`.
+- **Struktura:** cisla (300 Kc / 2 000 Mb/s / 30 min / 0 Kc), 01 Jak to funguje,
+  02 Tarify s pruhy rychlosti nahoru/dolu, 03 Clovek z Ostravy (bento s realnou
+  fotkou zastupce z `/kontakt/`), overeni s formularem, 04 Lokality (vsech 6
+  obvodu + dlazdice "Vsechny lokality"), 05 FAQ. Ciselne sekce spojuje signalni
+  linka (zluta -> opticka modra) s kosoctverci z puvodniho `.hero-meta`.
+- **SEO beze ztraty:** H2 "Internet v Ostrave zacina overenim presne adresy"
+  i jeho odstavec zustaly, 4 FAQ 1:1 se schematem, kotvy `#tarify`,
+  `#lokality`, `#faq`, odkazy na vsech 6 lokalit. Text v `<main>` 687 -> 884 slov.
+- **CSS:** vse pod prefixem `.v3-` a promennymi na `body.home-v3`, ostatni
+  stranky se nemeni. Globalne jen: kosoctverce misto tecek v marquee a zluty
+  prepinac "Pridat e-mail" na tmavych `.form-panel` (byl modry na tmavem, i na
+  `/dostupnost/`).
+- Overeno v Chromiu (390 / 900 / 1440 px): bez horizontalniho preteceni, odeslani
+  hero formulare az na `/dekujeme/` se spravnym payloadem, modal z tarifu,
+  mobilni lista se skryva pri viditelnem formulari, zadne chyby v konzoli.
+- Cache token r26 -> r27, sitemap lastmod `/`, `llms.txt` popis homepage.
+
 ## Pracovni cyklus 2026-09-30
 
 Podklad: report `reports/seo/2026-09-28.md`, GSC property `sc-domain:internetostrava.cz`, obdobi 2026-08-29 az 2026-09-25. Stranka `/internet-slezska-ostrava/` mela 60 zobrazeni, 0 kliku a prumernou pozici 18,3. Opakovany text o overeni adresy byl nahrazen kratkym postupem pro bytovy a rodinny dum, kontextovymi odkazy na Muglinov, Michalkovice a radu k vyberu rychlosti. Další vyhodnoceni az po novem 28dennim obdobi; nelze vyvozovat ucinek z dat, ktera predchazela zmene.

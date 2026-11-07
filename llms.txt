@@ -17,7 +17,7 @@
 
 ## Main pages
 
-- [Internet Ostrava](https://internetostrava.cz/): provider-neutral overview, tariffs, address verification form, callback form, and frequently asked questions
+- [Internet Ostrava](https://internetostrava.cz/): provider-neutral overview with the address verification form (street, house number, phone) directly in the first screen, the three tariffs with download and upload speeds, how the check works in three steps, the local representative, district guides and frequently asked questions
 - [Availability verification](https://internetostrava.cz/dostupnost/): how internet availability is determined per exact address in Ostrava, what affects the result at building level (house type, existing connection, riser cabling, housing-association consent, technology in the street), what to prepare, plus a non-binding check form
 - [Tariffs](https://internetostrava.cz/tarify/): the three tariffs with prices (300 / 440 / 570 CZK per month), a comparison table, a direct answer to "cheapest internet in Ostrava" (300 CZK with TV), what influences the real cost (upload speed, package contents, how long a promotional price lasts) and the five questions to ask any provider before signing
 - [Contact](https://internetostrava.cz/kontakt/): representative contact details, when calls are made and when not, what to prepare before the call, what happens with the submitted data, and the promise to say openly when the current connection is the better option
