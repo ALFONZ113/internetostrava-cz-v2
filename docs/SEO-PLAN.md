@@ -1,5 +1,15 @@
 # SEO a GEO plán pro InternetOstrava.cz
 
+## Implementovano 2026-11-07 (3) - Lokalita v3 (prototyp: Hrabuvka, Marianske Hory)
+
+- Nova sablona lokalitnich stranek v designu v3, zatim jen na `/internet-hrabuvka/` (cast) a `/internet-marianske-hory/` (obvod). Na zbylych 16 strankach az po schvaleni majitelem.
+- Generator `scripts/build-lokality.mjs` + data `data/lokality.json`: kostra (hero s adresou, tarify, kroky, FAQ, okoli, formular, modal, schema) je spolecna, unikatni obsah o zastavbe je v datech. Spusteni: `node scripts/build-lokality.mjs [slug]`, potom `npm run check && npm run seo:audit`.
+- Lidi: adresa + telefon primo v prvni obrazovce (driv 2,5-5 obrazovek dolu); karta „X v kostce"; ceny PODA tarifu 300/440/570 Kc s tlacitky do modalu; kroky 01-03; lepkavy kontakt vedle textu; modal i na lokalitach, takze mobilni lista uz neodvadi na /dostupnost/ a vsechny 4 formulare posilaji poznamku `Lokalita: X` (overeno v Chromiu s mockem /api/leads).
+- AI a roboti: jeden JSON-LD @graph - WebPage (dateModified, author, isPartOf #website), Place (containedInPlace obvod -> Ostrava), Service s areaServed a 3 nabidkami v CZK, FAQPage 1:1 s viditelnymi otazkami, BreadcrumbList. Viditelne „Aktualizovano" s `<time>`. FAQ rozsireno o cenu a rychlost odpovedi (Marianske Hory 2 -> 6 otazek, obsah ze 353 slov na plnou stranku).
+- PSC a souradnice obvodu se nepridavaly - nebylo je mozne overit (zdroj nedostupny).
+- Kontroly: CLS 0, zadny prvek za okrajem na 390 i 1440 px, reduced-motion i bez JS 0 skrytych prvku, check + seo:audit bez chyb.
+- Cache token r28 -> r29 (zmena redesign.css, assets jsou immutable).
+
 ## Implementovano 2026-11-07 (2) - Mikroanimace v3 + oprava CLS z marquee
 
 - `assets/motion.js` (2,4 kB, jen homepage): IntersectionObserver prida `.is-in`, kdyz prvek dojede do obrazovky; pocitadla v pasu cisel. Animuje se jen transform/opacity. Pri "omezit pohyb" i bez JS je vse rovnou v konecnem stavu (overeno: 0 skrytych prvku).

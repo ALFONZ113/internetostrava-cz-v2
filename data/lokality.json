@@ -1,0 +1,224 @@
+{
+  "_comment": "Unikátní obsah lokalitních stránek pro scripts/build-lokality.mjs (PODA SEO zóna). Kostra je v generátoru. Ceny a kontakty nesmí odporovat data/seo/facts.json.",
+  "pages": [
+    {
+      "slug": "internet-hrabuvka",
+      "name": "Hrabůvka",
+      "nameLoc": "v Hrabůvce",
+      "faqFor": "pro Hrabůvku",
+      "obvod": "Ostrava-Jih",
+      "parent": {
+        "slug": "internet-ostrava-jih",
+        "name": "Ostrava-Jih"
+      },
+      "placeName": "Hrabůvka",
+      "serviceName": "Ověření internetového připojení v Hrabůvce",
+      "updated": "2026-11-07",
+      "title": "Internet Hrabůvka | PODA připojení Ostrava-Jih podle adresy",
+      "description": "Internet v Hrabůvce od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – panelové domy i cihlový Šídlovec. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Hrabůvce od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Hrabůvka",
+        "position": "49.7860;18.2609"
+      },
+      "heroImg": "loc-jih.webp",
+      "heroAlt": "Ostrava-Jih: radnice obvodu a panelová zástavba",
+      "ogImage": "loc-jih",
+      "eyebrow": "Ostrava-Jih · Hrabůvka",
+      "h1": "Internet v Hrabůvce <span>podle vašeho domu.</span>",
+      "lead": "Panelové domy kolem OC Hrabůvka i cihlový Šídlovec mají jiné technické řešení. Proto možnosti připojení ověřujeme podle přesné adresy, ne podle názvu čtvrti.",
+      "formNote": "Lokalita: Hrabůvka (Ostrava-Jih)",
+      "addressPlaceholder": "Např. Horní 123",
+      "facts": [
+        [
+          "Obvod",
+          "Ostrava-Jih"
+        ],
+        [
+          "Zástavba",
+          "panelová sídliště kolem Horní ulice a OC Hrabůvka, cihlový Šídlovec"
+        ],
+        [
+          "Rozhoduje",
+          "přípojka do domu, rozvod po stoupačkách, trasa sítě v ulici"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "V Hrabůvce stojí vedle sebe dva úplně odlišné typy domů: panelová sídliště a nižší cihlová zástavba Šídlovce. U panelového domu se řeší připojení celé budovy, u Šídlovce spíš to, kudy vede síť ulicí. Proto se dostupnost nedá říct za celou Hrabůvku, ale jen pro konkrétní číslo popisné. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Hrabůvce internet dostupný?</h2>\n            <p>Pro dotazy jako internet Hrabůvka nebo PODA Hrabůvka je rozhodující konkrétní dům. Hrabůvka není jedna technická zóna – potvrzuje se podle ulice, čísla domu a typu objektu. Nejdřív ověříme, co je na dané adrese skutečně možné, a až potom má smysl vybírat tarif.</p>\n            <h2>Zástavba Hrabůvky: paneláky, Šídlovec i obchodní centrum</h2>\n            <p>Hrabůvka spojuje dva odlišné světy. Kolem Horní ulice a obchodního centra převažují panelové domy, kde v jednom vchodu bydlí desítky domácností a rozhoduje připojení celého objektu. Vedle toho je tu Šídlovec – zděná cihlová kolonie ze 40. let s nižšími domy, která má vlastní charakter i vlastní technické podmínky. Rozdíl je praktický: u bytového domu obvykle stačí, aby byl připojený celý objekt, u zděné zástavby Šídlovce zase záleží na tom, kudy vede síť konkrétní ulicí.</p>\n            <h2>Co u vás v Hrabůvce rozhoduje</h2>\n            <p>U panelového domu nezáleží na bytě, ale na celém objektu. Rozhoduje, jestli je do budovy přivedena přípojka a jak je signál rozvedený po stoupačkách k jednotlivým dveřím. Pokud dům připojený už je, bývá zapojení bytu výrazně jednodušší než v domě, kde se přípojka teprve buduje – tam vstupuje do hry souhlas SVJ nebo správce a domluva na trase kabelu. Podrobněji to rozebírá článek o tom, <a href=\"/poradna/dostupnost-optickeho-internetu-ostrava/\">jak se ověřuje dostupnost optiky</a>.</p>\n            <p>V nižší cihlové zástavbě Šídlovce je situace jiná. Domy jsou menší, často bez společné stoupačky, jakou znají paneláky, a rozvod se řeší individuálně. Tady víc než typ domu rozhoduje poloha adresy a to, jestli síť vede právě vaší ulicí. Dvě adresy pár set metrů od sebe proto mohou mít odlišné možnosti.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Hrabůvce</div>\n              <ul>\n                <li><strong>Panelák, nebo Šídlovec</strong> – každý typ zástavby se připojuje jinak.</li>\n                <li><strong>Přípojka do domu</strong> – jestli už v budově je, nebo by se musela nově budovat.</li>\n                <li><strong>Rozvod po stoupačkách</strong> – u panelových domů rozhoduje, jak je signál vedený k bytům.</li>\n                <li><strong>Souhlas SVJ nebo správce</strong> – u bytových domů bývá potřeba, u rodinného domu ne.</li>\n                <li><strong>Ulice a číslo domu</strong> – u nižší zástavby rozhoduje trasa sítě v konkrétní ulici.</li>\n              </ul>\n            </div>\n            <h2>Bytový dům nebo řadová zástavba</h2>\n            <p>U panelových domů v Hrabůvce bývá zapojení jednotlivého bytu rychlé, pokud je dům připojený. U nižší zděné zástavby a řadových domů je klíčová přesná poloha adresy a dostupná infrastruktura v ulici. Do formuláře proto napište ulici a číslo domu – ať víme, o jaký typ objektu jde.</p>\n            <h2>Proč se odpověď liší i mezi sousedními vchody</h2>\n            <p>Panelové domy v Hrabůvce se stavěly a připojovaly postupně, ne najednou. Jeden vchod tak může mít přípojku dávno zavedenou a sousední ne – a stejný rozdíl bývá mezi bytovými domy a řadovou zástavbou o ulici dál. Proto nemá smysl vycházet z toho, co má soused; jediná spolehlivá odpověď je ověření podle přesné adresy. Pokud vás zajímá spíš kvalita signálu uvnitř bytu než samotná dostupnost, začněte u textu o tom, jak se chová <a href=\"/poradna/slaba-wifi-v-panelaku/\">wifi v panelovém domě</a>.</p>\n            <h2>Který tarif v Hrabůvce dává smysl</h2>\n            <p>Běžné domácnosti v panelovém bytě obvykle stačí <strong>1 Giga + TV Basic za 300 Kč</strong> měsíčně – internet až 1 000 Mb/s a k tomu televize. Kdo chce vybírat stanice, sáhne po <strong>1 Giga + TV Mých 10 za 440 Kč</strong>. <strong>2 Giga internet za 570 Kč</strong> dává smysl tam, kde je naráz online hodně zařízení: práce z domu, videohovory, streamování, škola online nebo pravidelné zálohování. Kolik rychlosti domácnost reálně potřebuje, rozebírá článek <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jaká rychlost internetu pro domácnost</a>. Tarif ale vybíráme až podle toho, co jde u vašeho domu zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro panelový byt i dům na Šídlovci. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Hrabůvce?",
+          "Pošlete přesnou adresu v Hrabůvce – ulici, číslo domu a telefon. Možnosti připojení se potvrzují podle konkrétního domu, ne podle celé čtvrti."
+        ],
+        [
+          "Kolik stojí internet v Hrabůvce?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Liší se dostupnost mezi paneláky a Šídlovcem?",
+          "Ano, může se lišit. Panelové domy u OC Hrabůvka a cihlová zástavba Šídlovce mají odlišné technické řešení, proto ověřujeme každou adresu zvlášť – rozdíl může být i mezi sousedními domy."
+        ],
+        [
+          "Řeším byt v paneláku u OC Hrabůvka, jak začít?",
+          "Pošlete adresu domu. U bytových domů ověříme, jak je vyřešeno připojení celého objektu, a co z toho plyne pro váš byt."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Hrabůvky.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih",
+          "desc": "Přehled celého obvodu: Hrabůvka, Zábřeh, Dubina, Výškovice."
+        },
+        {
+          "slug": "internet-zabreh",
+          "name": "Zábřeh",
+          "desc": "Panelová sídliště i starší zděné činžáky u Rudné."
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina",
+          "desc": "Nejmladší panelové sídliště obvodu s vyššími domy."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih"
+        },
+        {
+          "slug": "internet-zabreh",
+          "name": "Zábřeh"
+        },
+        {
+          "slug": "internet-vyskovice",
+          "name": "Výškovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-marianske-hory",
+      "name": "Mariánské Hory",
+      "nameLoc": "v Mariánských Horách",
+      "faqFor": "pro Mariánské Hory",
+      "obvod": "Mariánské Hory a Hulváky",
+      "parent": null,
+      "placeName": "Mariánské Hory",
+      "serviceName": "Ověření internetového připojení v Mariánských Horách",
+      "updated": "2026-11-07",
+      "title": "Internet Mariánské Hory | PODA připojení podle adresy",
+      "description": "Internet v Mariánských Horách od 300 Kč měsíčně. Ověříme PODA připojení pro činžovní domy i novostavby podle přesné adresy. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Mariánských Horách od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Mariánské Hory",
+        "position": "49.8364;18.2563"
+      },
+      "heroImg": "loc-marianske-hory.webp",
+      "heroAlt": "Mariánské Hory v Ostravě",
+      "ogImage": "loc-marianske-hory",
+      "eyebrow": "Mariánské Hory a Hulváky",
+      "h1": "Internet v Mariánských Horách <span>podle vašeho domu.</span>",
+      "lead": "Starší cihlové činžáky, průmyslové areály i nové bytové projekty. Každý typ domu se připojuje jinak, proto možnosti ověřujeme podle přesné adresy.",
+      "formNote": "Lokalita: Mariánské Hory",
+      "addressPlaceholder": "Např. Přemyslovců 123",
+      "facts": [
+        [
+          "Obvod",
+          "Mariánské Hory a Hulváky"
+        ],
+        [
+          "Zástavba",
+          "cihlové činžovní domy kolem ulice Přemyslovců, průmyslové areály, nové bytové projekty"
+        ],
+        [
+          "Rozhoduje",
+          "přípojka do objektu a stav vnitřních rozvodů"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "V Mariánských Horách se možnosti připojení liší dům od domu. U starších cihlových činžáků rozhoduje, zda je síť přivedená do objektu a jaký je stav vnitřních rozvodů; u novostaveb bývá připojení řešené už při výstavbě. Dva sousední domy ve stejné ulici tak mohou mít odlišné možnosti. Ceny začínají na 300 Kč měsíčně, dostupnost potvrdíme pro konkrétní číslo domu.",
+      "body": "            <h2>Je u vás v Mariánských Horách internet dostupný?</h2>\n            <p>V Mariánských Horách rozhoduje přesná adresa, ne název lokality ani PSČ. Obvod je stavebně pestrý, a proto nejdřív prověříme konkrétní číslo domu. Až když víme, co je u objektu zavedené, má smysl vybírat mezi internetem a internetem s televizí.</p>\n            <h2>Činžovní domy, průmysl i nová výstavba</h2>\n            <p>Mariánské Hory a Hulváky kombinují starší cihlové činžovní domy kolem ulice Přemyslovců, průmyslové areály a novější bytové projekty. U starších činžáků rozhoduje o možnostech připojení stav vnitřních rozvodů a to, zda je síť přivedena do objektu; u novostaveb bývá připojení řešeno už při výstavbě. Dva sousední domy ve stejné ulici tak mohou mít odlišné možnosti – přesná adresa je proto první otázka, kterou řešíme.</p>\n            <h2>Starší činžovní dům: na čem záleží</h2>\n            <p>V cihlovém činžáku se vedle přípojky do domu řeší hlavně cesta kabelu k bytu. Starší domy nemají stoupačky připravené pro moderní rozvody, takže se trasa hledá chodbou nebo společnými prostory. Pokud síť do domu přivedená není, je potřeba souhlas vlastníka, SVJ nebo správce. Pokud přivedená je, bývá zapojení bytu výrazně jednodušší. Jak takové ověření probíhá krok za krokem, popisuje článek <a href=\"/poradna/dostupnost-optickeho-internetu-ostrava/\">jak se ověřuje dostupnost optiky</a>.</p>\n            <h2>Novostavba nebo nový bytový projekt</h2>\n            <p>U novějších bytových domů bývá připojení vyřešené už z výstavby. Pořád ale záleží na tom, jaká technologie je v domě skutečně zavedená a k jakým bytům vede rozvod. Do formuláře proto napište i číslo vchodu nebo bytu, pokud je dům rozdělený na více částí. Ušetříte si tím jeden telefonát navíc.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Mariánských Horách</div>\n              <ul>\n                <li><strong>Typ domu</strong> – starší činžák, novostavba, nebo rodinný dům.</li>\n                <li><strong>Přípojka do objektu</strong> – jestli už v domě je, nebo by se musela budovat.</li>\n                <li><strong>Vnitřní rozvody</strong> – u starších domů rozhoduje trasa kabelu k bytu.</li>\n                <li><strong>Souhlas vlastníka nebo SVJ</strong> – potřeba hlavně tam, kde se přípojka teprve řeší.</li>\n                <li><strong>Ulice a číslo domu</strong> – i sousední domy mohou mít jiné možnosti.</li>\n              </ul>\n            </div>\n            <h2>Rodinný dům v Mariánských Horách</h2>\n            <p>U rodinného domu není potřeba souhlas SVJ, zato rozhoduje, kudy vede síť ulicí a jak daleko je to k vašemu domu. Pošlete ulici a číslo popisné, ověříme, jestli je připojení možné, a řekneme i to, kdyby u vás nedávalo smysl.</p>\n            <h2>Internet, nebo internet s televizí</h2>\n            <p>Pro většinu domácností je rozumný start <strong>1 Giga + TV Basic za 300 Kč</strong> měsíčně. Pokud doma televizi sledujete a chcete si vybírat stanice, dává smysl <strong>1 Giga + TV Mých 10 za 440 Kč</strong>. Samostatný <strong>2 Giga internet za 570 Kč</strong> je pro domácnosti bez televize s náročným provozem – home office, velké soubory, hraní. Pokud řešíte hlavně práci z domu, přečtěte si i článek o <a href=\"/poradna/internet-pro-home-office-ostrava/\">internetu pro home office</a>.</p>\n            <h2>Nezávazné prověření</h2>\n            <p>Odeslání adresy není objednávka. Je to první krok k tomu, abyste dostali konkrétní odpověď pro svůj dům místo obecného seznamu tarifů.</p>",
+      "tariffLead": "Ceny jsou stejné pro činžák, novostavbu i rodinný dům. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Mariánských Horách?",
+          "Pošlete ulici, číslo domu a telefon. Ověříme, co je u vašeho domu zavedené, a ozveme se s konkrétní odpovědí."
+        ],
+        [
+          "Kolik stojí internet v Mariánských Horách?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Je dostupnost stejná v celých Mariánských Horách?",
+          "Ne. Byty i rodinné domy mohou mít různé možnosti, které se ověřují podle konkrétní adresy – rozdíl může být i mezi dvěma domy ve stejné ulici."
+        ],
+        [
+          "Bydlím ve starším činžáku, jde u nás připojení zavést?",
+          "Záleží na tom, zda je síť přivedená do domu a jak vede rozvod k bytům. Pošlete adresu, ověříme stav u vašeho domu a řekneme, jestli je potřeba souhlas vlastníka nebo SVJ."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je odeslání adresy závazná objednávka?",
+          "Ne. Je to první krok k tomu, abyste dostali konkrétní odpověď místo obecného seznamu tarifů."
+        ]
+      ],
+      "neighboursTitle": "Okolí Mariánských Hor.",
+      "neighboursLead": "Máte adresu poblíž? Přejděte na příslušnou lokalitu. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-hulvaky",
+          "name": "Hulváky",
+          "desc": "Menší lokalita s koloniemi i bytovými domy u Bazalů."
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava",
+          "desc": "Centrum města, byty, kanceláře a různorodé adresy."
+        },
+        {
+          "slug": "internet-ostrava-vitkovice",
+          "name": "Vítkovice",
+          "desc": "Cihlová industriální zástavba a domácnosti v centru dění."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-hulvaky",
+          "name": "Hulváky"
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava"
+        }
+      ]
+    }
+  ]
+}

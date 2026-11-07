@@ -664,7 +664,7 @@ input.is-invalid { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,97,
 /* kosočtverce v marquee – stejný tvar jako v .hero-meta (celý web) */
 .city-marquee i { display: inline-block; width: 7px; height: 7px; margin-right: 10px; font-size: 0; background: var(--steelblue-deep); transform: rotate(45deg); vertical-align: middle; }
 
-.home-v3 {
+.home-v3, .loc-v3 {
   --fiber: #3d8ad9;
   --w50: rgba(255,255,255,.5);
   --w14: rgba(255,255,255,.14);
@@ -928,6 +928,44 @@ input.is-invalid { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,97,
   .v3-lt--big p { display: block; }
   .v3-faq { grid-template-columns: 1fr; gap: 28px; }
   .v3-acc summary { font-size: 1.04rem; }
+}
+
+/* ==========================================================================
+   Lokalita v3 – stránky městských částí (body.loc-v3)
+   Stejné komponenty jako homepage, nižší hero, fakta místo specifikace
+   a dvousloupcový obsah s lepkavým kontaktem.
+   ========================================================================== */
+.loc-v3 .v3-hero__in { min-height: 0; align-items: center; padding-block: clamp(48px, 7vh, 84px) 60px; }
+.loc-v3 .v3-hero h1 { font-size: clamp(2.6rem, 4.2vw, 3.9rem); margin-top: 18px; }
+.loc-v3 .v3-hero .breadcrumbs { margin: 0 0 18px; }
+.v3-facts { display: grid; gap: 0; margin: 12px 0 0; }
+.v3-facts div { display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 11px 0; border-top: 1px solid var(--w14); }
+.v3-facts div:first-child { border-top: 0; }
+.v3-facts dt { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: .68rem; line-height: 1.6; color: var(--w50); }
+.v3-facts dd { margin: 0; font-size: .92rem; line-height: 1.45; color: #fff; }
+.v3-facts dd b { color: var(--signal); font-weight: 600; }
+.v3-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: clamp(36px, 6vw, 80px); align-items: start; }
+.v3-body .prose { max-width: 72ch; }
+.v3-body .prose h2 { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .015em; line-height: 1.1; font-size: clamp(1.5rem, 2.4vw, 2rem); margin: 44px 0 12px; }
+.v3-body .prose h2:first-of-type { margin-top: 36px; }
+.v3-updated { display: flex; align-items: baseline; gap: 10px; line-height: 1.6; margin: 0 0 18px; font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; font-size: .74rem; color: var(--ink-soft); }
+.v3-side { position: sticky; top: 96px; display: grid; gap: 14px; }
+.v3-side .v3-call { margin-top: 0; }
+.v3-side .btn { width: 100%; white-space: normal; text-align: center; }
+.loc-v3 .v3-cta h2 { max-width: 16ch; }
+.loc-v3 .loc-grid { margin-top: 0; }
+@media (max-width: 1100px) {
+  .loc-v3 .v3-spec { max-width: none; }
+  .v3-body { grid-template-columns: minmax(0, 1fr); }
+  .v3-side { position: static; max-width: 520px; }
+}
+@media (max-width: 760px) {
+  .loc-v3 .v3-hero__in { padding-block: 32px 40px; }
+  .loc-v3 .v3-hero .eyebrow { display: none; }
+  .loc-v3 .v3-hero h1 { font-size: clamp(2.3rem, 10vw, 3rem); }
+  .v3-facts div { grid-template-columns: 96px 1fr; gap: 12px; }
+  .v3-body .prose h2 { margin-top: 36px; }
+  .v3-side .v3-call a { font-size: 1.9rem; }
 }
 
 /* ==========================================================================
