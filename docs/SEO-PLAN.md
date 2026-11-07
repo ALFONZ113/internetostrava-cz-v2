@@ -1,5 +1,21 @@
 # SEO a GEO plán pro InternetOstrava.cz
 
+## Pracovni cyklus 2026-09-30
+
+Podklad: report `reports/seo/2026-09-28.md`, GSC property `sc-domain:internetostrava.cz`, obdobi 2026-08-29 az 2026-09-25. Stranka `/internet-slezska-ostrava/` mela 60 zobrazeni, 0 kliku a prumernou pozici 18,3. Opakovany text o overeni adresy byl nahrazen kratkym postupem pro bytovy a rodinny dum, kontextovymi odkazy na Muglinov, Michalkovice a radu k vyberu rychlosti. Další vyhodnoceni az po novem 28dennim obdobi; nelze vyvozovat ucinek z dat, ktera predchazela zmene.
+
+## Pracovni cyklus 2026-09-27
+
+Vsechna nasledujici cisla jsou jen z GSC property `sc-domain:internetostrava.cz`, typ Web, obdobi 2026-08-28 az 2026-09-24. Dotaz `internet ostrava`: 47 zobrazeni, 1 klik, prumerna pozice 32,0. Jiny dotaz `poda internet ostrava`: 35 zobrazeni, 2 kliky, pozice 7,5. Tyto dve pozice se nesmi zamenovat.
+
+Majitel 2026-09-27 potvrdil, ze cil zahrnuje i obecne dotazy `internet Ostrava` a konkretni casti mesta. Predchozi oznaceni obecnych dotazu jako `jen sledovat` v `data/seo/keywords.json` je proto zruseno. Poradi ve vyhledavaci se neslibuje; dalsi prace se bude ridit skutecnymi dotazy, kvalitou obsahu a poptavkami.
+
+- `/internet-ostrava-poruba/`: 90 zobrazeni na stranku, 0 kliku, pozice 19,0. Upraven opakovany text o klicovych slovech na prakticky postup pro byt a rodinny dum, doplneny kontextove odkazy.
+- `/poda-dostupnost/`: 177 zobrazeni na stranku, 1 klik, pozice 9,7. Doplneno, jaky vysledek clovek po overeni ziska, a upresnen popisek stranky. FAQ odpoved byla sjednocena s JSON-LD.
+- SEO monitor z 2026-09-16 a 2026-09-21 selhal: `seo-report.mjs` bral lexikograficky posledni `research-*.json`, ktery nema `current`/`previous`. Vyber je omezen na tydenni soubory `YYYY-MM-DD.json`.
+
+Po nasazeni: znovu spustit SEO monitor, overit nove ulozeny report a po 28 dnech porovnat stejne dotazy a URL. Pro Bing pouzit import z Google Search Console a overit sitemapu podle `docs/SEO-AUTOMATION.md`.
+
 ## Cíl
 
 Získávat relevantní návštěvy z lokálních dotazů na internet v Ostravě a převádět je na nezávazná ověření adresy.

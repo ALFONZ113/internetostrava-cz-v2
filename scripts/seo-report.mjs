@@ -19,7 +19,7 @@ const audit = JSON.parse(readFileSync(auditPath, "utf8"));
 
 const gscDir = join(root, "data/gsc");
 const gscFiles = existsSync(gscDir)
-  ? readdirSync(gscDir).filter((name) => name.endsWith(".json")).sort()
+  ? readdirSync(gscDir).filter((name) => /^\d{4}-\d{2}-\d{2}\.json$/.test(name)).sort()
   : [];
 const gsc = gscFiles.length ? JSON.parse(readFileSync(join(gscDir, gscFiles.at(-1)), "utf8")) : null;
 

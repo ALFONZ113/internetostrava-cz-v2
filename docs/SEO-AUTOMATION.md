@@ -109,9 +109,18 @@ co je špatně a co se navrhuje. Rozhodnutí je na majiteli.
 ## Co automatizace neumí
 
 - **Změřit Seznam.cz.** Nemá veřejné API pro pozice. Páka je zápis na Firmy.cz — ruční krok.
-- **Dostat web na první místo na dotaz `internet Ostrava`.** Výzkum z 2026-08-18 to uzavřel:
-  pole obsazené celostátními srovnávači a národními ISP. Automat cílí na značkový cluster
-  a dlouhý chvost, kde je pohyb reálný.
+- **Zaručit první místo na dotaz `internet Ostrava`.** Tento obecný dotaz je cílem webu,
+  ale o pořadí rozhoduje vyhledávač. Automat sleduje značkové, obecné i místní dotazy;
+  změny vybírá podle dat a užitečnosti obsahu.
 - **Google Business Profile, sjednocení NAP napříč weby majitele, získání reálných recenzí.**
   Report je připomíná v sekci 6, udělat je musí majitel.
 - **Garantovat výsledek.** Měří se trend, ne sliby.
+
+## Bing Webmaster Tools - první přidání webu
+
+1. Otevřete [Bing Webmaster Tools](https://www.bing.com/webmasters/) a přihlaste se.
+2. Zvolte **Import from Google Search Console** a v seznamu vyberte pouze `internetostrava.cz`. Bing tím převezme ověření vlastnictví i sitemapu; po importu zkontrolujte, že je vybrána správná doména.
+3. V **Sitemaps** ověřte, že Bing vidí `https://internetostrava.cz/sitemap.xml`. Pokud tam není, odešlete přes **Submit sitemaps** přesně tuto adresu.
+4. Ve **URL Inspection** zkontrolujte úvodní stránku a `/internet-ostrava-poruba/`. Stav indexace se nemusí změnit hned po odeslání sitemapy.
+
+Pokud import z účtu Google není dostupný, přidejte `https://internetostrava.cz/` ručně a dokončete ověření vlastnictví nabízenou metodou. Opakované ruční odesílání stejné URL indexaci neurychluje. Po ověření webu lze doplnit IndexNow pro oznamování skutečně změněných URL.
