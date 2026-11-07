@@ -20,7 +20,7 @@
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin-ext.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin.woff2" crossorigin>
 
-  <link rel="stylesheet" href="/assets/redesign.css?v=r27">
+  <link rel="stylesheet" href="/assets/redesign.css?v=r28">
   <meta property="og:title" content="Internet Ostrava – optické připojení až 2 Gb/s">
   <meta property="og:description" content="Rychlý internet v Ostravě a okolí. Ověřte dostupnost optického připojení na vaší adrese.">
   <meta property="og:type" content="website">
@@ -100,7 +100,7 @@
   }
   </script>
   <meta name="gtm-id" content="">
-  <script src="/assets/analytics.js?v=r27" defer></script>
+  <script src="/assets/analytics.js?v=r28" defer></script>
 </head>
 <body class="home-redesign home-v3">
   <header class="site-header">
@@ -124,6 +124,19 @@
   </header>
 
   <main>
+  <div class="city-marquee" aria-hidden="true">
+    <div class="city-marquee-track">
+      <div class="city-marquee-group">
+        <span><i>&bull;</i> Ověření adresy zdarma</span>
+        <span><i>&bull;</i> Odpověď do 30 minut</span>
+        <span><i>&bull;</i> Nezávazná poptávka</span>
+        <span><i>&bull;</i> Optika i bez optiky &ndash; podle domu</span>
+        <span><i>&bull;</i> Bez skrytých poplatků za ověření</span>
+        <span><i>&bull;</i> Telefon 777 425 230</span>
+      </div>
+      <div class="city-marquee-group"></div>
+    </div>
+  </div>
     <!-- HERO v3: adresa rovnou v první obrazovce -->
     <section class="v3-hero" aria-labelledby="v3-hero-title">
       <img class="v3-hero__bg" src="/assets/radnice-optika-night.webp" alt="Noční Nová radnice v Ostravě s optickými světelnými stopami" width="1715" height="917" fetchpriority="high">
@@ -145,7 +158,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
                 <span><small>Telefon</small><input id="hero-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 …" required></span>
               </label>
-              <button class="btn btn-primary" type="submit">Ověřit adresu →</button>
+              <button class="btn btn-primary" type="submit">Ověřit adresu <span class="v3-arr" aria-hidden="true">→</span></button>
             </div>
             <label class="consent"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním údajů pro vyřízení dotazu podle <a href="/ochrana-udaju/">zásad ochrany údajů</a></span></label>
           </form>
@@ -172,9 +185,9 @@
     <!-- ČÍSLA -->
     <section class="v3-stats" aria-label="Hlavní výhody">
       <div class="wrap">
-        <div class="v3-stat"><strong>300<small>Kč</small></strong><span>nejnižší měsíční cena z nabídky</span></div>
-        <div class="v3-stat"><strong>2 000<small>Mb/s</small></strong><span>nahoru i dolů stejnou rychlostí</span></div>
-        <div class="v3-stat"><strong>30<small>min</small></strong><span>ozve se člověk v pracovní dny</span></div>
+        <div class="v3-stat"><strong><span class="v3-num" data-count="300">300</span><small>Kč</small></strong><span>nejnižší měsíční cena z nabídky</span></div>
+        <div class="v3-stat"><strong><span class="v3-num" data-count="2000">2 000</span><small>Mb/s</small></strong><span>nahoru i dolů stejnou rychlostí</span></div>
+        <div class="v3-stat"><strong><span class="v3-num" data-count="30">30</span><small>min</small></strong><span>ozve se člověk v pracovní dny</span></div>
         <div class="v3-stat"><strong>0<small>Kč</small></strong><span>za ověření vaší adresy</span></div>
       </div>
     </section>
@@ -199,7 +212,7 @@
           <span><i class="v3-node" aria-hidden="true"></i>telefon</span>
           <span><i class="v3-node" aria-hidden="true"></i>jen internet, nebo i televizi</span>
           <span><i class="v3-node" aria-hidden="true"></i>krátkou poznámku k domácnosti</span>
-          <a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost →</a>
+          <a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost <span class="v3-arr" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -246,7 +259,7 @@
         </div>
         <div class="v3-tnote">
           <p>Hledáte levnější nebo senior variantu? Připravíme individuální nabídku. Dostupnost vybraného tarifu a technické možnosti zapojení potvrdíme pro přesnou adresu.</p>
-          <a class="v3-link" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Individuální tarif" data-tariff-price="na míru">Individuální nabídka →</a>
+          <a class="v3-link" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Individuální tarif" data-tariff-price="na míru">Individuální nabídka <span class="v3-arr" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -337,7 +350,7 @@
               </div>
             </div>
             <label class="consent"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním údajů pro vyřízení dotazu podle <a href="/ochrana-udaju/">zásad ochrany údajů</a></span></label>
-            <button class="btn btn-primary" type="submit" style="grid-column:1/-1">Odeslat nezávazný dotaz →</button>
+            <button class="btn btn-primary" type="submit" style="grid-column:1/-1">Odeslat nezávazný dotaz <span class="v3-arr" aria-hidden="true">→</span></button>
             <div class="form-reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> Nezávazné · Ozveme se do 30 minut</div>
           </div>
         </form>
@@ -359,7 +372,7 @@
           <a class="v3-lt" href="/internet-moravska-ostrava/"><img src="/assets/loc-moravska-ostrava-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Centrum a různorodé adresy</small><h3>Moravská Ostrava</h3></a>
           <a class="v3-lt" href="/internet-ostrava-vitkovice/"><img src="/assets/loc-vitkovice-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Industriální část Ostravy</small><h3>Vítkovice</h3></a>
           <a class="v3-lt" href="/internet-slezska-ostrava/"><img src="/assets/loc-slezska-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Rodinné i bytové domy</small><h3>Slezská Ostrava</h3></a>
-          <a class="v3-lt v3-lt--all" href="/lokality/"><i class="v3-node" aria-hidden="true"></i><div><h3>Všechny lokality Ostravy →</h3><p>Obvody i jednotlivé části podle oblasti.</p></div></a>
+          <a class="v3-lt v3-lt--all" href="/lokality/"><i class="v3-node" aria-hidden="true"></i><div><h3>Všechny lokality Ostravy <span class="v3-arr" aria-hidden="true">→</span></h3><p>Obvody i jednotlivé části podle oblasti.</p></div></a>
         </div>
       </div>
     </section>
@@ -458,7 +471,8 @@
     </section>
   </div>
 
-  <script src="/assets/main.js?v=r27" defer></script>
+  <script src="/assets/main.js?v=r28" defer></script>
+  <script src="/assets/motion.js?v=r28" defer></script>
 </body>
 </html>
 

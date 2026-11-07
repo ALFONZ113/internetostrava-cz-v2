@@ -716,8 +716,11 @@ input.is-invalid { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,97,
 .v3-addr__f small { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .16em; font-size: .66rem; color: var(--w50); line-height: 1.3; }
 .v3-addr__f input { width: 100%; padding: 2px 0 0; border: 0; background: transparent; color: #fff; font: inherit; font-size: 1.02rem; outline: none; }
 .v3-addr__f input::placeholder { color: rgba(255,255,255,.62); }
-.v3-addr__f:focus-within { box-shadow: inset 0 -3px 0 var(--signal); background: rgba(255,255,255,.03); }
-.v3-addr__f:has(input.is-invalid) { box-shadow: inset 0 -3px 0 var(--rust); }
+.v3-addr__f { position: relative; }
+.v3-addr__f::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--signal); transform: scaleX(0); transform-origin: left center; transition: transform .35s cubic-bezier(.2,.7,.2,1); pointer-events: none; }
+.v3-addr__f:focus-within { background: rgba(255,255,255,.03); }
+.v3-addr__f:focus-within::after { transform: scaleX(1); }
+.v3-addr__f:has(input.is-invalid)::after { background: var(--rust); transform: scaleX(1); }
 .v3-addr .btn { min-height: 56px; margin: 8px; padding: 0 28px; box-shadow: 0 10px 30px -10px rgba(245,184,0,.55); }
 .v3-hero .consent { margin-top: 14px; color: var(--white-70); }
 .v3-checks { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 14px; color: var(--white-70); font-size: .95rem; }
@@ -925,4 +928,132 @@ input.is-invalid { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,97,
   .v3-lt--big p { display: block; }
   .v3-faq { grid-template-columns: 1fr; gap: 28px; }
   .v3-acc summary { font-size: 1.04rem; }
+}
+
+/* ==========================================================================
+   v3 motion – mikroanimace (html.js-motion nastavuje assets/motion.js)
+   Jen transform a opacity. Hero (H1, formulář) se nikdy neskrývá ani
+   neanimuje, aby se nezdrželo načtení a nic nerušilo vyplnění adresy.
+   Bez JS nebo s „omezit pohyb" je vše rovnou v konečném stavu.
+   ========================================================================== */
+.v3-num { display: inline-block; }
+.v3-arr { display: inline-block; transition: transform .25s cubic-bezier(.2,.7,.2,1); }
+.btn:hover .v3-arr, .btn:focus-visible .v3-arr, .v3-link:hover .v3-arr, .v3-lt--all:hover .v3-arr { transform: translateX(5px); }
+
+/* Rozhoduje dům: signální linka pod domy (statický stav = konečný) */
+.v3-pins { position: relative; padding-bottom: 16px; }
+.v3-pins::before { content: ""; position: absolute; left: 0; bottom: 0; width: 184px; height: 2px; background: linear-gradient(90deg, var(--signal), var(--fiber)); }
+.v3-pins::after { content: ""; position: absolute; left: 15px; bottom: -4px; width: 10px; height: 10px; background: var(--signal); transform: translateX(144px) rotate(45deg); }
+
+/* Děkujeme: signál dorazil k domu (statický stav = konečný) */
+.v3-done { display: block; width: min(380px, 100%); height: auto; margin: 6px 0 18px; overflow: visible; }
+.v3-done .base { fill: none; stroke: rgba(255,255,255,.18); stroke-width: 2; }
+.v3-done .sig { fill: none; stroke: url(#v3-done-g); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 268; stroke-dashoffset: 0; }
+.v3-done .start, .v3-done .node { fill: #f5b800; }
+.v3-done .node { transform: translateX(268px); }
+.v3-done .house { fill: none; stroke: rgba(255,255,255,.45); stroke-width: 2; stroke-linejoin: round; }
+.v3-done .lit { fill: #f5b800; stroke: #f5b800; stroke-width: 2; stroke-linejoin: round; }
+.v3-done .chk { fill: none; stroke: #0a0f13; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 46; stroke-dashoffset: 0; }
+.v3-done .ring { fill: none; stroke: #f5b800; stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.v3-done text { fill: rgba(255,255,255,.6); font-family: var(--display); font-weight: 600; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+@media (min-width: 1100px) {
+  .subhero .wrap:has(.v3-done) { position: relative; }
+  .v3-done { position: absolute; right: 0; top: 50%; translate: 0 -50%; margin: 0; }
+}
+
+@keyframes v3-pulse-once { from { background-position: -60% 0; } to { background-position: 160% 0; } }
+@keyframes v3-pulse-loop { 0% { background-position: -60% 0; } 38%, 100% { background-position: 160% 0; } }
+@keyframes v3-pop { 0%, 100% { transform: rotate(45deg) scale(1); } 45% { transform: rotate(45deg) scale(1.9); } }
+@keyframes v3-shimmer { 0% { transform: translateX(-120%); } 32%, 100% { transform: translateX(420%); } }
+@keyframes v3-scan { from { transform: translateX(0) rotate(45deg); } }
+@keyframes v3-grow-x { from { transform: scaleX(0); } }
+@keyframes v3-dot { 0% { transform: scale(0); } 70% { transform: scale(1.4); } 100% { transform: scale(1); } }
+@keyframes v3-zoom { from { opacity: 0; transform: scale(.72); } }
+@keyframes v3-draw-sig { from { stroke-dashoffset: 268; } }
+@keyframes v3-draw-chk { from { stroke-dashoffset: 46; } }
+@keyframes v3-move { from { transform: translateX(0); } }
+@keyframes v3-fade { from { opacity: 0; } }
+@keyframes v3-ring { 0% { opacity: .9; transform: scale(.6); } 100% { opacity: 0; transform: scale(1.5); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 1) signální impulz: hero linka pravidelně, čísla sekcí jednou při příjezdu */
+  .v3-sigline::after { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 4px; pointer-events: none; opacity: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0), #fff 50%, rgba(255,255,255,0)) no-repeat -60% 0 / 22% 100%;
+    filter: drop-shadow(0 0 5px rgba(120,180,255,.95)); }
+  .v3-hero > .v3-sigline::after { opacity: 1; animation: v3-pulse-loop 7s cubic-bezier(.45,0,.25,1) 1.5s infinite; }
+  .js-motion .v3-secno.is-in .v3-sigline::after { opacity: 1; animation: v3-pulse-once 1.5s cubic-bezier(.45,0,.25,1) .25s both; }
+  .js-motion .v3-secno.is-in .v3-sigline::before { animation: v3-pop .55s ease-out .1s; }
+
+  /* 2) postupné odhalení (vlastnost translate - nekoliduje s transform) */
+  .js-motion .v3-step, .js-motion .v3-bx, .js-motion .v3-lt, .js-motion .v3-tc, .js-motion .v3-mini > div {
+    opacity: 0; translate: 0 18px; transition: opacity .6s ease, translate .7s cubic-bezier(.2,.7,.2,1); }
+  .js-motion .v3-lt { transition: opacity .6s ease, translate .7s cubic-bezier(.2,.7,.2,1), transform .2s ease; }
+  .js-motion .v3-steps.is-in .v3-step, .js-motion .v3-bento.is-in .v3-bx, .js-motion .v3-loc.is-in .v3-lt,
+  .js-motion .v3-tc.is-in, .js-motion .v3-mini.is-in > div { opacity: 1; translate: 0 0; }
+  .js-motion .v3-step:nth-child(2) { transition-delay: .5s; }
+  .js-motion .v3-step:nth-child(3) { transition-delay: .9s; }
+  .js-motion .v3-tc:nth-child(2) { transition-delay: .1s; }
+  .js-motion .v3-tc:nth-child(3) { transition-delay: .2s; }
+  .js-motion .v3-bx:nth-child(2) { transition-delay: .08s; }
+  .js-motion .v3-bx:nth-child(3) { transition-delay: .16s; }
+  .js-motion .v3-bx:nth-child(4) { transition-delay: .24s; }
+  .js-motion .v3-bx:nth-child(5) { transition-delay: .32s; }
+  .js-motion .v3-lt:nth-child(2) { transition-delay: .06s, .06s, 0s; }
+  .js-motion .v3-lt:nth-child(3) { transition-delay: .12s, .12s, 0s; }
+  .js-motion .v3-lt:nth-child(4) { transition-delay: .18s, .18s, 0s; }
+  .js-motion .v3-lt:nth-child(5) { transition-delay: .24s, .24s, 0s; }
+  .js-motion .v3-lt:nth-child(6) { transition-delay: .3s, .3s, 0s; }
+  .js-motion .v3-lt:nth-child(7) { transition-delay: .36s, .36s, 0s; }
+  .js-motion .v3-mini > div:nth-child(2) { transition-delay: .12s; }
+  .js-motion .v3-mini > div:nth-child(3) { transition-delay: .24s; }
+
+  /* 3) kroky 01 -> 02 -> 03: linka se nakreslí, uzly bliknou */
+  .js-motion .v3-steps::before { transform: scaleX(0); transform-origin: left center; transition: transform 1.3s cubic-bezier(.4,0,.2,1) .1s; }
+  .js-motion .v3-steps.is-in::before { transform: scaleX(1); }
+  .js-motion .v3-steps.is-in .v3-step__k::after { animation: v3-pop .5s ease-out .45s; }
+  .js-motion .v3-steps.is-in .v3-step:nth-child(2) .v3-step__k::after { animation-delay: .85s; }
+
+  /* 4) pruhy rychlosti se naplní; v hero štítku občas proběhne „paket" */
+  .js-motion .v3-bar .tr i { transform: scaleX(0); transform-origin: left center; transition: transform 1.1s cubic-bezier(.2,.7,.2,1) .2s; }
+  .js-motion .v3-bar + .v3-bar .tr i { transition-delay: .35s; }
+  .js-motion .is-in .v3-bar .tr i { transform: scaleX(1); }
+  .js-motion .v3-spec.is-in .v3-bar .tr::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 28%;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.75), rgba(255,255,255,0)); animation: v3-shimmer 4s ease-in-out 1.6s infinite; }
+  .js-motion .v3-spec.is-in .v3-bar + .v3-bar .tr::after { animation-delay: 2s; }
+
+  /* 5) bento: signál projde ulicí, domy se rozsvítí; 0 Kč naskočí; přechod 1 -> 2 */
+  .js-motion .v3-bento.is-in .v3-pins::before { animation: v3-grow-x 1.2s cubic-bezier(.4,0,.2,1) .35s both; transform-origin: left center; }
+  .js-motion .v3-bento.is-in .v3-pins::after { animation: v3-scan 1.2s cubic-bezier(.4,0,.2,1) .35s both; }
+  .js-motion .v3-pins i::after { transform: scale(0); }
+  .js-motion .v3-bento.is-in .v3-pins i::after { transform: scale(1); animation: v3-dot .45s ease-out both; }
+  .js-motion .v3-bento.is-in .v3-pins i:nth-child(1)::after { animation-delay: .45s; }
+  .js-motion .v3-bento.is-in .v3-pins i:nth-child(2)::after { animation-delay: .8s; }
+  .js-motion .v3-bento.is-in .v3-pins i:nth-child(3)::after { animation-delay: 1.15s; }
+  .js-motion .v3-bento.is-in .v3-pins i:nth-child(4)::after { animation-delay: 1.5s; }
+  .js-motion .v3-bento.is-in .v3-big { animation: v3-zoom .7s cubic-bezier(.2,.8,.2,1) .45s both; }
+  .js-motion .v3-tl i { transform: scaleY(0); transform-origin: center top; transition: transform .45s ease .7s; }
+  .js-motion .v3-tl div + i + div { opacity: 0; transition: opacity .5s ease 1.05s; }
+  .js-motion .v3-bento.is-in .v3-tl i { transform: scaleY(1); }
+  .js-motion .v3-bento.is-in .v3-tl div + i + div { opacity: 1; }
+
+  /* 6) FAQ se rozbalí plynule (prohlížeče bez podpory jen přepnou) */
+  .v3-acc { interpolate-size: allow-keywords; }
+  .v3-acc details::details-content { height: 0; overflow: clip; transition: height .35s ease, content-visibility .35s allow-discrete; }
+  .v3-acc details[open]::details-content { height: auto; }
+  .v3-acc summary span { transition: transform .3s ease, background-color .2s ease; }
+  .v3-acc details[open] summary span { transform: rotate(180deg); }
+
+  /* 7) děkujeme: linka -> uzel dojede -> dům se rozsvítí -> fajfka */
+  .v3-done .sig { animation: v3-draw-sig 1.1s cubic-bezier(.4,0,.2,1) .35s both; }
+  .v3-done .node { animation: v3-move 1.1s cubic-bezier(.4,0,.2,1) .35s both; }
+  .v3-done .lit { animation: v3-fade .45s ease 1.4s both; }
+  .v3-done .chk { animation: v3-draw-chk .45s ease-out 1.75s both; }
+  .v3-done .ring { animation: v3-ring 1.1s ease-out 1.5s forwards; }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 760px) {
+  .js-motion .v3-steps::before { transform: scaleY(0); transform-origin: center top; }
+  .js-motion .v3-steps.is-in::before { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v3-addr__f::after, .v3-arr { transition: none; }
 }
