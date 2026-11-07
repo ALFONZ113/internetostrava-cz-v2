@@ -219,6 +219,1917 @@
           "name": "Moravská Ostrava"
         }
       ]
+    },
+    {
+      "slug": "internet-belsky-les",
+      "name": "Bělský Les",
+      "nameLoc": "na Bělském Lese",
+      "faqFor": "pro Bělský Les",
+      "obvod": "Ostrava-Jih",
+      "parent": {
+        "slug": "internet-ostrava-jih",
+        "name": "Ostrava-Jih"
+      },
+      "placeName": "Bělský Les",
+      "serviceName": "Ověření internetového připojení na Bělském Lese",
+      "updated": "2026-11-07",
+      "title": "Internet Bělský Les | PODA připojení Ostrava podle adresy",
+      "description": "Internet na Bělském Lese od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – panelové domy v zeleni Ostravy-Jihu. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet na Bělském Lese od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Bělský Les",
+        "position": "49.7670;18.2520"
+      },
+      "heroImg": "loc-jih.webp",
+      "heroAlt": "Ostrava-Jih: radnice obvodu a panelová zástavba",
+      "ogImage": "loc-jih",
+      "eyebrow": "Ostrava-Jih · Bělský Les",
+      "h1": "Internet na Bělském Lese <span>podle vašeho domu.</span>",
+      "lead": "Bělský Les je panelové sídliště zasazené do zeleně na okraji Ostravy-Jihu. Dostupnost i tady potvrzujeme podle konkrétního domu.",
+      "formNote": "Lokalita: Bělský Les (Ostrava-Jih)",
+      "addressPlaceholder": "Např. Bělská 20",
+      "facts": [
+        [
+          "Obvod",
+          "Ostrava-Jih"
+        ],
+        [
+          "Zástavba",
+          "panelové domy ve volnějších blocích se zelení mezi domy"
+        ],
+        [
+          "Rozhoduje",
+          "připojení celého domu, u bytu vchod a patro"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Bělský Les je panelové sídliště Ostravy-Jihu uspořádané do volnějších bloků se zelení mezi domy. U panelového domu rozhoduje, jak je vyřešené připojení celého objektu – pokud je dům připojený, zapojení bytu bývá rychlé. Situace se ale může lišit dům od domu, proto dostupnost potvrzujeme pro konkrétní adresu. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás na Bělském Lese internet dostupný?</h2>\n            <p>Pro dotazy internet Bělský Les nebo PODA Bělský Les je rozhodující konkrétní bytový dům. Sídliště je novější a poměrně kompaktní, ale možnosti se ověřují podle adresy a vchodu – až pak řešíme rychlost a tarif.</p>\n            <h2>Zástavba Bělského Lesa: paneláky v zeleni</h2>\n            <p>Bělský Les patří k mladším sídlištím Ostravy-Jihu a je charakteristický tím, jak je zastavba prostoupená zelení na hraně Bělského lesa. Tvoří ho převážně panelové domy uspořádané do volnějších bloků s velkým podílem veřejné zeleně mezi domy. Pro připojení je podstatné, že jde o bytové domy s mnoha domácnostmi: pokud je objekt připojený, zapojení bytu bývá rychlé. I tak se ale ptáme na přesnou adresu, protože situace se může lišit vchod od vchodu.</p>\n            <h2>Byt v panelovém domě</h2>\n            <p>U panelových domů na Bělském Lese rozhoduje připojení celého objektu. Do formuláře napište ulici a číslo domu, případně patro nebo vchod, pokud řešíte konkrétní byt.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost se hodí domácnostem s více zařízeními a lidmi online zároveň. Nejdřív ale ověříme, co je na vaší adrese skutečně možné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro byt v kterémkoli domě Bělského Lesa. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet na Bělském Lese?",
+          "Pošlete přesnou adresu – ulici a číslo domu. Možnosti připojení potvrdíme podle konkrétního bytového domu."
+        ],
+        [
+          "Kolik stojí internet na Bělském Lese?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu na Bělském Lese potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Patří Bělský Les pod Ostravu-Jih?",
+          "Ano. Bělský Les je součástí obvodu Ostrava-Jih a řešíme ho stejně jako Hrabůvku, Zábřeh, Dubinu a Výškovice – podle přesné adresy."
+        ],
+        [
+          "Je dostupnost na celém sídlišti stejná?",
+          "Sídliště je kompaktní, ale situace se může lišit vchod od vchodu, proto ověřujeme každou adresu."
+        ],
+        [
+          "Jak rychle jde zapojit byt?",
+          "Pokud je dům připojený, bývá zapojení bytu obvykle rychlé. Přesně to potvrdíme po ověření adresy."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Bělského Lesa.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih",
+          "desc": "Přehled celého obvodu: Hrabůvka, Zábřeh, Dubina, Výškovice."
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina",
+          "desc": "Nejmladší panelové sídliště obvodu s vyššími domy."
+        },
+        {
+          "slug": "internet-vyskovice",
+          "name": "Výškovice",
+          "desc": "Paneláky i původní rodinná zástavba u Bělského lesa."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih"
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina"
+        },
+        {
+          "slug": "internet-vyskovice",
+          "name": "Výškovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-hulvaky",
+      "name": "Hulváky",
+      "nameLoc": "v Hulvákách",
+      "faqFor": "pro Hulváky",
+      "obvod": "Mariánské Hory a Hulváky",
+      "parent": {
+        "slug": "internet-marianske-hory",
+        "name": "Mariánské Hory"
+      },
+      "placeName": "Hulváky",
+      "serviceName": "Ověření internetového připojení v Hulvákách",
+      "updated": "2026-11-07",
+      "title": "Internet Hulváky | PODA připojení Ostrava podle adresy",
+      "description": "Internet v Hulvákách od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – dělnické kolonie i bytové domy u Bazalů. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Hulvákách od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Hulváky",
+        "position": "49.8140;18.2440"
+      },
+      "heroImg": "loc-marianske-hory.webp",
+      "heroAlt": "Mariánské Hory v Ostravě",
+      "ogImage": "loc-marianske-hory",
+      "eyebrow": "Mariánské Hory · Hulváky",
+      "h1": "Internet v Hulvákách <span>podle vašeho domu.</span>",
+      "lead": "Hulváky leží na pomezí Mariánských Hor a Nové Vsi – od starších kolonií po bytové domy u Bazalů. Dostupnost ověřujeme podle přesné adresy.",
+      "formNote": "Lokalita: Hulváky (Mariánské Hory a Hulváky)",
+      "addressPlaceholder": "Např. Sokolská 10",
+      "facts": [
+        [
+          "Obvod",
+          "Mariánské Hory a Hulváky"
+        ],
+        [
+          "Zástavba",
+          "starší dělnické kolonie, nižší domy, bytové domy u Bazalů"
+        ],
+        [
+          "Rozhoduje",
+          "trasa sítě v ulici, u bytového domu připojení objektu"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Hulváky tvoří starší kolonie a bytové domy. U starší zástavby bývá podstatný stav vnitřních rozvodů a souhlas vlastníka, u bytových objektů připojení celé budovy. Dostupnost se proto potvrzuje pro konkrétní dům. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Hulvákách internet dostupný?</h2>\n            <p>Pro dotazy internet Hulváky nebo PODA Hulváky je rozhodující konkrétní dům. Hulváky jsou menší a pestrá lokalita, kde se možnosti liší podle typu zástavby – proto začínáme ověřením přesné adresy.</p>\n            <h2>Zástavba Hulvák: kolonie i bytové domy</h2>\n            <p>Hulváky jsou historicky spjaté s průmyslem a hornictvím, čemuž odpovídá i zástavba. Najdete tu starší dělnické kolonie a nižší domy i pozdější bytové domy, a to na poměrně malém území mezi Mariánskými Horami, Novou Vsí a areálem u stadionu Bazaly. Pro připojení to znamená různé technické podmínky: u nižší a starší zástavby rozhoduje, jak vede síť ulicí, u bytových domů připojení celého objektu. Proto se ptáme na konkrétní adresu.</p>\n            <h2>Nižší dům nebo bytový objekt</h2>\n            <p>U starší a nižší zástavby v Hulvákách je klíčová poloha adresy a infrastruktura v ulici; u bytových domů připojení objektu. Do formuláře napište ulici a číslo domu a krátce, o jaký typ domu jde.</p>\n            <h2>Co u vás v Hulvákách rozhoduje</h2>\n            <p>Ve starší kolonijní zástavbě je nejčastější otázka, jak se signál dostane do domu a jak se v něm rozvede. Tyhle domy nebyly stavěné s dnešními rozvody na mysli, takže se řešení hledá individuálně – kudy kabel povede, kde vstoupí do objektu a jestli je potřeba něco upravit uvnitř. Bývá to řešitelné, jen to chce prohlídku konkrétního domu, ne obecnou odpověď.</p>\n            <p>U bytových domů je postup přímočařejší: rozhoduje, jestli je do objektu zavedená přípojka, a pokud ne, domluva se správcem nebo SVJ. Tam, kde už připojení funguje a řešíte spíš jeho kvalitu než dostupnost, může být příčina jinde, než čekáte – rozebírá to text o tom, <a href=\"/poradna/internet-vypadava-co-delat/\">co dělat, když internet vypadává</a>.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Hulvákách</div>\n              <ul>\n                <li><strong>Kolonie, nebo bytový dům</strong> – jiný postup i jiná časová náročnost.</li>\n                <li><strong>Stav vnitřních rozvodů</strong> – u starší zástavby to nejčastější téma.</li>\n                <li><strong>Vstup kabelu do objektu</strong> – u starších domů se řeší na místě.</li>\n                <li><strong>Souhlas vlastníka nebo správce</strong> – nutný u domů s více byty.</li>\n                <li><strong>Přesná adresa</strong> – kolonie a bytové domy tu stojí blízko sebe.</li>\n              </ul>\n            </div>\n            <h2>Starší dům není překážka</h2>\n            <p>Panuje představa, že do starší zástavby se moderní připojení dostat nedá. Praxe je jiná: stáří domu samo o sobě nerozhoduje, rozhoduje to, jestli je kam přivést přípojku a jak ji vést uvnitř. U starších objektů to znamená víc otázek na začátku a někdy delší přípravu, ne automatické ne. Jediný způsob, jak to zjistit, je poslat konkrétní adresu a nechat možnosti ověřit.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Rychlejší připojení se hodí tam, kde je online víc lidí a zařízení současně. Nejprve ale ověříme, co je na vaší adrese možné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro dům v kolonii i byt v bytovém domě. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Hulvákách?",
+          "Pošlete přesnou adresu – ulici a číslo domu. Možnosti se liší podle typu zástavby, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Kolik stojí internet v Hulvákách?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Hulvákách potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Pod jaký obvod Hulváky patří?",
+          "Hulváky jsou součástí městského obvodu Mariánské Hory a Hulváky. Dostupnost řešíme podle konkrétní adresy."
+        ],
+        [
+          "Je dostupnost v Hulvákách všude stejná?",
+          "Ne. Kolonie a bytové domy mají odlišné podmínky – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím ve starší kolonii, dá se to řešit?",
+          "Ano. Pošlete adresu a ověříme, jaké připojení připadá pro daný dům v úvahu."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Hulvák.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-marianske-hory",
+          "name": "Mariánské Hory",
+          "desc": "Byty i rodinné domy v širším centru Ostravy."
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava",
+          "desc": "Centrum města, byty, kanceláře a různorodé adresy."
+        },
+        {
+          "slug": "internet-ostrava-vitkovice",
+          "name": "Vítkovice",
+          "desc": "Cihlová industriální zástavba a domácnosti v centru dění."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-marianske-hory",
+          "name": "Mariánské Hory"
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava"
+        },
+        {
+          "slug": "internet-ostrava-vitkovice",
+          "name": "Vítkovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-michalkovice",
+      "name": "Michálkovice",
+      "nameLoc": "v Michálkovicích",
+      "faqFor": "pro Michálkovice",
+      "obvod": "Michálkovice",
+      "parent": {
+        "slug": "lokality",
+        "name": "Lokality"
+      },
+      "placeName": "Michálkovice",
+      "serviceName": "Ověření internetového připojení v Michálkovicích",
+      "updated": "2026-11-07",
+      "title": "Internet Michálkovice | PODA připojení Ostrava podle adresy",
+      "description": "Internet v Michálkovicích od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – hornické kolonie i rodinné domy u dolu Michal. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Michálkovicích od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Michálkovice",
+        "position": "49.8402;18.3376"
+      },
+      "heroImg": "loc-slezska.webp",
+      "heroAlt": "Slezská Ostrava",
+      "ogImage": "loc-slezska",
+      "eyebrow": "Městský obvod Michálkovice",
+      "h1": "Internet v Michálkovicích <span>podle vašeho domu.</span>",
+      "lead": "Michálkovice jsou spjaté s hornickou minulostí a dolem Michal – od kolonií po rodinné domy. Dostupnost ověřujeme podle přesné adresy.",
+      "formNote": "Lokalita: Michálkovice",
+      "addressPlaceholder": "Např. Československé armády 30",
+      "facts": [
+        [
+          "Obvod",
+          "Michálkovice"
+        ],
+        [
+          "Zástavba",
+          "hornické kolonie, starší nižší domy, rodinné domy se zahradami"
+        ],
+        [
+          "Rozhoduje",
+          "trasa sítě v konkrétní ulici"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Michálkovice tvoří dochované hornické kolonie a novější rodinné domy se zahradami. Jde převážně o nižší zástavbu, kde rozhoduje, jak vede síť konkrétní ulicí. Dostupnost proto ověřujeme podle čísla domu. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Michálkovicích internet dostupný?</h2>\n            <p>Pro dotazy internet Michálkovice nebo PODA Michálkovice je rozhodující konkrétní dům. Michálkovice mají pestrou zástavbu od hornických kolonií po novější rodinné domy, kde se možnosti liší podle ulice – proto začínáme ověřením.</p>\n            <h2>Zástavba Michálkovic: kolonie i rodinné domy</h2>\n            <p>Michálkovice patří k východním částem Ostravy s výraznou hornickou historií – dominuje jim národní kulturní památka důl Michal. Této minulosti odpovídá i zástavba: dochované hornické kolonie a starší nižší domy doplňují novější rodinné domy se zahradami. Jde tedy převážně o nižší a rodinnou zástavbu, kde je pro připojení klíčové, zda a jak vede síť konkrétní ulicí. Protože se možnosti mohou lišit i mezi blízkými adresami, ptáme se vždy na přesnou adresu.</p>\n            <h2>Rodinný dům nebo starší kolonie</h2>\n            <p>U rodinných domů i domů v koloniích v Michálkovicích rozhoduje poloha adresy a dostupná infrastruktura v ulici. Do formuláře napište ulici a číslo domu a krátce, o jaký typ domu jde.</p>\n            <h2>Co u vás v Michálkovicích rozhoduje</h2>\n            <p>U rodinného domu se řeší trasa sítě ve vaší ulici, vzdálenost od jejího koncového bodu a to, kudy přípojka povede na pozemek a do domu. U novější zástavby se zahradami k tomu přistupuje vzdálenost domu od ulice – čím dál stojí, tím víc se řeší vedení po pozemku.</p>\n            <p>V dochovaných koloniích je situace specifická stářím objektů. Nebyly stavěné s dnešními rozvody na mysli, takže se víc než jinde řeší, kudy signál do domu vstoupí a jak se uvnitř rozvede. Není to překážka, jen to znamená víc otázek na začátku. Jak celé ověření probíhá, popisuje článek o tom, <a href=\"/poradna/dostupnost-optickeho-internetu-ostrava/\">jak se ověřuje dostupnost optiky</a>.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Michálkovicích</div>\n              <ul>\n                <li><strong>Kolonie, nebo novější rodinný dům</strong> – liší se příprava i rozvod.</li>\n                <li><strong>Trasa sítě ve vaší ulici</strong> – u nižší zástavby rozhoduje nejvíc.</li>\n                <li><strong>Vzdálenost domu od ulice</strong> – u domů se zahradou se řeší vedení po pozemku.</li>\n                <li><strong>Stav objektu a vnitřních rozvodů</strong> – téma hlavně u starší zástavby.</li>\n                <li><strong>Číslo domu</strong> – bez něj nelze dát konkrétní odpověď.</li>\n              </ul>\n            </div>\n            <h2>Hornická minulost se promítá do zástavby</h2>\n            <p>Michálkovice si zachovaly kolonijní zástavbu z dob, kdy tu fungoval důl Michal. Domy z toho období stojí vedle novější rodinné výstavby a technicky se chovají jinak – jiné stáří, jiné dispozice, jiná příprava. Pro odpověď na otázku po dostupnosti to znamená, že rozhoduje konkrétní objekt, ne to, co platí o ulici vedle. Kolik rychlosti má v domácnosti smysl řešit, shrnuje text o tom, <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jakou rychlost domácnost potřebuje</a>.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost ocení domácnosti s prací z domu, více zařízeními a streamováním. Nejprve ale ověříme, co je na vaší adrese možné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro rodinný dům i dům v kolonii. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Michálkovicích?",
+          "Pošlete přesnou adresu – ulici a číslo domu. U nižší a rodinné zástavby ověřujeme dostupnost podle konkrétní ulice."
+        ],
+        [
+          "Kolik stojí internet v Michálkovicích?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Michálkovicích potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Dá se připojit i dům ve starší kolonii?",
+          "Ano, řešíme i starší zástavbu. Konkrétní možnosti závisí na infrastruktuře v ulici, což ověříme podle adresy."
+        ],
+        [
+          "Je dostupnost v Michálkovicích všude stejná?",
+          "Ne. U rodinné a koloniální zástavby se liší ulici od ulice – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím blízko dolu Michal, jak začít?",
+          "Pošlete adresu domu a ověříme dostupnost pro konkrétní objekt."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Michálkovic.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava",
+          "desc": "Rodinné i bytové domy a adresy blízko centra."
+        },
+        {
+          "slug": "internet-muglinov",
+          "name": "Muglinov",
+          "desc": "Rodinná zástavba i sídliště na pravém břehu Ostravice."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava"
+        },
+        {
+          "slug": "internet-muglinov",
+          "name": "Muglinov"
+        },
+        {
+          "slug": "internet-ostrava-vitkovice",
+          "name": "Vítkovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-moravska-ostrava",
+      "name": "Moravská Ostrava",
+      "nameLoc": "v Moravské Ostravě",
+      "faqFor": "pro Moravskou Ostravu",
+      "obvod": "Moravská Ostrava a Přívoz",
+      "parent": null,
+      "placeName": "Moravská Ostrava",
+      "serviceName": "Ověření internetového připojení v Moravské Ostravě",
+      "updated": "2026-11-07",
+      "title": "Internet Moravská Ostrava | PODA podle adresy",
+      "description": "Internet v Moravské Ostravě od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – byty, činžáky i kanceláře v centru. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Moravské Ostravě od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Moravská Ostrava",
+        "position": "49.8351;18.2925"
+      },
+      "heroImg": "loc-moravska-ostrava.webp",
+      "heroAlt": "Moravská Ostrava – centrum města",
+      "ogImage": "loc-moravska-ostrava",
+      "eyebrow": "Městský obvod Moravská Ostrava a Přívoz",
+      "h1": "Internet v Moravské Ostravě <span>podle vašeho domu.</span>",
+      "lead": "U bytů, kanceláří i domů v širším centru rozhoduje přesná adresa. Ověříme možnosti připojení a projdeme vhodný tarif.",
+      "formNote": "Lokalita: Moravská Ostrava",
+      "addressPlaceholder": "Např. Hlavní třída 123",
+      "facts": [
+        [
+          "Obvod",
+          "Moravská Ostrava a Přívoz"
+        ],
+        [
+          "Zástavba",
+          "historické činžáky, byty nad obchody, kanceláře, panelové vnitrobloky"
+        ],
+        [
+          "Rozhoduje",
+          "přípojka do domu a možnosti vedení kabelu"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Moravská Ostrava je nejpestřejší část města: historické činžovní domy, byty nad obchodním parterem, kancelářské budovy i panelové vnitrobloky. Technické řešení připojení se tu liší dům od domu – starší dům s památkovou hodnotou má jiné možnosti vedení kabelu než rekonstruovaný činžák nebo novostavba. Dostupnost proto ověřujeme pro konkrétní adresu. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Moravské Ostravě internet dostupný?</h2>\n            <p>V Moravské Ostravě a centru je potřeba ověřit konkrétní adresu. Stejná městská část může znamenat jiné možnosti pro byt, dům i firemní objekt.</p>\n            <h2>Centrum má pestrou skladbu adres</h2>\n            <p>Moravská Ostrava zahrnuje bytové domy, administrativní objekty i adresy s různým technickým řešením. Proto je důležité ověřit konkrétní dům, nikoli jen městskou část.</p>\n            <h2>Od secesních činžáků po kancelářské budovy</h2>\n            <p>Moravská Ostrava a Přívoz je nejrozmanitější část města: historické činžovní domy kolem Masarykova náměstí a Nádražní ulice, byty nad obchodním parterem, kancelářské budovy i panelové vnitrobloky. Technická řešení připojení se zde liší dům od domu více než kdekoli jinde v Ostravě – starší dům s památkovou hodnotou má jiné možnosti vedení kabelu než rekonstruovaný činžák nebo novostavba. Právě proto v centru nemá smysl řídit se obecnou mapou pokrytí.</p>\n            <h2>Kdy dává ověření smysl</h2>\n            <p>Pokud řešíte internet do bytu, práci z domova, stabilní připojení pro více zařízení nebo kombinaci s televizí, pošlete přesnou adresu. Díky tomu lze zjistit, jaké možnosti připadají v úvahu právě pro daný objekt.</p>",
+      "tariffLead": "Ceny jsou stejné pro byt, kancelář i činžák v centru. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Stačí napsat jen „centrum Ostravy“?",
+          "Nestačí. Pro ověření je potřeba přesná adresa, protože možnosti se liší dům od domu."
+        ],
+        [
+          "Kolik stojí internet v Moravské Ostravě?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Moravské Ostravě potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Má starší činžák v centru horší možnosti než novostavba?",
+          "Nemusí, jen se řeší jinak. U staršího domu, zvlášť s památkovou hodnotou, se hledá jiná trasa kabelu než v rekonstruovaném činžáku nebo novostavbě. Proto ověřujeme konkrétní dům."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je ověření závazné?",
+          "Ne. Ověření slouží k tomu, abyste znali reálné možnosti před výběrem tarifu."
+        ]
+      ],
+      "neighboursTitle": "Části a okolí Moravské Ostravy.",
+      "neighboursLead": "Každá část má vlastní průvodce se zástavbou a tím, co u ní rozhoduje. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-privoz",
+          "name": "Přívoz",
+          "desc": "Historická čtvrť u hlavního nádraží se secesními činžáky."
+        },
+        {
+          "slug": "internet-marianske-hory",
+          "name": "Mariánské Hory",
+          "desc": "Byty i rodinné domy v širším centru Ostravy."
+        },
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava",
+          "desc": "Rodinné i bytové domy a adresy blízko centra."
+        },
+        {
+          "slug": "internet-ostrava-vitkovice",
+          "name": "Vítkovice",
+          "desc": "Cihlová industriální zástavba a domácnosti v centru dění."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-privoz",
+          "name": "Přívoz"
+        },
+        {
+          "slug": "internet-marianske-hory",
+          "name": "Mariánské Hory"
+        },
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava"
+        }
+      ]
+    },
+    {
+      "slug": "internet-muglinov",
+      "name": "Muglinov",
+      "nameLoc": "v Muglinově",
+      "faqFor": "pro Muglinov",
+      "obvod": "Slezská Ostrava",
+      "parent": {
+        "slug": "internet-slezska-ostrava",
+        "name": "Slezská Ostrava"
+      },
+      "placeName": "Muglinov",
+      "serviceName": "Ověření internetového připojení v Muglinově",
+      "updated": "2026-11-07",
+      "title": "Internet Muglinov | PODA připojení Ostrava podle adresy",
+      "description": "Internet v Muglinově od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – rodinné domy i sídliště na pravém břehu Ostravice. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Muglinově od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Muglinov",
+        "position": "49.8487;18.3053"
+      },
+      "heroImg": "loc-slezska.webp",
+      "heroAlt": "Slezská Ostrava",
+      "ogImage": "loc-slezska",
+      "eyebrow": "Slezská Ostrava · Muglinov",
+      "h1": "Internet v Muglinově <span>podle vašeho domu.</span>",
+      "lead": "Muglinov leží na pravém břehu Ostravice a spojuje rodinnou zástavbu se sídlištěm. Dostupnost tu ověřujeme podle přesné adresy a typu domu.",
+      "formNote": "Lokalita: Muglinov (Slezská Ostrava)",
+      "addressPlaceholder": "Např. Petřkovická 10",
+      "facts": [
+        [
+          "Obvod",
+          "Slezská Ostrava"
+        ],
+        [
+          "Zástavba",
+          "starší rodinné domy a panelové sídliště ve svahu nad Ostravicí"
+        ],
+        [
+          "Rozhoduje",
+          "u rodinného domu ulice, u paneláku připojení domu"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Muglinov spojuje starší rodinnou zástavbu s panelovým sídlištěm a leží ve svahu nad pravým břehem Ostravice. U rodinného domu rozhoduje trasa sítě v ulici, u panelového domu připojení celé budovy. Odpověď dává konkrétní adresa. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Muglinově internet dostupný?</h2>\n            <p>Pro dotazy internet Muglinov nebo PODA Muglinov je rozhodující konkrétní dům. Muglinov má rodinnou i sídlištní část a možnosti se mezi nimi liší – proto začínáme ověřením přesné adresy.</p>\n            <h2>Zástavba Muglinova: rodinné domy i sídliště</h2>\n            <p>Muglinov je součástí obvodu Slezská Ostrava a rozkládá se na svazích nad pravým břehem Ostravice. Zástavba je smíšená: starší rodinné a nižší zděné domy původní čtvrti doplňuje panelové sídliště Muglinov. Pro připojení to znamená dvojí přístup – u rodinných domů rozhoduje, kudy vede síť ulicí, u panelových domů připojení celého objektu. Protože obě části leží blízko sebe, ptáme se vždy na konkrétní adresu.</p>\n            <h2>Rodinný dům nebo byt na sídlišti</h2>\n            <p>U rodinných domů v Muglinově je klíčová poloha adresy a infrastruktura v ulici; u panelových domů připojení objektu. Do formuláře napište ulici a číslo domu a krátce, o jaký typ domu jde.</p>\n            <h2>Co u vás v Muglinově rozhoduje</h2>\n            <p>U rodinného domu je podstatné, kudy vede síť ulicí a jak se dostane na pozemek. Ve svažitém terénu k tomu přistupuje otázka, jak kabel vést a kudy vstoupí do domu – nic neřešitelného, jen věc, která se potvrzuje na místě podle konkrétní dispozice.</p>\n            <p>U bytu na sídlišti se pozemek neřeší vůbec. Rozhoduje, jestli je do objektu zavedená přípojka a jak je signál rozvedený po stoupačkách k bytům. Pokud dům připojený zatím není, přibývá souhlas SVJ nebo správce. Jak se signál chová uvnitř panelového domu, rozebírá text o tom, jaká bývá <a href=\"/poradna/slaba-wifi-v-panelaku/\">wifi v panelovém domě</a>.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Muglinově</div>\n              <ul>\n                <li><strong>Rodinný dům, nebo byt na sídlišti</strong> – dva odlišné postupy.</li>\n                <li><strong>Trasa sítě ve vaší ulici</strong> – u rodinné zástavby rozhoduje.</li>\n                <li><strong>Připojení celého objektu</strong> – u panelových domů to podstatné.</li>\n                <li><strong>Svažitý terén</strong> – ovlivňuje vedení přípojky k rodinnému domu.</li>\n                <li><strong>Souhlas SVJ</strong> – nutný tam, kde přípojka teprve vznikne.</li>\n              </ul>\n            </div>\n            <h2>Dvě zástavby blízko sebe, dvě různé odpovědi</h2>\n            <p>Rodinná část a sídliště leží v Muglinově kousek od sebe, ale technicky spolu nemají nic společného. Sídlištní domy se připojovaly hromadně po objektech, rodinná zástavba individuálně po ulicích. Platí tu proto totéž co jinde v Ostravě, jen výrazněji: odpověď pro jednu adresu nevypovídá o té druhé, i když je vidět z okna. Jestli řešíte spíš výpadky než dostupnost, začněte u textu o tom, <a href=\"/poradna/internet-vypadava-co-delat/\">co dělat, když internet vypadává</a>.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Rychlejší připojení ocení domácnosti s více zařízeními online, prací z domu i streamováním. Nejprve ale ověříme, co je na vaší adrese reálné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro rodinný dům i byt na sídlišti. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Muglinově?",
+          "Pošlete přesnou adresu – ulici a číslo domu. Rodinná a sídlištní část mají odlišné podmínky, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Kolik stojí internet v Muglinově?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Muglinově potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Pod jaký obvod Muglinov patří?",
+          "Muglinov je součástí obvodu Slezská Ostrava. Dostupnost řešíme podle konkrétní adresy."
+        ],
+        [
+          "Je dostupnost v Muglinově všude stejná?",
+          "Ne. Rodinná a panelová část mají různé podmínky – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím na sídlišti Muglinov, jak začít?",
+          "Pošlete adresu domu. U bytových domů ověříme, jak je vyřešeno připojení celého objektu."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Muglinova.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava",
+          "desc": "Rodinné i bytové domy a adresy blízko centra."
+        },
+        {
+          "slug": "internet-michalkovice",
+          "name": "Michálkovice",
+          "desc": "Hornické kolonie i rodinné domy u dolu Michal."
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava",
+          "desc": "Centrum města, byty, kanceláře a různorodé adresy."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava"
+        },
+        {
+          "slug": "internet-michalkovice",
+          "name": "Michálkovice"
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava"
+        }
+      ]
+    },
+    {
+      "slug": "internet-ostrava-dubina",
+      "name": "Dubina",
+      "nameLoc": "na Dubině",
+      "faqFor": "pro Dubinu",
+      "obvod": "Ostrava-Jih",
+      "parent": {
+        "slug": "internet-ostrava-jih",
+        "name": "Ostrava-Jih"
+      },
+      "placeName": "Dubina",
+      "serviceName": "Ověření internetového připojení na Dubině",
+      "updated": "2026-11-07",
+      "title": "Internet Dubina Ostrava | PODA připojení podle adresy",
+      "description": "Internet na Dubině od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – věžáky i nižší paneláky nejmladšího sídliště Jihu. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet na Dubině od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Dubina",
+        "position": "49.7580;18.2600"
+      },
+      "heroImg": "loc-jih.webp",
+      "heroAlt": "Ostrava-Jih: radnice obvodu a panelová zástavba",
+      "ogImage": "loc-jih",
+      "eyebrow": "Ostrava-Jih · Dubina",
+      "h1": "Internet na Dubině <span>podle vašeho domu.</span>",
+      "lead": "Dubina je nejmladší panelové sídliště Ostravy-Jihu s vysokými domy. I tady platí, že dostupnost se potvrzuje podle konkrétního domu, ne podle celého sídliště.",
+      "formNote": "Lokalita: Dubina (Ostrava-Jih)",
+      "addressPlaceholder": "Např. Bělská 12",
+      "facts": [
+        [
+          "Obvod",
+          "Ostrava-Jih"
+        ],
+        [
+          "Zástavba",
+          "vyšší panelové domy a věžáky kolem ulic Horní a Bělská"
+        ],
+        [
+          "Rozhoduje",
+          "připojení celého objektu, liší se vchod od vchodu"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Dubina je nejmladší velké sídliště Ostravy-Jihu s vyššími panelovými domy a věžáky. Pokud je bytový dům připojený, zapojení bytu bývá rychlé, situace se ale liší vchod od vchodu. Proto dostupnost potvrzujeme podle přesné adresy, ne podle celého sídliště. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás na Dubině internet dostupný?</h2>\n            <p>Pro dotazy internet Dubina nebo PODA Dubina je rozhodující konkrétní vchod. Sídliště je sice technicky poměrně jednotné, ale možnosti se ověřují podle adresy a typu domu – teprve pak má smysl řešit rychlost a tarif.</p>\n            <h2>Zástavba Dubiny: nejmladší sídliště Jihu</h2>\n            <p>Dubina vznikala v 70. a 80. letech jako závěrečná velká etapa výstavby Ostravy-Jihu. Převažují tu vyšší panelové domy a věžáky uspořádané kolem ulic Horní a Bělská, s velkou koncentrací domácností na malé ploše. To je pro připojení spíš výhoda: pokud je bytový dům připojený, zapojení jednotlivého bytu bývá rychlé. Přesto se i na Dubině liší situace vchod od vchodu, a proto ověřujeme přesnou adresu.</p>\n            <h2>Byt ve věžáku i v nižším paneláku</h2>\n            <p>Ať bydlíte ve výškovém domě, nebo v nižším panelovém bloku, klíčové je, jak je vyřešeno připojení celého objektu. Do formuláře stačí napsat ulici a číslo domu, případně patro, pokud řešíte konkrétní potřebu.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost se vyplatí domácnostem, kde je online víc lidí najednou: práce, škola, streamování i hraní. Nejdřív ale potvrdíme, co je na vaší adrese možné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro byt ve věžáku i v nižším paneláku. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet na Dubině?",
+          "Pošlete přesnou adresu na Dubině – ulici a číslo domu. Možnosti připojení potvrdíme podle konkrétního bytového domu."
+        ],
+        [
+          "Kolik stojí internet na Dubině?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu na Dubině potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Je dostupnost na celé Dubině stejná?",
+          "Sídliště je poměrně jednotné, ale situace se může lišit vchod od vchodu, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Bydlím ve věžáku, je to problém?",
+          "Není. U výškových i nižších panelových domů ověříme, jak je vyřešeno připojení objektu."
+        ],
+        [
+          "Jak dlouho trvá zapojení bytu?",
+          "Pokud je dům připojený, bývá zapojení jednotlivého bytu obvykle rychlé. Přesně to potvrdíme po ověření adresy."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Dubiny.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih",
+          "desc": "Přehled celého obvodu: Hrabůvka, Zábřeh, Dubina, Výškovice."
+        },
+        {
+          "slug": "internet-hrabuvka",
+          "name": "Hrabůvka",
+          "desc": "Panelové domy u OC Hrabůvka i cihlový Šídlovec."
+        },
+        {
+          "slug": "internet-belsky-les",
+          "name": "Bělský Les",
+          "desc": "Panelové sídliště zasazené do zeleně."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih"
+        },
+        {
+          "slug": "internet-zabreh",
+          "name": "Zábřeh"
+        },
+        {
+          "slug": "internet-vyskovice",
+          "name": "Výškovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-ostrava-jih",
+      "name": "Ostrava-Jih",
+      "nameLoc": "na Ostravě-Jihu",
+      "faqFor": "pro Ostravu-Jih",
+      "obvod": "Ostrava-Jih",
+      "parent": null,
+      "placeName": "Ostrava-Jih",
+      "serviceName": "Ověření internetového připojení na Ostravě-Jihu",
+      "updated": "2026-11-07",
+      "title": "Internet Ostrava-Jih | Dostupnost optiky podle adresy",
+      "description": "Internet na Ostravě-Jihu od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – paneláky, zděné domy i rodinné domy celého obvodu. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet na Ostravě-Jihu od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Jih",
+        "position": "49.7896;18.2483"
+      },
+      "heroImg": "loc-jih.webp",
+      "heroAlt": "Ostrava-Jih: radnice obvodu a panelová zástavba",
+      "ogImage": "loc-jih",
+      "eyebrow": "Městský obvod Ostrava-Jih",
+      "h1": "Internet na Ostravě-Jihu <span>podle vašeho domu.</span>",
+      "lead": "Hrabůvka, Zábřeh, Dubina nebo Výškovice: zjistěte, jaké připojení připadá v úvahu na vaší přesné adrese.",
+      "formNote": "Lokalita: Ostrava-Jih",
+      "addressPlaceholder": "Např. Hlavní třída 123",
+      "facts": [
+        [
+          "Části",
+          "Hrabůvka, Zábřeh, Dubina, Výškovice, Bělský Les"
+        ],
+        [
+          "Zástavba",
+          "převážně panelové domy, zděné domy v Zábřehu, rodinné domy ve Výškovicích"
+        ],
+        [
+          "Rozhoduje",
+          "připojení celého domu, u rodinného domu trasa sítě v ulici"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Ostrava-Jih zahrnuje Hrabůvku, Zábřeh, Dubinu, Výškovice a Bělský Les. Převažují panelové domy, kde rozhoduje připojení celého objektu, ale jsou tu i starší zděné domy v Zábřehu a rodinné domy ve Výškovicích s jinými pravidly. Dostupnost proto ověřujeme podle ulice a čísla domu, ne podle obvodu. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás na Ostravě-Jihu internet dostupný?</h2>\n            <p>Pro Hrabůvku, Zábřeh, Dubinu i Výškovice je nejlepší začít jednou stránkou Ostrava-Jih. Přesné možnosti internetu se pak ověřují podle ulice a čísla domu.</p>\n            <h2>Jedna městská část, mnoho různých adres</h2>\n            <p>V obvodu Ostrava-Jih nestačí znát pouze lokalitu. Možnosti se mohou lišit podle konkrétního domu, a proto ověřujeme přesnou ulici a číslo popisné nebo orientační.</p>\n            <h2>Největší sídliště v Ostravě</h2>\n            <p>Ostrava-Jih zahrnuje Hrabůvku, Zábřeh, Dubinu, Výškovice a Bělský Les – převažuje zde panelová zástavba, kde v jednom domě bydlí desítky domácností. U panelových domů bývá klíčové, jak je vyřešeno připojení celého objektu: pokud je dům připojený, zapojení jednotlivého bytu je obvykle rychlé. Vedle panelů jsou tu ale i starší zděné domy v Zábřehu a rodinné domy ve Výškovicích, kde platí jiná pravidla – proto se ptáme na přesnou adresu.</p>\n            <h2>Nejčastější potřeby domácností</h2>\n            <p>Typickým požadavkem je stabilní připojení pro několik zařízení současně: práci, školu, streamování i běžný provoz domácnosti. Podle dostupnosti lze projít samostatný internet i kombinace s televizí.</p>\n            <h2>Jak získat konkrétní odpověď</h2>\n            <p>Pošlete adresu přes formulář. Místo obecného slibu dostanete informaci o tom, co lze na vašem místě skutečně řešit.</p>",
+      "tariffLead": "Ceny jsou stejné pro Hrabůvku, Zábřeh, Dubinu, Výškovice i Bělský Les. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Je dostupnost stejná v celém obvodu Ostrava-Jih?",
+          "Ne. Hrabůvka, Zábřeh, Dubina i Výškovice mají různé možnosti, které se ověřují podle konkrétní adresy."
+        ],
+        [
+          "Kolik stojí internet na Ostravě-Jihu?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu na Ostravě-Jihu potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Liší se dostupnost mezi Hrabůvkou, Zábřehem a Výškovicemi?",
+          "Ano. Panelové domy, starší zděné domy v Zábřehu a rodinné domy ve Výškovicích se připojují různě, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Formulář slouží k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Části Ostravy-Jihu.",
+      "neighboursLead": "Každá část má vlastní průvodce se zástavbou a tím, co u ní rozhoduje. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-hrabuvka",
+          "name": "Hrabůvka",
+          "desc": "Panelové domy u OC Hrabůvka i cihlový Šídlovec."
+        },
+        {
+          "slug": "internet-zabreh",
+          "name": "Zábřeh",
+          "desc": "Panelová sídliště i starší zděné činžáky u Rudné."
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina",
+          "desc": "Nejmladší panelové sídliště obvodu s vyššími domy."
+        },
+        {
+          "slug": "internet-vyskovice",
+          "name": "Výškovice",
+          "desc": "Paneláky i původní rodinná zástavba u Bělského lesa."
+        },
+        {
+          "slug": "internet-belsky-les",
+          "name": "Bělský Les",
+          "desc": "Panelové sídliště zasazené do zeleně."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-hrabuvka",
+          "name": "Hrabůvka"
+        },
+        {
+          "slug": "internet-zabreh",
+          "name": "Zábřeh"
+        },
+        {
+          "slug": "internet-vyskovice",
+          "name": "Výškovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-ostrava-poruba",
+      "name": "Poruba",
+      "nameLoc": "v Porubě",
+      "faqFor": "pro Porubu",
+      "obvod": "Poruba",
+      "parent": null,
+      "placeName": "Poruba",
+      "serviceName": "Ověření internetového připojení v Porubě",
+      "updated": "2026-11-07",
+      "title": "PODA internet Ostrava-Poruba | Dostupnost podle adresy",
+      "description": "Internet v Porubě od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – byty na Hlavní třídě, paneláky i rodinné domy. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Porubě od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Poruba",
+        "position": "49.8246;18.1619"
+      },
+      "heroImg": "loc-poruba.webp",
+      "heroAlt": "Ostrava-Poruba – městská část Ostravy",
+      "ogImage": "loc-poruba",
+      "eyebrow": "Městský obvod Poruba",
+      "h1": "PODA internet v Porubě <span>podle vašeho domu.</span>",
+      "lead": "Poruba má bytové domy, rodinné domy i domácnosti s různými nároky. Proto ověřujeme dostupnost podle přesné adresy, ne podle názvu městské části.",
+      "formNote": "Lokalita: Ostrava-Poruba",
+      "addressPlaceholder": "Např. Hlavní třída 123",
+      "facts": [
+        [
+          "Obvod",
+          "Poruba"
+        ],
+        [
+          "Zástavba",
+          "sorela kolem Hlavní třídy, panelové stavební obvody, rodinné domy na okrajích"
+        ],
+        [
+          "Rozhoduje",
+          "stavební obvod, stáří domu a vnitřní rozvody"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Poruba se stavěla po etapách a každý stavební obvod má jinou zástavbu – zděné domy sorely kolem Hlavní třídy, panelové bloky ve vyšších obvodech a rodinné domy na okrajích. Možnosti připojení se proto liší dům od domu a potvrzují se pro konkrétní adresu, ne pro celou Porubu. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Porubě internet dostupný?</h2>\n            <p>Pro dotazy PODA Poruba, internet Poruba nebo internet Ostrava-Poruba je nejdůležitější přesná adresa. Poruba není jedna technická zóna: rozhoduje konkrétní dům, typ objektu a to, jak je k němu síť fyzicky dovedena. Napište nám ulici a číslo domu a ozveme se s tím, co na vaší adrese skutečně připadá v úvahu.</p>\n            <h2>Zástavba Poruby: od sorely po rodinné domy</h2>\n            <p>Poruba se mezi ostravskými obvody odlišuje tím, jak čitelně je v ní vidět postup výstavby. Nejstarší část kolem Hlavní třídy tvoří zděné bloky z 50. let ve stylu sorely, jejichž symbolem je Oblouk. Další stavební obvody přibývaly postupně a s nimi i panelová výstavba několika generací. Na okrajích obvodu, směrem ke Krásnému Poli a Plesné, pak převažují rodinné domy se zahradami.</p>\n            <p>Pro připojení z toho plyne praktický rozdíl. U zděných i panelových bytových domů rozhoduje technické řešení celého objektu: jednou přivedený kabel obslouží desítky bytů a zapojení jednotlivé domácnosti je pak otázkou vnitřního rozvodu. U rodinného domu naopak záleží na tom, zda síť vede přímo vaší ulicí a jak lze udělat přípojku na pozemek. Dvě adresy pár set metrů od sebe – třeba byt u Alšova náměstí a dům na okraji obvodu – proto mohou mít odlišné možnosti.</p>\n            <h2>Stavební obvody: proč se Poruba nedá posuzovat jako celek</h2>\n            <p>Členění Poruby na stavební obvody není jen adresní zvyklost. Napovídá i to, z jaké doby dům pochází a jak vypadají jeho vnitřní rozvody. Okolí Hlavní třídy, Alšova náměstí, Duhy nebo Vozovny má jiný charakter než vyšší obvody s panelovými bloky či okolí kampusu VŠB-TUO na ulici 17. listopadu. Podél Opavské se navíc bytová zástavba mísí s občanskou vybaveností a obchodními objekty.</p>\n            <p>Zkušenost souseda z jiného stavebního obvodu proto o vaší adrese mnoho neříká. Informaci, která má hodnotu, dostanete až tehdy, když se ověří konkrétní číslo domu.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Porubě</div>\n              <ul>\n                <li><strong>Typ domu</strong> – zděný dům sorely, panelový blok i rodinný dům se připojují jinak.</li>\n                <li><strong>Přípojka do budovy</strong> – už zavedená, nebo teprve k vybudování.</li>\n                <li><strong>Stav vnitřních rozvodů</strong> – u starších domů je potřeba je posoudit.</li>\n                <li><strong>Souhlas SVJ nebo vlastníka</strong> – u bytových domů běžný krok.</li>\n                <li><strong>Trasa sítě v ulici</strong> – u rodinných domů na okrajích Poruby rozhoduje nejvíc.</li>\n                <li><strong>Přesná adresa</strong> – včetně čísla vchodu, pokud jich má dům víc.</li>\n              </ul>\n            </div>\n            <h2>Byt v bytovém domě: jak zavedení probíhá</h2>\n            <p>Když je bytový dům už připojený, bývá zapojení domácnosti ta jednodušší část. Signál se k bytům vede po stoupačkách a řeší se hlavně termín technika a umístění zásuvky. Pokud přípojka v domě zatím není, přibývá krok navíc: souhlas SVJ nebo správce objektu a dohoda na trase kabelu ve společných prostorách. To není překážka, jen to posouvá termín – projednání ve výboru SVJ obvykle trvá déle než samotná montáž.</p>\n            <p>Praktické je zjistit dopředu, kdo za dům jedná: předseda SVJ, správcovská firma, nebo u nájemních bytů majitel domu. Pokud tuto informaci máte, napište ji do poznámky ve formuláři; ušetří to jedno kolo dotazů. Když řešíte spíš kvalitu signálu než samotnou přípojku, může pomoci text o tom, <a href=\"/poradna/slaba-wifi-v-panelaku/\">proč bývá wifi v paneláku slabá</a>.</p>\n            <h2>Rodinný dům na okraji Poruby</h2>\n            <p>U rodinných domů na okrajích obvodu rozhoduje především to, kudy síť vede a jak daleko je od vašeho pozemku. Řeší se trasa přípojky, způsob uložení kabelu a prostup do domu. V řadové zástavbě bývá situace přímočařejší než u samostatně stojícího domu na konci slepé ulice. Proto u rodinných domů nikdy neodpovídáme podle čtvrti – rozdíl může být i mezi dvěma domy v jedné ulici.</p>\n            <h2>Studentské bydlení a podnájmy u kampusu</h2>\n            <p>V okolí kampusu VŠB-TUO a ulice 17. listopadu je hodně bytů pronajímaných. Tam je dobré vědět dvě věci: připojení do bytu zřizuje vlastník, případně nájemce s jeho souhlasem, a délka smlouvy by měla odpovídat tomu, jak dlouho v bytě zůstanete. Pokud řešíte podnájem, uveďte to do poznámky – projdeme, která varianta v takové situaci dává smysl.</p>\n            <h2>Optika, nebo bezdrát</h2>\n            <p>V husté porubské zástavbě bývá obvyklejší připojení kabelem přivedeným do domu, na okrajích obvodu se častěji objevuje i bezdrátová varianta. Kabelové připojení má stabilnější odezvu a nezávisí na počasí ani na počtu domácností připojených k jednomu vysílači; bezdrát zase dosáhne i tam, kam kabel zatím nevede. Podrobné srovnání obou technologií najdete v článku <a href=\"/poradna/optika-vs-bezdratovy-internet/\">optika proti bezdrátovému internetu</a>.</p>\n            <h2>Přechod od současného poskytovatele</h2>\n            <p>Změna poskytovatele se v Porubě řeší stejně jako jinde a nejčastější obavu – že zůstanete pár dní bez internetu – lze ošetřit pořadím kroků. Nejdřív se ověří dostupnost na adrese, potom se domluví termín zapojení a až podle něj se podává výpověď u stávajícího poskytovatele. Hlídejte si výpovědní lhůtu i případný závazek ve smlouvě a počítejte s vrácením pronajatého modemu nebo routeru. Co se před přechodem řeší nejčastěji, shrnují <a href=\"/poradna/caste-otazky-pred-zmenou-poskytovatele/\">časté otázky před změnou poskytovatele</a>.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost ocení domácnosti, kde běží více zařízení současně: notebooky, telefony, televize, práce z domu, videohovory, streamování nebo pravidelné nahrávání větších souborů. Ve větším bytě v panelovém domě bývá ale limitem spíš wifi než samotná přípojka, takže se vyplatí probrat i umístění routeru. Kolik rychlosti má smysl řešit, rozebírá text o tom, <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jakou rychlost domácnost potřebuje</a>.</p>\n            <p>Vedle samostatného internetu lze na dostupných adresách řešit i kombinaci s televizí. Přehled variant najdete na stránce <a href=\"/tarify/\">tarify internetu</a>; konkrétní nabídku pro vaši adresu potvrdíme až po ověření dostupnosti.</p>\n            <p>Podrobně celý postup ověření popisuje <a href=\"/poradna/dostupnost-optickeho-internetu-ostrava/\">průvodce ověřením optického internetu v Ostravě</a>.</p>\n            <h2>Sousední části: Pustkovec, Třebovice a Svinov</h2>\n            <p>Na Porubu bezprostředně navazují menší lokality s jiným charakterem zástavby. <a href=\"/internet-pustkovec/\">Pustkovec</a> je klidná rodinná zástavba hned u kampusu, <a href=\"/internet-trebovice/\">Třebovice</a> jsou rezidenční část se zámeckým parkem a <a href=\"/internet-svinov/\">Svinov</a> je dopravní uzel, kde se rodinné domy střídají s nižšími bytovkami. Pokud máte adresu v některé z nich, začněte rovnou u příslušné stránky – postup ověření je stejný.</p>",
+      "tariffLead": "Ceny jsou stejné pro byt v sorele, panelák i rodinný dům. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím PODA internet v Porubě?",
+          "Pošlete přesnou adresu v Ostravě-Porubě, ideálně ulici, číslo domu a telefon. Možnosti se ověřují podle konkrétního domu."
+        ],
+        [
+          "Kolik stojí internet v Porubě?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Porubě potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Stačí napsat jen Ostrava-Poruba?",
+          "Nestačí. Pro ověření dostupnosti je důležitá přesná adresa, protože sousední domy mohou mít odlišné možnosti připojení."
+        ],
+        [
+          "Je dostupnost stejná v celé Porubě?",
+          "Ne. Dostupnost se potvrzuje podle přesné adresy a může se lišit podle konkrétního domu."
+        ],
+        [
+          "Liší se možnosti mezi stavebními obvody Poruby?",
+          "Mohou se lišit. Jednotlivé stavební obvody vznikaly v různých obdobích a mají odlišný typ zástavby i vnitřních rozvodů. Rozhodující je ale vždy konkrétní dům, ne číslo obvodu."
+        ],
+        [
+          "Co když v domě zatím přípojka není?",
+          "Pak se řeší, zda a jak ji lze do domu přivést. Součástí bývá souhlas SVJ nebo vlastníka a dohoda na trase kabelu. Výsledek vám řekneme po ověření adresy."
+        ],
+        [
+          "Potřebuji souhlas SVJ nebo majitele domu?",
+          "U zásahu do společných prostor bytového domu ano. Pokud je dům už připojený, obvykle stačí objednat zapojení bytu. V nájmu je potřeba souhlas vlastníka bytu."
+        ],
+        [
+          "Bydlím v rodinném domě na okraji Poruby, dá se to řešit?",
+          "Ano, ale odpověď dává až konkrétní adresa. U rodinných domů rozhoduje, kudy vede síť ve vaší ulici a jak lze udělat přípojku na pozemek."
+        ],
+        [
+          "Jak dlouho trvá zapojení?",
+          "Termín potvrzujeme až podle konkrétní adresy. Pokud je dům připojený, jde obvykle o objednání termínu montáže. Když je potřeba přípojku teprve vybudovat, počítejte s delší přípravou."
+        ],
+        [
+          "Musím nejdřív ukončit smlouvu u současného poskytovatele?",
+          "Nemusíte. Nejdřív se ověří dostupnost a domluví termín zapojení, výpověď se podává až podle něj. Hlídejte si výpovědní lhůtu a případný závazek."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Formulář slouží k nezávaznému ověření možností pro danou adresu."
+        ],
+        [
+          "Mohu vybrat tarif až po ověření?",
+          "Ano. Doporučujeme nejdříve ověřit adresu a až potom projít vhodnou variantu internetu nebo internetu s televizí."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ]
+      ],
+      "neighboursTitle": "Okolí Poruby.",
+      "neighboursLead": "Každá část má vlastní průvodce se zástavbou a tím, co u ní rozhoduje. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-pustkovec",
+          "name": "Pustkovec",
+          "desc": "Klidná rodinná zástavba u Poruby a kampusu VŠB."
+        },
+        {
+          "slug": "internet-trebovice",
+          "name": "Třebovice",
+          "desc": "Rezidenční část s rodinnými domy a zámeckým parkem."
+        },
+        {
+          "slug": "internet-svinov",
+          "name": "Svinov",
+          "desc": "Dopravní uzel s rodinnými domy i bytovkami u nádraží."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-svinov",
+          "name": "Svinov"
+        },
+        {
+          "slug": "internet-pustkovec",
+          "name": "Pustkovec"
+        },
+        {
+          "slug": "internet-trebovice",
+          "name": "Třebovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-ostrava-privoz",
+      "name": "Přívoz",
+      "nameLoc": "v Přívoze",
+      "faqFor": "pro Přívoz",
+      "obvod": "Moravská Ostrava a Přívoz",
+      "parent": {
+        "slug": "internet-moravska-ostrava",
+        "name": "Moravská Ostrava"
+      },
+      "placeName": "Přívoz",
+      "serviceName": "Ověření internetového připojení v Přívoze",
+      "updated": "2026-11-07",
+      "title": "Internet Přívoz Ostrava | PODA připojení podle adresy",
+      "description": "Internet v Přívoze od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – secesní činžáky u hlavního nádraží. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Přívoze od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Přívoz",
+        "position": "49.8567;18.2697"
+      },
+      "heroImg": "loc-moravska-ostrava.webp",
+      "heroAlt": "Moravská Ostrava – centrum města",
+      "ogImage": "loc-moravska-ostrava",
+      "eyebrow": "Moravská Ostrava · Přívoz",
+      "h1": "Internet v Přívoze <span>podle vašeho domu.</span>",
+      "lead": "Přívoz je historická čtvrť u hlavního nádraží s hustou zástavbou secesních činžáků. U starších domů se dostupnost liší dům od domu, proto ověřujeme přesnou adresu.",
+      "formNote": "Lokalita: Přívoz (Moravská Ostrava)",
+      "addressPlaceholder": "Např. Nádražní 100",
+      "facts": [
+        [
+          "Obvod",
+          "Moravská Ostrava a Přívoz"
+        ],
+        [
+          "Zástavba",
+          "činžovní domy z přelomu 19. a 20. století mezi centrem a hlavním nádražím"
+        ],
+        [
+          "Rozhoduje",
+          "připojení domu a stav vnitřních rozvodů"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Přívoz tvoří souvislá zástavba činžovních domů z přelomu 19. a 20. století mezi centrem a hlavním nádražím. Starší zděné domy mají různý stav a různé vnitřní rozvody, takže připojení jednoho domu neříká nic o sousedním. Dostupnost proto potvrzujeme pro konkrétní dům. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Přívoze internet dostupný?</h2>\n            <p>Pro dotazy internet Přívoz nebo PODA Přívoz je rozhodující konkrétní činžovní dům. Přívoz má hustou historickou zástavbu, kde se technické možnosti liší dům od domu – proto začínáme ověřením přesné adresy.</p>\n            <h2>Zástavba Přívozu: secesní činžáky u nádraží</h2>\n            <p>Přívoz je jednou z architektonicky nejcennějších čtvrtí Ostravy. Kolem náměstí Svatopluka Čecha a ulic mezi centrem a hlavním nádražím stojí souvislá zástavba činžovních domů z přelomu 19. a 20. století, jejíž urbanistickou podobu navrhoval Camillo Sitte. Tyto starší zděné domy mají různý stav a různé technické řešení vnitřních rozvodů, takže připojení jednoho domu neříká nic o sousedním. Právě proto se u historické zástavby ptáme na konkrétní adresu a vchod.</p>\n            <h2>Byt ve starším činžovním domě</h2>\n            <p>U činžáků v Přívoze záleží na tom, jak je vyřešené připojení domu a rozvody uvnitř. Do formuláře napište ulici, číslo domu a případně patro – u starší zástavby to pomáhá ověření zpřesnit.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost ocení domácnosti a spolubydlící s více zařízeními online, práci z domu i streamování. Nejdřív ale ověříme, co je v konkrétním domě reálné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro byt v kterémkoli činžáku v Přívoze. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Přívoze?",
+          "Pošlete přesnou adresu – ulici a číslo domu. U historické zástavby se možnosti liší dům od domu, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Kolik stojí internet v Přívoze?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Přívoze potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Dá se připojit i starší činžák?",
+          "Ano, řešíme i starší zděné domy. Konkrétní možnosti závisí na stavu domu a rozvodů, což ověříme podle adresy."
+        ],
+        [
+          "Je dostupnost v celém Přívoze stejná?",
+          "Ne. U husté historické zástavby se liší dům od domu – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím u hlavního nádraží, jak začít?",
+          "Pošlete adresu domu a ověříme, jaké připojení připadá pro daný objekt v úvahu."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Přívozu.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava",
+          "desc": "Centrum města, byty, kanceláře a různorodé adresy."
+        },
+        {
+          "slug": "internet-marianske-hory",
+          "name": "Mariánské Hory",
+          "desc": "Byty i rodinné domy v širším centru Ostravy."
+        },
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava",
+          "desc": "Rodinné i bytové domy a adresy blízko centra."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava"
+        },
+        {
+          "slug": "internet-marianske-hory",
+          "name": "Mariánské Hory"
+        },
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava"
+        }
+      ]
+    },
+    {
+      "slug": "internet-ostrava-vitkovice",
+      "name": "Vítkovice",
+      "nameLoc": "ve Vítkovicích",
+      "faqFor": "pro Vítkovice",
+      "obvod": "Vítkovice",
+      "parent": null,
+      "placeName": "Vítkovice",
+      "serviceName": "Ověření internetového připojení ve Vítkovicích",
+      "updated": "2026-11-07",
+      "title": "Internet Ostrava-Vítkovice | Ověření PODA podle adresy",
+      "description": "Internet ve Vítkovicích od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – cihlové domy železáren i rekonstruované byty. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet ve Vítkovicích od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Vítkovice",
+        "position": "49.8156;18.2588"
+      },
+      "heroImg": "loc-vitkovice.webp",
+      "heroAlt": "Vysoká pec Dolních Vítkovic v Ostravě",
+      "ogImage": "loc-vitkovice",
+      "eyebrow": "Městský obvod Vítkovice",
+      "h1": "Internet ve Vítkovicích <span>podle vašeho domu.</span>",
+      "lead": "Vítkovice mají různorodou zástavbu a technické možnosti se mohou lišit podle objektu. Ověření adresy je první krok.",
+      "formNote": "Lokalita: Vítkovice",
+      "addressPlaceholder": "Např. Hlavní třída 123",
+      "facts": [
+        [
+          "Obvod",
+          "Vítkovice"
+        ],
+        [
+          "Zástavba",
+          "režné cihlové domy železáren, rekonstrukce, novější byty u Dolní oblasti"
+        ],
+        [
+          "Rozhoduje",
+          "stav konkrétního domu a jeho rozvodů"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Vítkovice tvoří z velké části režné cihlové domy postavené pro zaměstnance železáren – menší objekty s několika byty, které mají jiné vnitřní rozvody než panelová sídliště. Vedle nich stojí rekonstruované domy a novější byty v okolí Dolní oblasti. Možnosti se proto posuzují pro konkrétní dům, ne pro celé Vítkovice. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás ve Vítkovicích internet dostupný?</h2>\n            <p>Internet ve Vítkovicích ověřujeme podle přesné adresy. Název lokality pomůže s orientací, ale výběr tarifu má smysl až po kontrole konkrétního domu. Pošlete ulici a číslo domu a ozveme se s tím, co na vaší adrese připadá v úvahu.</p>\n            <h2>Cihlová kolonie s vlastním charakterem</h2>\n            <p>Vítkovice jsou známé režnými cihlovými domy z éry Vítkovických železáren. Jde o menší bytové domy s několika byty, často v pravidelných blocích kolem ulic vedoucích k Mírovému náměstí s radnicí. Charakter čtvrti dotváří areál Dolní oblasti Vítkovice s vysokou pecí, který na obytnou zástavbu přímo navazuje, a ulice jako Ruská nebo Zengrova, které tvoří hlavní dopravní osy čtvrti.</p>\n            <p>Pro připojení je podstatné, že takový dům se chová jinak než panelák. Bytů je v něm málo, rozvody vznikaly postupně a společné stoupačky v podobě, jakou znají sídliště, tu často chybí. Řešení se proto hledá pro konkrétní objekt: zda je do něj síť přivedena a jak lze vést rozvod uvnitř. Odpověď hledáme vždy pro přesnou adresu.</p>\n            <h2>Malý obvod, velké rozdíly mezi domy</h2>\n            <p>Vítkovice patří k menším ostravským obvodům, přesto jsou rozdíly mezi adresami výrazné. Vedle původní cihlové zástavby tu najdete objekty po celkové rekonstrukci, domy s novými vnitřními rozvody i novější bytové projekty v okolí Dolní oblasti. Jinou situaci má i okolí Vítkovické nemocnice a ulice u hranice se Zábřehem. Údaj od známého z vedlejšího bloku proto o vašem domě nemusí vypovídat nic.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek ve Vítkovicích</div>\n              <ul>\n                <li><strong>Typ domu</strong> – původní cihlový dům, rekonstruovaný objekt i novostavba se připojují jinak.</li>\n                <li><strong>Přípojka do budovy</strong> – zavedená, nebo teprve k vybudování.</li>\n                <li><strong>Stav vnitřních rozvodů</strong> – u starších domů se posuzuje individuálně.</li>\n                <li><strong>Souhlas SVJ nebo vlastníka</strong> – u bytových domů standardní krok.</li>\n                <li><strong>Počet bytů v domě</strong> – u menších objektů se řeší rozvod jinak než u paneláku.</li>\n                <li><strong>Přesná adresa</strong> – včetně čísla vchodu, pokud jich má dům víc.</li>\n              </ul>\n            </div>\n            <h2>Menší cihlový dům: jak zavedení probíhá</h2>\n            <p>U starších cihlových domů se nejčastěji řeší dvě věci: kudy přivést kabel do domu a jak vést rozvod k jednotlivým bytům tak, aby zásah do společných prostor byl co nejmenší. Pokud je dům už připojený, jde obvykle jen o zapojení bytu a domluvu termínu. Když přípojka chybí, přidává se souhlas SVJ nebo vlastníka domu a dohoda na trase kabelu.</p>\n            <p>V domech s malým počtem bytů bývá jednání jednodušší než ve velkém SVJ, protože se vlastníci domluví rychleji. Pomůže, když do poznámky napíšete, kdo za dům jedná – předseda SVJ, správcovská firma, nebo majitel u nájemních bytů.</p>\n            <h2>Rekonstruované domy a novější byty</h2>\n            <p>Část vítkovických domů prošla rekonstrukcí a má nové elektroinstalace i společné prostory. Tam bývá zavedení připojení technicky snazší, protože se dá navázat na existující trasy. Naopak u objektů, které rekonstrukcí zatím neprošly, se stav rozvodů posuzuje individuálně. Ani jedno nelze určit od stolu – proto vždy začínáme ověřením adresy.</p>\n            <h2>Optika, nebo bezdrát</h2>\n            <p>V souvislé vítkovické zástavbě bývá obvyklejší připojení kabelem přivedeným do domu. Kabel má stabilnější odezvu a nezávisí na počasí ani na počtu domácností připojených k jednomu vysílači; bezdrátová varianta zase dosáhne i tam, kam kabel zatím nevede. Rozdíly mezi technologiemi rozebírá článek <a href=\"/poradna/optika-vs-bezdratovy-internet/\">optika proti bezdrátovému internetu</a>.</p>\n            <h2>Přechod od současného poskytovatele</h2>\n            <p>Když internet jen měníte, vyplatí se držet pořadí kroků: ověřit dostupnost na adrese, domluvit termín zapojení a až podle něj podat výpověď u stávajícího poskytovatele. Vyhnete se tak pauze bez připojení. Zkontrolujte si výpovědní lhůtu i případný závazek ve smlouvě a počítejte s vrácením pronajatého modemu nebo routeru. Praktické otázky shrnují <a href=\"/poradna/caste-otazky-pred-zmenou-poskytovatele/\">časté otázky před změnou poskytovatele</a>.</p>\n            <h2>Domácnost, práce i běžný provoz</h2>\n            <p>Při výběru tarifu je dobré říct, kolik zařízení doma používáte, zda řešíte home office, streamování, hraní nebo připojení více členů domácnosti současně. Ve starších domech s tlustšími zdmi bývá limitem spíš wifi než samotná přípojka, takže se vyplatí probrat i umístění routeru. Orientaci nabízí text o tom, <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jakou rychlost domácnost potřebuje</a>, přehled variant pak sekce <a href=\"/tarify/\">tarify internetu</a>.</p>\n            <h2>Jak pokračovat</h2>\n            <p>Vyplňte krátký formulář pro ověření dostupnosti. Odeslání adresy není objednávka; slouží k tomu, abyste dostali konkrétní informaci pro svůj dům.</p>",
+      "tariffLead": "Ceny jsou stejné pro cihlový dům i rekonstruovaný byt. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Musím znát aktuální tarif?",
+          "Nemusíte. Stačí popsat, jak internet používáte, a poslat adresu."
+        ],
+        [
+          "Kolik stojí internet ve Vítkovicích?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu ve Vítkovicích potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Mohu řešit i televizi?",
+          "Ano, pokud vás zajímá internet s televizí, uveďte to do poznámky k ověření."
+        ],
+        [
+          "Je dostupnost stejná v celých Vítkovicích?",
+          "Ne. Původní cihlové domy, rekonstruované objekty i novější byty mají odlišné podmínky. Potvrzuje se to podle přesné adresy."
+        ],
+        [
+          "Bydlím ve starším cihlovém domě, dá se to řešit?",
+          "Ano. Posuzuje se, zda je do domu přivedena síť a jak lze vést rozvod k bytům. Pošlete adresu a ověříme to pro konkrétní objekt."
+        ],
+        [
+          "Co když v domě zatím přípojka není?",
+          "Pak se řeší, zda a jak ji lze přivést. Součástí bývá souhlas SVJ nebo vlastníka domu a dohoda na trase kabelu ve společných prostorách."
+        ],
+        [
+          "Potřebuji souhlas SVJ nebo majitele?",
+          "U zásahu do společných prostor ano. Pokud je dům už připojený, obvykle stačí objednat zapojení bytu. V nájmu je potřeba souhlas vlastníka bytu."
+        ],
+        [
+          "Musím nejdřív ukončit smlouvu u současného poskytovatele?",
+          "Nemusíte. Nejdřív se ověří dostupnost a domluví termín zapojení, výpověď se podává až podle něj."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Vítkovic.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava",
+          "desc": "Centrum města, byty, kanceláře a různorodé adresy."
+        },
+        {
+          "slug": "internet-marianske-hory",
+          "name": "Mariánské Hory",
+          "desc": "Byty i rodinné domy v širším centru Ostravy."
+        },
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih",
+          "desc": "Přehled celého obvodu: Hrabůvka, Zábřeh, Dubina, Výškovice."
+        },
+        {
+          "slug": "internet-zabreh",
+          "name": "Zábřeh",
+          "desc": "Panelová sídliště i starší zděné činžáky u Rudné."
+        },
+        {
+          "slug": "internet-hrabuvka",
+          "name": "Hrabůvka",
+          "desc": "Panelové domy u OC Hrabůvka i cihlový Šídlovec."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava"
+        },
+        {
+          "slug": "internet-slezska-ostrava",
+          "name": "Slezská Ostrava"
+        },
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih"
+        }
+      ]
+    },
+    {
+      "slug": "internet-pustkovec",
+      "name": "Pustkovec",
+      "nameLoc": "v Pustkovci",
+      "faqFor": "pro Pustkovec",
+      "obvod": "Poruba",
+      "parent": {
+        "slug": "lokality",
+        "name": "Lokality"
+      },
+      "placeName": "Pustkovec",
+      "serviceName": "Ověření internetového připojení v Pustkovci",
+      "updated": "2026-11-07",
+      "title": "Internet Pustkovec | PODA připojení Ostrava podle adresy",
+      "description": "Internet v Pustkovci od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – klidná rodinná zástavba u Poruby a kampusu VŠB. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Pustkovci od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Pustkovec",
+        "position": "49.8390;18.1720"
+      },
+      "heroImg": "loc-poruba.webp",
+      "heroAlt": "Ostrava-Poruba – městská část Ostravy",
+      "ogImage": "loc-poruba",
+      "eyebrow": "Poruba · Pustkovec",
+      "h1": "Internet v Pustkovci <span>podle vašeho domu.</span>",
+      "lead": "Pustkovec je klidná část u Poruby s převahou rodinných domů a blízkostí kampusu VŠB. Dostupnost ověřujeme podle přesné adresy a ulice.",
+      "formNote": "Lokalita: Pustkovec",
+      "addressPlaceholder": "Např. Pustkovecká 20",
+      "facts": [
+        [
+          "Obvod",
+          "Poruba"
+        ],
+        [
+          "Zástavba",
+          "rodinné domy se zahradami u kampusu VŠB-TUO"
+        ],
+        [
+          "Rozhoduje",
+          "trasa sítě v ulici a přípojka na pozemek"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Pustkovec je malá klidná část u Poruby a kampusu VŠB-TUO s převahou rodinných domů se zahradami. U rodinného domu rozhoduje, zda a jak vede síť konkrétní ulicí, a i sousední adresy mohou mít odlišné možnosti. Ověřujeme proto podle čísla domu. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Pustkovci internet dostupný?</h2>\n            <p>Pro dotazy internet Pustkovec nebo PODA Pustkovec je rozhodující konkrétní dům a ulice. Pustkovec je menší a převážně rodinná lokalita, kde u připojení záleží na tom, kudy vede síť – proto začínáme ověřením přesné adresy.</p>\n            <h2>Zástavba Pustkovce: rodinné domy u Poruby</h2>\n            <p>Pustkovec je jednou z nejmenších ostravských částí a svým charakterem je spíš klidnou rezidenční čtvrtí. Převažuje tu rodinná zástavba – rodinné domy se zahradami podél údolí Pustkoveckého potoka – v těsném sousedství Poruby a univerzitního kampusu VŠB-TUO. U rodinných domů je pro připojení klíčové, zda a jak vede síť konkrétní ulicí, protože i sousední adresy mohou mít odlišné možnosti. Proto se ptáme na přesnou adresu, ne jen na název čtvrti.</p>\n            <h2>Rodinný dům a jeho adresa</h2>\n            <p>U rodinných domů v Pustkovci rozhoduje poloha adresy a dostupná infrastruktura v ulici. Do formuláře napište ulici a číslo domu; pokud řešíte konkrétní potřebu, přidejte krátkou poznámku.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost ocení domácnosti s prací z domu, studiem, více zařízeními a streamováním. Nejprve ale ověříme, co je na vaší adrese možné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro každý rodinný dům v Pustkovci. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Pustkovci?",
+          "Pošlete přesnou adresu – ulici a číslo domu. U rodinné zástavby ověřujeme dostupnost podle konkrétní ulice."
+        ],
+        [
+          "Kolik stojí internet v Pustkovci?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Pustkovci potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Sousedé připojení mají, budu ho mít taky?",
+          "Ne vždy to tak musí být. I sousední adresy mohou mít odlišné možnosti, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Je dostupnost v Pustkovci všude stejná?",
+          "Ne. U rodinné zástavby se liší ulici od ulice – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím blízko kampusu VŠB, dá se to řešit?",
+          "Pošlete adresu domu a ověříme dostupnost pro konkrétní objekt."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Pustkovce.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-poruba",
+          "name": "Ostrava-Poruba",
+          "desc": "Sorela, panelové domy i rodinná zástavba na okrajích."
+        },
+        {
+          "slug": "internet-trebovice",
+          "name": "Třebovice",
+          "desc": "Rezidenční část s rodinnými domy a zámeckým parkem."
+        },
+        {
+          "slug": "internet-svinov",
+          "name": "Svinov",
+          "desc": "Dopravní uzel s rodinnými domy i bytovkami u nádraží."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-poruba",
+          "name": "Poruba"
+        },
+        {
+          "slug": "internet-svinov",
+          "name": "Svinov"
+        },
+        {
+          "slug": "internet-trebovice",
+          "name": "Třebovice"
+        }
+      ]
+    },
+    {
+      "slug": "internet-slezska-ostrava",
+      "name": "Slezská Ostrava",
+      "nameLoc": "ve Slezské Ostravě",
+      "faqFor": "pro Slezskou Ostravu",
+      "obvod": "Slezská Ostrava",
+      "parent": null,
+      "placeName": "Slezská Ostrava",
+      "serviceName": "Ověření internetového připojení ve Slezské Ostravě",
+      "updated": "2026-11-07",
+      "title": "Internet Slezská Ostrava | PODA dostupnost podle adresy",
+      "description": "Internet ve Slezské Ostravě od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – rodinné domy, bytovky i Muglinov. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet ve Slezské Ostravě od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Slezská Ostrava",
+        "position": "49.8419;18.3100"
+      },
+      "heroImg": "loc-slezska.webp",
+      "heroAlt": "Slezská Ostrava",
+      "ogImage": "loc-slezska",
+      "eyebrow": "Městský obvod Slezská Ostrava",
+      "h1": "Internet ve Slezské Ostravě <span>podle vašeho domu.</span>",
+      "lead": "Rodinné domy, bytové domy i adresy blízko centra mohou mít různé možnosti. Prověříme konkrétní adresu.",
+      "formNote": "Lokalita: Slezská Ostrava",
+      "addressPlaceholder": "Např. Hlavní třída 123",
+      "facts": [
+        [
+          "Části",
+          "Muglinov, Heřmanice, Hrušov, Kunčice, Kunčičky, Koblov, Antošovice"
+        ],
+        [
+          "Zástavba",
+          "rodinné domy ve svazích, menší bytovky, rozptýlená zástavba"
+        ],
+        [
+          "Rozhoduje",
+          "kam je síť fyzicky dovedena"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Slezská Ostrava není sídliště, ale rozlehlý obvod na pravém břehu Ostravice s rodinnými domy ve svazích, menšími bytovkami a několika samostatnými částmi. Zástavba je tu rozptýlená, takže rozhoduje, kam je síť fyzicky dovedena. Dostupnost proto potvrzujeme pro konkrétní dům, ne pro čtvrť. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás ve Slezské Ostravě internet dostupný?</h2>\n            <p>Ve Slezské Ostravě začíná ověření internetu přesnou adresou. Pomůže nám ulice, číslo domu a stručná informace, zda jde o běžnou domácnost, práci z domu nebo kombinaci internetu s televizí. Podle toho zjistíme, co na dané adrese připadá v úvahu, a teprve potom má smysl vybírat tarif.</p>\n            <h2>Svahy nad Ostravicí a rozptýlená zástavba</h2>\n            <p>Slezská Ostrava se od sídlištních částí Ostravy liší už terénem. Od soutoku Ostravice a Lučiny, kde stojí Slezskoostravský hrad, se zástavba zvedá do svahů a pokračuje k Hladnovu a dál na východ. Nad okolím se tyčí halda Ema, hlavní tahy tvoří Bohumínská, Těšínská a Michálkovická, podél které se dostanete k ostravské zoo. Mezi nimi se střídají ulice rodinných domů, menší bytové domy a volné plochy.</p>\n            <p>Právě u rozptýlené zástavby platí dvojnásob, že se možnosti liší ulici od ulice. Tam, kde se domy táhnou v souvislé řadě, bývá situace přímočařejší; u ulic, kde zástavba po pár domech končí a zase začíná, je rozhodující, kudy trasa sítě skutečně vede. Svažitý terén k tomu přidává další proměnnou: záleží na vedení trasy a možnostech přípojky na pozemek.</p>\n            <h2>Obvod složený z několika částí</h2>\n            <p>Pod Slezskou Ostravu spadá i řada dalších částí – <a href=\"/internet-muglinov/\">Muglinov</a>, Heřmanice, Hrušov, Kunčice, Kunčičky, Koblov a Antošovice. Každá z nich má vlastní historii i typ zástavby, od hornických kolonií přes rodinné domy se zahradami po nižší bytové domy. Podobný charakter mají i sousední <a href=\"/internet-michalkovice/\">Michálkovice</a>. Z toho plyne, že jedna odpověď pro celý obvod neexistuje; to, co platí v Muglinově, nemusí platit v Koblově.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek ve Slezské Ostravě</div>\n              <ul>\n                <li><strong>Typ domu</strong> – rodinný dům, kolonie i nižší bytovka se připojují jinak.</li>\n                <li><strong>Trasa sítě ve vaší ulici</strong> – u rozptýlené zástavby rozhoduje nejvíc.</li>\n                <li><strong>Terén a poloha pozemku</strong> – ve svahu se řeší vedení přípojky.</li>\n                <li><strong>Přípojka do budovy</strong> – zavedená, nebo teprve k vybudování.</li>\n                <li><strong>Souhlas SVJ nebo vlastníka</strong> – u bytových domů standardní krok.</li>\n                <li><strong>Přesná adresa</strong> – obvod je rozlehlý a rozdíly mezi částmi jsou velké.</li>\n              </ul>\n            </div>\n            <h2>Rodinný dům: co se řeší na pozemku</h2>\n            <p>U rodinného domu jde především o cestu kabelu: kudy vede síť v ulici, jak daleko je od hranice pozemku a jak se udělá prostup do domu. Roli hraje i to, zda je dům samostatně stojící, nebo v řadě, a jestli se na pozemku už řešily jiné inženýrské sítě. Nic z toho se nedá odhadnout podle názvu čtvrti – proto se ptáme na číslo domu.</p>\n            <h2>Byt v bytovém domě a souhlas SVJ</h2>\n            <p>U menších bytových domů a bytovek platí jednoduché pravidlo: pokud je dům už připojený, řeší se hlavně zapojení konkrétního bytu a termín montáže. Pokud přípojka chybí, přibývá krok navíc – souhlas SVJ nebo vlastníka domu a dohoda na trase kabelu ve společných prostorách. Není to překážka, jen je dobré s tím počítat při plánování termínu. Pomůže, když do poznámky napíšete, kdo za dům jedná.</p>\n            <h2>Optika, nebo bezdrát</h2>\n            <p>V částech s hustší zástavbou bývá obvyklejší kabelové připojení přivedené do domu, v okrajových ulicích se častěji objevuje bezdrátová varianta. Kabel má stabilnější odezvu a nezávisí na počasí, bezdrát zase dosáhne i tam, kam kabel zatím nevede. Obě technologie porovnává článek <a href=\"/poradna/optika-vs-bezdratovy-internet/\">optika proti bezdrátovému internetu</a>.</p>\n            <h2>Přechod od současného poskytovatele</h2>\n            <p>Pokud už internet doma máte a jen ho měníte, doporučujeme tohle pořadí: ověřit dostupnost na adrese, domluvit termín zapojení a až podle něj podat výpověď u stávajícího poskytovatele. Vyhnete se tak zbytečné pauze bez připojení. Zkontrolujte si výpovědní lhůtu i případný závazek a počítejte s vrácením pronajatého zařízení. Další praktické otázky shrnují <a href=\"/poradna/caste-otazky-pred-zmenou-poskytovatele/\">časté otázky před změnou poskytovatele</a>.</p>\n            <h2>Co řešit před výběrem tarifu</h2>\n            <p>Nejdříve je dobré vědět, k čemu internet používáte: běžná domácnost, více zařízení, práce z domova, videohovory, streamování nebo kombinace s televizí. Podle toho se potom lépe vybírá vhodná varianta. Orientaci v rychlostech nabízí text o tom, <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jakou rychlost domácnost potřebuje</a>, přehled variant pak najdete v sekci <a href=\"/tarify/\">tarify internetu</a>.</p>\n            <h2>Nezávazný první krok</h2>\n            <p>Formulář slouží k ověření. Není to závazná objednávka a konečná nabídka se potvrzuje až podle dostupnosti na přesné adrese.</p>",
+      "tariffLead": "Ceny jsou stejné pro rodinný dům ve svahu i byt v bytovce. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Ověřujete celou Slezskou Ostravu jedním pravidlem?",
+          "Ne. Každou poptávku řešíme podle přesné adresy, protože možnosti se mohou lišit dům od domu."
+        ],
+        [
+          "Kolik stojí internet ve Slezské Ostravě?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu ve Slezské Ostravě potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Co když nevím, jaký tarif chci?",
+          "To nevadí. Začněte adresou a krátkým popisem používání internetu."
+        ],
+        [
+          "Je dostupnost stejná ve všech částech obvodu?",
+          "Ne. Muglinov, Heřmanice, Hrušov, Kunčičky, Koblov i Antošovice mají odlišnou zástavbu. Odpověď dává vždy konkrétní adresa."
+        ],
+        [
+          "Bydlím v rodinném domě ve svahu, je to problém?",
+          "Není to překážka sama o sobě. Řeší se, kudy vede síť ve vaší ulici a jak lze udělat přípojku na pozemek. To se posuzuje pro konkrétní dům."
+        ],
+        [
+          "Co když v bytovém domě zatím přípojka není?",
+          "Pak se řeší, zda a jak ji lze do domu přivést. Součástí bývá souhlas SVJ nebo vlastníka a dohoda na trase kabelu ve společných prostorách."
+        ],
+        [
+          "Musím nejdřív vypovědět stávající smlouvu?",
+          "Nemusíte. Nejdřív se ověří dostupnost a domluví termín zapojení, výpověď se podává až podle něj."
+        ],
+        [
+          "Řešíte i internet s televizí?",
+          "Ano. Pokud vás zajímá kombinace internetu a televize, napište to do poznámky ve formuláři."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Slezská Ostrava a okolí.",
+      "neighboursLead": "Každá část má vlastní průvodce se zástavbou a tím, co u ní rozhoduje. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-muglinov",
+          "name": "Muglinov",
+          "desc": "Rodinná zástavba i sídliště na pravém břehu Ostravice."
+        },
+        {
+          "slug": "internet-michalkovice",
+          "name": "Michálkovice",
+          "desc": "Hornické kolonie i rodinné domy u dolu Michal."
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava",
+          "desc": "Centrum města, byty, kanceláře a různorodé adresy."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-muglinov",
+          "name": "Muglinov"
+        },
+        {
+          "slug": "internet-michalkovice",
+          "name": "Michálkovice"
+        },
+        {
+          "slug": "internet-moravska-ostrava",
+          "name": "Moravská Ostrava"
+        }
+      ]
+    },
+    {
+      "slug": "internet-svinov",
+      "name": "Svinov",
+      "nameLoc": "ve Svinově",
+      "faqFor": "pro Svinov",
+      "obvod": "Svinov",
+      "parent": {
+        "slug": "lokality",
+        "name": "Lokality"
+      },
+      "placeName": "Svinov",
+      "serviceName": "Ověření internetového připojení ve Svinově",
+      "updated": "2026-11-07",
+      "title": "Internet Svinov | PODA připojení Ostrava podle adresy",
+      "description": "Internet ve Svinově od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – rodinné domy i bytovky u nádraží a Svinovských mostů. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet ve Svinově od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Svinov",
+        "position": "49.8055;18.2126"
+      },
+      "heroImg": "loc-poruba.webp",
+      "heroAlt": "Ostrava-Poruba – městská část Ostravy",
+      "ogImage": "loc-poruba",
+      "eyebrow": "Městský obvod Svinov",
+      "h1": "Internet ve Svinově <span>podle vašeho domu.</span>",
+      "lead": "Svinov je významný dopravní uzel s rozptýlenou zástavbou – rodinné domy, bytovky i okolí nádraží a Svinovských mostů. Dostupnost ověřujeme podle přesné adresy.",
+      "formNote": "Lokalita: Svinov",
+      "addressPlaceholder": "Např. Bílovecká 50",
+      "facts": [
+        [
+          "Obvod",
+          "Svinov"
+        ],
+        [
+          "Zástavba",
+          "rodinné domy, nižší bytovky a zděná zástavba kolem nádraží"
+        ],
+        [
+          "Rozhoduje",
+          "část Svinova oddělená tratí či silnicí a trasa sítě v ulici"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Svinov je dopravní uzel – železniční trať a hlavní silniční tahy dělí zástavbu na části, které spolu technicky nesouvisí. Rodinné domy i nižší bytovky se proto ověřují podle přesné adresy, ne podle čtvrti. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás ve Svinově internet dostupný?</h2>\n            <p>Pro dotazy internet Svinov nebo PODA Svinov je nejdůležitější konkrétní dům. Svinov má různorodou zástavbu roztaženou kolem nádraží a hlavních tahů, takže možnosti se liší podle ulice – proto ověřujeme přesnou adresu.</p>\n            <h2>Zástavba Svinova: nádraží, rodinné domy i bytovky</h2>\n            <p>Svinov znají mnozí hlavně jako přestupní uzel – vlakové nádraží Ostrava-Svinov a tramvajové Svinovské mosty. Kolem této dopravní páteře se ale rozkládá běžná obytná čtvrť: převažují rodinné domy a nižší bytové domy, doplněné o starší zděnou zástavbu blíž k centru Svinova. Zástavba je tím pádem rozptýlená a technické podmínky se liší ulici od ulice. U rodinných domů rozhoduje, kudy vede síť, u bytovek připojení objektu – proto se ptáme na konkrétní adresu.</p>\n            <h2>Rodinný dům nebo bytovka</h2>\n            <p>U rodinných domů ve Svinově je klíčová poloha adresy a dostupná infrastruktura v ulici; u bytových domů připojení celého objektu. Do formuláře napište ulici a číslo domu a krátce, o jaký objekt jde.</p>\n            <h2>Co u vás ve Svinově rozhoduje</h2>\n            <p>U rodinného domu jde především o to, kudy vede síť ulicí a jak se dostane na pozemek. Řeší se trasa přípojky, místo vstupu do domu a kam přijde koncové zařízení. Protože je zástavba ve Svinově rozptýlená a jednotlivé části od sebe oddělují dopravní stavby, liší se možnosti mezi ulicemi víc než v souvisle zastavěné čtvrti.</p>\n            <p>U nižších bytovek se řeší připojení celého objektu a případný souhlas vlastníka. Bytové domy tu bývají menší než sídlištní paneláky, takže se rozvod často řeší jednodušeji. Kolik rychlosti dává v domácnosti smysl řešit, shrnuje text o tom, <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jakou rychlost domácnost potřebuje</a>.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek ve Svinově</div>\n              <ul>\n                <li><strong>Rodinný dům, nebo bytovka</strong> – rozdílný postup připojení.</li>\n                <li><strong>Trasa sítě ve vaší ulici</strong> – u rozptýlené zástavby rozhoduje nejvíc.</li>\n                <li><strong>Poloha vůči dopravním stavbám</strong> – trať a silnice dělí zástavbu na části.</li>\n                <li><strong>Vzdálenost od sítě</strong> – ovlivňuje, co je na pozemku reálné.</li>\n                <li><strong>Souhlas vlastníka</strong> – u domů s více byty standardní krok.</li>\n              </ul>\n            </div>\n            <h2>Dopravní uzel s rozdělenou zástavbou</h2>\n            <p>Svinov není jedna souvislá čtvrť. Železnice a hlavní silniční tahy ho rozdělují na části, mezi kterými je to pěšky blízko, ale sítě je obsluhují nezávisle. Praktický důsledek je, že zkušenost známého z druhé strany trati o vaší adrese nic nevypovídá. Pokud zvažujete, jestli počkat na optiku, nebo řešit připojení jinak, porovnává možnosti text o tom, jak si stojí <a href=\"/poradna/optika-vs-bezdratovy-internet/\">optika proti bezdrátovému připojení</a>.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost ocení domácnosti s více zařízeními online, prací z domu i streamováním. Nejprve ale ověříme, co je na vaší adrese reálné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro rodinný dům i bytovku. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet ve Svinově?",
+          "Pošlete přesnou adresu – ulici a číslo domu. Svinov má rozptýlenou zástavbu, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Kolik stojí internet ve Svinově?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu ve Svinově potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Řeším rodinný dům, jak na to?",
+          "U rodinných domů je důležitá poloha adresy a infrastruktura v ulici. Pošlete adresu a ověříme, co připadá v úvahu."
+        ],
+        [
+          "Je dostupnost ve Svinově všude stejná?",
+          "Ne. Rozptýlená zástavba znamená různé podmínky ulici od ulice – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím blízko Svinovských mostů, dá se to?",
+          "Pošlete adresu domu a ověříme dostupnost pro konkrétní objekt."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Svinova.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-poruba",
+          "name": "Ostrava-Poruba",
+          "desc": "Sorela, panelové domy i rodinná zástavba na okrajích."
+        },
+        {
+          "slug": "internet-trebovice",
+          "name": "Třebovice",
+          "desc": "Rezidenční část s rodinnými domy a zámeckým parkem."
+        },
+        {
+          "slug": "internet-pustkovec",
+          "name": "Pustkovec",
+          "desc": "Klidná rodinná zástavba u Poruby a kampusu VŠB."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-poruba",
+          "name": "Poruba"
+        },
+        {
+          "slug": "internet-trebovice",
+          "name": "Třebovice"
+        },
+        {
+          "slug": "internet-pustkovec",
+          "name": "Pustkovec"
+        }
+      ]
+    },
+    {
+      "slug": "internet-trebovice",
+      "name": "Třebovice",
+      "nameLoc": "v Třebovicích",
+      "faqFor": "pro Třebovice",
+      "obvod": "Třebovice",
+      "parent": {
+        "slug": "lokality",
+        "name": "Lokality"
+      },
+      "placeName": "Třebovice",
+      "serviceName": "Ověření internetového připojení v Třebovicích",
+      "updated": "2026-11-07",
+      "title": "Internet Třebovice | PODA připojení Ostrava podle adresy",
+      "description": "Internet v Třebovicích od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – klidná rodinná zástavba u zámeckého parku. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Třebovicích od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Třebovice",
+        "position": "49.8211;18.1957"
+      },
+      "heroImg": "loc-poruba.webp",
+      "heroAlt": "Ostrava-Poruba – městská část Ostravy",
+      "ogImage": "loc-poruba",
+      "eyebrow": "Městský obvod Třebovice",
+      "h1": "Internet v Třebovicích <span>podle vašeho domu.</span>",
+      "lead": "Třebovice jsou klidná rezidenční část s rodinnými domy a zámeckým parkem, mezi Porubou a Svinovem. Dostupnost ověřujeme podle přesné adresy.",
+      "formNote": "Lokalita: Třebovice",
+      "addressPlaceholder": "Např. Třebovická 40",
+      "facts": [
+        [
+          "Obvod",
+          "Třebovice"
+        ],
+        [
+          "Zástavba",
+          "rodinné domy se zahradami kolem zámeckého parku"
+        ],
+        [
+          "Rozhoduje",
+          "trasa sítě v ulici a přípojka na pozemek"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Třebovice jsou převážně rodinná zástavba. U rodinného domu rozhoduje trasa sítě ve vaší ulici a přípojka na pozemek – dvě adresy v téže ulici proto mohou mít odlišné možnosti. Ověřujeme podle čísla domu. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Třebovicích internet dostupný?</h2>\n            <p>Pro dotazy internet Třebovice nebo PODA Třebovice je rozhodující konkrétní dům. Třebovice mají převážně rodinnou zástavbu, kde u připojení záleží na ulici a poloze adresy – proto začínáme ověřením.</p>\n            <h2>Zástavba Třebovic: rodinné domy a zámecký park</h2>\n            <p>Třebovice patří ke klidnějším částem Ostravy. Kolem Třebovického zámku a jeho parku se rozkládá převážně rodinná zástavba – rodinné domy se zahradami a nižší objekty, s vesnickým jádrem původní obce a novější výstavbou na okrajích směrem k Porubě a Svinovu. U rodinných domů je pro připojení klíčové, zda a jak vede síť konkrétní ulicí, protože možnosti se mohou lišit i mezi blízkými adresami. Proto ověřujeme přesnou adresu.</p>\n            <h2>Rodinný dům a jeho ulice</h2>\n            <p>U rodinných domů v Třebovicích rozhoduje poloha adresy a dostupná infrastruktura v dané ulici. Do formuláře napište ulici a číslo domu a případně krátkou poznámku k tomu, co řešíte.</p>\n            <h2>Co u vás v Třebovicích rozhoduje</h2>\n            <p>V rodinné zástavbě se všechno odvíjí od ulice. Rozhoduje, kudy síť vede, na které straně ulice, a jak daleko od vašeho pozemku končí. Od toho se odvíjí trasa přípojky, místo vstupu kabelu do domu i to, kam přijde koncové zařízení. Tyhle věci se potvrzují prohlídkou konkrétní adresy, ne pohledem na mapu čtvrti.</p>\n            <p>Právě proto tu platí, že sousedovo připojení není důkaz o tom vašem. Síť může být vedená jen po jedné straně ulice nebo končit několik domů před vámi. Jak ověření probíhá a co se při něm zjišťuje, popisuje článek o tom, <a href=\"/poradna/dostupnost-optickeho-internetu-ostrava/\">jak se ověřuje dostupnost optiky</a>.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Třebovicích</div>\n              <ul>\n                <li><strong>Trasa sítě ve vaší ulici</strong> – u rodinných domů to úplně nejdůležitější.</li>\n                <li><strong>Strana ulice</strong> – síť nemusí vést po obou.</li>\n                <li><strong>Vzdálenost od koncového bodu sítě</strong> – rozhoduje o možnostech na pozemku.</li>\n                <li><strong>Vstup kabelu do domu</strong> – řeší se na místě podle dispozice.</li>\n                <li><strong>Číslo domu</strong> – bez něj nelze dát konkrétní odpověď.</li>\n              </ul>\n            </div>\n            <h2>Klidná čtvrť, ale technicky nejednotná</h2>\n            <p>Třebovice působí jako souvislá rodinná zástavba, technicky ale jednotné nejsou. Ulice vznikaly postupně a síť je obsluhuje podle toho, jak se budovala, ne podle hranic čtvrti. Rozdíl mezi dvěma adresami vzdálenými pár set metrů proto může být zásadní. Pokud v domě řešíte spíš pokrytí signálem než samotné připojení, pomůže text o tom, <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jakou rychlost domácnost potřebuje</a>.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Vyšší rychlost se hodí domácnostem s prací z domu, více zařízeními a streamováním. Nejprve ale ověříme, co je na vaší adrese reálné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro každý rodinný dům v Třebovicích. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Třebovicích?",
+          "Pošlete přesnou adresu – ulici a číslo domu. U rodinné zástavby ověřujeme dostupnost podle konkrétní ulice."
+        ],
+        [
+          "Kolik stojí internet v Třebovicích?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Třebovicích potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Liší se možnosti mezi sousedními domy?",
+          "Ano, mohou se lišit. U rodinných domů záleží na tom, kudy vede síť, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Je dostupnost v Třebovicích všude stejná?",
+          "Ne. U rodinné zástavby se liší ulici od ulice – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím u zámeckého parku, dá se to řešit?",
+          "Pošlete adresu domu a ověříme dostupnost pro konkrétní objekt."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Třebovic.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-poruba",
+          "name": "Ostrava-Poruba",
+          "desc": "Sorela, panelové domy i rodinná zástavba na okrajích."
+        },
+        {
+          "slug": "internet-svinov",
+          "name": "Svinov",
+          "desc": "Dopravní uzel s rodinnými domy i bytovkami u nádraží."
+        },
+        {
+          "slug": "internet-pustkovec",
+          "name": "Pustkovec",
+          "desc": "Klidná rodinná zástavba u Poruby a kampusu VŠB."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-poruba",
+          "name": "Poruba"
+        },
+        {
+          "slug": "internet-svinov",
+          "name": "Svinov"
+        },
+        {
+          "slug": "internet-pustkovec",
+          "name": "Pustkovec"
+        }
+      ]
+    },
+    {
+      "slug": "internet-vyskovice",
+      "name": "Výškovice",
+      "nameLoc": "ve Výškovicích",
+      "faqFor": "pro Výškovice",
+      "obvod": "Ostrava-Jih",
+      "parent": {
+        "slug": "internet-ostrava-jih",
+        "name": "Ostrava-Jih"
+      },
+      "placeName": "Výškovice",
+      "serviceName": "Ověření internetového připojení ve Výškovicích",
+      "updated": "2026-11-07",
+      "title": "Internet Výškovice | PODA připojení Ostrava-Jih podle adresy",
+      "description": "Internet ve Výškovicích od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – paneláky i původní rodinné domy u Bělského lesa. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet ve Výškovicích od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Výškovice",
+        "position": "49.7670;18.2250"
+      },
+      "heroImg": "loc-jih.webp",
+      "heroAlt": "Ostrava-Jih: radnice obvodu a panelová zástavba",
+      "ogImage": "loc-jih",
+      "eyebrow": "Ostrava-Jih · Výškovice",
+      "h1": "Internet ve Výškovicích <span>podle vašeho domu.</span>",
+      "lead": "Výškovice spojují panelové domy s původní rodinnou zástavbou u Bělského lesa. Právě tady se možnosti liší nejvíc, proto ověřujeme přesnou adresu.",
+      "formNote": "Lokalita: Výškovice (Ostrava-Jih)",
+      "addressPlaceholder": "Např. Výškovická 100",
+      "facts": [
+        [
+          "Obvod",
+          "Ostrava-Jih"
+        ],
+        [
+          "Zástavba",
+          "panelové sídliště a původní rodinná zástavba u Bělského lesa"
+        ],
+        [
+          "Rozhoduje",
+          "u bytu připojení domu, u rodinného domu trasa sítě v ulici"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Výškovice spojují panelové sídliště s původní obecní zástavbou rodinných domů. U bytu se řeší připojení celého domu, u rodinného domu trasa sítě v ulici a přípojka na pozemek. Odpověď proto dává jen konkrétní adresa. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás ve Výškovicích internet dostupný?</h2>\n            <p>Pro dotazy internet Výškovice nebo PODA Výškovice je nejdůležitější typ domu. Výškovice mají panelovou i rodinnou část a technické možnosti se mezi nimi liší. Nejdřív ověříme adresu, pak řešíme rychlost.</p>\n            <h2>Zástavba Výškovic: paneláky i původní obec</h2>\n            <p>Výškovice byly původně samostatná obec a tento dvojí charakter si zachovaly. Na jedné straně je tu panelové sídliště navazující na zbytek Jihu, na druhé straně původní rodinná a nižší zástavba blíž k Bělskému lesu. Pro připojení je to podstatný rozdíl: u bytového domu rozhoduje připojení celého objektu, u rodinného domu záleží na tom, zda a jak vede síť konkrétní ulicí. Proto se u vás ptáme na přesnou adresu.</p>\n            <h2>Rodinný dům nebo byt v paneláku</h2>\n            <p>U rodinných domů ve Výškovicích je klíčová poloha adresy a dostupná infrastruktura v ulici; u panelových domů zase připojení celého objektu. Napište do formuláře ulici a číslo domu a krátce, o jaký objekt jde.</p>\n            <h2>Co u vás ve Výškovicích rozhoduje</h2>\n            <p>U rodinného domu je klíčové, kudy vede síť vaší ulicí a jak daleko je od domu. Řeší se trasa přípojky na pozemek, místo, kudy kabel vstoupí do domu, a kam přijde koncové zařízení. Tyhle věci se potvrzují na místě, ne od stolu – proto se ptáme na ulici a číslo domu a ne jen na čtvrť.</p>\n            <p>U bytu v panelovém domě se naopak neřeší pozemek, ale budova jako celek: jestli je přípojka zavedená a jak je signál rozvedený k bytům. Pokud dům připojený není, přidává se souhlas SVJ. Jak celé ověření probíhá krok za krokem, popisuje článek o tom, <a href=\"/poradna/dostupnost-optickeho-internetu-ostrava/\">jak se ověřuje dostupnost optiky</a>.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek ve Výškovicích</div>\n              <ul>\n                <li><strong>Rodinný dům, nebo byt</strong> – zcela odlišný postup připojení.</li>\n                <li><strong>Trasa sítě ve vaší ulici</strong> – u rodinných domů rozhoduje nejvíc.</li>\n                <li><strong>Vzdálenost od sítě</strong> – ovlivňuje, co je na pozemku reálné.</li>\n                <li><strong>Připojení celé budovy</strong> – u bytových domů to podstatné.</li>\n                <li><strong>Souhlas SVJ</strong> – potřebný tam, kde přípojka teprve vznikne.</li>\n              </ul>\n            </div>\n            <h2>Sídliště a původní obec vedle sebe</h2>\n            <p>Výškovice mají dvě tváře, které spolu technicky nesouvisí. Sídlištní část se připojovala hromadně po objektech, původní obecní zástavba individuálně po ulicích. Adresa vzdálená pár minut chůze tak může mít úplně jiné možnosti než ta vaše, a to oběma směry. Pokud řešíte rodinný dům a zvažujete, jestli má smysl čekat na optiku, nebo sáhnout po bezdrátovém řešení, porovnává obojí text o tom, jak si stojí <a href=\"/poradna/optika-vs-bezdratovy-internet/\">optika proti bezdrátovému připojení</a>.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Rychlejší připojení ocení domácnosti s více zařízeními a lidmi online: práce z domu, škola, streamování, zálohování. Nejprve ale ověříme, co je na adrese skutečně možné.</p>",
+      "tariffLead": "Ceny jsou stejné pro byt v paneláku i rodinný dům. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet ve Výškovicích?",
+          "Pošlete přesnou adresu – ulici a číslo domu. Možnosti se liší mezi panelovou a rodinnou zástavbou, proto ověřujeme každou adresu zvlášť."
+        ],
+        [
+          "Kolik stojí internet ve Výškovicích?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu ve Výškovicích potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Je dostupnost ve Výškovicích všude stejná?",
+          "Ne. Panelová a rodinná část mají odlišné podmínky – potvrzuje se podle přesné adresy."
+        ],
+        [
+          "Bydlím u Bělského lesa v rodinném domě, dá se to?",
+          "Pošlete adresu a ověříme dostupnost pro konkrétní dům a ulici."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Výškovic.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih",
+          "desc": "Přehled celého obvodu: Hrabůvka, Zábřeh, Dubina, Výškovice."
+        },
+        {
+          "slug": "internet-zabreh",
+          "name": "Zábřeh",
+          "desc": "Panelová sídliště i starší zděné činžáky u Rudné."
+        },
+        {
+          "slug": "internet-belsky-les",
+          "name": "Bělský Les",
+          "desc": "Panelové sídliště zasazené do zeleně."
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina",
+          "desc": "Nejmladší panelové sídliště obvodu s vyššími domy."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih"
+        },
+        {
+          "slug": "internet-belsky-les",
+          "name": "Bělský Les"
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina"
+        }
+      ]
+    },
+    {
+      "slug": "internet-zabreh",
+      "name": "Zábřeh",
+      "nameLoc": "v Zábřehu",
+      "faqFor": "pro Zábřeh",
+      "obvod": "Ostrava-Jih",
+      "parent": {
+        "slug": "internet-ostrava-jih",
+        "name": "Ostrava-Jih"
+      },
+      "placeName": "Zábřeh",
+      "serviceName": "Ověření internetového připojení v Zábřehu",
+      "updated": "2026-11-07",
+      "title": "Internet Zábřeh Ostrava | PODA dostupnost podle adresy",
+      "description": "Internet v Zábřehu od 300 Kč měsíčně. Ověříme PODA připojení podle přesné adresy – panelové domy i starší činžáky u Rudné. Odpověď do 30 minut.",
+      "ogDescription": "PODA internet v Zábřehu od 300 Kč měsíčně. Ověření podle přesné adresy, odpověď do 30 minut.",
+      "geo": {
+        "placename": "Ostrava-Zábřeh",
+        "position": "49.7920;18.2390"
+      },
+      "heroImg": "loc-jih.webp",
+      "heroAlt": "Ostrava-Jih: radnice obvodu a panelová zástavba",
+      "ogImage": "loc-jih",
+      "eyebrow": "Ostrava-Jih · Zábřeh",
+      "h1": "Internet v Zábřehu <span>podle vašeho domu.</span>",
+      "lead": "Zábřeh patří k největším částem Jihu – od panelových domů po starší zděné činžáky u Rudné. Dostupnost proto ověřujeme podle přesné adresy.",
+      "formNote": "Lokalita: Zábřeh (Ostrava-Jih)",
+      "addressPlaceholder": "Např. Čujkovova 12",
+      "facts": [
+        [
+          "Obvod",
+          "Ostrava-Jih"
+        ],
+        [
+          "Zástavba",
+          "panelová sídliště kolem Výškovické a Čujkovovy, zděné činžáky u Rudné"
+        ],
+        [
+          "Rozhoduje",
+          "u paneláku připojení domu, u činžáku trasa sítě v ulici"
+        ],
+        [
+          "Cena",
+          "od <b>300 Kč</b> měsíčně"
+        ],
+        [
+          "Odpověď",
+          "do 30 minut v pracovní dny"
+        ]
+      ],
+      "answer": "Zábřeh je jednou z největších částí Ostravy-Jihu a možnosti se v něm liší ulici od ulice. Panelová sídliště se připojují jako celý objekt, starší zděné činžáky individuálně. Dostupnost proto potvrzujeme pro konkrétní dům, ne pro čtvrť. Ceny začínají na 300 Kč měsíčně.",
+      "body": "            <h2>Je u vás v Zábřehu internet dostupný?</h2>\n            <p>Pro dotazy internet Zábřeh nebo PODA Zábřeh je nejdůležitější konkrétní dům. Zábřeh je rozlehlý a technické možnosti se liší podle ulice, proto začínáme ověřením přesné adresy a až potom má smysl řešit tarif.</p>\n            <h2>Zástavba Zábřehu: panelová sídliště i zděné činžáky</h2>\n            <p>Zábřeh není jednolité sídliště. Kolem ulic Výškovická a Čujkovova převažují panelové domy z různých etap výstavby, u Rudné a směrem k centru najdete i starší zděné činžovní domy a nižší bytovky. Pro připojení to znamená různé technické podmínky: u panelového domu obvykle rozhoduje připojení celého objektu a zapojení bytu je pak rychlé, u starší zděné zástavby záleží na tom, jak je vedená síť v konkrétní ulici. Právě proto se ptáme na adresu, a ne jen na název čtvrti.</p>\n            <h2>Byt v paneláku nebo starší činžák</h2>\n            <p>V panelových domech Zábřehu je klíčové, zda je dům připojený – pak jde zapojení domácnosti obvykle snadno. U starších činžáků a nižších bytovek je důležitá poloha adresy a dostupná infrastruktura. Napište proto do formuláře ulici a číslo domu.</p>\n            <h2>Co u vás v Zábřehu rozhoduje</h2>\n            <p>U bytu v paneláku je podstatné, jestli je dům jako celek připojený. Signál se k jednotlivým bytům vede po stoupačkách a od toho se odvíjí, co se dá zapojit a jak rychle. V domě, kde přípojka zatím není, přibývá krok navíc – souhlas SVJ nebo správce a dohoda na trase kabelu. To není překážka, jen to posouvá termín.</p>\n            <p>Starší zděné činžáky v Zábřehu mají jinou historii. Bývají menší, rozvody v nich vznikaly postupně a společná stoupačka v podobě, jakou znají paneláky, tu často chybí. Řešení se proto hledá pro konkrétní dům a vstupuje do něj souhlas vlastníka. Pokud vybíráte mezi technologiemi, pomůže srovnání <a href=\"/poradna/optika-vs-bezdratovy-internet/\">optika proti bezdrátovému připojení</a>.</p>\n            <div class=\"checklist\">\n              <div class=\"label\">Co ovlivňuje výsledek v Zábřehu</div>\n              <ul>\n                <li><strong>Panelový dům, nebo zděný činžák</strong> – každý se připojuje jinak.</li>\n                <li><strong>Přípojka do budovy</strong> – zavedená, nebo teprve k vybudování.</li>\n                <li><strong>Stav vnitřních rozvodů</strong> – u starších domů bývá potřeba je posoudit.</li>\n                <li><strong>Souhlas SVJ nebo vlastníka</strong> – u bytových domů standardní krok.</li>\n                <li><strong>Přesná adresa</strong> – Zábřeh je velký a možnosti se liší i mezi bloky.</li>\n              </ul>\n            </div>\n            <h2>Zábřeh není jedna technická zóna</h2>\n            <p>Rozloha Zábřehu je jeho hlavní specifikum. Sídlištní bloky, starší zástavba i okraje čtvrti vznikaly v různých obdobích a připojovaly se nezávisle na sobě, takže rozdíly mezi adresami jsou tu větší než v menších částech Ostravy. Z toho plyne praktický důsledek: informace od známého z jiné části Zábřehu o vaší adrese nevypovídá. Kolik rychlosti má vlastně smysl řešit, shrnuje text o tom, <a href=\"/poradna/jaka-rychlost-internetu-pro-domacnost/\">jakou rychlost domácnost potřebuje</a>.</p>\n            <h2>Kdy dává rychlejší tarif smysl</h2>\n            <p>Rychlejší připojení se hodí tam, kde běží víc zařízení současně: home office, videohovory, streamování ve více pokojích, škola nebo hraní. Nejprve ale ověříme, co je na adrese reálné zapojit.</p>",
+      "tariffLead": "Ceny jsou stejné pro panelák i starší činžák. Liší se jen to, co jde u konkrétní adresy zapojit.",
+      "faq": [
+        [
+          "Jak ověřím internet v Zábřehu?",
+          "Pošlete přesnou adresu v Zábřehu – ulici, číslo domu a telefon. Možnosti se potvrzují podle konkrétního domu, panelové domy i starší činžáky mohou mít odlišné řešení."
+        ],
+        [
+          "Kolik stojí internet v Zábřehu?",
+          "Měsíčně 300 Kč za 1 Giga + TV Basic, 440 Kč za 1 Giga + TV Mých 10 a 570 Kč za samostatný 2 Giga internet. Ceny jsou stejné v celé Ostravě, u vašeho domu v Zábřehu potvrdíme, který tarif jde zapojit."
+        ],
+        [
+          "Je dostupnost stejná v celém Zábřehu?",
+          "Ne. Zábřeh je velký a možnosti se liší podle ulice i typu domu – potvrzují se podle přesné adresy."
+        ],
+        [
+          "Bydlím ve starším činžáku, dá se to řešit?",
+          "Ano. Pošlete adresu a ověříme, jaké připojení připadá pro daný dům v úvahu."
+        ],
+        [
+          "Jak rychle se ozvete?",
+          "V pracovní dny do 30 minut od odeslání adresy. Večer a o víkendu se ozveme další pracovní den ráno."
+        ],
+        [
+          "Je formulář závazná objednávka?",
+          "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu."
+        ]
+      ],
+      "neighboursTitle": "Okolí Zábřehu.",
+      "neighboursLead": "Bydlíte o kus dál? Každá lokalita má vlastní průvodce. Dostupnost vždy ověřujeme podle přesného domu.",
+      "neighbours": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih",
+          "desc": "Přehled celého obvodu: Hrabůvka, Zábřeh, Dubina, Výškovice."
+        },
+        {
+          "slug": "internet-hrabuvka",
+          "name": "Hrabůvka",
+          "desc": "Panelové domy u OC Hrabůvka i cihlový Šídlovec."
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina",
+          "desc": "Nejmladší panelové sídliště obvodu s vyššími domy."
+        },
+        {
+          "slug": "internet-vyskovice",
+          "name": "Výškovice",
+          "desc": "Paneláky i původní rodinná zástavba u Bělského lesa."
+        }
+      ],
+      "footerLinks": [
+        {
+          "slug": "internet-ostrava-jih",
+          "name": "Ostrava-Jih"
+        },
+        {
+          "slug": "internet-hrabuvka",
+          "name": "Hrabůvka"
+        },
+        {
+          "slug": "internet-ostrava-dubina",
+          "name": "Dubina"
+        }
+      ]
     }
   ]
 }

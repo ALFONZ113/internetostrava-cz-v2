@@ -1,5 +1,14 @@
 # SEO a GEO plán pro InternetOstrava.cz
 
+## Implementovano 2026-11-07 (4) - Lokalita v3 na vsech 18 lokalitach
+
+- Sablona Lokalita v3 rozsirena na zbylych 16 lokalitnich stranek (schvaleno majitelem). Generuje se vse z `data/lokality.json` pres `scripts/build-lokality.mjs`.
+- Obsah o zastavbe prevzat 1:1 ze stavajicich stranek. Odstraneno jen „Co poslat k overeni" (nahrazuje blok kroku 01-03) a stare FAQ (presunuto do noveho FAQ). Zadna otazka ani interni odkaz se neztratil (porovnano skriptem proti puvodnim strankam).
+- Nove na kazde strance: karta „v kostce", rychla odpoved (6 stranek ji dosud nemelo: Belsky Les, Moravska Ostrava, Dubina, Ostrava-Jih, Privoz, Pustkovec), FAQ „Kolik stoji internet v X?" a „Jak rychle se ozvete?", ceny tarifu, modal s poznamkou `Lokalita: X`, schema @graph. Description doplneny o „od 300 Kc" a „Odpoved do 30 minut"; title beze zmeny.
+- Moravska Ostrava a Ostrava-Jih: FAQ ze 2 na 5 otazek.
+- Kontroly na vsech 18 strankach: hero formular posila spravnou poznamku, CLS 0, zadny prvek za okrajem (390 i 1440 px), 0 chyb v konzoli; check + seo:audit bez chyb.
+- Dalsi krok (obsah): 6 stranek ma unikatni text jen kolem 170-185 slov (Belsky Les, Moravska Ostrava, Dubina, Ostrava-Jih, Privoz, Pustkovec) - prohloubit o vlastni sekce o zastavbe.
+
 ## Implementovano 2026-11-07 (3) - Lokalita v3 (prototyp: Hrabuvka, Marianske Hory)
 
 - Nova sablona lokalitnich stranek v designu v3, zatim jen na `/internet-hrabuvka/` (cast) a `/internet-marianske-hory/` (obvod). Na zbylych 16 strankach az po schvaleni majitelem.
