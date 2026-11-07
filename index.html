@@ -16,13 +16,19 @@
   <meta name="geo.placename" content="Ostrava">
   <meta name="geo.position" content="49.8209;18.2625">
   <meta name="ICBM" content="49.8209, 18.2625">
-  <link rel="preload" as="image" href="/assets/hero-clouds-poster.webp?v=r23">
-  <link rel="stylesheet" href="/assets/redesign.css?v=r23">
+  <link rel="preload" as="image" href="/assets/radnice-optika-night.webp" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin-ext.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin.woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/redesign.css?v=r27">
   <meta property="og:title" content="Internet Ostrava – optické připojení až 2 Gb/s">
   <meta property="og:description" content="Rychlý internet v Ostravě a okolí. Ověřte dostupnost optického připojení na vaší adrese.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://internetostrava.cz/">
-  <meta property="og:image" content="https://internetostrava.cz/assets/hero-vitkovice-night.webp">
+  <meta property="og:image" content="https://internetostrava.cz/assets/og/hero-vitkovice-night.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -35,8 +41,19 @@
         "url": "https://internetostrava.cz/",
         "description": "Nezávislý poradenský web pro ověření dostupnosti internetového připojení v Ostravě a okolí.",
         "telephone": "+420777425230",
+        "email": "info@internetostrava.cz",
         "address": { "@type": "PostalAddress", "addressLocality": "Ostrava", "addressRegion": "Moravskoslezský kraj", "addressCountry": "CZ" },
-        "areaServed": { "@type": "City", "name": "Ostrava" }
+        "areaServed": { "@type": "City", "name": "Ostrava" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+420777425230",
+          "email": "info@internetostrava.cz",
+          "contactType": "customer service",
+          "availableLanguage": ["cs"],
+          "areaServed": "CZ",
+          "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] }
+        },
+        "founder": { "@type": "Person", "name": "Milan Terč", "jobTitle": "Obchodní zástupce pro připojení v Ostravě" }
       },
       {
         "@type": "WebSite",
@@ -82,8 +99,10 @@
     ]
   }
   </script>
+  <meta name="gtm-id" content="">
+  <script src="/assets/analytics.js?v=r27" defer></script>
 </head>
-<body class="home-redesign">
+<body class="home-redesign home-v3">
   <header class="site-header">
     <div class="wrap nav">
       <a class="logo logo-combo" href="/" aria-label="Internet Ostrava domů">
@@ -105,208 +124,256 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-media">
-        <video class="hero-video" data-hero-video data-video-src="/assets/hero-clouds.mp4?v=r23" poster="/assets/hero-clouds-poster.webp?v=r23" muted loop playsinline preload="none" aria-hidden="true" width="1264" height="720"></video>
-      </div>
-      <div class="hero-scrim" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <span class="eyebrow">Připojení pro Ostravu</span>
-        <h1>Internet, který drží <span class="accent">rytmus Ostravy.</span></h1>
-        <p class="lead">Pošlete přesnou adresu. Ověříme, co opravdu můžete zapojit – optiku až 2 Gb/s, s televizí i bez ní. Ozve se vám člověk, ne automat, do 30 minut.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost →</a>
-          <form class="hero-callback" action="/api/leads" method="post" data-lead-form>
-            <input type="hidden" name="lead_type" value="callback">
-            <input type="hidden" name="poznamka" value="Zpětné zavolání z hero sekce">
-            <label class="sr-only" for="hero-phone">Telefon pro zpětné zavolání</label>
-            <input id="hero-phone" name="telefon" type="tel" autocomplete="tel" placeholder="Váš telefon" required>
-            <button class="btn btn-ghost" type="submit">Zavolejte mi</button>
-          </form>
-        </div>
-        <p class="hero-altlink">Nevíte, který tarif vybrat? <a href="/tarify/">Prohlédněte si tarify a ceny →</a></p>
-        <div class="hero-meta">
-          <b>Srdce města</b><span aria-hidden="true"></span>Ostrava<span aria-hidden="true"></span>49°50′N · 18°17′E
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS -->
-    <section class="stats" aria-label="Hlavní výhody">
-      <div class="wrap">
-        <div class="grid">
-          <div class="stat"><b>01</b><strong>Až 2 Gb/s</strong><span>rychlost pro náročnou domácnost</span></div>
-          <div class="stat"><b>02</b><strong>Podle adresy</strong><span>ověření dostupné technologie pro váš dům</span></div>
-          <div class="stat"><b>03</b><strong>Osobní kontakt</strong><span>od dotazu až po výběr řešení</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VALUE -->
-    <section class="section concrete">
-      <div class="wrap value">
+    <!-- HERO v3: adresa rovnou v první obrazovce -->
+    <section class="v3-hero" aria-labelledby="v3-hero-title">
+      <img class="v3-hero__bg" src="/assets/radnice-optika-night.webp" alt="Noční Nová radnice v Ostravě s optickými světelnými stopami" width="1715" height="917" fetchpriority="high">
+      <div class="wrap v3-hero__in">
         <div>
-          <span class="eyebrow dark">Krátká odpověď</span>
-          <h2 class="title">Internet v Ostravě začíná ověřením přesné adresy.</h2>
-          <p class="lead" style="margin-top:18px">Nestačí vybrat tarif podle názvu města. Možnosti připojení se v Ostravě liší dům od domu – podle technologie v objektu i dostupné infrastruktury. Proto nezačínáme slibem, ale ověřením konkrétní adresy.</p>
-          <div class="trustline">
-            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-            <p><strong>Ozve se vám člověk, ne automat.</strong> Vaše ověření vyřídí místní zástupce pro Ostravu a okolí. Ozveme se do 30 minut.</p>
-          </div>
-          <a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal style="margin-top:26px">Ověřit dostupnost →</a>
-        </div>
-        <div class="checklist">
-          <div class="label">Co poslat</div>
-          <ul>
-            <li>ulici a číslo domu v Ostravě</li>
-            <li>telefon pro rychlé doplnění informací</li>
-            <li>zda řešíte jen internet, nebo i televizi</li>
-            <li>krátkou poznámku k využití domácnosti</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TARIFY -->
-    <section class="section soft-2" id="tarify">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow dark">Tarify internetu</span>
-          <h2 class="title">Vyberte výkon podle toho, jak Ostrava opravdu žije.</h2>
-          <p class="lead">Konečnou nabídku vždy potvrdíme po ověření adresy. Díky tomu víte, co lze zapojit právě u vás.</p>
-        </div>
-        <div class="tariff-rows">
-          <div class="tariff-row feature">
-            <div class="tprice"><b>300 <small>Kč</small></b><span>/ měsíc</span></div>
-            <div class="tinfo"><div class="tname">Giga 1000 + TV <span class="ttag">Oblíbená</span></div><div class="tdesc">optický internet · základní televizní balíček · až 1 000 / 1 000 Mb/s</div></div>
-            <div class="tact"><a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV" data-tariff-price="300 Kč / měsíc">Objednat</a></div>
-          </div>
-          <div class="tariff-row">
-            <div class="tprice"><b>440 <small>Kč</small></b><span>/ měsíc</span></div>
-            <div class="tinfo"><div class="tname">Giga 1000 + TV 10</div><div class="tdesc">optický internet · 103 stanic + 10 prémiových dle výběru · až 1 000 / 1 000 Mb/s</div></div>
-            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV 10" data-tariff-price="440 Kč / měsíc">Objednat</a></div>
-          </div>
-          <div class="tariff-row">
-            <div class="tprice"><b>570 <small>Kč</small></b><span>/ měsíc</span></div>
-            <div class="tinfo"><div class="tname">Giga 2000</div><div class="tdesc">samostatný internet · pro více zařízení a náročný provoz · až 2 000 / 2 000 Mb/s</div></div>
-            <div class="tact"><a class="btn btn-line" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 2000" data-tariff-price="570 Kč / měsíc">Objednat</a></div>
-          </div>
-        </div>
-        <p class="note">Hledáte levnější nebo senior variantu? Připravíme individuální nabídku. Dostupnost vybraného tarifu a technické možnosti zapojení potvrdíme pro přesnou adresu.</p>
-      </div>
-    </section>
-
-    <!-- JAK TO FUNGUJE -->
-    <section class="section band-dark">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Jak to funguje</span>
-          <h2 class="title">Nejdřív adresa. Potom řešení, které drží krok.</h2>
-        </div>
-        <div class="steps">
-          <div class="step"><div class="num">1</div><h3>Pošlete adresu</h3><p>Stačí ulice, číslo domu a kontakt, na kterém se vám můžeme ozvat.</p></div>
-          <div class="step"><div class="num">2</div><h3>Prověříme dostupnost</h3><p>Do 30 minut se ozve místní zástupce – ne call centrum – s možnostmi pro váš dům.</p></div>
-          <div class="step"><div class="num">3</div><h3>Vyberete variantu</h3><p>Projdeme s vámi možnosti internetu i televize, bez zbytečné složitosti. Nezávazně.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OVĚŘENÍ / OPTIKA BAND (radnice + světlo) -->
-    <section class="photoband left" aria-label="Ověření dostupnosti">
-      <img src="/assets/radnice-optika-night.webp" alt="Noční Nová radnice v Ostravě s optickými světelnými stopami" loading="lazy">
-      <div class="scrim" aria-hidden="true"></div>
-      <div class="wrap inner">
-        <div class="split" style="align-items:center">
-          <div>
-            <span class="eyebrow">Ověření zdarma</span>
-            <h2 class="title" style="color:#fff">Světlo, které dorazí až k vašemu domu.</h2>
-            <p class="lead" style="color:rgba(255,255,255,.86);margin-top:16px">Optika míří do Ostravy ulici po ulici. Pošlete adresu a my ověříme, jestli je u vás dostupná – nezávazně a do 30 minut.</p>
-          </div>
-          <form class="form-panel" name="overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
-            <h3>Ověřit adresu</h3>
-            <p>Pošlete adresu a telefon. Zjistíme, co u vás jde zapojit.</p>
-            <div class="form-grid">
-              <input type="hidden" name="lead_type" value="availability">
-              <div class="field hp-field" aria-hidden="true"><label for="home-website">Web</label><input id="home-website" name="website" tabindex="-1" autocomplete="off"></div>
-              <div class="field primary wide">
-                <label for="home-address">Ulice a číslo domu</label>
-                <div class="input-wrap">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.686-6-10a6 6 0 0 1 12 0c0 4.314-6 10-6 10Z"/><circle cx="12" cy="11" r="2.5"/></svg>
-                  <input id="home-address" name="adresa" autocomplete="street-address" placeholder="Např. Hlavní třída 123" required>
-                </div>
-              </div>
-              <div class="field">
-                <label for="home-phone">Telefon</label>
-                <div class="input-wrap">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
-                  <input id="home-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 ..." required>
-                </div>
-              </div>
-              <div class="field">
-                <label for="home-email">E-mail <small>· volitelné</small></label>
-                <div class="input-wrap">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-                  <input id="home-email" name="email" type="email" autocomplete="email" placeholder="vas@email.cz">
-                </div>
-              </div>
-              <label class="consent"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním údajů pro vyřízení dotazu podle <a href="/ochrana-udaju/">zásad ochrany údajů</a></span></label>
-              <button class="btn btn-primary" type="submit" style="grid-column:1/-1">Odeslat nezávazný dotaz →</button>
-              <div class="form-reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> Nezávazné · Ozveme se do 30 minut</div>
+          <span class="eyebrow">Optické připojení · Ostrava a okolí</span>
+          <h1 id="v3-hero-title">Internet, který drží<br> <span>rytmus Ostravy.</span></h1>
+          <p class="lead">Pošlete přesnou adresu. Ověříme, co u vás opravdu jde zapojit – optiku až 2&nbsp;Gb/s, s&nbsp;televizí i&nbsp;bez ní.</p>
+          <form class="v3-hero__form" name="overeni-hero" action="/api/leads" method="post" data-lead-form>
+            <input type="hidden" name="lead_type" value="availability">
+            <input type="hidden" name="poznamka" value="Ověření z hero sekce">
+            <div class="field hp-field" aria-hidden="true"><label for="hero-website">Web</label><input id="hero-website" name="website" tabindex="-1" autocomplete="off"></div>
+            <div class="v3-addr">
+              <label class="v3-addr__f" for="hero-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2.4"/></svg>
+                <span><small>Ulice a číslo domu</small><input id="hero-address" name="adresa" autocomplete="street-address" placeholder="Např. Hlavní třída 123" required></span>
+              </label>
+              <label class="v3-addr__f" for="hero-phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+                <span><small>Telefon</small><input id="hero-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 …" required></span>
+              </label>
+              <button class="btn btn-primary" type="submit">Ověřit adresu →</button>
             </div>
+            <label class="consent"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním údajů pro vyřízení dotazu podle <a href="/ochrana-udaju/">zásad ochrany údajů</a></span></label>
           </form>
+          <div class="v3-checks">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Zdarma a nezávazně</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Ozve se člověk, ne automat, do 30 minut</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Rozhoduje dům, ne čtvrť</span>
+          </div>
+          <div class="hero-meta">
+            <b>Srdce města</b><span aria-hidden="true"></span>Ostrava<span aria-hidden="true"></span>49°50′N · 18°17′E
+          </div>
+        </div>
+        <aside class="v3-spec" aria-label="Rychlost optického připojení">
+          <div class="v3-spec__lab">Optika až do domu</div>
+          <h2>Nahoru stejně jako dolů</h2>
+          <div class="v3-bar"><div class="row"><span>↓ Stahování</span><b>2 000 Mb/s</b></div><div class="tr"><i style="width:100%"></i></div></div>
+          <div class="v3-bar"><div class="row"><span>↑ Odesílání</span><b>2 000 Mb/s</b></div><div class="tr"><i style="width:100%"></i></div></div>
+          <p>Giga 2000 · 570 Kč měsíčně. Dostupnost potvrdíme podle přesné adresy.</p>
+        </aside>
+      </div>
+      <div class="v3-sigline" aria-hidden="true"></div>
+    </section>
+
+    <!-- ČÍSLA -->
+    <section class="v3-stats" aria-label="Hlavní výhody">
+      <div class="wrap">
+        <div class="v3-stat"><strong>300<small>Kč</small></strong><span>nejnižší měsíční cena z nabídky</span></div>
+        <div class="v3-stat"><strong>2 000<small>Mb/s</small></strong><span>nahoru i dolů stejnou rychlostí</span></div>
+        <div class="v3-stat"><strong>30<small>min</small></strong><span>ozve se člověk v pracovní dny</span></div>
+        <div class="v3-stat"><strong>0<small>Kč</small></strong><span>za ověření vaší adresy</span></div>
+      </div>
+    </section>
+
+    <!-- 01 JAK TO FUNGUJE -->
+    <section class="v3-sec v3-paper v3-map">
+      <div class="wrap">
+        <div class="v3-secno"><b>01 / Jak to funguje</b><div class="v3-sigline" aria-hidden="true"></div></div>
+        <div class="v3-head">
+          <h2 class="v3-h2">Internet v Ostravě začíná ověřením <span style="color:var(--steelblue-deep)">přesné adresy.</span></h2>
+          <p class="lead">Nestačí vybrat tarif podle názvu města. Možnosti připojení se v Ostravě liší dům od domu – podle technologie v objektu i dostupné infrastruktury. Proto nezačínáme slibem, ale ověřením konkrétní adresy.</p>
+        </div>
+        <p class="v3-steps-title">Nejdřív adresa. Potom řešení, které drží krok.</p>
+        <ol class="v3-steps">
+          <li class="v3-step"><div class="v3-step__k">01</div><h3>Pošlete adresu</h3><p>Stačí ulice, číslo domu a kontakt, na kterém se vám můžeme ozvat. Žádná registrace.</p><span class="v3-tag">Zdarma</span></li>
+          <li class="v3-step"><div class="v3-step__k">02</div><h3>Prověříme dostupnost</h3><p>Do 30 minut se ozve místní zástupce – ne call centrum – s možnostmi pro váš dům.</p><span class="v3-tag">Pracovní dny</span></li>
+          <li class="v3-step"><div class="v3-step__k">03</div><h3>Vyberete variantu</h3><p>Projdeme s vámi možnosti internetu i televize, bez zbytečné složitosti. Nezávazně.</p><span class="v3-tag">Bez závazku</span></li>
+        </ol>
+        <div class="v3-send">
+          <b>Co poslat</b>
+          <span><i class="v3-node" aria-hidden="true"></i>ulici a číslo domu</span>
+          <span><i class="v3-node" aria-hidden="true"></i>telefon</span>
+          <span><i class="v3-node" aria-hidden="true"></i>jen internet, nebo i televizi</span>
+          <span><i class="v3-node" aria-hidden="true"></i>krátkou poznámku k domácnosti</span>
+          <a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal>Ověřit dostupnost →</a>
         </div>
       </div>
     </section>
 
-    <!-- LOKALITY -->
-    <section class="section concrete" id="lokality">
+    <!-- 02 TARIFY -->
+    <section class="v3-sec v3-conc" id="tarify">
       <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow dark">Lokality</span>
-          <h2 class="title">Internet řešíme napříč Ostravou.</h2>
+        <div class="v3-secno"><b>02 / Tarify internetu</b><div class="v3-sigline" aria-hidden="true"></div></div>
+        <div class="v3-head">
+          <h2 class="v3-h2">Vyberte výkon podle toho, jak Ostrava opravdu žije.</h2>
+          <p class="lead">Ceny jsou měsíční a stejné pro každou adresu. Konečnou nabídku vždy potvrdíme po ověření adresy – víte tak, co lze zapojit právě u vás.</p>
+        </div>
+        <div class="v3-tariffs">
+          <article class="v3-tc is-ft">
+            <span class="v3-tc__tag">Oblíbená</span>
+            <h3>Giga 1000 + TV</h3>
+            <p class="v3-tc__sub">Optický internet a základní televizní balíček.</p>
+            <div class="v3-tc__pr"><b>300</b><span>Kč / měsíc</span></div>
+            <div class="v3-bar"><div class="row"><span>↓ Stahování</span><b>1 000 Mb/s</b></div><div class="tr"><i style="width:50%"></i></div></div>
+            <div class="v3-bar"><div class="row"><span>↑ Odesílání</span><b>1 000 Mb/s</b></div><div class="tr"><i style="width:50%"></i></div></div>
+            <ul><li>Základní televizní balíček</li><li>Optika vedená až do domu</li><li>Nejnižší částka z nabídky</li></ul>
+            <a class="btn btn-primary" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV" data-tariff-price="300 Kč / měsíc">Chci tento tarif</a>
+          </article>
+          <article class="v3-tc">
+            <span class="v3-tc__tag">S výběrem stanic</span>
+            <h3>Giga 1000 + TV 10</h3>
+            <p class="v3-tc__sub">103 stanic a k tomu 10 prémiových podle vašeho výběru.</p>
+            <div class="v3-tc__pr"><b>440</b><span>Kč / měsíc</span></div>
+            <div class="v3-bar"><div class="row"><span>↓ Stahování</span><b>1 000 Mb/s</b></div><div class="tr"><i style="width:50%"></i></div></div>
+            <div class="v3-bar"><div class="row"><span>↑ Odesílání</span><b>1 000 Mb/s</b></div><div class="tr"><i style="width:50%"></i></div></div>
+            <ul><li>103 + 10 prémiových stanic</li><li>Pro domácnost, která televizi sleduje</li><li>Optika vedená až do domu</li></ul>
+            <a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 1000 + TV 10" data-tariff-price="440 Kč / měsíc">Chci tento tarif</a>
+          </article>
+          <article class="v3-tc">
+            <span class="v3-tc__tag">Samostatný internet</span>
+            <h3>Giga 2000</h3>
+            <p class="v3-tc__sub">Dvojnásobná rychlost pro více zařízení a náročný provoz.</p>
+            <div class="v3-tc__pr"><b>570</b><span>Kč / měsíc</span></div>
+            <div class="v3-bar"><div class="row"><span>↓ Stahování</span><b>2 000 Mb/s</b></div><div class="tr"><i style="width:100%"></i></div></div>
+            <div class="v3-bar"><div class="row"><span>↑ Odesílání</span><b>2 000 Mb/s</b></div><div class="tr"><i style="width:100%"></i></div></div>
+            <ul><li>Bez televize</li><li>Home office, velké soubory, hraní</li><li>Optika vedená až do domu</li></ul>
+            <a class="btn btn-dark" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Giga 2000" data-tariff-price="570 Kč / měsíc">Chci tento tarif</a>
+          </article>
+        </div>
+        <div class="v3-tnote">
+          <p>Hledáte levnější nebo senior variantu? Připravíme individuální nabídku. Dostupnost vybraného tarifu a technické možnosti zapojení potvrdíme pro přesnou adresu.</p>
+          <a class="v3-link" href="/dostupnost/" data-open-lead-modal data-lead-intent="order" data-tariff="Individuální tarif" data-tariff-price="na míru">Individuální nabídka →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 ČLOVĚK Z OSTRAVY -->
+    <section class="v3-sec v3-dark">
+      <div class="wrap">
+        <div class="v3-secno"><b>03 / Člověk z Ostravy</b><div class="v3-sigline" aria-hidden="true"></div></div>
+        <div class="v3-head">
+          <h2 class="v3-h2">Místní. <span class="v3-yel">Ne call centrum.</span></h2>
+          <p class="lead">Nejsme anonymní linka. Vašemu dotazu se věnuje místní zástupce, který Ostravu zná – ulice, domy i to, co kde reálně jde zapojit.</p>
+        </div>
+        <div class="v3-bento">
+          <div class="v3-bx v3-bx--ph">
+            <img src="/assets/kontakt-hero-radnice.webp" alt="Místní obchodní zástupce před Novou radnicí v Ostravě" loading="lazy" width="1800" height="600">
+            <div class="v3-bx__lab"><i class="v3-node" aria-hidden="true"></i>Za webem je živý člověk</div>
+            <div>
+              <h3>Řekneme vám to na rovinu.</h3>
+              <p>Ozveme se do 30 minut v pracovní dny. A když u vás optika nedává smysl, řekneme to taky.</p>
+              <div class="v3-who"><div><b>p. Terč</b><span>místní zástupce pro Ostravu a okolí</span></div><a class="btn btn-primary" href="tel:+420777425230">Volat 777 425 230</a></div>
+            </div>
+          </div>
+          <div class="v3-bx v3-bx--tex">
+            <div class="v3-bx__lab"><i class="v3-node" aria-hidden="true"></i>Symetrická optika</div>
+            <div class="v3-bx__viz">
+              <div class="v3-bar"><div class="row"><span>↓ Dolů</span><b>1 000 Mb/s</b></div><div class="tr"><i style="width:100%"></i></div></div>
+              <div class="v3-bar"><div class="row"><span>↑ Nahoru</span><b>1 000 Mb/s</b></div><div class="tr"><i style="width:100%"></i></div></div>
+            </div>
+            <div><h3>Nahoru stejně jako dolů</h3><p>Poznáte to u videohovorů, záloh i odesílání velkých souborů.</p></div>
+          </div>
+          <div class="v3-bx v3-bx--map">
+            <div class="v3-bx__lab"><i class="v3-node" aria-hidden="true"></i>Ověření podle adresy</div>
+            <div class="v3-bx__viz v3-pins" aria-hidden="true"><i></i><i class="ok"></i><i></i><i class="ok"></i></div>
+            <div><h3>Rozhoduje dům, ne čtvrť</h3><p>Sousední vchody mohou mít jiné možnosti. Proto ověřujeme konkrétní adresu.</p></div>
+          </div>
+          <div class="v3-bx v3-bx--y">
+            <div class="v3-bx__lab"><i class="v3-node" aria-hidden="true"></i>Nezávazně</div>
+            <div class="v3-bx__viz v3-big">0 Kč</div>
+            <div><h3>Ověření zdarma</h3><p>Odeslání adresy není objednávka. K ničemu vás nezavazuje.</p></div>
+          </div>
+          <div class="v3-bx v3-bx--tex">
+            <div class="v3-bx__lab"><i class="v3-node" aria-hidden="true"></i>Přechod bez výpadku</div>
+            <div class="v3-bx__viz v3-tl"><div><b>1</b>Zapojíme optiku</div><i aria-hidden="true"></i><div><b>2</b>Pak vypovíte starou smlouvu</div></div>
+            <div><h3>Ve správném pořadí</h3><p>Pomůžeme s kroky přechodu tak, abyste nezůstali bez internetu. <a href="/poradna/caste-otazky-pred-zmenou-poskytovatele/" style="color:var(--signal)">Jak na to →</a></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVĚŘENÍ ZDARMA: formulář -->
+    <section class="v3-sec v3-cta" aria-label="Ověření dostupnosti">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Ověření zdarma</span>
+          <h2 class="v3-h2">Světlo, které dorazí až <span class="v3-yel">k&nbsp;vašemu domu.</span></h2>
+          <p class="lead">Optika míří do Ostravy ulici po ulici. Pošlete adresu a my ověříme, jestli je u vás dostupná – nezávazně a do 30 minut.</p>
+          <div class="v3-mini">
+            <div><b>Adresa</b><span>ulice a číslo domu</span></div>
+            <div><b>Ověření</b><span>přímo pro váš dům</span></div>
+            <div><b>Hovor</b><span>do 30 minut</span></div>
+          </div>
+        </div>
+        <form class="form-panel" name="overeni-dostupnosti" action="/api/leads" method="post" data-lead-form>
+          <h3>Vaše adresa</h3>
+          <p>Formulář je nezávazný. Odeslání není objednávka.</p>
+          <div class="form-grid">
+            <input type="hidden" name="lead_type" value="availability">
+            <div class="field hp-field" aria-hidden="true"><label for="home-website">Web</label><input id="home-website" name="website" tabindex="-1" autocomplete="off"></div>
+            <div class="field primary wide">
+              <label for="home-address">Ulice a číslo domu</label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.686-6-10a6 6 0 0 1 12 0c0 4.314-6 10-6 10Z"/><circle cx="12" cy="11" r="2.5"/></svg>
+                <input id="home-address" name="adresa" autocomplete="street-address" placeholder="Např. Hlavní třída 123" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="home-phone">Telefon</label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.5a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></svg>
+                <input id="home-phone" name="telefon" type="tel" autocomplete="tel" placeholder="+420 ..." required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="home-email">E-mail <small>· volitelné</small></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                <input id="home-email" name="email" type="email" autocomplete="email" placeholder="vas@email.cz">
+              </div>
+            </div>
+            <label class="consent"><input type="checkbox" name="souhlas" required> <span>Souhlasím se zpracováním údajů pro vyřízení dotazu podle <a href="/ochrana-udaju/">zásad ochrany údajů</a></span></label>
+            <button class="btn btn-primary" type="submit" style="grid-column:1/-1">Odeslat nezávazný dotaz →</button>
+            <div class="form-reassure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> Nezávazné · Ozveme se do 30 minut</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 04 LOKALITY -->
+    <section class="v3-sec v3-paper" id="lokality">
+      <div class="wrap">
+        <div class="v3-secno"><b>04 / Lokality</b><div class="v3-sigline" aria-hidden="true"></div></div>
+        <div class="v3-head">
+          <h2 class="v3-h2">Internet řešíme napříč Ostravou.</h2>
           <p class="lead">Každá městská část má jinou skladbu domů a jiné možnosti zapojení. Přesnou dostupnost proto vždy prověřujeme podle adresy.</p>
         </div>
-        <div class="districts">
-          <a class="district" href="/internet-ostrava-poruba/"><img src="/assets/loc-poruba-thumb.webp" alt="" loading="lazy"><span>Byty, rodinné domy i domácnosti s vyšší zátěží</span><h3>Ostrava-Poruba</h3><b>Průvodce lokalitou →</b></a>
-          <a class="district" href="/internet-ostrava-jih/"><img src="/assets/loc-jih-thumb.webp" alt="" loading="lazy"><span>Hrabůvka, Zábřeh, Dubina a Výškovice</span><h3>Ostrava-Jih</h3><b>Průvodce lokalitou →</b></a>
-          <a class="district" href="/internet-marianske-hory/"><img src="/assets/loc-marianske-hory-thumb.webp" alt="" loading="lazy"><span>Byty i adresy v širším centru Ostravy</span><h3>Mariánské Hory</h3><b>Průvodce lokalitou →</b></a>
-          <a class="district" href="/internet-moravska-ostrava/"><img src="/assets/loc-moravska-ostrava-thumb.webp" alt="" loading="lazy"><span>Centrum, byty, kanceláře a různorodé adresy</span><h3>Moravská Ostrava</h3><b>Průvodce lokalitou →</b></a>
-          <a class="district" href="/internet-ostrava-vitkovice/"><img src="/assets/loc-vitkovice-thumb.webp" alt="" loading="lazy"><span>Domácnosti v industriální části Ostravy</span><h3>Vítkovice</h3><b>Průvodce lokalitou →</b></a>
-          <a class="district" href="/internet-slezska-ostrava/"><img src="/assets/loc-slezska-thumb.webp" alt="" loading="lazy"><span>Rodinné i bytové domy a adresy blízko centra</span><h3>Slezská Ostrava</h3><b>Průvodce lokalitou →</b></a>
+        <div class="v3-loc">
+          <a class="v3-lt v3-lt--big" href="/internet-ostrava-poruba/"><img src="/assets/loc-poruba-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Byty, rodinné domy i domácnosti s vyšší zátěží</small><h3>Ostrava-Poruba</h3><p>Sorela kolem Hlavní třídy, panelové obvody i rodinné domy na okrajích. Co rozhoduje u vašeho domu.</p></a>
+          <a class="v3-lt" href="/internet-ostrava-jih/"><img src="/assets/loc-jih-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Hrabůvka, Zábřeh, Dubina, Výškovice</small><h3>Ostrava-Jih</h3></a>
+          <a class="v3-lt" href="/internet-marianske-hory/"><img src="/assets/loc-marianske-hory-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Byty v širším centru</small><h3>Mariánské Hory</h3></a>
+          <a class="v3-lt" href="/internet-moravska-ostrava/"><img src="/assets/loc-moravska-ostrava-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Centrum a různorodé adresy</small><h3>Moravská Ostrava</h3></a>
+          <a class="v3-lt" href="/internet-ostrava-vitkovice/"><img src="/assets/loc-vitkovice-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Industriální část Ostravy</small><h3>Vítkovice</h3></a>
+          <a class="v3-lt" href="/internet-slezska-ostrava/"><img src="/assets/loc-slezska-thumb.webp" alt="" loading="lazy" width="760" height="520"><small>Rodinné i bytové domy</small><h3>Slezská Ostrava</h3></a>
+          <a class="v3-lt v3-lt--all" href="/lokality/"><i class="v3-node" aria-hidden="true"></i><div><h3>Všechny lokality Ostravy →</h3><p>Obvody i jednotlivé části podle oblasti.</p></div></a>
         </div>
-        <div class="section-cta" style="margin-top:28px"><a class="btn btn-ghost" href="/lokality/">Všechny lokality Ostravy →</a></div>
       </div>
     </section>
 
-    <!-- ČLOVĚK Z OSTRAVY -->
-    <section class="section band-dark">
-      <div class="wrap person">
-        <figure>
-          <img src="/assets/kontakt-hero-radnice.webp" alt="Místní obchodní zástupce před Novou radnicí v Ostravě" loading="lazy" width="1672" height="941">
-          <div class="badge"><b>Místní. Ne call centrum.</b><span>Zástupce pro Ostravu a okolí</span></div>
-        </figure>
+    <!-- 05 FAQ -->
+    <section class="v3-sec v3-conc" id="faq">
+      <div class="wrap v3-faq">
         <div>
-          <span class="eyebrow">Člověk z Ostravy</span>
-          <h2 class="title">Za webem je živý člověk, který je tu doma.</h2>
-          <p class="lead" style="margin-top:18px">Nejsme anonymní linka. Vašemu dotazu se věnuje místní zástupce, který Ostravu zná – ulice, domy i to, co kde reálně jde zapojit. Ozveme se do 30 minut a řekneme vám to na rovinu.</p>
-          <div class="hero-cta" style="margin-top:26px">
-            <a class="btn btn-primary" href="tel:+420777425230">Volat 777 425 230</a>
-            <a class="btn btn-ghost" href="/kontakt/">Napsat nám</a>
-          </div>
+          <div class="v3-secno"><b>05 / Časté dotazy</b><div class="v3-sigline" aria-hidden="true"></div></div>
+          <h2 class="v3-h2">Než pošlete adresu.</h2>
+          <div class="v3-call"><small>Raději zavoláte?</small><a href="tel:+420777425230">777 425 230</a><span>V pracovní dny. Večer a o víkendu se ozveme další pracovní den ráno.</span></div>
         </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section soft-2" id="faq">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow dark">Časté dotazy</span>
-          <h2 class="title">Než pošlete adresu.</h2>
-        </div>
-        <div class="faq">
-          <details><summary>Jak zjistím dostupnost internetu na své adrese v Ostravě?<span aria-hidden="true"></span></summary><p>Vyplňte ulici, číslo domu a telefon. Ověříme dostupné připojení a ozveme se s možnostmi pro konkrétní adresu.</p></details>
+        <div class="v3-acc">
+          <details open><summary>Jak zjistím dostupnost internetu na své adrese v Ostravě?<span aria-hidden="true"></span></summary><p>Vyplňte ulici, číslo domu a telefon. Ověříme dostupné připojení a ozveme se s možnostmi pro konkrétní adresu.</p></details>
           <details><summary>Je optický internet dostupný v celé Ostravě?<span aria-hidden="true"></span></summary><p>Dostupnost se liší podle konkrétního domu. Sousední adresy mohou mít odlišné možnosti připojení, proto je přesná adresa důležitá.</p></details>
           <details><summary>Mohu mít pouze internet bez televize?<span aria-hidden="true"></span></summary><p>Ano. Nabídka může obsahovat samostatný internet i kombinace s televizí. Vybereme dostupnou variantu podle vašich potřeb.</p></details>
           <details><summary>Je odeslání formuláře závazná objednávka?<span aria-hidden="true"></span></summary><p>Ne. Formulář slouží k ověření dostupnosti a prvnímu kontaktu. Konkrétní řešení si nejprve projdete s obchodním zástupcem.</p></details>
@@ -391,7 +458,7 @@
     </section>
   </div>
 
-  <script src="/assets/main.js?v=r23" defer></script>
+  <script src="/assets/main.js?v=r27" defer></script>
 </body>
 </html>
 

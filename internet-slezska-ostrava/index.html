@@ -12,12 +12,18 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a0f13"><meta name="geo.region" content="CZ-80"><meta name="geo.placename" content="Slezská Ostrava"><meta name="geo.position" content="49.8419;18.3100"><meta name="ICBM" content="49.8419, 18.3100">
-  <link rel="stylesheet" href="/assets/redesign.css?v=r23">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin-ext.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin.woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/redesign.css?v=r27">
   <meta property="og:title" content="Internet Slezská Ostrava | PODA dostupnost podle adresy">
   <meta property="og:description" content="Zjistěte možnosti internetu PODA ve Slezské Ostravě podle přesné adresy domu.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://internetostrava.cz/internet-slezska-ostrava/">
-  <meta property="og:image" content="https://internetostrava.cz/assets/loc-slezska.webp">
+  <meta property="og:image" content="https://internetostrava.cz/assets/og/loc-slezska.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -48,18 +54,50 @@
           {
             "@type": "Question",
             "name": "Ověřujete celou Slezskou Ostravu jedním pravidlem?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Každou poptávku řešíme podle přesné adresy, protože možnosti internetu se mohou lišit dům od domu." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Každou poptávku řešíme podle přesné adresy, protože možnosti se mohou lišit dům od domu." }
           },
           {
             "@type": "Question",
             "name": "Co když nevím, jaký tarif chci?",
             "acceptedAnswer": { "@type": "Answer", "text": "To nevadí. Začněte adresou a krátkým popisem používání internetu." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je dostupnost stejná ve všech částech obvodu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Muglinov, Heřmanice, Hrušov, Kunčičky, Koblov i Antošovice mají odlišnou zástavbu. Odpověď dává vždy konkrétní adresa." }
+          },
+          {
+            "@type": "Question",
+            "name": "Bydlím v rodinném domě ve svahu, je to problém?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Není to překážka sama o sobě. Řeší se, kudy vede síť ve vaší ulici a jak lze udělat přípojku na pozemek. To se posuzuje pro konkrétní dům." }
+          },
+          {
+            "@type": "Question",
+            "name": "Co když v bytovém domě zatím přípojka není?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Pak se řeší, zda a jak ji lze do domu přivést. Součástí bývá souhlas SVJ nebo vlastníka a dohoda na trase kabelu ve společných prostorách." }
+          },
+          {
+            "@type": "Question",
+            "name": "Musím nejdřív vypovědět stávající smlouvu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nemusíte. Nejdřív se ověří dostupnost a domluví termín zapojení, výpověď se podává až podle něj." }
+          },
+          {
+            "@type": "Question",
+            "name": "Řešíte i internet s televizí?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ano. Pokud vás zajímá kombinace internetu a televize, napište to do poznámky ve formuláři." }
+          },
+          {
+            "@type": "Question",
+            "name": "Je formulář závazná objednávka?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ne. Slouží jen k nezávaznému ověření možností pro danou adresu." }
           }
         ]
       }
     ]
   }
   </script>
+  <meta name="gtm-id" content="">
+  <script src="/assets/analytics.js?v=r27" defer></script>
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -93,26 +131,66 @@
       <div class="wrap page-grid">
         <div class="prose">
           <div class="answer-box">
-            <p><strong>Rychlá odpověď:</strong> Ve Slezské Ostravě se možnosti připojení liší podle konkrétního domu. U bytu je důležité připojení celé budovy a rozvod k bytu; u rodinného domu síť v ulici a způsob přivedení přípojky. K ověření pošlete ulici, číslo domu a typ bydlení.</p>
+            <p><strong>Rychlá odpověď:</strong> Slezská Ostrava není sídliště, ale rozlehlý obvod na pravém břehu Ostravice s rodinnými domy ve svazích, menšími bytovkami a několika samostatnými částmi. Zástavba je tu rozptýlená, takže rozhoduje, kam je síť fyzicky dovedena. Dostupnost proto potvrzujeme pro konkrétní dům, ne pro čtvrť.</p>
           </div>
-          <h2>Co ověřit u bytu a co u rodinného domu</h2>
-          <p>Část Slezské Ostravy tvoří bytové domy, jinde převažují rodinné domy v členitém terénu. Stejný název čtvrti proto neříká, jaké připojení půjde zapojit u vás. Rozhoduje dům a jeho napojení na síť.</p>
+          <h2>Je u vás ve Slezské Ostravě internet dostupný?</h2>
+          <p>Ve Slezské Ostravě začíná ověření internetu přesnou adresou. Pomůže nám ulice, číslo domu a stručná informace, zda jde o běžnou domácnost, práci z domu nebo kombinaci internetu s televizí. Podle toho zjistíme, co na dané adrese připadá v úvahu, a teprve potom má smysl vybírat tarif.</p>
+
+          <h2>Svahy nad Ostravicí a rozptýlená zástavba</h2>
+          <p>Slezská Ostrava se od sídlištních částí Ostravy liší už terénem. Od soutoku Ostravice a Lučiny, kde stojí Slezskoostravský hrad, se zástavba zvedá do svahů a pokračuje k Hladnovu a dál na východ. Nad okolím se tyčí halda Ema, hlavní tahy tvoří Bohumínská, Těšínská a Michálkovická, podél které se dostanete k ostravské zoo. Mezi nimi se střídají ulice rodinných domů, menší bytové domy a volné plochy.</p>
+          <p>Právě u rozptýlené zástavby platí dvojnásob, že se možnosti liší ulici od ulice. Tam, kde se domy táhnou v souvislé řadě, bývá situace přímočařejší; u ulic, kde zástavba po pár domech končí a zase začíná, je rozhodující, kudy trasa sítě skutečně vede. Svažitý terén k tomu přidává další proměnnou: záleží na vedení trasy a možnostech přípojky na pozemek.</p>
+
+          <h2>Obvod složený z několika částí</h2>
+          <p>Pod Slezskou Ostravu spadá i řada dalších částí – <a href="/internet-muglinov/">Muglinov</a>, Heřmanice, Hrušov, Kunčice, Kunčičky, Koblov a Antošovice. Každá z nich má vlastní historii i typ zástavby, od hornických kolonií přes rodinné domy se zahradami po nižší bytové domy. Podobný charakter mají i sousední <a href="/internet-michalkovice/">Michálkovice</a>. Z toho plyne, že jedna odpověď pro celý obvod neexistuje; to, co platí v Muglinově, nemusí platit v Koblově.</p>
           <div class="checklist">
-            <div class="label">Podle typu bydlení</div>
+            <div class="label">Co ovlivňuje výsledek ve Slezské Ostravě</div>
             <ul>
-              <li><strong>Bytový dům:</strong> ověřuje se přípojka do objektu a vnitřní rozvod. Napište také vchod, pokud jich dům má více.</li>
-              <li><strong>Rodinný dům:</strong> záleží na trase sítě v ulici a na možnosti přivedení přípojky k domu. Dostupnost u souseda nemusí platit pro vaši adresu.</li>
-              <li><strong>Nová přípojka:</strong> pokud v domě dosud není, může být potřeba domluva s vlastníkem nebo správcem objektu.</li>
+              <li><strong>Typ domu</strong> – rodinný dům, kolonie i nižší bytovka se připojují jinak.</li>
+              <li><strong>Trasa sítě ve vaší ulici</strong> – u rozptýlené zástavby rozhoduje nejvíc.</li>
+              <li><strong>Terén a poloha pozemku</strong> – ve svahu se řeší vedení přípojky.</li>
+              <li><strong>Přípojka do budovy</strong> – zavedená, nebo teprve k vybudování.</li>
+              <li><strong>Souhlas SVJ nebo vlastníka</strong> – u bytových domů standardní krok.</li>
+              <li><strong>Přesná adresa</strong> – obvod je rozlehlý a rozdíly mezi částmi jsou velké.</li>
             </ul>
           </div>
-          <p>Bydlíte v konkrétní části obvodu? Pro <a href="/internet-muglinov/">Muglinov</a> a <a href="/internet-michalkovice/">Michálkovice</a> máme samostatné průvodce podle místní zástavby. Odpověď pro váš dům ale vždy začíná přesnou adresou.</p>
-          <h2>Jak postupovat před výběrem tarifu</h2>
-          <p>Nejprve vyplňte ulici a číslo domu do formuláře na této stránce. Připište, zda jde o byt nebo rodinný dům a jestli internet používáte také pro práci z domova, videohovory či televizi. Po ověření dostupné technologie můžeme projít tarify, které lze na dané adrese skutečně nabídnout. Pokud si nejste jistí rychlostí, pomůže vám <a href="/poradna/jaka-rychlost-internetu-pro-domacnost/">průvodce výběrem rychlosti</a>.</p>
-          <p>Odeslání formuláře je nezávazné a není objednávkou. Dostupnost i konečná nabídka se potvrzují pro konkrétní adresu.</p>
-          <h2>Časté dotazy</h2>
+
+          <h2>Rodinný dům: co se řeší na pozemku</h2>
+          <p>U rodinného domu jde především o cestu kabelu: kudy vede síť v ulici, jak daleko je od hranice pozemku a jak se udělá prostup do domu. Roli hraje i to, zda je dům samostatně stojící, nebo v řadě, a jestli se na pozemku už řešily jiné inženýrské sítě. Nic z toho se nedá odhadnout podle názvu čtvrti – proto se ptáme na číslo domu.</p>
+
+          <h2>Byt v bytovém domě a souhlas SVJ</h2>
+          <p>U menších bytových domů a bytovek platí jednoduché pravidlo: pokud je dům už připojený, řeší se hlavně zapojení konkrétního bytu a termín montáže. Pokud přípojka chybí, přibývá krok navíc – souhlas SVJ nebo vlastníka domu a dohoda na trase kabelu ve společných prostorách. Není to překážka, jen je dobré s tím počítat při plánování termínu. Pomůže, když do poznámky napíšete, kdo za dům jedná.</p>
+
+          <h2>Optika, nebo bezdrát</h2>
+          <p>V částech s hustší zástavbou bývá obvyklejší kabelové připojení přivedené do domu, v okrajových ulicích se častěji objevuje bezdrátová varianta. Kabel má stabilnější odezvu a nezávisí na počasí, bezdrát zase dosáhne i tam, kam kabel zatím nevede. Obě technologie porovnává článek <a href="/poradna/optika-vs-bezdratovy-internet/">optika proti bezdrátovému internetu</a>.</p>
+
+          <h2>Přechod od současného poskytovatele</h2>
+          <p>Pokud už internet doma máte a jen ho měníte, doporučujeme tohle pořadí: ověřit dostupnost na adrese, domluvit termín zapojení a až podle něj podat výpověď u stávajícího poskytovatele. Vyhnete se tak zbytečné pauze bez připojení. Zkontrolujte si výpovědní lhůtu i případný závazek a počítejte s vrácením pronajatého zařízení. Další praktické otázky shrnují <a href="/poradna/caste-otazky-pred-zmenou-poskytovatele/">časté otázky před změnou poskytovatele</a>.</p>
+
+          <h2>Co řešit před výběrem tarifu</h2>
+          <p>Nejdříve je dobré vědět, k čemu internet používáte: běžná domácnost, více zařízení, práce z domova, videohovory, streamování nebo kombinace s televizí. Podle toho se potom lépe vybírá vhodná varianta. Orientaci v rychlostech nabízí text o tom, <a href="/poradna/jaka-rychlost-internetu-pro-domacnost/">jakou rychlost domácnost potřebuje</a>, přehled variant pak najdete v sekci <a href="/tarify/">tarify internetu</a>.</p>
+
+          <h2>Co poslat k ověření</h2>
+          <ul>
+            <li>ulici a číslo domu ve Slezské Ostravě nebo v její části,</li>
+            <li>telefon, na kterém se vám ozveme,</li>
+            <li>zda chcete jen internet, nebo i televizi,</li>
+            <li>poznámku k využití: více zařízení, práce z domu, streamování,</li>
+            <li>u bytového domu informaci, kdo za dům jedná.</li>
+          </ul>
+
+          <h2>Nezávazný první krok</h2>
+          <p>Formulář slouží k ověření. Není to závazná objednávka a konečná nabídka se potvrzuje až podle dostupnosti na přesné adrese.</p>
+
+          <h2>Časté dotazy pro Slezskou Ostravu</h2>
           <div class="faq">
             <details><summary>Ověřujete celou Slezskou Ostravu jedním pravidlem?<span aria-hidden="true"></span></summary><p>Ne. Každou poptávku řešíme podle přesné adresy, protože možnosti se mohou lišit dům od domu.</p></details>
             <details><summary>Co když nevím, jaký tarif chci?<span aria-hidden="true"></span></summary><p>To nevadí. Začněte adresou a krátkým popisem používání internetu.</p></details>
+            <details><summary>Je dostupnost stejná ve všech částech obvodu?<span aria-hidden="true"></span></summary><p>Ne. Muglinov, Heřmanice, Hrušov, Kunčičky, Koblov i Antošovice mají odlišnou zástavbu. Odpověď dává vždy konkrétní adresa.</p></details>
+            <details><summary>Bydlím v rodinném domě ve svahu, je to problém?<span aria-hidden="true"></span></summary><p>Není to překážka sama o sobě. Řeší se, kudy vede síť ve vaší ulici a jak lze udělat přípojku na pozemek. To se posuzuje pro konkrétní dům.</p></details>
+            <details><summary>Co když v bytovém domě zatím přípojka není?<span aria-hidden="true"></span></summary><p>Pak se řeší, zda a jak ji lze do domu přivést. Součástí bývá souhlas SVJ nebo vlastníka a dohoda na trase kabelu ve společných prostorách.</p></details>
+            <details><summary>Musím nejdřív vypovědět stávající smlouvu?<span aria-hidden="true"></span></summary><p>Nemusíte. Nejdřív se ověří dostupnost a domluví termín zapojení, výpověď se podává až podle něj.</p></details>
+            <details><summary>Řešíte i internet s televizí?<span aria-hidden="true"></span></summary><p>Ano. Pokud vás zajímá kombinace internetu a televize, napište to do poznámky ve formuláři.</p></details>
+            <details><summary>Je formulář závazná objednávka?<span aria-hidden="true"></span></summary><p>Ne. Slouží jen k nezávaznému ověření možností pro danou adresu.</p></details>
           </div>
         </div>
         <aside class="aside-cta">
@@ -160,8 +238,8 @@
     <section class="section">
       <div class="wrap">
         <div class="loc-group" style="margin-top:0">
-          <h2>Části Slezské Ostravy</h2>
-          <p class="loc-group-note">Slezská Ostrava zahrnuje i další čtvrti na pravém břehu Ostravice. Vyberte svou část – dostupnost ověřujeme podle přesné adresy.</p>
+          <h2>Slezská Ostrava a okolí</h2>
+          <p class="loc-group-note">Obvod tvoří i další čtvrti na pravém břehu Ostravice a hned vedle leží Michálkovice. Vyberte svou lokalitu – dostupnost ověřujeme podle přesné adresy.</p>
           <div class="loc-grid">
             <a class="loc-card" href="/internet-muglinov/"><h3>Muglinov</h3><p>Rodinná zástavba i sídliště nad pravým břehem Ostravice.</p><b>Průvodce lokalitou →</b></a>
             <a class="loc-card" href="/internet-michalkovice/"><h3>Michálkovice</h3><p>Hornické kolonie i rodinné domy u dolu Michal.</p><b>Průvodce lokalitou →</b></a>
@@ -180,7 +258,7 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · obchodní zástupce PODA a.s.</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=r23" defer></script>
+  <script src="/assets/main.js?v=r27" defer></script>
 </body>
 </html>
 

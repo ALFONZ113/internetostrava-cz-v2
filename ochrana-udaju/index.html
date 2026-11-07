@@ -4,13 +4,21 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ochrana osobních údajů | Internet Ostrava</title>
   <meta name="description" content="Informace o zpracování osobních údajů při ověření dostupnosti internetu přes web InternetOstrava.cz.">
-  <link rel="canonical" href="https://internetostrava.cz/ochrana-udaju/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><link rel="stylesheet" href="/assets/redesign.css?v=r23">
+  <link rel="canonical" href="https://internetostrava.cz/ochrana-udaju/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin-ext.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/redesign.css?v=r27">
   <meta property="og:title" content="Ochrana osobních údajů | Internet Ostrava">
   <meta property="og:description" content="Informace o zpracování osobních údajů při ověření dostupnosti internetu přes web InternetOstrava.cz.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://internetostrava.cz/ochrana-udaju/">
-  <meta property="og:image" content="https://internetostrava.cz/assets/hero-vitkovice-night.webp">
+  <meta property="og:image" content="https://internetostrava.cz/assets/og/hero-vitkovice-night.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="gtm-id" content="">
+  <script src="/assets/analytics.js?v=r27" defer></script>
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -84,8 +92,16 @@
           <p>Ve vztahu ke svým osobním údajům máte právo na přístup, opravu, výmaz, omezení zpracování, vznesení námitky, přenositelnost údajů a právo kdykoli odvolat souhlas. Žádost uplatníte na kontaktech výše.</p>
           <p>Máte rovněž právo obrátit se se stížností na dozorový úřad: <strong>Úřad pro ochranu osobních údajů</strong>, Pplk. Sochora 27, 170 00 Praha 7, <a href="https://www.uoou.cz" rel="noopener" target="_blank">uoou.cz</a>.</p>
 
-          <h2>8. Cookies a analytika</h2>
-          <p>Web nepoužívá sledovací ani marketingové cookies a nevytváří uživatelské profily. Pokud by v budoucnu byly nasazeny analytické nebo reklamní nástroje, budou tyto zásady aktualizovány a v případě potřeby vyžádán souhlas.</p>
+          <h2>8. Cookies, měření návštěvnosti a ukládání v prohlížeči</h2>
+          <p>Web nevytváří uživatelské profily a neprodává data inzerentům. Rozlišujeme dvě kategorie ukládaných informací:</p>
+          <p><strong>Nezbytné pro fungování webu (bez souhlasu).</strong> Tyto údaje zůstávají ve vašem prohlížeči, neodesílají se nikam dál a slouží výhradně k tomu, aby web fungoval tak, jak očekáváte:</p>
+          <ul>
+            <li><code>io-lead-draft-v1</code> – rozepsaný kontaktní formulář, aby se vám text neztratil, když odejdete a vrátíte se. Uchovává adresu, telefon a e-mail po dobu 7 dnů. Souhlas se zpracováním údajů se zde záměrně neukládá, musí být vždy zaškrtnut znovu.</li>
+            <li><code>io-consent-v1</code> – vaše volba ohledně měření návštěvnosti, aby se vás web neptal opakovaně. Platnost 6 měsíců.</li>
+            <li>Parametry kampaně (UTM) v <code>sessionStorage</code> po dobu jedné návštěvy, aby se u odeslané poptávky dalo dohledat, ze kterého odkazu jste přišli.</li>
+          </ul>
+          <p><strong>Měření návštěvnosti (pouze s vaším souhlasem).</strong> Pokud v liště zvolíte „Souhlasím“, aktivuje se měření návštěvnosti prostřednictvím služeb Google Tag Manager a Google Analytics 4 (Google Ireland Limited). Sledujeme, které stránky lidé čtou a kde v objednávkovém formuláři odcházejí, abychom web zlepšovali. Do měření se posílají technické údaje o návštěvě a o tom, zda byl odeslán formulář nebo kliknuto na telefon – nikoli obsah, který jste do formuláře napsali.</p>
+          <p>Používáme Google Consent Mode v2 s výchozím stavem „odmítnuto“: dokud souhlas neudělíte, měřicí nástroje se vůbec nenačtou. Volbu „Odmítnout“ respektujeme a web funguje beze změny. Souhlas můžete kdykoli změnit vymazáním dat webu v prohlížeči, po 6 měsících se lišta zobrazí znovu.</p>
 
           <h2>9. Účinnost</h2>
           <p>Tyto zásady jsou účinné ode dne spuštění webu na doméně internetostrava.cz. Aktuální znění je vždy dostupné na této stránce.</p>
@@ -109,7 +125,7 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý poradenský web pro připojení v Ostravě</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=r23" defer></script>
+  <script src="/assets/main.js?v=r27" defer></script>
 </body>
 </html>
 
