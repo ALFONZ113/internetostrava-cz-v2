@@ -1,5 +1,14 @@
 # SEO a GEO plán pro InternetOstrava.cz
 
+## Implementovano 2026-11-07 (2) - Mikroanimace v3 + oprava CLS z marquee
+
+- `assets/motion.js` (2,4 kB, jen homepage): IntersectionObserver prida `.is-in`, kdyz prvek dojede do obrazovky; pocitadla v pasu cisel. Animuje se jen transform/opacity. Pri "omezit pohyb" i bez JS je vse rovnou v konecnem stavu (overeno: 0 skrytych prvku).
+- Pohyb: signalni impulz po lince pod hero (kazdych 7 s) a jednou u cisel sekci; kroky 01-03 se postupne rozsviti a linka se nakresli; pruhy rychlosti se naplni, v hero stitku obcas probehne "paket"; bento - signal projde ulici a domy se rozsviti, 0 Kc naskoci, prechod 1 -> 2; karty tarifu a lokalit najedou postupne; sipky v tlacitkach se posunou pri hoveru; zluta linka pod polem formulare se pri kliknuti natahne; FAQ se rozbali plynule.
+- `/dekujeme/`: SVG grafika - signal dobehne k domu, dum se rozsviti, fajfka (pocatecni stav je hotova grafika, animace jen pri povolenem pohybu).
+- Hero (H1, formular) se nikdy neskryva ani neanimuje - LCP a vyplneni adresy bez zdrzeni.
+- **Oprava CLS (vsech 41 stranek):** zluty pas (marquee) vkladal `main.js` az po vykresleni, takze hero na mobilu poskocil o 47 px (CLS 0,05 v cca polovine nacteni). Pas je nove primo v HTML; `main.js` ho uz pri existenci nevklada. Namereno 12 behu na 3 strankach: CLS max 0,006.
+- Cache token r27 -> r28.
+
 ## Implementovano 2026-11-07 - Homepage v3 „Ocel & Signal"
 
 Redizajn homepage podle schvaleneho navrhu v3. Neni to novy web: paleta, Oswald,
