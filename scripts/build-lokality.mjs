@@ -15,7 +15,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ORIGIN = "https://internetostrava.cz";
-const CACHE = "r29";
+const CACHE = "r30";
 const PHONE = { tel: "tel:+420777425230", display: "777 425 230" };
 const EMAIL = "terc@obchod.poda.cz";
 

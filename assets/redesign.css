@@ -812,11 +812,14 @@ input.is-invalid { border-color: var(--rust); box-shadow: 0 0 0 3px rgba(192,97,
 .v3-bx--map .v3-bx__lab { color: var(--steelblue-deep); }
 .v3-bx--map .v3-node { background: var(--steelblue-deep); }
 .v3-big { font-family: var(--display); font-weight: 700; font-size: 5.2rem; line-height: .9; letter-spacing: -.01em; }
-.v3-pins { display: flex; gap: 8px; }
-.v3-pins i { position: relative; width: 40px; height: 54px; background: rgba(255,255,255,.65); border: 2px solid var(--ink); border-radius: 2px; }
-.v3-pins i::after { content: ""; position: absolute; left: 50%; bottom: 7px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--rust); }
+/* 4 sousední domy: střecha + značka ✓ (jde zapojit) / ✕ (zatím ne) */
+.v3-pins { display: flex; gap: 8px; padding-top: 16px; }
+.v3-pins i { position: relative; width: 40px; height: 44px; background: rgba(255,255,255,.8); border: 2px solid var(--ink); border-top: 0; border-radius: 0 0 2px 2px; }
+.v3-pins i::before { content: ""; position: absolute; left: -5px; right: -5px; top: -16px; height: 17px; background: var(--ink); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.v3-pins i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; background: var(--rust) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M7.5 7.5l7 7M14.5 7.5l-7 7' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% no-repeat; }
 .v3-pins i.ok { border-color: var(--steelblue-deep); }
-.v3-pins i.ok::after { background: var(--steelblue-deep); }
+.v3-pins i.ok::before { background: var(--steelblue-deep); }
+.v3-pins i.ok::after { background: var(--steelblue-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6.5 11.5l3 3 6-6.5' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat; }
 .v3-tl { display: grid; gap: 10px; }
 .v3-tl div { display: flex; align-items: center; gap: 14px; font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: 1rem; }
 .v3-tl b { display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: var(--radius); background: var(--signal); color: var(--steel-950); font-size: .9rem; }
