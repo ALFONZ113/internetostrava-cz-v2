@@ -5,7 +5,18 @@ const N8N_LEAD_WEBHOOK = process.env.N8N_LEAD_WEBHOOK;
 const N8N_LEAD_TOKEN = process.env.N8N_LEAD_TOKEN;
 
 function cleanText(value, maxLength = 1000) {
-  return String(value || "").trim().slice(0, maxLength);
+  return String(value || "")
+    .replace(/\r\n?/g, "\n")
+    // Ridici znaky nemaji v leadu co delat a v hlavickach e-mailu jsou zneuzitelne.
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "")
+    .trim()
+    .slice(0, maxLength);
+}
+
+// Predmet e-mailu musi byt jednoradkovy. Novy radek v nem Resend odmitne (422)
+// a je to zaroven klasicky tvar header injection, takze ho tu slepujeme.
+function subjectText(value, maxLength = 120) {
+  return cleanText(value, maxLength + 80).replace(/\s+/g, " ").trim().slice(0, maxLength);
 }
 
 function isValidPhone(value) {
@@ -43,39 +54,47 @@ function buildEmailHtml(lead) {
 }
 
 async function sendResendEmail(lead) {
-  if (!RESEND_API_KEY) return { configured: false };
+  if (!RESEND_API_KEY) return { configured: false, delivered: false };
 
   const subject = lead.type === "callback"
-    ? `Zpetne zavolani: ${lead.phone || "novy kontakt"}`
+    ? `Zpetne zavolani: ${subjectText(lead.phone) || "novy kontakt"}`
     : lead.type === "order"
-    ? `Nezavazna objednavka: ${lead.tarif || lead.address || "novy lead"}`
-    : `Overeni internetu: ${lead.address || "nova adresa"}`;
+    ? `Nezavazna objednavka: ${subjectText(lead.tarif || lead.address) || "novy lead"}`
+    : `Overeni internetu: ${subjectText(lead.address) || "nova adresa"}`;
 
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${RESEND_API_KEY}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      from: LEAD_FROM_EMAIL,
-      to: [LEAD_TO_EMAIL],
-      reply_to: lead.email || undefined,
-      subject,
-      html: buildEmailHtml(lead)
-    })
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Resend failed: ${response.status} ${errorText}`);
+  try {
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        from: LEAD_FROM_EMAIL,
+        to: [LEAD_TO_EMAIL],
+        reply_to: lead.email || undefined,
+        subject,
+        html: buildEmailHtml(lead)
+      }),
+      signal: controller.signal
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Resend failed: ${response.status} ${errorText}`);
+    }
+
+    return { configured: true, delivered: true };
+  } finally {
+    clearTimeout(timeout);
   }
-
-  return { configured: true };
 }
 
 async function forwardLeadToN8n(lead) {
-  if (!N8N_LEAD_WEBHOOK || !N8N_LEAD_TOKEN) return;
+  if (!N8N_LEAD_WEBHOOK || !N8N_LEAD_TOKEN) return { configured: false, delivered: false };
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 3000);
@@ -118,8 +137,10 @@ async function forwardLeadToN8n(lead) {
     if (!response.ok) {
       throw new Error(`n8n returned ${response.status}`);
     }
+    return { configured: true, delivered: true };
   } catch (error) {
-    console.warn("[leads] n8n forwarding failed (ignored):", error instanceof Error ? error.message : "unknown error");
+    console.warn("[leads] n8n forwarding failed:", error instanceof Error ? error.message : "unknown error");
+    return { configured: true, delivered: false };
   } finally {
     clearTimeout(timeout);
   }
@@ -169,22 +190,43 @@ module.exports = async function handler(request, response) {
       return response.status(400).json({ ok: false, error: "invalid_required_fields" });
     }
 
-    const [mailResult] = await Promise.allSettled([
+    const [mailResult, n8nResult] = await Promise.allSettled([
       sendResendEmail(lead),
       forwardLeadToN8n(lead)
     ]);
 
-    if (mailResult.status === "rejected") {
-      console.error(mailResult.reason);
-      return response.status(202).json({ ok: true, configured: false, fallback: "mailto", delivery: "resend_failed" });
+    const settled = (result, label) => {
+      if (result.status === "fulfilled") return result.value;
+      console.error(`[leads] ${label} selhal:`, result.reason);
+      return { configured: true, delivered: false };
+    };
+
+    const mail = settled(mailResult, "Resend");
+    const n8n = settled(n8nResult, "n8n");
+
+    // Lead dorucen aspon jednim kanalem = hotovo. Navstevnik vidi dekovaci
+    // stranku a nema duvod cokoli posilat rucne. Driv se tohle rozhodovalo
+    // jen podle Resendu, takze po napojeni n8n dostaval mailto i navstevnik,
+    // jehoz lead uz byl v poradku doruceny.
+    if (mail.delivered || n8n.delivered) {
+      if (!mail.delivered) {
+        console.warn("[leads] e-mail neodeslan, lead doruceny jen pres n8n", {
+          emailConfigured: mail.configured
+        });
+      }
+      return response.status(200).json({
+        ok: true,
+        configured: true,
+        delivery: { email: mail.delivered, n8n: n8n.delivered }
+      });
     }
 
-    const mail = mailResult.value;
-    if (!mail.configured) {
-      return response.status(202).json({ ok: true, configured: false, fallback: "mailto" });
-    }
-
-    return response.status(200).json({ ok: true, configured: true });
+    // Teprve kdyz lead nedorucil zadny kanal, ma smysl nabidnout mailto.
+    console.error("[leads] zadny kanal lead nedorucil", {
+      emailConfigured: mail.configured,
+      n8nConfigured: n8n.configured
+    });
+    return response.status(202).json({ ok: true, configured: false, fallback: "mailto" });
   } catch (error) {
     console.error(error);
     return response.status(500).json({ ok: false, error: "lead_submit_failed" });
