@@ -1,13 +1,26 @@
 # Lead flow setup
 
-Aktualni stav: web uz ma serverovy endpoint `/api/leads`, ale bez Resend klice bezi bezpecny fallback do e-mailu. Supabase se nepouziva.
+Aktualni stav: `/api/leads` dorucuje leady dvema nezavislymi kanaly - e-mailem pres
+Resend a webhookem do n8n (odtud dal napr. do Telegramu). Supabase se nepouziva.
+
+**Resend neni nastaveny.** Leady proto chodi jen pres n8n. Chcete-li i e-mail,
+doplnte promenne nize a overte odesilaci domenu v Resend.
 
 ## Jak to funguje
 
 1. Navstevnik vyplni adresu, telefon, pripadne e-mail a poznamku.
 2. Frontend posle data na `/api/leads`.
-3. Pokud je ve Vercelu nastaveny `RESEND_API_KEY`, Vercel Function odesle e-mail s leadem.
-4. Pokud Resend jeste neni nastaveny, web otevre predvyplneny e-mail na `terc@obchod.poda.cz`.
+3. Endpoint zkusi **oba kanaly zaroven**: e-mail pres Resend (jen kdyz je
+   `RESEND_API_KEY` nastaveny) a webhook do n8n (jen kdyz jsou nastavene
+   `N8N_LEAD_WEBHOOK` a `N8N_LEAD_TOKEN`).
+4. Kdyz lead dorucil **aspon jeden** kanal, endpoint vrati `configured: true`
+   a frontend posle navstevnika na `/dekujeme/`. V odpovedi je pole `delivery`,
+   ze ktereho je videt, ktery kanal uspel.
+5. Teprve kdyz lead nedorucil zadny kanal, endpoint vrati `configured: false`
+   a web otevre predvyplneny e-mail na `terc@obchod.poda.cz` jako posledni zalohu.
+
+Kdyz e-mail neodejde, ale n8n ano, Vercel log obsahuje radek
+`[leads] e-mail neodeslan, lead doruceny jen pres n8n`. Navstevnika to neomezi.
 
 ## Vercel environment variables
 
