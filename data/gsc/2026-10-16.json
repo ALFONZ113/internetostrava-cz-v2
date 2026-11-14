@@ -1,0 +1,2457 @@
+{
+  "generatedAt": "2026-10-19T10:48:53.753Z",
+  "siteUrl": "sc-domain:internetostrava.cz",
+  "current": {
+    "startDate": "2026-09-19",
+    "endDate": "2026-10-16",
+    "totals": {
+      "clicks": 30,
+      "impressions": 1576,
+      "ctr": 0.01903553299492386,
+      "position": 11.478426395939087
+    },
+    "queries": [
+      {
+        "key": "poda internet ostrava",
+        "clicks": 2,
+        "impressions": 28,
+        "ctr": 0.07142857142857142,
+        "position": 6.928571428571429
+      },
+      {
+        "key": "internet ostrava poruba",
+        "clicks": 1,
+        "impressions": 25,
+        "ctr": 0.04,
+        "position": 14.88
+      },
+      {
+        "key": "poda internet",
+        "clicks": 1,
+        "impressions": 53,
+        "ctr": 0.018867924528301886,
+        "position": 10.773584905660377
+      },
+      {
+        "key": "adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "key": "bezdrátový internet ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "key": "dostupnost adsl podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "key": "dostupnost internetu mapa",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "key": "dostupnost internetu na adrese",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 36.473684210526315
+      },
+      {
+        "key": "dostupnost internetu podle adresy",
+        "clicks": 0,
+        "impressions": 66,
+        "ctr": 0,
+        "position": 17.46969696969697
+      },
+      {
+        "key": "dostupnost optického internetu na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "key": "dostupny internet na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "key": "dostupný internet na adrese",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 33.125
+      },
+      {
+        "key": "dostupný internet podle adresy",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "key": "internet",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "key": "internet dostupnost",
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 6.151515151515151
+      },
+      {
+        "key": "internet dostupnost na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "key": "internet karviná",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "key": "internet kvítkovice",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "key": "internet na adrese",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 23.666666666666668
+      },
+      {
+        "key": "internet ostrava",
+        "clicks": 0,
+        "impressions": 41,
+        "ctr": 0,
+        "position": 28.29268292682927
+      },
+      {
+        "key": "internet ostrava hrabůvka",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 13.4
+      },
+      {
+        "key": "internet ostrava zábřeh",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "key": "internet poda",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 10.571428571428571
+      },
+      {
+        "key": "internet podle adresy",
+        "clicks": 0,
+        "impressions": 69,
+        "ctr": 0,
+        "position": 16.53623188405797
+      },
+      {
+        "key": "internet poruba",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 15.3125
+      },
+      {
+        "key": "internet slezke",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 16.92857142857143
+      },
+      {
+        "key": "internet sluhy",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 55.25
+      },
+      {
+        "key": "internet v ostravě",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 28.142857142857142
+      },
+      {
+        "key": "internet vitkovice",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 15.1875
+      },
+      {
+        "key": "internet vítkovice",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.8
+      },
+      {
+        "key": "internet zábřeh",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "key": "internetové připojení ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "key": "internetové připojení podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "key": "jak zjistit isp",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "key": "klientská zóna poda",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "key": "nabídka internetu podle adresy",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "key": "nefunguje internet",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "key": "nejlevnější internet ostrava",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 26.875
+      },
+      {
+        "key": "ostrava poruba internet",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "key": "ověření dostupnosti internetu",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "key": "ověřit dostupnost internetu",
+        "clicks": 0,
+        "impressions": 73,
+        "ctr": 0,
+        "position": 9.424657534246576
+      },
+      {
+        "key": "poda dostupnost",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 9.333333333333334
+      },
+      {
+        "key": "poda infolinka",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "key": "poda karvina",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 10.4375
+      },
+      {
+        "key": "poda karviná",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 11.470588235294118
+      },
+      {
+        "key": "poda karviná kontakt",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "key": "poda klientská zóna",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "key": "poda optika",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "key": "poda ostrava",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "key": "poda ostrava poruba",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.333333333333334
+      },
+      {
+        "key": "poda pokrytí",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 7.111111111111111
+      },
+      {
+        "key": "poda poruba",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "key": "pokrytí internetu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "key": "poruba internet",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "key": "poskytovatel internetu ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "key": "poskytovatele internetu podle adresy",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 58.333333333333336
+      },
+      {
+        "key": "poskytovatelé internetu ostrava",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "key": "poskytovatelé internetu podle adresy",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 40.42857142857143
+      },
+      {
+        "key": "proč vypadává wifi",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "key": "slabá wifi",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      }
+    ],
+    "pages": [
+      {
+        "key": "https://internetostrava.cz/",
+        "clicks": 7,
+        "impressions": 234,
+        "ctr": 0.029914529914529916,
+        "position": 13.850427350427351
+      },
+      {
+        "key": "https://internetostrava.cz/poda-dostupnost/",
+        "clicks": 3,
+        "impressions": 279,
+        "ctr": 0.010752688172043012,
+        "position": 12.544802867383513
+      },
+      {
+        "key": "https://internetostrava.cz/poda-internet-ostrava/",
+        "clicks": 3,
+        "impressions": 235,
+        "ctr": 0.01276595744680851,
+        "position": 8.804255319148936
+      },
+      {
+        "key": "https://internetostrava.cz/internet-marianske-hory/",
+        "clicks": 2,
+        "impressions": 19,
+        "ctr": 0.10526315789473684,
+        "position": 7.421052631578948
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-jih/",
+        "clicks": 2,
+        "impressions": 34,
+        "ctr": 0.058823529411764705,
+        "position": 11.176470588235293
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "clicks": 2,
+        "impressions": 77,
+        "ctr": 0.025974025974025976,
+        "position": 14.233766233766234
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-vitkovice/",
+        "clicks": 2,
+        "impressions": 38,
+        "ctr": 0.05263157894736842,
+        "position": 14.131578947368421
+      },
+      {
+        "key": "https://internetostrava.cz/kontakt/",
+        "clicks": 2,
+        "impressions": 46,
+        "ctr": 0.043478260869565216,
+        "position": 15.826086956521738
+      },
+      {
+        "key": "https://internetostrava.cz/dostupnost/",
+        "clicks": 1,
+        "impressions": 184,
+        "ctr": 0.005434782608695652,
+        "position": 16.983695652173914
+      },
+      {
+        "key": "https://internetostrava.cz/internet-hrabuvka/",
+        "clicks": 1,
+        "impressions": 24,
+        "ctr": 0.041666666666666664,
+        "position": 8.625
+      },
+      {
+        "key": "https://internetostrava.cz/internet-svinov/",
+        "clicks": 1,
+        "impressions": 15,
+        "ctr": 0.06666666666666667,
+        "position": 9.533333333333333
+      },
+      {
+        "key": "https://internetostrava.cz/internet-vyskovice/",
+        "clicks": 1,
+        "impressions": 9,
+        "ctr": 0.1111111111111111,
+        "position": 4.888888888888889
+      },
+      {
+        "key": "https://internetostrava.cz/lokality/",
+        "clicks": 1,
+        "impressions": 43,
+        "ctr": 0.023255813953488372,
+        "position": 8.13953488372093
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/optika-vs-bezdratovy-internet/",
+        "clicks": 1,
+        "impressions": 29,
+        "ctr": 0.034482758620689655,
+        "position": 7.620689655172414
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/pomaly-internet-vecer/",
+        "clicks": 1,
+        "impressions": 17,
+        "ctr": 0.058823529411764705,
+        "position": 5.0588235294117645
+      },
+      {
+        "key": "https://internetostrava.cz/internet-belsky-les/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "key": "https://internetostrava.cz/internet-hulvaky/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "key": "https://internetostrava.cz/internet-michalkovice/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "key": "https://internetostrava.cz/internet-moravska-ostrava/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12.5
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-dubina/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "key": "https://internetostrava.cz/internet-slezska-ostrava/",
+        "clicks": 0,
+        "impressions": 37,
+        "ctr": 0,
+        "position": 14.297297297297296
+      },
+      {
+        "key": "https://internetostrava.cz/internet-trebovice/",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 7.25
+      },
+      {
+        "key": "https://internetostrava.cz/internet-zabreh/",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 16.333333333333336
+      },
+      {
+        "key": "https://internetostrava.cz/poda-karvina/",
+        "clicks": 0,
+        "impressions": 80,
+        "ctr": 0,
+        "position": 10.775
+      },
+      {
+        "key": "https://internetostrava.cz/poda-kdy-nedava-smysl/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 41.8
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/caste-otazky-pred-zmenou-poskytovatele/",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 5.375
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/dostupnost-optickeho-internetu-ostrava/",
+        "clicks": 0,
+        "impressions": 28,
+        "ctr": 0,
+        "position": 5.321428571428571
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/internet-pro-home-office-ostrava/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/internet-vypadava-co-delat/",
+        "clicks": 0,
+        "impressions": 80,
+        "ctr": 0,
+        "position": 8.1125
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/jaka-rychlost-internetu-pro-domacnost/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/problem-u-poskytovatele-nebo-doma/",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 6.181818181818182
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/",
+        "clicks": 0,
+        "impressions": 100,
+        "ctr": 0,
+        "position": 5.41
+      },
+      {
+        "key": "https://internetostrava.cz/tarify/",
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 48.333333333333336
+      }
+    ],
+    "devices": [
+      {
+        "key": "MOBILE",
+        "clicks": 17,
+        "impressions": 863,
+        "ctr": 0.019698725376593278,
+        "position": 11.30359212050985
+      },
+      {
+        "key": "DESKTOP",
+        "clicks": 12,
+        "impressions": 697,
+        "ctr": 0.01721664275466284,
+        "position": 11.758967001434721
+      },
+      {
+        "key": "TABLET",
+        "clicks": 1,
+        "impressions": 16,
+        "ctr": 0.0625,
+        "position": 8.6875
+      }
+    ],
+    "pairs": [
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poda internet ostrava",
+        "clicks": 2,
+        "impressions": 28,
+        "ctr": 0.07142857142857142,
+        "position": 6.928571428571429
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "query": "internet ostrava poruba",
+        "clicks": 1,
+        "impressions": 21,
+        "ctr": 0.047619047619047616,
+        "position": 15.333333333333334
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poda internet",
+        "clicks": 1,
+        "impressions": 50,
+        "ctr": 0.02,
+        "position": 11.14
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "bezdrátový internet ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "internet",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "internet ostrava",
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 22.227272727272727
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "internet ostrava poruba",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 23.2
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "internet sluhy",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 55.25
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "internet v ostravě",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 17.428571428571427
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "internetové připojení ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "nejlevnější internet ostrava",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 23.833333333333332
+      },
+      {
+        "page": "https://internetostrava.cz/",
+        "query": "poskytovatelé internetu ostrava",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 47.75
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "dostupnost internetu na adrese",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 25.77777777777778
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "dostupnost internetu podle adresy",
+        "clicks": 0,
+        "impressions": 41,
+        "ctr": 0,
+        "position": 19.804878048780488
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "dostupnost optického internetu na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "dostupny internet na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "dostupný internet na adrese",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 29.714285714285715
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "dostupný internet podle adresy",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "internet dostupnost na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "internet na adrese",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 23.666666666666668
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "internet podle adresy",
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 19.151515151515152
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "internetové připojení podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "nabídka internetu podle adresy",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "ověření dostupnosti internetu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "ověřit dostupnost internetu",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "page": "https://internetostrava.cz/dostupnost/",
+        "query": "poskytovatelé internetu podle adresy",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 25.2
+      },
+      {
+        "page": "https://internetostrava.cz/internet-hrabuvka/",
+        "query": "internet ostrava hrabůvka",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-jih/",
+        "query": "internet ostrava hrabůvka",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-jih/",
+        "query": "internet ostrava zábřeh",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.75
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "query": "internet poruba",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 15.3125
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "query": "ostrava poruba internet",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "query": "poda ostrava poruba",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.333333333333334
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "query": "poda poruba",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "query": "poruba internet",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-vitkovice/",
+        "query": "internet kvítkovice",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-vitkovice/",
+        "query": "internet vitkovice",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 15.1875
+      },
+      {
+        "page": "https://internetostrava.cz/internet-ostrava-vitkovice/",
+        "query": "internet vítkovice",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.8
+      },
+      {
+        "page": "https://internetostrava.cz/internet-slezska-ostrava/",
+        "query": "internet ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 61
+      },
+      {
+        "page": "https://internetostrava.cz/internet-slezska-ostrava/",
+        "query": "internet slezke",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 16.92857142857143
+      },
+      {
+        "page": "https://internetostrava.cz/internet-slezska-ostrava/",
+        "query": "internet v ostravě",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "page": "https://internetostrava.cz/internet-trebovice/",
+        "query": "poda pokrytí",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://internetostrava.cz/internet-zabreh/",
+        "query": "internet ostrava zábřeh",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "page": "https://internetostrava.cz/internet-zabreh/",
+        "query": "internet zábřeh",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "page": "https://internetostrava.cz/kontakt/",
+        "query": "internet ostrava",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 34.77777777777778
+      },
+      {
+        "page": "https://internetostrava.cz/kontakt/",
+        "query": "internet v ostravě",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "page": "https://internetostrava.cz/kontakt/",
+        "query": "poskytovatelé internetu ostrava",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 17.166666666666668
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "dostupnost adsl podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "dostupnost internetu mapa",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "dostupnost internetu na adrese",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 46.1
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "dostupnost internetu podle adresy",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 22.8
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "dostupný internet na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "dostupný internet podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 37
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "internet dostupnost",
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 6.151515151515151
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "internet podle adresy",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 25.57894736842105
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "jak zjistit isp",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "ověření dostupnosti internetu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 69
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "ověřit dostupnost internetu",
+        "clicks": 0,
+        "impressions": 62,
+        "ctr": 0,
+        "position": 5.951612903225806
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "poda dostupnost",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 8.875
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "poda pokrytí",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 8.375
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "pokrytí internetu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "poskytovatele internetu podle adresy",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 58.333333333333336
+      },
+      {
+        "page": "https://internetostrava.cz/poda-dostupnost/",
+        "query": "poskytovatelé internetu podle adresy",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 48.888888888888886
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "dostupnost internetu podle adresy",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 6.928571428571429
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "internet ostrava",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "internet ostrava poruba",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "internet poda",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 10.571428571428571
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "internet podle adresy",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "klientská zóna poda",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poda dostupnost",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.25
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poda klientská zóna",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poda optika",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poda ostrava",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poda pokrytí",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "page": "https://internetostrava.cz/poda-internet-ostrava/",
+        "query": "poskytovatel internetu ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://internetostrava.cz/poda-karvina/",
+        "query": "internet karviná",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "page": "https://internetostrava.cz/poda-karvina/",
+        "query": "poda infolinka",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "page": "https://internetostrava.cz/poda-karvina/",
+        "query": "poda internet",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.25
+      },
+      {
+        "page": "https://internetostrava.cz/poda-karvina/",
+        "query": "poda karvina",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 10.4375
+      },
+      {
+        "page": "https://internetostrava.cz/poda-karvina/",
+        "query": "poda karviná",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 11.470588235294118
+      },
+      {
+        "page": "https://internetostrava.cz/poda-karvina/",
+        "query": "poda karviná kontakt",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://internetostrava.cz/poda-karvina/",
+        "query": "poda pokrytí",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "page": "https://internetostrava.cz/poradna/",
+        "query": "internet ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 63
+      },
+      {
+        "page": "https://internetostrava.cz/poradna/",
+        "query": "internet v ostravě",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "page": "https://internetostrava.cz/poradna/internet-vypadava-co-delat/",
+        "query": "nefunguje internet",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 85
+      },
+      {
+        "page": "https://internetostrava.cz/poradna/internet-vypadava-co-delat/",
+        "query": "proč vypadává wifi",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/",
+        "query": "slabá wifi",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://internetostrava.cz/tarify/",
+        "query": "internet ostrava",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 54.22222222222222
+      },
+      {
+        "page": "https://internetostrava.cz/tarify/",
+        "query": "internet v ostravě",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "page": "https://internetostrava.cz/tarify/",
+        "query": "nejlevnější internet ostrava",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "page": "https://internetostrava.cz/tarify/",
+        "query": "poskytovatelé internetu ostrava",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 87.5
+      }
+    ]
+  },
+  "previous": {
+    "startDate": "2026-08-22",
+    "endDate": "2026-09-18",
+    "totals": {
+      "clicks": 19,
+      "impressions": 1616,
+      "ctr": 0.011757425742574257,
+      "position": 12.384282178217822
+    },
+    "queries": [
+      {
+        "key": "internet ostrava",
+        "clicks": 2,
+        "impressions": 50,
+        "ctr": 0.04,
+        "position": 32.4
+      },
+      {
+        "key": "poda internet ostrava",
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 0.03125,
+        "position": 7.34375
+      },
+      {
+        "key": "adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "key": "ano",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "key": "dostupnost adsl podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "key": "dostupnost internetu mapa",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "key": "dostupnost internetu na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "key": "dostupnost internetu podle adresy",
+        "clicks": 0,
+        "impressions": 47,
+        "ctr": 0,
+        "position": 18.19148936170213
+      },
+      {
+        "key": "dostupný internet podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 24
+      },
+      {
+        "key": "home internet near me",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "key": "internet adresa",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "key": "internet chcils",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "key": "internet karviná",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "key": "internet na adrese",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "key": "internet na doma ostrava",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "key": "internet ostrava hrabůvka",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "key": "internet ostrava poruba",
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 23.727272727272727
+      },
+      {
+        "key": "internet ostrava zábřeh",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11.714285714285714
+      },
+      {
+        "key": "internet poda",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "key": "internet podle adresy",
+        "clicks": 0,
+        "impressions": 40,
+        "ctr": 0,
+        "position": 23.275
+      },
+      {
+        "key": "internet poruba",
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0,
+        "position": 29.228571428571428
+      },
+      {
+        "key": "internet slezke",
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 16.48148148148148
+      },
+      {
+        "key": "internet v ostravě",
+        "clicks": 0,
+        "impressions": 44,
+        "ctr": 0,
+        "position": 34.77272727272727
+      },
+      {
+        "key": "internet vitkovice",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 22.5
+      },
+      {
+        "key": "internet vítkovice",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 17.285714285714285
+      },
+      {
+        "key": "internetové připojení ostrava",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 16.6
+      },
+      {
+        "key": "jak pro mě probíhá hladký přechod při změně poskytovatele internetu?",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "key": "kdo poskytuje optický internet pro firmy v ostravě?",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "key": "klientská zóna poda",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "key": "která internetová síť večer nejméně často vypadává?",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 3.3333333333333335
+      },
+      {
+        "key": "možnosti připojení k internetu podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "key": "nabídka internetu podle adresy",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "key": "nejlevnější internet ostrava",
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 31.08
+      },
+      {
+        "key": "optika internet dostupnost",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "key": "ostrava plesna",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "key": "ostrava poruba internet",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "key": "ověřit dostupnost internetu",
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 21.1875
+      },
+      {
+        "key": "ping 29ms",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "key": "poda ceník",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 41
+      },
+      {
+        "key": "poda dostupnost",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 10.473684210526315
+      },
+      {
+        "key": "poda internet",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 17.928571428571427
+      },
+      {
+        "key": "poda internet cena",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "key": "poda internet kontakt",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "key": "poda karvina",
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0,
+        "position": 12.375
+      },
+      {
+        "key": "poda karviná",
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 11.722222222222221
+      },
+      {
+        "key": "poda klientská zóna",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "key": "poda klientské centrum",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "key": "poda mail",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "key": "poda ostrava",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "key": "poda ostrava hrabůvka",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "key": "poda ostrava poruba",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 19
+      },
+      {
+        "key": "poda pokrytí",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 6.416666666666667
+      },
+      {
+        "key": "poda poruba",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 13.166666666666666
+      },
+      {
+        "key": "poda poruchy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "key": "poruba internet",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23.25
+      },
+      {
+        "key": "poruba net",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 36.714285714285715
+      },
+      {
+        "key": "poskytovatel internetu podle adresy",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 38
+      },
+      {
+        "key": "poskytovatelé internetu ostrava",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 18.125
+      },
+      {
+        "key": "poskytovatelé internetu podle adresy",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "key": "proč mám pomalý internet",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "key": "proč vypadává wifi",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "key": "slabá wifi",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "key": "slabá wifi v bytě",
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0,
+        "position": 12.333333333333334
+      },
+      {
+        "key": "slabá wifi v domě",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 14.75
+      },
+      {
+        "key": "v jakém městě?",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "key": "vypadek wifi",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "key": "vypadává internet",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.6
+      },
+      {
+        "key": "výpadky wifi",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 17.5
+      },
+      {
+        "key": "web kontakt",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "key": "wifi do bytu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      }
+    ],
+    "pages": [
+      {
+        "key": "https://internetostrava.cz/",
+        "clicks": 8,
+        "impressions": 302,
+        "ctr": 0.026490066225165563,
+        "position": 14.672185430463577
+      },
+      {
+        "key": "https://internetostrava.cz/dostupnost/",
+        "clicks": 3,
+        "impressions": 150,
+        "ctr": 0.02,
+        "position": 15.966666666666667
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-jih/",
+        "clicks": 2,
+        "impressions": 36,
+        "ctr": 0.05555555555555555,
+        "position": 9.5
+      },
+      {
+        "key": "https://internetostrava.cz/poda-dostupnost/",
+        "clicks": 2,
+        "impressions": 167,
+        "ctr": 0.011976047904191617,
+        "position": 9.982035928143713
+      },
+      {
+        "key": "https://internetostrava.cz/poda-internet-ostrava/",
+        "clicks": 1,
+        "impressions": 248,
+        "ctr": 0.004032258064516129,
+        "position": 11.47983870967742
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/pomaly-internet-vecer/",
+        "clicks": 1,
+        "impressions": 24,
+        "ctr": 0.041666666666666664,
+        "position": 5
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/problem-u-poskytovatele-nebo-doma/",
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 0.16666666666666666,
+        "position": 4.5
+      },
+      {
+        "key": "https://internetostrava.cz/tarify/",
+        "clicks": 1,
+        "impressions": 46,
+        "ctr": 0.021739130434782608,
+        "position": 30.369565217391305
+      },
+      {
+        "key": "https://internetostrava.cz/internet-marianske-hory/",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 7.785714285714286
+      },
+      {
+        "key": "https://internetostrava.cz/internet-moravska-ostrava/",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 6.818181818181818
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-poruba/",
+        "clicks": 0,
+        "impressions": 86,
+        "ctr": 0,
+        "position": 20.1046511627907
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-privoz/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "key": "https://internetostrava.cz/internet-ostrava-vitkovice/",
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0,
+        "position": 12.085714285714285
+      },
+      {
+        "key": "https://internetostrava.cz/internet-pustkovec/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "key": "https://internetostrava.cz/internet-slezska-ostrava/",
+        "clicks": 0,
+        "impressions": 59,
+        "ctr": 0,
+        "position": 20.271186440677965
+      },
+      {
+        "key": "https://internetostrava.cz/internet-trebovice/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "key": "https://internetostrava.cz/internet-vyskovice/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "key": "https://internetostrava.cz/kontakt/",
+        "clicks": 0,
+        "impressions": 67,
+        "ctr": 0,
+        "position": 15.298507462686567
+      },
+      {
+        "key": "https://internetostrava.cz/lokality/",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 7.285714285714286
+      },
+      {
+        "key": "https://internetostrava.cz/poda-karvina/",
+        "clicks": 0,
+        "impressions": 71,
+        "ctr": 0,
+        "position": 10.845070422535212
+      },
+      {
+        "key": "https://internetostrava.cz/poda-kdy-nedava-smysl/",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 9.75
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 4.571428571428571
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/caste-otazky-pred-zmenou-poskytovatele/",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/dostupnost-optickeho-internetu-ostrava/",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 5.733333333333333
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/internet-vypadava-co-delat/",
+        "clicks": 0,
+        "impressions": 152,
+        "ctr": 0,
+        "position": 8.927631578947368
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/jaka-rychlost-internetu-pro-domacnost/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/optika-vs-bezdratovy-internet/",
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/",
+        "clicks": 0,
+        "impressions": 58,
+        "ctr": 0,
+        "position": 10.844827586206897
+      },
+      {
+        "key": "https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/",
+        "clicks": 0,
+        "impressions": 169,
+        "ctr": 0,
+        "position": 6.236686390532545
+      }
+    ]
+  },
+  "inspection": [
+    {
+      "url": "https://internetostrava.cz/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-10-17T07:55:39Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/dostupnost/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-23T05:23:30Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/tarify/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-29T05:24:20Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poda-internet-ostrava/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-08T02:16:24Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poda-dostupnost/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-29T04:43:23Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poda-karvina/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-07-08T07:37:35Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/kontakt/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-08T14:37:38Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T19:39:33Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/dostupnost-optickeho-internetu-ostrava/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-07-13T17:10:12Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/optika-vs-bezdratovy-internet/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-07-16T06:04:26Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/internet-pro-home-office-ostrava/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-07-13T17:09:51Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/jaka-rychlost-internetu-pro-domacnost/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-07-13T17:11:50Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/caste-otazky-pred-zmenou-poskytovatele/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-07-13T17:10:15Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/lokality/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T12:53:45Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-ostrava-poruba/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-08T11:48:45Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-ostrava-jih/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T13:00:04Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-marianske-hory/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-08T02:54:48Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-moravska-ostrava/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-10-13T07:17:57Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-ostrava-vitkovice/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-08T18:33:36Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-slezska-ostrava/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-10-10T03:39:02Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-hrabuvka/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T12:51:44Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-zabreh/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T12:53:45Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-ostrava-dubina/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-01T09:06:16Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-vyskovice/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T12:55:45Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-belsky-les/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-01T09:01:16Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-ostrava-privoz/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-01T11:57:44Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-hulvaky/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T12:55:45Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-svinov/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T12:58:06Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-pustkovec/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-01T11:46:11Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-trebovice/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T12:58:06Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-muglinov/",
+      "verdict": "NEUTRAL",
+      "coverageState": "Objeveno – momentálně neindexováno",
+      "lastCrawlTime": null,
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED"
+    },
+    {
+      "url": "https://internetostrava.cz/internet-michalkovice/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-09-16T13:00:05Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/internet-vypadava-co-delat/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-28T15:33:20Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/pomaly-internet-vecer/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-28T15:47:12Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/vysoky-ping-pri-hrani/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-28T15:37:22Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/slaba-wifi-v-panelaku/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-28T15:32:44Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poradna/problem-u-poskytovatele-nebo-doma/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-28T15:31:09Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/poda-kdy-nedava-smysl/",
+      "verdict": "PASS",
+      "coverageState": "Odesláno a indexováno",
+      "lastCrawlTime": "2026-08-28T15:14:24Z",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED"
+    },
+    {
+      "url": "https://internetostrava.cz/ochrana-udaju/",
+      "verdict": "NEUTRAL",
+      "coverageState": "Objeveno – momentálně neindexováno",
+      "lastCrawlTime": null,
+      "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED"
+    }
+  ]
+}

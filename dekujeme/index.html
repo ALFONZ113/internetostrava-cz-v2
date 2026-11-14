@@ -5,7 +5,12 @@
   <title>Děkujeme za dotaz | Internet Ostrava</title>
   <meta name="description" content="Děkujeme za dotaz k ověření dostupnosti internetu v Ostravě.">
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://internetostrava.cz/dekujeme/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><link rel="stylesheet" href="/assets/redesign.css?v=r23">
+  <link rel="canonical" href="https://internetostrava.cz/dekujeme/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin-ext.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/redesign.css?v=r30">
+  <meta name="gtm-id" content="">
+  <script src="/assets/analytics.js?v=r30" defer></script>
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -24,18 +29,84 @@
     </div>
   </header>
   <main>
+  <div class="city-marquee" aria-hidden="true">
+    <div class="city-marquee-track">
+      <div class="city-marquee-group">
+        <span><i>&bull;</i> Ověření adresy zdarma</span>
+        <span><i>&bull;</i> Odpověď do 30 minut</span>
+        <span><i>&bull;</i> Nezávazná poptávka</span>
+        <span><i>&bull;</i> Optika i bez optiky &ndash; podle domu</span>
+        <span><i>&bull;</i> Bez skrytých poplatků za ověření</span>
+        <span><i>&bull;</i> Telefon 777 425 230</span>
+      </div>
+      <div class="city-marquee-group"></div>
+    </div>
+  </div>
     <section class="subhero">
       <div class="wrap">
         <div class="breadcrumbs"><a href="/">Domů</a> / Děkujeme</div>
+        <svg class="v3-done" viewBox="0 0 380 150" role="img" aria-label="Signál dorazil k vašemu domu">
+          <defs><linearGradient id="v3-done-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="278" y2="0"><stop offset="0" stop-color="#f5b800"/><stop offset="1" stop-color="#3d8ad9"/></linearGradient></defs>
+          <path class="base" d="M10 112H278"/>
+          <path class="sig" d="M10 112H278"/>
+          <polygon class="start" points="10,105 17,112 10,119 3,112"/>
+          <polygon class="node" points="10,105 17,112 10,119 3,112"/>
+          <circle class="ring" cx="310" cy="82" r="44"/>
+          <g class="house"><polygon points="270,70 310,40 350,70"/><rect x="278" y="70" width="64" height="48"/></g>
+          <g class="lit"><polygon points="270,70 310,40 350,70"/><rect x="278" y="70" width="64" height="48"/></g>
+          <path class="chk" d="M294 94l10 10 20-22"/>
+          <text x="10" y="140">Adresa</text><text x="144" y="140" text-anchor="middle">Ověření</text><text x="310" y="140" text-anchor="middle">Váš dům</text>
+        </svg>
         <h1>Děkujeme. Adresu máme.</h1>
         <p class="lead">Dotaz jsme přijali. Prověříme možnosti připojení pro váš dům a <strong>ozveme se vám do 30 minut</strong>. Pokud spěcháte, zavolejte rovnou.</p>
         <div class="hero-cta" style="margin-top:28px">
-          <a class="btn btn-primary" href="/">Zpět na hlavní stránku</a>
-          <a class="btn btn-ghost" href="tel:+420777425230">Volat 777 425 230</a>
+          <a class="btn btn-primary" href="tel:+420777425230">Volat 777 425 230</a>
+          <a class="btn btn-ghost" href="/poradna/">Přečíst si poradnu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Co bude následovat</h2>
+        <ol class="steps">
+          <li>
+            <h3>Ověříme vaši adresu</h3>
+            <p>Podíváme se, co je zavedené přímo ve vašem domě. Rozhoduje konkrétní adresa, ne název čtvrti – sousední dům může mít jiné možnosti.</p>
+          </li>
+          <li>
+            <h3>Zavoláme vám do 30 minut</h3>
+            <p>Ozve se vám místní zástupce, ne call centrum. Řekneme rovnou, co je u vás zapojitelné a co ne, včetně ceny. Pokud voláme mimo vaše možnosti, napište nám čas, který vám vyhovuje.</p>
+          </li>
+          <li>
+            <h3>Rozhodnete se v klidu</h3>
+            <p>Odeslaný dotaz není objednávka a k ničemu vás nezavazuje. Pokud nabídka nebude dávat smysl, řekneme vám to na rovinu.</p>
+          </li>
+        </ol>
+        <p class="note">Nedorazilo potvrzení nebo jste se překlepli v telefonu? Napište na <a href="mailto:info@internetostrava.cz">info@internetostrava.cz</a> nebo zavolejte na <a href="tel:+420777425230">777 425 230</a>.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Než se ozveme</h2>
+        <p>Pokud vás zajímá, co dnešní potíže s připojením obvykle způsobuje, tyhle návody jsou k tomu nejčtenější:</p>
+        <div class="aside-links">
+          <a href="/poradna/internet-vypadava-co-delat/">Internet vypadává: kde bývá příčina</a>
+          <a href="/poradna/pomaly-internet-vecer/">Proč je internet pomalý večer</a>
+          <a href="/poradna/slaba-wifi-v-panelaku/">Slabá wifi v bytě i paneláku</a>
+          <a href="/tarify/">Přehled tarifů a cen</a>
         </div>
       </div>
     </section>
   </main>
+  <script>
+    /* Zaloha konverzniho signalu. main.js posila lead_submit jeste pred
+       presmerovanim; tenhle event potvrdi, ze uzivatel na dekovaci stranku
+       skutecne dorazil, i kdyby se predchozi udalost pri navigaci ztratila. */
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "lead_thank_you", source_page: "/dekujeme/" });
+  </script>
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -46,7 +117,7 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý poradenský web pro připojení v Ostravě</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=r23" defer></script>
+  <script src="/assets/main.js?v=r30" defer></script>
 </body>
 </html>
 

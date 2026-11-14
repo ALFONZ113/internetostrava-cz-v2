@@ -4,12 +4,18 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Poradna: jak vybrat internet v Ostravě | InternetOstrava.cz</title>
   <meta name="description" content="Praktické návody pro výběr internetu v Ostravě i řešení potíží: dostupnost podle adresy, optika vs. bezdrát, výpadky, pomalý internet večer a slabá wifi.">
-  <link rel="canonical" href="https://internetostrava.cz/poradna/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><meta name="geo.region" content="CZ-80"><meta name="geo.placename" content="Ostrava"><meta name="geo.position" content="49.8209;18.2625"><meta name="ICBM" content="49.8209, 18.2625"><link rel="stylesheet" href="/assets/redesign.css?v=r23">
+  <link rel="canonical" href="https://internetostrava.cz/poradna/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="theme-color" content="#0a0f13"><meta name="geo.region" content="CZ-80"><meta name="geo.placename" content="Ostrava"><meta name="geo.position" content="49.8209;18.2625"><meta name="ICBM" content="49.8209, 18.2625">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin-ext.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/oswald-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/redesign.css?v=r30">
   <meta property="og:title" content="Poradna: jak vybrat internet v Ostravě">
   <meta property="og:description" content="Praktické návody: dostupnost optiky podle adresy, optika vs. bezdrát, home office a jakou rychlost domácnost skutečně potřebuje.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://internetostrava.cz/poradna/">
-  <meta property="og:image" content="https://internetostrava.cz/assets/vitkovice-skyline.webp">
+  <meta property="og:image" content="https://internetostrava.cz/assets/og/vitkovice-skyline.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
@@ -42,10 +48,37 @@
           { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://internetostrava.cz/" },
           { "@type": "ListItem", "position": 2, "name": "Poradna", "item": "https://internetostrava.cz/poradna/" }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Kde začít, když vybírám internet v Ostravě?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ověřením přesné adresy. Teprve když víte, co je ve vašem domě zavedené, má smysl porovnávat tarify – jinak vybíráte z nabídky, která u vás nemusí být zapojitelná." }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak poznám, jestli je problém doma, nebo u poskytovatele?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Připojte počítač kabelem přímo k routeru a změřte rychlost. Pokud je po kabelu v pořádku, je příčina ve wifi. Pokud je špatná i po kabelu a ve všech denních dobách, jde o přípojku. Podrobný postup je v návodu „U poskytovatele, nebo doma?“." }
+          },
+          {
+            "@type": "Question",
+            "name": "Stačí běžné domácnosti 1 Gb/s?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ve většině případů ano. Tisícimegabitová linka zvládne současně několik streamů ve vysokém rozlišení, videohovory i stahování. Dvojnásobná rychlost dává smysl při pravidelném přenosu velkých souborů nebo u domácnosti s mnoha náročnými zařízeními najednou." }
+          },
+          {
+            "@type": "Question",
+            "name": "Co si připravit k ověření adresy?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ulici a číslo domu, typ domu (byt, řadovka, rodinný dům) a to, co vám na současném připojení vadí – cena, rychlost, výpadky nebo končící smlouva. Ověření je zdarma a nezávazné." }
+          }
+        ]
       }
     ]
   }
   </script>
+  <meta name="gtm-id" content="">
+  <script src="/assets/analytics.js?v=r30" defer></script>
 </head>
 <body class="home-redesign">
   <header class="site-header">
@@ -64,6 +97,19 @@
     </div>
   </header>
   <main>
+  <div class="city-marquee" aria-hidden="true">
+    <div class="city-marquee-track">
+      <div class="city-marquee-group">
+        <span><i>&bull;</i> Ověření adresy zdarma</span>
+        <span><i>&bull;</i> Odpověď do 30 minut</span>
+        <span><i>&bull;</i> Nezávazná poptávka</span>
+        <span><i>&bull;</i> Optika i bez optiky &ndash; podle domu</span>
+        <span><i>&bull;</i> Bez skrytých poplatků za ověření</span>
+        <span><i>&bull;</i> Telefon 777 425 230</span>
+      </div>
+      <div class="city-marquee-group"></div>
+    </div>
+  </div>
     <section class="subhero photo">
       <img src="/assets/vitkovice-skyline.webp" alt="Panorama Ostravy s vysokou pecí a věží radnice" loading="eager">
       <div class="scrim" aria-hidden="true"></div>
@@ -106,6 +152,30 @@
       </div>
     </section>
 
+    <section class="section concrete">
+      <div class="wrap">
+        <div class="prose">
+          <h2>Jak vybrat internet v Ostravě ve třech krocích</h2>
+          <div class="answer-box">
+            <p><strong>Rychlá odpověď:</strong> Nejdřív zjistěte, co je zavedené přímo ve vašem domě – ne ve čtvrti, ale na konkrétní adrese. Pak porovnávejte nabídky podle rychlosti odesílání, obsahu balíčku a trvání akční ceny, ne jen podle měsíční částky. A než cokoli podepíšete, zeptejte se na cenu po skončení akce, na zařízení, na zřízení přípojky a na dobu trvání smlouvy.</p>
+          </div>
+          <ul>
+            <li><strong>1. Adresa rozhoduje.</strong> Sousední vchody mohou mít jiné možnosti, protože záleží na tom, jestli je v domě zavedená optika a rozvod do bytů. Veřejné mapy pokrytí tohle neukážou. Jak se dostupnost ověřuje, popisuje <a href="/poradna/dostupnost-optickeho-internetu-ostrava/">první návod</a>.</li>
+            <li><strong>2. Porovnávejte celou nabídku, ne jen číslo.</strong> U optiky je odesílání stejně rychlé jako stahování, což poznáte při videohovorech a zálohování. Balíček s televizí může vyjít levněji než samostatný internet. Konkrétní ceny a otázky, které vám dají srovnatelnou odpověď od kohokoli, najdete na <a href="/tarify/">stránce tarifů</a>.</li>
+            <li><strong>3. Nejdřív diagnóza, pak změna.</strong> Pomalý internet večer nebo výpadky mají často příčinu doma – ve wifi nebo v routeru. Než měníte poskytovatele, projděte si <a href="/poradna/problem-u-poskytovatele-nebo-doma/">desetiminutový test</a>, který to rozliší. Když je příčina v přípojce, dává změna smysl; když ve wifi, nový tarif nepomůže.</li>
+          </ul>
+
+          <h2>Časté dotazy</h2>
+          <div class="faq">
+            <details><summary>Kde začít, když vybírám internet v Ostravě?<span aria-hidden="true"></span></summary><p>Ověřením přesné adresy. Teprve když víte, co je ve vašem domě zavedené, má smysl porovnávat tarify – jinak vybíráte z nabídky, která u vás nemusí být zapojitelná.</p></details>
+            <details><summary>Jak poznám, jestli je problém doma, nebo u poskytovatele?<span aria-hidden="true"></span></summary><p>Připojte počítač kabelem přímo k routeru a změřte rychlost. Pokud je po kabelu v pořádku, je příčina ve wifi. Pokud je špatná i po kabelu a ve všech denních dobách, jde o přípojku. Podrobný postup je v návodu „U poskytovatele, nebo doma?“.</p></details>
+            <details><summary>Stačí běžné domácnosti 1 Gb/s?<span aria-hidden="true"></span></summary><p>Ve většině případů ano. Tisícimegabitová linka zvládne současně několik streamů ve vysokém rozlišení, videohovory i stahování. Dvojnásobná rychlost dává smysl při pravidelném přenosu velkých souborů nebo u domácnosti s mnoha náročnými zařízeními najednou.</p></details>
+            <details><summary>Co si připravit k ověření adresy?<span aria-hidden="true"></span></summary><p>Ulici a číslo domu, typ domu (byt, řadovka, rodinný dům) a to, co vám na současném připojení vadí – cena, rychlost, výpadky nebo končící smlouva. Ověření je zdarma a nezávazné.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section soft-2">
       <div class="wrap">
         <div class="cta-band">
@@ -131,6 +201,6 @@
       <div class="footer-bottom">© 2026 InternetOstrava.cz · Nezávislý poradenský web pro připojení v Ostravě</div>
     </div>
   </footer>
-  <script src="/assets/main.js?v=r23" defer></script>
+  <script src="/assets/main.js?v=r30" defer></script>
 </body>
 </html>

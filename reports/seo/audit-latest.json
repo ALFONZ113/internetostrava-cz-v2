@@ -1,119 +1,51 @@
 {
-  "generatedAt": "2026-09-14T12:49:22.782Z",
+  "generatedAt": "2026-11-09T13:52:31.274Z",
   "pages": 41,
   "indexable": 39,
-  "schemaBlocks": 45,
+  "schemaBlocks": 38,
   "adsZonePages": 19,
-  "thinPages": [
-    {
-      "route": "/kontakt/",
-      "words": 299
-    },
-    {
-      "route": "/poradna/",
-      "words": 343
-    },
-    {
-      "route": "/internet-ostrava-vitkovice/",
-      "words": 349
-    },
-    {
-      "route": "/poda-dostupnost/",
-      "words": 353
-    },
-    {
-      "route": "/poda-karvina/",
-      "words": 372
-    },
-    {
-      "route": "/tarify/",
-      "words": 396
-    }
-  ],
+  "thinPages": [],
   "wordCounts": {
-    "/dostupnost/": 1016,
-    "/": 789,
-    "/internet-belsky-les/": 445,
-    "/internet-hrabuvka/": 514,
-    "/internet-hulvaky/": 446,
-    "/internet-marianske-hory/": 407,
-    "/internet-michalkovice/": 443,
-    "/internet-moravska-ostrava/": 409,
-    "/internet-muglinov/": 433,
-    "/internet-ostrava-dubina/": 445,
-    "/internet-ostrava-jih/": 419,
-    "/internet-ostrava-poruba/": 493,
-    "/internet-ostrava-privoz/": 458,
-    "/internet-ostrava-vitkovice/": 349,
-    "/internet-pustkovec/": 440,
-    "/internet-slezska-ostrava/": 407,
-    "/internet-svinov/": 448,
-    "/internet-trebovice/": 432,
-    "/internet-vyskovice/": 426,
-    "/internet-zabreh/": 461,
-    "/kontakt/": 299,
-    "/lokality/": 515,
-    "/ochrana-udaju/": 501,
-    "/poda-dostupnost/": 353,
-    "/poda-internet-ostrava/": 1406,
-    "/poda-karvina/": 372,
-    "/poda-kdy-nedava-smysl/": 812,
-    "/poradna/caste-otazky-pred-zmenou-poskytovatele/": 479,
-    "/poradna/dostupnost-optickeho-internetu-ostrava/": 571,
-    "/poradna/": 343,
-    "/poradna/internet-pro-home-office-ostrava/": 489,
-    "/poradna/internet-vypadava-co-delat/": 758,
-    "/poradna/jaka-rychlost-internetu-pro-domacnost/": 517,
-    "/poradna/optika-vs-bezdratovy-internet/": 535,
-    "/poradna/pomaly-internet-vecer/": 749,
-    "/poradna/problem-u-poskytovatele-nebo-doma/": 703,
-    "/poradna/slaba-wifi-v-panelaku/": 710,
-    "/poradna/vysoky-ping-pri-hrani/": 714,
-    "/tarify/": 396
+    "/dostupnost/": 1040,
+    "/": 1020,
+    "/internet-belsky-les/": 1101,
+    "/internet-hrabuvka/": 1489,
+    "/internet-hulvaky/": 1329,
+    "/internet-marianske-hory/": 1401,
+    "/internet-michalkovice/": 1303,
+    "/internet-moravska-ostrava/": 1088,
+    "/internet-muglinov/": 1301,
+    "/internet-ostrava-dubina/": 1085,
+    "/internet-ostrava-jih/": 1087,
+    "/internet-ostrava-poruba/": 2049,
+    "/internet-ostrava-privoz/": 1109,
+    "/internet-ostrava-vitkovice/": 1673,
+    "/internet-pustkovec/": 1080,
+    "/internet-slezska-ostrava/": 1658,
+    "/internet-svinov/": 1310,
+    "/internet-trebovice/": 1287,
+    "/internet-vyskovice/": 1312,
+    "/internet-zabreh/": 1351,
+    "/kontakt/": 725,
+    "/lokality/": 924,
+    "/ochrana-udaju/": 722,
+    "/poda-dostupnost/": 1440,
+    "/poda-internet-ostrava/": 1438,
+    "/poda-karvina/": 1498,
+    "/poda-kdy-nedava-smysl/": 836,
+    "/poradna/caste-otazky-pred-zmenou-poskytovatele/": 503,
+    "/poradna/dostupnost-optickeho-internetu-ostrava/": 595,
+    "/poradna/": 720,
+    "/poradna/internet-pro-home-office-ostrava/": 513,
+    "/poradna/internet-vypadava-co-delat/": 782,
+    "/poradna/jaka-rychlost-internetu-pro-domacnost/": 541,
+    "/poradna/optika-vs-bezdratovy-internet/": 559,
+    "/poradna/pomaly-internet-vecer/": 773,
+    "/poradna/problem-u-poskytovatele-nebo-doma/": 727,
+    "/poradna/slaba-wifi-v-panelaku/": 734,
+    "/poradna/vysoky-ping-pri-hrani/": 738,
+    "/tarify/": 1037
   },
   "errors": [],
-  "warnings": [
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "internet-ostrava-vitkovice/index.html",
-      "message": "jen 349 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "kontakt/index.html",
-      "message": "jen 299 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "poda-dostupnost/index.html",
-      "message": "jen 353 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "poda-karvina/index.html",
-      "message": "jen 372 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "poradna/index.html",
-      "message": "jen 343 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    },
-    {
-      "severity": "warn",
-      "check": "title",
-      "page": "poradna/pomaly-internet-vecer/index.html",
-      "message": "title ma jen 29 znaku (doporuceno od 30)"
-    },
-    {
-      "severity": "warn",
-      "check": "tenky-obsah",
-      "page": "tarify/index.html",
-      "message": "jen 396 slov (prah 400) - riziko doorway hodnoceni, prohloubit nebo slouceni"
-    }
-  ]
+  "warnings": []
 }

@@ -1,5 +1,80 @@
 # SEO a GEO plán pro InternetOstrava.cz
 
+## Implementovano 2026-11-07 (4) - Lokalita v3 na vsech 18 lokalitach
+
+- Sablona Lokalita v3 rozsirena na zbylych 16 lokalitnich stranek (schvaleno majitelem). Generuje se vse z `data/lokality.json` pres `scripts/build-lokality.mjs`.
+- Obsah o zastavbe prevzat 1:1 ze stavajicich stranek. Odstraneno jen „Co poslat k overeni" (nahrazuje blok kroku 01-03) a stare FAQ (presunuto do noveho FAQ). Zadna otazka ani interni odkaz se neztratil (porovnano skriptem proti puvodnim strankam).
+- Nove na kazde strance: karta „v kostce", rychla odpoved (6 stranek ji dosud nemelo: Belsky Les, Moravska Ostrava, Dubina, Ostrava-Jih, Privoz, Pustkovec), FAQ „Kolik stoji internet v X?" a „Jak rychle se ozvete?", ceny tarifu, modal s poznamkou `Lokalita: X`, schema @graph. Description doplneny o „od 300 Kc" a „Odpoved do 30 minut"; title beze zmeny.
+- Moravska Ostrava a Ostrava-Jih: FAQ ze 2 na 5 otazek.
+- Kontroly na vsech 18 strankach: hero formular posila spravnou poznamku, CLS 0, zadny prvek za okrajem (390 i 1440 px), 0 chyb v konzoli; check + seo:audit bez chyb.
+- Dalsi krok (obsah): 6 stranek ma unikatni text jen kolem 170-185 slov (Belsky Les, Moravska Ostrava, Dubina, Ostrava-Jih, Privoz, Pustkovec) - prohloubit o vlastni sekce o zastavbe.
+
+## Implementovano 2026-11-07 (3) - Lokalita v3 (prototyp: Hrabuvka, Marianske Hory)
+
+- Nova sablona lokalitnich stranek v designu v3, zatim jen na `/internet-hrabuvka/` (cast) a `/internet-marianske-hory/` (obvod). Na zbylych 16 strankach az po schvaleni majitelem.
+- Generator `scripts/build-lokality.mjs` + data `data/lokality.json`: kostra (hero s adresou, tarify, kroky, FAQ, okoli, formular, modal, schema) je spolecna, unikatni obsah o zastavbe je v datech. Spusteni: `node scripts/build-lokality.mjs [slug]`, potom `npm run check && npm run seo:audit`.
+- Lidi: adresa + telefon primo v prvni obrazovce (driv 2,5-5 obrazovek dolu); karta „X v kostce"; ceny PODA tarifu 300/440/570 Kc s tlacitky do modalu; kroky 01-03; lepkavy kontakt vedle textu; modal i na lokalitach, takze mobilni lista uz neodvadi na /dostupnost/ a vsechny 4 formulare posilaji poznamku `Lokalita: X` (overeno v Chromiu s mockem /api/leads).
+- AI a roboti: jeden JSON-LD @graph - WebPage (dateModified, author, isPartOf #website), Place (containedInPlace obvod -> Ostrava), Service s areaServed a 3 nabidkami v CZK, FAQPage 1:1 s viditelnymi otazkami, BreadcrumbList. Viditelne „Aktualizovano" s `<time>`. FAQ rozsireno o cenu a rychlost odpovedi (Marianske Hory 2 -> 6 otazek, obsah ze 353 slov na plnou stranku).
+- PSC a souradnice obvodu se nepridavaly - nebylo je mozne overit (zdroj nedostupny).
+- Kontroly: CLS 0, zadny prvek za okrajem na 390 i 1440 px, reduced-motion i bez JS 0 skrytych prvku, check + seo:audit bez chyb.
+- Cache token r28 -> r29 (zmena redesign.css, assets jsou immutable).
+
+## Implementovano 2026-11-07 (2) - Mikroanimace v3 + oprava CLS z marquee
+
+- `assets/motion.js` (2,4 kB, jen homepage): IntersectionObserver prida `.is-in`, kdyz prvek dojede do obrazovky; pocitadla v pasu cisel. Animuje se jen transform/opacity. Pri "omezit pohyb" i bez JS je vse rovnou v konecnem stavu (overeno: 0 skrytych prvku).
+- Pohyb: signalni impulz po lince pod hero (kazdych 7 s) a jednou u cisel sekci; kroky 01-03 se postupne rozsviti a linka se nakresli; pruhy rychlosti se naplni, v hero stitku obcas probehne "paket"; bento - signal projde ulici a domy se rozsviti, 0 Kc naskoci, prechod 1 -> 2; karty tarifu a lokalit najedou postupne; sipky v tlacitkach se posunou pri hoveru; zluta linka pod polem formulare se pri kliknuti natahne; FAQ se rozbali plynule.
+- `/dekujeme/`: SVG grafika - signal dobehne k domu, dum se rozsviti, fajfka (pocatecni stav je hotova grafika, animace jen pri povolenem pohybu).
+- Hero (H1, formular) se nikdy neskryva ani neanimuje - LCP a vyplneni adresy bez zdrzeni.
+- **Oprava CLS (vsech 41 stranek):** zluty pas (marquee) vkladal `main.js` az po vykresleni, takze hero na mobilu poskocil o 47 px (CLS 0,05 v cca polovine nacteni). Pas je nove primo v HTML; `main.js` ho uz pri existenci nevklada. Namereno 12 behu na 3 strankach: CLS max 0,006.
+- Cache token r27 -> r28.
+
+## Implementovano 2026-11-07 - Homepage v3 „Ocel & Signal"
+
+Redizajn homepage podle schvaleneho navrhu v3. Neni to novy web: paleta, Oswald,
+textury, fotky a ostre hrany jsou beze zmeny z puvodniho CSS. Meni se kompozice
+a hlavne cesta k overeni adresy.
+
+- **Adresa v hero.** Formular ulice + telefon + souhlas primo pod H1 (dosud jen
+  tlacitko do modalu a formular "Zavolejte mi" jen s telefonem). Payload nese
+  `poznamka: "Overeni z hero sekce"`, takze jde v leadech rozlisit od spodniho
+  formulare. Formular "Zavolejte mi" (lead_type callback) z homepage zmizel -
+  sledovat, zda pocet leadu z homepage nepoklesne.
+- **Hero obrazek:** Nova radnice s modrym svetlem (`radnice-optika-night.webp`,
+  112 kB) s preloadem a fetchpriority high misto videa s mraky. Video zustava
+  na `/poda-internet-ostrava/`.
+- **Struktura:** cisla (300 Kc / 2 000 Mb/s / 30 min / 0 Kc), 01 Jak to funguje,
+  02 Tarify s pruhy rychlosti nahoru/dolu, 03 Clovek z Ostravy (bento s realnou
+  fotkou zastupce z `/kontakt/`), overeni s formularem, 04 Lokality (vsech 6
+  obvodu + dlazdice "Vsechny lokality"), 05 FAQ. Ciselne sekce spojuje signalni
+  linka (zluta -> opticka modra) s kosoctverci z puvodniho `.hero-meta`.
+- **SEO beze ztraty:** H2 "Internet v Ostrave zacina overenim presne adresy"
+  i jeho odstavec zustaly, 4 FAQ 1:1 se schematem, kotvy `#tarify`,
+  `#lokality`, `#faq`, odkazy na vsech 6 lokalit. Text v `<main>` 687 -> 884 slov.
+- **CSS:** vse pod prefixem `.v3-` a promennymi na `body.home-v3`, ostatni
+  stranky se nemeni. Globalne jen: kosoctverce misto tecek v marquee a zluty
+  prepinac "Pridat e-mail" na tmavych `.form-panel` (byl modry na tmavem, i na
+  `/dostupnost/`).
+- Overeno v Chromiu (390 / 900 / 1440 px): bez horizontalniho preteceni, odeslani
+  hero formulare az na `/dekujeme/` se spravnym payloadem, modal z tarifu,
+  mobilni lista se skryva pri viditelnem formulari, zadne chyby v konzoli.
+- Cache token r26 -> r27, sitemap lastmod `/`, `llms.txt` popis homepage.
+
+## Pracovni cyklus 2026-09-30
+
+Podklad: report `reports/seo/2026-09-28.md`, GSC property `sc-domain:internetostrava.cz`, obdobi 2026-08-29 az 2026-09-25. Stranka `/internet-slezska-ostrava/` mela 60 zobrazeni, 0 kliku a prumernou pozici 18,3. Opakovany text o overeni adresy byl nahrazen kratkym postupem pro bytovy a rodinny dum, kontextovymi odkazy na Muglinov, Michalkovice a radu k vyberu rychlosti. Další vyhodnoceni az po novem 28dennim obdobi; nelze vyvozovat ucinek z dat, ktera predchazela zmene.
+
+## Pracovni cyklus 2026-09-27
+
+Vsechna nasledujici cisla jsou jen z GSC property `sc-domain:internetostrava.cz`, typ Web, obdobi 2026-08-28 az 2026-09-24. Dotaz `internet ostrava`: 47 zobrazeni, 1 klik, prumerna pozice 32,0. Jiny dotaz `poda internet ostrava`: 35 zobrazeni, 2 kliky, pozice 7,5. Tyto dve pozice se nesmi zamenovat.
+
+Majitel 2026-09-27 potvrdil, ze cil zahrnuje i obecne dotazy `internet Ostrava` a konkretni casti mesta. Predchozi oznaceni obecnych dotazu jako `jen sledovat` v `data/seo/keywords.json` je proto zruseno. Poradi ve vyhledavaci se neslibuje; dalsi prace se bude ridit skutecnymi dotazy, kvalitou obsahu a poptavkami.
+
+- `/internet-ostrava-poruba/`: 90 zobrazeni na stranku, 0 kliku, pozice 19,0. Upraven opakovany text o klicovych slovech na prakticky postup pro byt a rodinny dum, doplneny kontextove odkazy.
+- `/poda-dostupnost/`: 177 zobrazeni na stranku, 1 klik, pozice 9,7. Doplneno, jaky vysledek clovek po overeni ziska, a upresnen popisek stranky. FAQ odpoved byla sjednocena s JSON-LD.
+- SEO monitor z 2026-09-16 a 2026-09-21 selhal: `seo-report.mjs` bral lexikograficky posledni `research-*.json`, ktery nema `current`/`previous`. Vyber je omezen na tydenni soubory `YYYY-MM-DD.json`.
+
+Po nasazeni: znovu spustit SEO monitor, overit nove ulozeny report a po 28 dnech porovnat stejne dotazy a URL. Pro Bing pouzit import z Google Search Console a overit sitemapu podle `docs/SEO-AUTOMATION.md`.
+
 ## Cíl
 
 Získávat relevantní návštěvy z lokálních dotazů na internet v Ostravě a převádět je na nezávazná ověření adresy.
@@ -94,6 +169,173 @@ Interni odkazy na hub vedou z 6 lokalnich stranek, 2 PODA satelitu a sitemapy. H
 Aliasy v `vercel.json`: `/poda`, `/poda-internet`, `/poda-ostrava`, `/poda-pokryti`, `/poda-overeni-dostupnosti`, `/poda-internet-karvina`, `/internet-karvina`, `/poda-poruba`.
 
 Pozn.: leady nadale chodi na terc@obchod.poda.cz (api/leads.js, env LEAD_TO_EMAIL; fallback mailto v assets/main.js) - jde o funkcni kontakt mimo viditelny obsah. Pripadnou vymenu za neutralni adresu (napr. info@internetostrava.cz) rozhodne majitel.
+
+## Implementovano 2026-09-18 (2. kolo) - Vizualni kontrola, AEO, sdileni odkazu, copy CTA
+
+Kontext: prvni kolo (mereni, formulare, sest prohloubenych stranek) bylo
+odladene jen auditem a syntaxi, ne v prohlizeci. Screenshoty v Chromiu
+(Playwright, 390 px a 1366 px) odhalily chyby, ktere by jinak odesly na
+produkci. Druhe kolo je proto z vetsi casti kontrola a dotazeni, plus veci,
+ktere se ukazaly az pri prohlidce ocima navstevnika.
+
+### Opraveno po screenshotech
+
+- Nepovinne pole e-mail se neskryvalo: atribut `hidden` prohraval s
+  `.field { display: grid }`. Globalni `[hidden] { display: none !important }`.
+  Modal a `.modal-tariff` overeny, ze se stale otevraji a zaviraji.
+- `/dekujeme/`: odkazy na navody pouzivaly `.footer-links` (bila na tmavou
+  paticku), na svetlem pozadi byly neviditelne. Nahrazeno `.aside-links`.
+- Tabulka tarifu na mobilu: paty sloupec s vetami natahoval radky do prazdna.
+  Do 720 px se skryva (informace je v kartach), bunky maji mensi padding,
+  "103 stanic + 10 premiovych" zkraceno, aby nepreteklo bunku.
+- `/dostupnost/` - hlavni Ads landing - mela trust radek "Ozve se vam clovek,
+  ne automat" v barve inkoustu na tmavem subhero, tedy prakticky necitelny.
+  Nove bila s ikonou v signalni zlute (`.subhero .trustline`).
+- Prepinac e-mailu ve dvousloupcovem `.form-grid` zabiral jednu bunku a lamal
+  se; nove pres celou sirku, zarovnany vlevo.
+
+### AEO / GEO
+
+- `llms.txt`: nova sekce "Key facts" - operator (Milan Terc, ICO, zastupce,
+  ne operator site), oblast, telefon a kdy se vola, prubeh overeni, tri tarify
+  s cenami, ze nejlevnejsi je 300 Kc s televizi a proc, symetricky upload,
+  ze web nepublikuje procenta ani recenze, kam smi mirit Ads. Popisy stranek
+  aktualizovane podle prohloubeneho obsahu, diakritika v nazvech ctvrti.
+- `/poradna/` (343 -> 647 slov): answer-box "Jak vybrat internet v Ostrave ve
+  trech krocich" + 4 FAQ; FAQPage pridana do stavajiciho @graph.
+- Homepage Organization schema: `email`, `contactPoint` (telefon, e-mail,
+  jazyk, pracovni dny) a `founder` Person "Milan Terc" s jobTitle bez znacky.
+  Entita provozovatele je tak v Ads zone citelna strojove, konzistentne s
+  /kontakt/ ("p. Terc") a /ochrana-udaju/ (cele jmeno, ICO).
+
+### Sdileni odkazu (WhatsApp, Messenger, iMessage)
+
+Vsech 10 og:image bylo WebP. Facebook s nim pracuje, WhatsApp a iMessage
+nespolehlive - odkaz poslany zakaznikovi z terenu se tak casto zobrazi bez
+nahledu. Vygenerovano 10 JPEG 1200x630 (`assets/og/`, 61-177 kB, sharp,
+`fit: cover, position: attention`), og:image prepnuto na ne a doplneno
+og:image:width/height/type na vsech strankach.
+
+### Vykon
+
+- Hero video (1,7 MB mp4) se stahovalo i na mobilu, ackoli LCP je poster.
+  Nove jen od 880 px sirky a ne pri zapnutem Data Saver; overeno, ze na
+  390 px se `<source>` nevklada a na 1366 px ano.
+- Preload obou subsetu fontu Oswald (H1 v display fontu bez FOUT).
+
+### Copy CTA
+
+"Objednat" u tarifu (11 mist: homepage, /tarify/, PODA hub) otviral modal,
+ktery je vyslovene nezavazny. Slovo slibovalo zavazek, ktery tam neni, a u
+neoverene dostupnosti odrazovalo. Nove "Chci tento tarif"; modal "Nezavazna
+poptavka / Chci tento tarif / Odeslat nezavaznou poptavku", mailto fallback
+sladen. FAQ "Je odeslani zavazna objednavka? Ne." zustava - tam je slovo na
+miste.
+
+### Prohloubeny PODA stranky (znackovy cluster, priorita 1 v reportu)
+
+| Stranka | Pred | Po | Dotazy (pozice) |
+|---|---:|---:|---|
+| `/poda-dostupnost/` | 353 | 1361 | poda dostupnost (10,3), poda pokryti (7,2) |
+| `/poda-karvina/` | 372 | 1419 | poda karvina (12,4), poda karvina s diakritikou (12,1) |
+
+Obe byly na hrane prvni strany s tenkym obsahem. Na /poda-dostupnost/ je jadrem, proc verejna mapa pokryti nestaci a co na adrese rozhoduje (typ domu, pripojka do budovy, rozvod, souhlas SVJ, technologie v ulici); na /poda-karvina/ popis casti mesta (Frystat, Nove Mesto, sidliste Raj / Mizerov / Hranice, Darkov, Stare Mesto) a co z typu zastavby plyne pro zavedeni optiky. FAQ 3 -> 10 na obou, schema 1:1. Nikde se netvrdi, ktera cast je pokryta.
+
+Audit: 0 chyb, 0 varovani (poprve od zavedeni prahu tenkeho obsahu).
+Cache token r25 -> r26. Sitemap lastmod u /poradna/, /poda-dostupnost/,
+/poda-karvina/.
+
+### Co zbyva majiteli (beze zmeny)
+
+1. GTM ID do `<meta name="gtm-id">` (`docs/MERENI-A-ADS.md`).
+2. Google Business Profile.
+3. Overit `RESEND_API_KEY` ve Vercelu.
+4. Google Ads az po 1 a 3.
+
+## Implementovano 2026-09-18 - Mereni konverzi, konverzni vrstva a prohloubeni sesti stranek
+
+Kontext: veskera dosavadni prace na webu byla SEO (dve vlny kanibalizace,
+prohloubeni lokalit). Web pritom **nemeril nic** - `assets/main.js` pushoval
+udalosti do `window.dataLayer`, ale GTM ani GA4 nebyly nainstalovany na zadne
+ze 41 stranek. Bez mereni nelze spustit Google Ads (nema na cem optimalizovat)
+ani zjistit, ktera stranka generuje poptavky. Web ma 15 kliku za 28 dni, coz
+pri 10% konverzi vychazi na 1,5 leadu mesicne; organika sama tohle cislo v
+rozumnem horizontu nezvedne, hlavni packa je Ads - a ta bez mereni nedava smysl.
+
+### Mereni
+
+- Novy `assets/analytics.js`: GTM loader rizeny `<meta name="gtm-id">`. Dokud je
+  obsah prazdny, skript jen pripravi dataLayer a nic nestahuje, takze nasazeni
+  je bezpecne i pred zalozenim kontejneru. Souhlasova lista se ze stejneho
+  duvodu ukazuje jen tehdy, kdyz je ID vyplnene.
+- Google Consent Mode v2, vychozi stav `denied`. Merici skripty se nenactou,
+  dokud clovek neklikne na Souhlasim. Volba v `localStorage` na 6 mesicu.
+- Devet udalosti: `lead_submit` (s `lead_type`, `tarif`, UTM), `lead_thank_you`,
+  `phone_click` (s umistenim odkazu), `email_click`, `modal_open`, `form_start`,
+  `form_email_opened`, `form_abandon` (s poctem vyplnenych poli),
+  `mailto_fallback` (s duvodem).
+- `mailto_fallback` je zaroven diagnostika: kdyz se objevuje, `/api/leads`
+  lead neprijal (nejspis chybi `RESEND_API_KEY` ve Vercelu) a na mobilu takovy
+  lead vetsinou nikdo nedokonci. Postup v `docs/MERENI-A-ADS.md`.
+
+### Konverzni vrstva formularu
+
+- Rozepsany formular prezije odchod ze stranky (`io-lead-draft-v1`, 7 dni).
+  Souhlas se zpracovanim se zamerne neuklada - musi byt vzdy novy ukon.
+- E-mail je nepovinny, proto nove schovany pod prepinacem: uzivatel vidi dve
+  povinna pole misto tri.
+- Telefon se kontroluje pri opusteni pole a normalizuje pred odeslanim.
+- `/dekujeme/` prestala byt slepou ulickou (jediny odkaz zpet na homepage).
+  Nove tri kroky "co bude nasledovat", telefon jako hlavni CTA a odkazy na
+  nejctenejsi navody.
+
+### Snippety podle dotazu
+
+Prepsany title a description ctyr clanku poradny. Klicovy nalez: 
+`/poradna/vysoky-ping-pri-hrani/` rankuje na dotaz "ping 29ms", coz je otazka
+na HODNOTU, ale titulek mluvil o "vysokem pingu" - proto 95 zobrazeni a nula
+kliku pri pozici 6,1. Novy titulek slibuje hodnoty, popisek je vyjmenuje.
+Pozn. k ocekavani: pri pozici 9,3 vychazi ocekavany zisk na jednotky kliku
+mesicne, ne na skokovou zmenu.
+
+### Prohloubeny stranky
+
+| Stranka | Pred | Po | Duvod |
+|---|---:|---:|---|
+| `/internet-ostrava-poruba/` | 439 | 1401 | 78 zobrazeni, pozice 21,2, komercni dotazy |
+| `/internet-ostrava-vitkovice/` | 293 | 1103 | 41 zobrazeni, pozice 15,9 |
+| `/internet-slezska-ostrava/` | 352 | 1052 | 54 zobrazeni, pozice 21,4 |
+| `/tarify/` | 396 | 908 | "nejlevnejsi internet ostrava", pozice 34,9 |
+| `/kontakt/` | 299 | 652 | nejtencí soubor v Ads zone |
+| `/ochrana-udaju/` | 458 | 655 | sekce 8 musela popsat nove mereni |
+
+U lokalit pribyly stavebni obvody a orientacni body, zavedeni v bytovem dome
+vcetne souhlasu SVJ, prechod od poskytovatele a FAQ (Poruba 11, ostatni 8).
+`/tarify/` nove odpovida na cenovy dotaz: nejnizsi cena z nabidky je 300 Kc a
+balicek s televizi je levnejsi nez samostatny internet, protoze rozdil dela
+rychlost. Zadny superlativ o trhu - odpovidame vlastni nabidkou.
+`/kontakt/` dostal duveryhodnostni obsah, ktery zamerne NEcili na "internet
+ostrava" (kanibalizaci resil commit c13d494).
+
+FAQPage schema se nove generuje primo z viditelnych `<details>`, takze se s
+obsahem nemuze rozejit.
+
+Opraveno pri praci: nadpis mini-hubu na `/internet-slezska-ostrava/` z "Casti
+Slezske Ostravy" na "Slezska Ostrava a okoli" - Michalkovice jsou samostatny
+mestsky obvod, ne cast Slezske, a jejich vlastni breadcrumb vede pres
+`/lokality/`. Karty ani odkazy nezmeneny.
+
+Audit: 0 chyb, varovani 7 -> 3 (zbyva `/poda-dostupnost/`, `/poda-karvina/`,
+`/poradna/`). Cache token r23 -> r24. Sitemap lastmod u 10 URL.
+
+### Dalsi kroky podle ocekavaneho dopadu
+
+1. **Vlozit GTM ID** (`docs/MERENI-A-ADS.md`) - bez toho vsechno vyse nemeri nic.
+2. **Google Business Profile** - pro service-area business je map pack nad
+   organickymi vysledky; stale neudelano.
+3. **Overit `RESEND_API_KEY`** ve Vercelu, jinak kazdy lead pada do mailto.
+4. **Google Ads** az po bodech 1 a 3.
+5. Prohloubit `/poradna/`, `/poda-dostupnost/`, `/poda-karvina/`.
 
 ## Implementovano 2026-09-16 - Prohloubeni nezaindexovanych lokalit
 

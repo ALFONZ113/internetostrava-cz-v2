@@ -79,10 +79,10 @@
     },
     {
       "id": "head",
-      "label": "Obecné dotazy (jen sledovat)",
-      "priority": 5,
-      "note": "NECÍLIT na první místo. Výzkum 2026-08-18: pole obsazené celostátními srovnávači (rychlost.cz, dsl.cz, porovnejsito.cz) a národními ISP. Sledujeme jen kvůli trendu.",
-      "watchOnly": true,
+      "label": "Obecné dotazy Ostrava",
+      "priority": 3,
+      "note": "Majitel chce rozvíjet i dotazy internet Ostrava a internet v Ostravě. Cílíme na užitečnost hlavní stránky a sledujeme skutečné dotazy i konverze; první pozici nelze slíbit.",
+      "watchOnly": false,
       "queries": [
         { "query": "internet ostrava", "page": "/", "baseline": 40.6 },
         { "query": "internet v ostrave", "page": "/", "baseline": 28.3 },
