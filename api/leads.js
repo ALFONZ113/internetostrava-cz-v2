@@ -5,7 +5,18 @@ const N8N_LEAD_WEBHOOK = process.env.N8N_LEAD_WEBHOOK;
 const N8N_LEAD_TOKEN = process.env.N8N_LEAD_TOKEN;
 
 function cleanText(value, maxLength = 1000) {
-  return String(value || "").trim().slice(0, maxLength);
+  return String(value || "")
+    .replace(/\r\n?/g, "\n")
+    // Ridici znaky nemaji v leadu co delat a v hlavickach e-mailu jsou zneuzitelne.
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "")
+    .trim()
+    .slice(0, maxLength);
+}
+
+// Predmet e-mailu musi byt jednoradkovy. Novy radek v nem Resend odmitne (422)
+// a je to zaroven klasicky tvar header injection, takze ho tu slepujeme.
+function subjectText(value, maxLength = 120) {
+  return cleanText(value, maxLength + 80).replace(/\s+/g, " ").trim().slice(0, maxLength);
 }
 
 function isValidPhone(value) {
@@ -46,32 +57,40 @@ async function sendResendEmail(lead) {
   if (!RESEND_API_KEY) return { configured: false, delivered: false };
 
   const subject = lead.type === "callback"
-    ? `Zpetne zavolani: ${lead.phone || "novy kontakt"}`
+    ? `Zpetne zavolani: ${subjectText(lead.phone) || "novy kontakt"}`
     : lead.type === "order"
-    ? `Nezavazna objednavka: ${lead.tarif || lead.address || "novy lead"}`
-    : `Overeni internetu: ${lead.address || "nova adresa"}`;
+    ? `Nezavazna objednavka: ${subjectText(lead.tarif || lead.address) || "novy lead"}`
+    : `Overeni internetu: ${subjectText(lead.address) || "nova adresa"}`;
 
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${RESEND_API_KEY}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      from: LEAD_FROM_EMAIL,
-      to: [LEAD_TO_EMAIL],
-      reply_to: lead.email || undefined,
-      subject,
-      html: buildEmailHtml(lead)
-    })
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Resend failed: ${response.status} ${errorText}`);
+  try {
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        from: LEAD_FROM_EMAIL,
+        to: [LEAD_TO_EMAIL],
+        reply_to: lead.email || undefined,
+        subject,
+        html: buildEmailHtml(lead)
+      }),
+      signal: controller.signal
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Resend failed: ${response.status} ${errorText}`);
+    }
+
+    return { configured: true, delivered: true };
+  } finally {
+    clearTimeout(timeout);
   }
-
-  return { configured: true, delivered: true };
 }
 
 async function forwardLeadToN8n(lead) {
